@@ -4,6 +4,8 @@ function reduceClockBuffers(graph: CircuitGraph) {
 	const visited: Set<string> = new Set()
 	const frontier: string[] = []
 
+	let clockBuffsRemoved = 0
+
 	visited.add('clk')
 	frontier.push('clk')
 
@@ -13,7 +15,19 @@ function reduceClockBuffers(graph: CircuitGraph) {
 		const node = graph[name]
 
 		if(node.type === 'sky130_fd_sc_hd__clkbuf_16') {
-			continue
+			const inputConnection = node.inPorts['A']
+			
+			const index = graph[inputConnection.name].outPorts[inputConnection.port].findIndex(connection => connection.name === name)
+			graph[inputConnection.name].outPorts[inputConnection.port].splice(index, 1)
+			graph[inputConnection.name].outPorts[inputConnection.port] = graph[inputConnection.name].outPorts[inputConnection.port].concat(node.outPorts['X'])
+
+			for(const connection of node.outPorts['X']) {
+				graph[connection.name].inPorts[connection.port] = inputConnection
+			}
+			
+			delete graph[name]
+
+			clockBuffsRemoved++
 		}
 		
 		for(const port of Object.keys(node.outPorts)) {
@@ -25,6 +39,8 @@ function reduceClockBuffers(graph: CircuitGraph) {
 			}
 		}
 	}
+
+	console.log(`Removed ${clockBuffsRemoved} clock buffs!`)
 }
 
 class Circuit {
@@ -105,7 +121,7 @@ class Circuit {
 
 						for(const otherName of connectingInstances) {
 							if(otherName === name) continue
-							
+
 							if(!graph[name].outPorts[port]) graph[name].outPorts[port] = []
 							graph[name].outPorts[port] = graph[name].outPorts[port].concat(
 								Object.entries(instances[otherName].connections).filter(([_, connection]) => connection === connectionId).map(([port, _]) => ({ name: otherName, port }))

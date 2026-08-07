@@ -79,29 +79,68 @@
     "outPorts": {
       "clk": [
         {
-          "name": "sky130_fd_sc_hd__clkbuf_16_2",
-          "port": "A"
-        }
-      ]
-    }
-  },
-  "sky130_fd_sc_hd__clkbuf_16_2": {
-    "type": "sky130_fd_sc_hd__clkbuf_16",
-    "inPorts": {
-      "A": {
-        "name": "clk",
-        "port": "clk"
-      }
-    },
-    "outPorts": {
-      "X": [
-        {
-          "name": "sky130_fd_sc_hd__clkbuf_16_0",
-          "port": "A"
+          "name": "sky130_fd_sc_hd__dfrtp_2_0",
+          "port": "CLK"
         },
         {
-          "name": "sky130_fd_sc_hd__clkbuf_16_1",
-          "port": "A"
+          "name": "sky130_fd_sc_hd__dfrtp_2_1",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_2",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_3",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_4",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_5",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_6",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_7",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_10",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_11",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_12",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_13",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_14",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_15",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_8",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_9",
+          "port": "CLK"
         }
       ]
     }
@@ -612,8 +651,8 @@
         "port": "X"
       },
       "CLK": {
-        "name": "sky130_fd_sc_hd__clkbuf_16_1",
-        "port": "X"
+        "name": "clk",
+        "port": "clk"
       }
     },
     "outPorts": {
@@ -649,8 +688,8 @@
         "port": "X"
       },
       "CLK": {
-        "name": "sky130_fd_sc_hd__clkbuf_16_1",
-        "port": "X"
+        "name": "clk",
+        "port": "clk"
       }
     },
     "outPorts": {
@@ -690,8 +729,8 @@
         "port": "X"
       },
       "CLK": {
-        "name": "sky130_fd_sc_hd__clkbuf_16_1",
-        "port": "X"
+        "name": "clk",
+        "port": "clk"
       }
     },
     "outPorts": {
@@ -731,8 +770,8 @@
         "port": "X"
       },
       "CLK": {
-        "name": "sky130_fd_sc_hd__clkbuf_16_1",
-        "port": "X"
+        "name": "clk",
+        "port": "clk"
       }
     },
     "outPorts": {
@@ -772,8 +811,8 @@
         "port": "X"
       },
       "CLK": {
-        "name": "sky130_fd_sc_hd__clkbuf_16_1",
-        "port": "X"
+        "name": "clk",
+        "port": "clk"
       }
     },
     "outPorts": {
@@ -813,8 +852,8 @@
         "port": "X"
       },
       "CLK": {
-        "name": "sky130_fd_sc_hd__clkbuf_16_1",
-        "port": "X"
+        "name": "clk",
+        "port": "clk"
       }
     },
     "outPorts": {
@@ -854,8 +893,8 @@
         "port": "X"
       },
       "CLK": {
-        "name": "sky130_fd_sc_hd__clkbuf_16_0",
-        "port": "X"
+        "name": "clk",
+        "port": "clk"
       }
     },
     "outPorts": {
@@ -895,8 +934,8 @@
         "port": "X"
       },
       "CLK": {
-        "name": "sky130_fd_sc_hd__clkbuf_16_0",
-        "port": "X"
+        "name": "clk",
+        "port": "clk"
       }
     },
     "outPorts": {
@@ -936,8 +975,8 @@
         "port": "X"
       },
       "CLK": {
-        "name": "sky130_fd_sc_hd__clkbuf_16_0",
-        "port": "X"
+        "name": "clk",
+        "port": "clk"
       }
     },
     "outPorts": {
@@ -977,8 +1016,8 @@
         "port": "X"
       },
       "CLK": {
-        "name": "sky130_fd_sc_hd__clkbuf_16_0",
-        "port": "X"
+        "name": "clk",
+        "port": "clk"
       }
     },
     "outPorts": {
@@ -1014,8 +1053,8 @@
         "port": "X"
       },
       "CLK": {
-        "name": "sky130_fd_sc_hd__clkbuf_16_0",
-        "port": "X"
+        "name": "clk",
+        "port": "clk"
       }
     },
     "outPorts": {
@@ -1055,8 +1094,8 @@
         "port": "X"
       },
       "CLK": {
-        "name": "sky130_fd_sc_hd__clkbuf_16_0",
-        "port": "X"
+        "name": "clk",
+        "port": "clk"
       }
     },
     "outPorts": {
@@ -1088,8 +1127,8 @@
         "port": "X"
       },
       "CLK": {
-        "name": "sky130_fd_sc_hd__clkbuf_16_0",
-        "port": "X"
+        "name": "clk",
+        "port": "clk"
       }
     },
     "outPorts": {
@@ -1129,8 +1168,8 @@
         "port": "X"
       },
       "CLK": {
-        "name": "sky130_fd_sc_hd__clkbuf_16_0",
-        "port": "X"
+        "name": "clk",
+        "port": "clk"
       }
     },
     "outPorts": {
@@ -1166,8 +1205,8 @@
         "port": "X"
       },
       "CLK": {
-        "name": "sky130_fd_sc_hd__clkbuf_16_1",
-        "port": "X"
+        "name": "clk",
+        "port": "clk"
       }
     },
     "outPorts": {
@@ -1203,8 +1242,8 @@
         "port": "X"
       },
       "CLK": {
-        "name": "sky130_fd_sc_hd__clkbuf_16_1",
-        "port": "X"
+        "name": "clk",
+        "port": "clk"
       }
     },
     "outPorts": {
@@ -1220,96 +1259,6 @@
         {
           "name": "sky130_fd_sc_hd__nor2_2_7",
           "port": "B"
-        }
-      ]
-    }
-  },
-  "sky130_fd_sc_hd__clkbuf_16_0": {
-    "type": "sky130_fd_sc_hd__clkbuf_16",
-    "inPorts": {
-      "A": {
-        "name": "sky130_fd_sc_hd__clkbuf_16_2",
-        "port": "X"
-      }
-    },
-    "outPorts": {
-      "X": [
-        {
-          "name": "sky130_fd_sc_hd__dfrtp_2_0",
-          "port": "CLK"
-        },
-        {
-          "name": "sky130_fd_sc_hd__dfrtp_2_1",
-          "port": "CLK"
-        },
-        {
-          "name": "sky130_fd_sc_hd__dfrtp_2_2",
-          "port": "CLK"
-        },
-        {
-          "name": "sky130_fd_sc_hd__dfrtp_2_3",
-          "port": "CLK"
-        },
-        {
-          "name": "sky130_fd_sc_hd__dfrtp_2_4",
-          "port": "CLK"
-        },
-        {
-          "name": "sky130_fd_sc_hd__dfrtp_2_5",
-          "port": "CLK"
-        },
-        {
-          "name": "sky130_fd_sc_hd__dfrtp_2_6",
-          "port": "CLK"
-        },
-        {
-          "name": "sky130_fd_sc_hd__dfrtp_2_7",
-          "port": "CLK"
-        }
-      ]
-    }
-  },
-  "sky130_fd_sc_hd__clkbuf_16_1": {
-    "type": "sky130_fd_sc_hd__clkbuf_16",
-    "inPorts": {
-      "A": {
-        "name": "sky130_fd_sc_hd__clkbuf_16_2",
-        "port": "X"
-      }
-    },
-    "outPorts": {
-      "X": [
-        {
-          "name": "sky130_fd_sc_hd__dfrtp_2_10",
-          "port": "CLK"
-        },
-        {
-          "name": "sky130_fd_sc_hd__dfrtp_2_11",
-          "port": "CLK"
-        },
-        {
-          "name": "sky130_fd_sc_hd__dfrtp_2_12",
-          "port": "CLK"
-        },
-        {
-          "name": "sky130_fd_sc_hd__dfrtp_2_13",
-          "port": "CLK"
-        },
-        {
-          "name": "sky130_fd_sc_hd__dfrtp_2_14",
-          "port": "CLK"
-        },
-        {
-          "name": "sky130_fd_sc_hd__dfrtp_2_15",
-          "port": "CLK"
-        },
-        {
-          "name": "sky130_fd_sc_hd__dfrtp_2_8",
-          "port": "CLK"
-        },
-        {
-          "name": "sky130_fd_sc_hd__dfrtp_2_9",
-          "port": "CLK"
         }
       ]
     }
