@@ -34,7 +34,7 @@ function reduceClockBuffers(graph: CircuitGraph) {
 
 		const node = graph[name]
 
-		if(node.type === 'sky130_fd_sc_hd__clkbuf_16') {
+		if(node.type === 'sky130_fd_sc_hd__clkbuf_16' || node.type === 'sky130_fd_sc_hd__clkbuf_8' || node.type === 'sky130_fd_sc_hd__clkbuf_4') {
 			const inputConnection = node.inPorts['A']
 
 			closeConnection(graph, inputConnection, name, node.outPorts['X'])
@@ -232,8 +232,8 @@ class Circuit {
 			}
 		}
 
-		reduceClockBuffers(graph)
-		reduceRegisters(graph)
+		// reduceClockBuffers(graph)
+		// reduceRegisters(graph)
 
 		return new Circuit(name, inPorts, outPorts, graph)
 	}
@@ -242,26 +242,78 @@ class Circuit {
 const CIRCUIT_DEFINITIONS: Circuit[] = [
 	new Circuit('sky130_fd_sc_hd__mux2_1', ['S', 'A0', 'A1', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
 	
-	new Circuit('sky130_fd_sc_hd__and3_2', ['A', 'B', 'C', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
-	new Circuit('sky130_fd_sc_hd__xor2_2', ['A', 'B', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
 	new Circuit('sky130_fd_sc_hd__and2_2', ['A', 'B', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
-	new Circuit('sky130_fd_sc_hd__or2_2', ['A', 'B', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__and2b_2', ['A_N', 'B', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__and3_2', ['A', 'B', 'C', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__and3b_2', ['A_N', 'B', 'C', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__and4_2', ['A', 'B', 'C', 'D', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__and4b_2', ['A_N', 'B', 'C', 'D', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
 	new Circuit('sky130_fd_sc_hd__and4bb_2', ['A_N', 'B_N', 'C', 'D', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__or2_2', ['A', 'B', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__or3_2', ['A', 'B', 'C', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__or3b_2', ['A', 'B', 'C_N', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__or4_2', ['A', 'B', 'C', 'D', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__or4b_2', ['A', 'B', 'C', 'D_N', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__or4bb_2', ['A', 'B', 'C_N', 'D_N', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__xor2_2', ['A', 'B', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
 	
 	new Circuit('sky130_fd_sc_hd__nand2_2', ['A', 'B', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
+	new Circuit('sky130_fd_sc_hd__nand2b_2', ['A_N', 'B', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
+	new Circuit('sky130_fd_sc_hd__nand3_2', ['A', 'B', 'C', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
+	new Circuit('sky130_fd_sc_hd__nand3b_2', ['A_N', 'B', 'C', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
+	new Circuit('sky130_fd_sc_hd__nand4_2', ['A', 'B', 'C', 'D', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
 	new Circuit('sky130_fd_sc_hd__nor2_2', ['A', 'B', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
+	new Circuit('sky130_fd_sc_hd__nor3_2', ['A', 'B', 'C', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
+	new Circuit('sky130_fd_sc_hd__nor3b_2', ['A', 'B', 'C_N', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
+	new Circuit('sky130_fd_sc_hd__nor4_2', ['A', 'B', 'C', 'D', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
+	new Circuit('sky130_fd_sc_hd__nor4b_2', ['A', 'B', 'C', 'D_N', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
 	new Circuit('sky130_fd_sc_hd__xnor2_2', ['A', 'B', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
+	new Circuit('sky130_fd_sc_hd__inv_2', ['A', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
 	
-	new Circuit('sky130_fd_sc_hd__a21bo_2', ['A1', 'A2', 'B1_N', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
 	new Circuit('sky130_fd_sc_hd__a21o_2', ['A1', 'A2', 'B1', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__a21bo_2', ['A1', 'A2', 'B1_N', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
 	new Circuit('sky130_fd_sc_hd__a31o_2', ['A1', 'A2', 'A3', 'B1', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__a211o_2', ['A1', 'A2', 'B1', 'C1', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__a22o_2', ['A1', 'A2', 'B1', 'B2', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__a31o_2', ['A1', 'A2', 'A3', 'B1', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__a32o_2', ['A1', 'A2', 'A3', 'B1', 'B2', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__a311o_2', ['A1', 'A2', 'A3', 'B1', 'C1', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__a221o_2', ['A1', 'A2', 'B1', 'B2', 'C1', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__o2bb2a_2', ['A1_N', 'A2_N', 'B1', 'B2', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__o21a_2', ['A1', 'A2', 'B1', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__o21ba_2', ['A1', 'A2', 'B1_N', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__o22a_2', ['A1', 'A2', 'B1', 'B2', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__o211a_2', ['A1', 'A2', 'B1', 'C1', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__o311a_2', ['A1', 'A2', 'A3', 'B1', 'C1', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__o31a_2', ['A1', 'A2', 'A3', 'B1', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__o221a_2', ['A1', 'A2', 'B1', 'B2', 'C1', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__o32a_2', ['A1', 'A2', 'A3', 'B1', 'B2', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+
+	new Circuit('sky130_fd_sc_hd__a21oi_2', ['A1', 'A2', 'B1', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
 	new Circuit('sky130_fd_sc_hd__a21boi_2', ['A1', 'A2', 'B1_N', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
+	new Circuit('sky130_fd_sc_hd__a211oi_2', ['A1', 'A2', 'B1', 'C1', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
+	new Circuit('sky130_fd_sc_hd__a31oi_2', ['A1', 'A2', 'A3', 'B1', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
+	new Circuit('sky130_fd_sc_hd__a22oi_2', ['A1', 'A2', 'B1', 'B2', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
+	new Circuit('sky130_fd_sc_hd__a221oi_2', ['A1', 'A2', 'B1', 'B2', 'C1', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
+	new Circuit('sky130_fd_sc_hd__a41oi_2', ['A1', 'A2', 'A3', 'A4', 'B1', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
+	new Circuit('sky130_fd_sc_hd__a2111oi_2', ['A1', 'A2', 'B1', 'C1', 'D1', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
+	new Circuit('sky130_fd_sc_hd__o21ai_2', ['A1', 'A2', 'B1', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
 	new Circuit('sky130_fd_sc_hd__o21bai_2', ['A1', 'A2', 'B1_N', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
+	new Circuit('sky130_fd_sc_hd__o211ai_2', ['A1', 'A2', 'B1', 'C1', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
+	new Circuit('sky130_fd_sc_hd__o22ai_2', ['A1', 'A2', 'B1', 'B2', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
+	new Circuit('sky130_fd_sc_hd__o31ai_2', ['A1', 'A2', 'A3', 'B1', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
+	new Circuit('sky130_fd_sc_hd__o32ai_2', ['A1', 'A2', 'A3', 'B1', 'B2', 'VPWR', 'VGND', 'VPB', 'VND'], ['Y'], {}),
 
 	new Circuit('sky130_fd_sc_hd__dfrtp_2', ['D', 'CLK', 'RESET_B', 'VPWR', 'VGND', 'VPB', 'VND'], ['Q'], {}),
+	new Circuit('sky130_fd_sc_hd__dfstp_2', ['D', 'CLK', 'SET_B', 'SCD', 'SCE', 'VPWR', 'VGND', 'VPB', 'VND'], ['Q'], {}),
+	new Circuit('sky130_fd_sc_hd__dfxtp_2', ['D', 'CLK', 'SCD', 'SCE', 'VPWR', 'VGND', 'VPB', 'VND'], ['Q'], {}),
 
 	new Circuit('sky130_fd_sc_hd__decap_3', ['VPWR', 'VGND', 'VPB', 'VND'], [], {}),
+	new Circuit('sky130_fd_sc_hd__diode_2', ['DIODE', 'VPWR', 'VGND', 'VPB', 'VND'], [], {}),
 	new Circuit('sky130_fd_sc_hd__clkbuf_16', ['A', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__clkbuf_8', ['A', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__clkbuf_4', ['A', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__buf_2', ['A', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
 ]
 
 class Project {
@@ -310,16 +362,16 @@ class Project {
 			}
 		}
 
-		circuits.push(Circuit.parse(circuitDefinitions['adder_demo'].lines, ['A', 'B', 'clk', 'en', 'rst_n', 'VGND', 'VPWR'], ['S'], CIRCUIT_DEFINITIONS, circuitDefinitions))
-		// circuits.push(Circuit.parse(circuitDefinitions['puzzle'].lines, ['A', 'B', 'clk', 'en', 'rst_n', 'VGND', 'VPWR'], ['S'], CIRCUIT_DEFINITIONS, circuitDefinitions))
+		// circuits.push(Circuit.parse(circuitDefinitions['adder_demo'].lines, ['A', 'B', 'clk', 'en', 'rst_n', 'VGND', 'VPWR'], ['S'], CIRCUIT_DEFINITIONS, circuitDefinitions))
+		circuits.push(Circuit.parse(circuitDefinitions['puzzle'].lines, ['I', 'clk', 'en', 'rst_n', 'VGND', 'VPWR'], ['success', 'O[0]', 'O[1]', 'O[2]', 'O[3]', 'O[4]', 'O[5]', 'O[6]', 'O[7]'], CIRCUIT_DEFINITIONS, circuitDefinitions))
 
 		return new Project(circuits)
 	}
 }
 
-const spiceSource = await Deno.readTextFile('./adder_demo.spice')
-// const spiceSource = await Deno.readTextFile('./puzzle.spice')
+// const spiceSource = await Deno.readTextFile('./adder_demo.spice')
+const spiceSource = await Deno.readTextFile('./puzzle.spice')
 const project = Project.parse(spiceSource)
 
-await Deno.writeTextFile('../visualizer/src/data.json', JSON.stringify(project.circuits.find(circuit => circuit.name === 'adder_demo')?.graph, null, 2))
-// await Deno.writeTextFile('../visualizer/src/data.json', JSON.stringify(project.circuits.find(circuit => circuit.name === 'puzzle')?.graph, null, 2))
+// await Deno.writeTextFile('../visualizer/src/data.json', JSON.stringify(project.circuits.find(circuit => circuit.name === 'adder_demo')?.graph, null, 2))
+await Deno.writeTextFile('../visualizer/src/data.json', JSON.stringify(project.circuits.find(circuit => circuit.name === 'puzzle')?.graph, null, 2))

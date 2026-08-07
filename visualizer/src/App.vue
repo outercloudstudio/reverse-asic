@@ -20,8 +20,9 @@ onMounted(() => {
 	// 	graph.addNode(io, { label: io, x: io === 'S' ? 1000 : -1000, y: 0, size: 10, color: 'red' })
 	// }
 
-	const inputPorts = ['A', 'B', 'clk', 'en', 'rst_n', 'VPWR', 'VGND', 'VPB', 'VND']
-	const outputPorts = ['S']
+	// const inputPorts = ['A', 'B', 'clk', 'en', 'rst_n', 'VPWR', 'VGND', 'VPB', 'VND']
+	const inputPorts = ['I', 'clk', 'en', 'rst_n', 'VPWR', 'VGND', 'VPB', 'VND']
+	const outputPorts = ['success', 'O[0]', 'O[1]', 'O[2]', 'O[3]', 'O[4]', 'O[5]', 'O[6]', 'O[7]']
 
 	for(const instanceName of Object.keys(data)) {
 		const instance = (data as any)[instanceName]
