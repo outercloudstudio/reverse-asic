@@ -1,0 +1,3552 @@
+module puzzle
+ports: I, O_0_, O_1_, O_2_, O_3_, O_4_, O_5_, O_6_, O_7_, clk, enable, rst_n, success, VGND, VPWR
+
+942 instances:
+
+sky130_fd_sc_hd__nor4_2_0  [nor4_2]
+    out: Y=sky130_fd_sc_hd__nor4_2_0_Y
+    in : A=sky130_fd_sc_hd__or4b_2_3_A, B=sky130_fd_sc_hd__or4b_2_3_B, C=sky130_fd_sc_hd__or4b_2_2_C, D=sky130_fd_sc_hd__or4b_2_3_C
+
+sky130_fd_sc_hd__or2_2_8  [or2_2]
+    out: X=sky130_fd_sc_hd__or2_2_8_X
+    in : A=sky130_fd_sc_hd__or2_2_9_B, B=sky130_fd_sc_hd__or2_2_8_B
+
+sky130_fd_sc_hd__and2b_2_3  [and2b_2]
+    out: X=sky130_fd_sc_hd__and4_2_1_A
+    in : A_N=sky130_fd_sc_hd__nand4_2_1_C, B=sky130_fd_sc_hd__and2b_2_3_B
+
+sky130_fd_sc_hd__o31ai_2_1  [o31ai_2]
+    out: Y=sky130_fd_sc_hd__o31ai_2_1_Y
+    in : A1=sky130_fd_sc_hd__or3_2_3_A, A2=sky130_fd_sc_hd__or3_2_3_B, A3=sky130_fd_sc_hd__or2_2_2_A, B1=sky130_fd_sc_hd__nor2_2_5_A
+
+sky130_fd_sc_hd__decap_3_14  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_36  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_25  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_47  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_58  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_69  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__a31o_2_17  [a31o_2]
+    out: X=sky130_fd_sc_hd__a31o_2_17_X
+    in : A1=I, A2=sky130_fd_sc_hd__inv_2_7_A, A3=sky130_fd_sc_hd__nand4_2_4_D, B1=sky130_fd_sc_hd__nand4_2_4_C
+
+sky130_fd_sc_hd__and3_2_20  [and3_2]
+    out: X=O_3_
+    in : A=sky130_fd_sc_hd__or2_2_11_B, B=sky130_fd_sc_hd__o31a_2_10_X, C=sky130_fd_sc_hd__and3_2_25_C
+
+sky130_fd_sc_hd__nand4_2_12  [nand4_2]
+    out: Y=sky130_fd_sc_hd__o21a_2_27_A2
+    in : A=I, B=sky130_fd_sc_hd__inv_2_7_A, C=sky130_fd_sc_hd__nand4_2_12_C, D=sky130_fd_sc_hd__nand4_2_12_D
+
+sky130_fd_sc_hd__or3_2_17  [or3_2]
+    out: X=sky130_fd_sc_hd__or3_2_17_X
+    in : A=sky130_fd_sc_hd__or3_2_17_A, B=sky130_fd_sc_hd__or3_2_17_B, C=sky130_fd_sc_hd__or3_2_17_C
+
+sky130_fd_sc_hd__a31o_2_9  [a31o_2]
+    out: X=sky130_fd_sc_hd__a31o_2_9_X
+    in : A1=sky130_fd_sc_hd__and4_2_3_C, A2=sky130_fd_sc_hd__inv_2_10_A, A3=sky130_fd_sc_hd__and4_2_4_D, B1=sky130_fd_sc_hd__nor3_2_2_A
+
+sky130_fd_sc_hd__xnor2_2_24  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__nor3b_2_0_B
+    in : A=sky130_fd_sc_hd__xor2_2_16_A, B=sky130_fd_sc_hd__xor2_2_19_X
+
+sky130_fd_sc_hd__and4bb_2_7  [and4bb_2]
+    out: X=sky130_fd_sc_hd__nand4_2_4_D
+    in : A_N=sky130_fd_sc_hd__or4b_2_3_A, B_N=sky130_fd_sc_hd__or4b_2_3_C, C=sky130_fd_sc_hd__or4b_2_2_C, D=sky130_fd_sc_hd__or4b_2_3_B
+
+sky130_fd_sc_hd__xnor2_2_13  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__xnor2_2_13_Y
+    in : A=sky130_fd_sc_hd__xor2_2_17_B, B=sky130_fd_sc_hd__a31o_2_15_X
+
+sky130_fd_sc_hd__clkbuf_8_15  [clkbuf_8]
+    out: X=sky130_fd_sc_hd__dfrtp_2_8_CLK
+    in : A=sky130_fd_sc_hd__clkbuf_8_9_A
+
+sky130_fd_sc_hd__nor3b_2_2  [nor3b_2]
+    out: Y=sky130_fd_sc_hd__nor3b_2_2_Y
+    in : A=sky130_fd_sc_hd__nor3_2_3_A, B=sky130_fd_sc_hd__nor3_2_3_C, C_N=sky130_fd_sc_hd__nor3_2_3_B
+
+sky130_fd_sc_hd__clkbuf_8_1  [clkbuf_8]
+    out: X=sky130_fd_sc_hd__clkbuf_8_1_X
+    in : A=sky130_fd_sc_hd__clkbuf_8_9_A
+
+sky130_fd_sc_hd__mux2_1_4  [mux2_1]
+    out: X=sky130_fd_sc_hd__mux2_1_4_X
+    in : A0=sky130_fd_sc_hd__or3_2_4_B, A1=sky130_fd_sc_hd__or2_2_4_A, S=sky130_fd_sc_hd__mux2_1_4_S
+
+sky130_fd_sc_hd__a21o_2_8  [a21o_2]
+    out: X=sky130_fd_sc_hd__xor2_2_8_A
+    in : A1=sky130_fd_sc_hd__xor2_2_2_A, A2=sky130_fd_sc_hd__a21o_2_8_A2, B1=sky130_fd_sc_hd__nor2_2_19_Y
+
+sky130_fd_sc_hd__a211oi_2_0  [a211oi_2]
+    out: Y=sky130_fd_sc_hd__dfrtp_2_43_D
+    in : A1=sky130_fd_sc_hd__inv_2_7_A, A2=sky130_fd_sc_hd__inv_2_9_A, B1=sky130_fd_sc_hd__a21oi_2_13_Y, C1=sky130_fd_sc_hd__xor2_2_11_B
+
+sky130_fd_sc_hd__nor4_2_1  [nor4_2]
+    out: Y=sky130_fd_sc_hd__nor4_2_1_Y
+    in : A=sky130_fd_sc_hd__or4_2_4_B, B=sky130_fd_sc_hd__or4_2_4_A, C=sky130_fd_sc_hd__or4_2_4_D, D=sky130_fd_sc_hd__or4_2_4_C
+
+sky130_fd_sc_hd__a22oi_2_0  [a22oi_2]
+    out: Y=sky130_fd_sc_hd__a22oi_2_0_Y
+    in : A1=sky130_fd_sc_hd__or3b_2_0_A, A2=sky130_fd_sc_hd__inv_2_13_Y, B1=sky130_fd_sc_hd__or2_2_9_X, B2=sky130_fd_sc_hd__nand2_2_29_Y
+
+sky130_fd_sc_hd__or2_2_9  [or2_2]
+    out: X=sky130_fd_sc_hd__or2_2_9_X
+    in : A=sky130_fd_sc_hd__or2_2_9_A, B=sky130_fd_sc_hd__or2_2_9_B
+
+sky130_fd_sc_hd__o221a_2_0  [o221a_2]
+    out: X=sky130_fd_sc_hd__o221a_2_0_X
+    in : A1=sky130_fd_sc_hd__or3_2_2_C, A2=sky130_fd_sc_hd__o21ai_2_2_Y, B1=sky130_fd_sc_hd__o21a_2_1_X, B2=sky130_fd_sc_hd__or4_2_0_A, C1=sky130_fd_sc_hd__or4_2_0_B
+
+sky130_fd_sc_hd__and2b_2_4  [and2b_2]
+    out: X=sky130_fd_sc_hd__and4_2_1_D
+    in : A_N=sky130_fd_sc_hd__nand4_2_2_C, B=sky130_fd_sc_hd__o21a_2_8_A1
+
+sky130_fd_sc_hd__and4_2_0  [and4_2]
+    out: X=sky130_fd_sc_hd__and4_2_0_X
+    in : A=sky130_fd_sc_hd__and4_2_0_A, B=sky130_fd_sc_hd__and4_2_0_B, C=sky130_fd_sc_hd__and4_2_0_C, D=sky130_fd_sc_hd__and4_2_0_D
+
+sky130_fd_sc_hd__decap_3_15  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_26  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_48  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_37  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_59  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__a31o_2_18  [a31o_2]
+    out: X=sky130_fd_sc_hd__a31o_2_18_X
+    in : A1=I, A2=sky130_fd_sc_hd__inv_2_7_A, A3=sky130_fd_sc_hd__nor4_2_1_Y, B1=sky130_fd_sc_hd__nand4_2_7_C
+
+sky130_fd_sc_hd__and3_2_10  [and3_2]
+    out: X=sky130_fd_sc_hd__or4b_2_8_C
+    in : A=sky130_fd_sc_hd__and3_2_10_A, B=sky130_fd_sc_hd__and3_2_10_B, C=sky130_fd_sc_hd__and4_2_4_B
+
+sky130_fd_sc_hd__and3_2_21  [and3_2]
+    out: X=O_4_
+    in : A=sky130_fd_sc_hd__or2_2_11_B, B=sky130_fd_sc_hd__o31a_2_5_X, C=sky130_fd_sc_hd__and3_2_25_C
+
+sky130_fd_sc_hd__nand4_2_13  [nand4_2]
+    out: Y=sky130_fd_sc_hd__o21a_2_25_A2
+    in : A=I, B=sky130_fd_sc_hd__inv_2_7_A, C=sky130_fd_sc_hd__nand4_2_13_C, D=sky130_fd_sc_hd__nand4_2_13_D
+
+sky130_fd_sc_hd__xnor2_2_25  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_46_B
+    in : A=sky130_fd_sc_hd__a22o_2_4_B2, B=sky130_fd_sc_hd__xor2_2_17_X
+
+sky130_fd_sc_hd__and4bb_2_8  [and4bb_2]
+    out: X=sky130_fd_sc_hd__nand4_2_6_D
+    in : A_N=sky130_fd_sc_hd__or4b_2_3_B, B_N=sky130_fd_sc_hd__or4b_2_3_C, C=sky130_fd_sc_hd__or4b_2_2_C, D=sky130_fd_sc_hd__or4b_2_3_A
+
+sky130_fd_sc_hd__xnor2_2_14  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__xnor2_2_14_Y
+    in : A=sky130_fd_sc_hd__xor2_2_16_A, B=sky130_fd_sc_hd__xnor2_2_14_B
+
+sky130_fd_sc_hd__nor3b_2_3  [nor3b_2]
+    out: Y=sky130_fd_sc_hd__nor3b_2_3_Y
+    in : A=sky130_fd_sc_hd__nor3_2_3_A, B=sky130_fd_sc_hd__nor3_2_3_B, C_N=sky130_fd_sc_hd__nor3_2_3_C
+
+sky130_fd_sc_hd__clkbuf_8_2  [clkbuf_8]
+    out: X=sky130_fd_sc_hd__clkbuf_8_2_X
+    in : A=sky130_fd_sc_hd__clkbuf_8_9_A
+
+sky130_fd_sc_hd__mux2_1_5  [mux2_1]
+    out: X=sky130_fd_sc_hd__mux2_1_5_X
+    in : A0=sky130_fd_sc_hd__and3_2_7_X, A1=sky130_fd_sc_hd__mux2_1_5_A1, S=sky130_fd_sc_hd__xor2_2_7_A
+
+sky130_fd_sc_hd__a21o_2_9  [a21o_2]
+    out: X=sky130_fd_sc_hd__a21o_2_9_X
+    in : A1=sky130_fd_sc_hd__xor2_2_9_A, A2=sky130_fd_sc_hd__inv_2_5_A, B1=sky130_fd_sc_hd__xor2_2_4_A
+
+sky130_fd_sc_hd__a211oi_2_1  [a211oi_2]
+    out: Y=sky130_fd_sc_hd__nor3_2_3_A
+    in : A1=sky130_fd_sc_hd__inv_2_22_Y, A2=sky130_fd_sc_hd__a32o_2_3_B1, B1=sky130_fd_sc_hd__or4b_2_8_C, C1=sky130_fd_sc_hd__or4b_2_8_A
+
+sky130_fd_sc_hd__o221a_2_1  [o221a_2]
+    out: X=sky130_fd_sc_hd__o221a_2_1_X
+    in : A1=sky130_fd_sc_hd__xor2_2_16_A, A2=sky130_fd_sc_hd__or2_2_10_X, B1=sky130_fd_sc_hd__nor2_2_46_A, B2=sky130_fd_sc_hd__xnor2_2_21_Y, C1=sky130_fd_sc_hd__o21ai_2_3_Y
+
+sky130_fd_sc_hd__and2b_2_5  [and2b_2]
+    out: X=sky130_fd_sc_hd__xor2_2_6_B
+    in : A_N=sky130_fd_sc_hd__and4bb_2_0_X, B=sky130_fd_sc_hd__o22ai_2_0_Y
+
+sky130_fd_sc_hd__a21oi_2_0  [a21oi_2]
+    out: Y=sky130_fd_sc_hd__a32o_2_1_B2
+    in : A1=sky130_fd_sc_hd__or3_2_3_B, A2=sky130_fd_sc_hd__nor2_2_3_B, B1=sky130_fd_sc_hd__or4_2_0_A
+
+sky130_fd_sc_hd__and4_2_1  [and4_2]
+    out: X=sky130_fd_sc_hd__and4_2_1_X
+    in : A=sky130_fd_sc_hd__and4_2_1_A, B=sky130_fd_sc_hd__and4_2_1_B, C=sky130_fd_sc_hd__and4_2_1_C, D=sky130_fd_sc_hd__and4_2_1_D
+
+sky130_fd_sc_hd__decap_3_16  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_27  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_38  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_49  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__a31o_2_19  [a31o_2]
+    out: X=sky130_fd_sc_hd__a31o_2_19_X
+    in : A1=I, A2=sky130_fd_sc_hd__inv_2_7_A, A3=sky130_fd_sc_hd__nand4_2_8_D, B1=sky130_fd_sc_hd__nand4_2_8_C
+
+sky130_fd_sc_hd__o211a_2_0  [o211a_2]
+    out: X=sky130_fd_sc_hd__o211a_2_0_X
+    in : A1=sky130_fd_sc_hd__xor2_2_7_A, A2=sky130_fd_sc_hd__xor2_2_0_B, B1=sky130_fd_sc_hd__xor2_2_9_A, C1=sky130_fd_sc_hd__xor2_2_4_A
+
+sky130_fd_sc_hd__and3_2_22  [and3_2]
+    out: X=O_5_
+    in : A=sky130_fd_sc_hd__or2_2_11_B, B=sky130_fd_sc_hd__o31a_2_8_X, C=sky130_fd_sc_hd__and3_2_25_C
+
+sky130_fd_sc_hd__and3_2_11  [and3_2]
+    out: X=sky130_fd_sc_hd__and3_2_11_X
+    in : A=sky130_fd_sc_hd__and4_2_3_A, B=sky130_fd_sc_hd__and4_2_3_B, C=sky130_fd_sc_hd__inv_2_10_A
+
+sky130_fd_sc_hd__nand4_2_14  [nand4_2]
+    out: Y=sky130_fd_sc_hd__and3_2_25_C
+    in : A=sky130_fd_sc_hd__or2_2_8_B, B=sky130_fd_sc_hd__or2_2_9_B, C=sky130_fd_sc_hd__or2_2_9_A, D=sky130_fd_sc_hd__or3b_2_0_A
+
+sky130_fd_sc_hd__and4bb_2_9  [and4bb_2]
+    out: X=sky130_fd_sc_hd__nand4_2_9_D
+    in : A_N=sky130_fd_sc_hd__or4_2_4_B, B_N=sky130_fd_sc_hd__or4_2_4_D, C=sky130_fd_sc_hd__or4_2_4_C, D=sky130_fd_sc_hd__or4_2_4_A
+
+sky130_fd_sc_hd__xnor2_2_15  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__a22o_2_9_A1
+    in : A=sky130_fd_sc_hd__a22o_2_4_B2, B=sky130_fd_sc_hd__a22o_2_22_X
+
+sky130_fd_sc_hd__xnor2_2_26  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_40_A
+    in : A=sky130_fd_sc_hd__xnor2_2_26_A, B=sky130_fd_sc_hd__xnor2_2_26_B
+
+sky130_fd_sc_hd__nor3b_2_4  [nor3b_2]
+    out: Y=sky130_fd_sc_hd__or3_2_17_B
+    in : A=sky130_fd_sc_hd__nor3_2_3_B, B=sky130_fd_sc_hd__nor3_2_3_C, C_N=sky130_fd_sc_hd__nor3_2_3_A
+
+sky130_fd_sc_hd__clkbuf_8_3  [clkbuf_8]
+    out: X=sky130_fd_sc_hd__clkbuf_8_3_X
+    in : A=sky130_fd_sc_hd__clkbuf_8_9_A
+
+sky130_fd_sc_hd__mux2_1_6  [mux2_1]
+    out: X=sky130_fd_sc_hd__mux2_1_6_X
+    in : A0=sky130_fd_sc_hd__inv_2_9_A, A1=sky130_fd_sc_hd__inv_2_8_Y, S=sky130_fd_sc_hd__inv_2_7_Y
+
+sky130_fd_sc_hd__a211oi_2_2  [a211oi_2]
+    out: Y=sky130_fd_sc_hd__or3_2_17_A
+    in : A1=sky130_fd_sc_hd__or3b_2_0_A, A2=sky130_fd_sc_hd__or2_2_9_A, B1=sky130_fd_sc_hd__or2_2_9_B, C1=sky130_fd_sc_hd__or2_2_8_B
+
+sky130_fd_sc_hd__o221a_2_2  [o221a_2]
+    out: X=sky130_fd_sc_hd__o221a_2_2_X
+    in : A1=sky130_fd_sc_hd__or2_2_8_X, A2=sky130_fd_sc_hd__nor2_2_32_B, B1=sky130_fd_sc_hd__nor2_2_32_Y, B2=sky130_fd_sc_hd__o221a_2_2_B2, C1=sky130_fd_sc_hd__o221a_2_2_C1
+
+sky130_fd_sc_hd__or4b_2_0  [or4b_2]
+    out: X=sky130_fd_sc_hd__or4_2_1_C
+    in : A=sky130_fd_sc_hd__or4b_2_3_A, B=sky130_fd_sc_hd__or4b_2_2_C, C=sky130_fd_sc_hd__or4b_2_3_C, D_N=sky130_fd_sc_hd__or4b_2_3_B
+
+sky130_fd_sc_hd__and2b_2_6  [and2b_2]
+    out: X=sky130_fd_sc_hd__and2b_2_6_X
+    in : A_N=sky130_fd_sc_hd__or2_2_9_B, B=sky130_fd_sc_hd__or3b_2_0_A
+
+sky130_fd_sc_hd__a21oi_2_1  [a21oi_2]
+    out: Y=sky130_fd_sc_hd__o32a_2_0_A3
+    in : A1=sky130_fd_sc_hd__or2_2_4_A, A2=sky130_fd_sc_hd__and3_2_0_C, B1=sky130_fd_sc_hd__or3_2_0_X
+
+sky130_fd_sc_hd__decap_3_17  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__and4_2_2  [and4_2]
+    out: X=sky130_fd_sc_hd__inv_2_5_A
+    in : A=sky130_fd_sc_hd__inv_2_9_A, B=sky130_fd_sc_hd__inv_2_7_A, C=sky130_fd_sc_hd__xor2_2_0_B, D=sky130_fd_sc_hd__xor2_2_7_A
+
+sky130_fd_sc_hd__decap_3_39  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_28  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__o211a_2_1  [o211a_2]
+    out: X=sky130_fd_sc_hd__or3_2_4_C
+    in : A1=sky130_fd_sc_hd__or3_2_3_A, A2=sky130_fd_sc_hd__or2_2_2_A, B1=sky130_fd_sc_hd__or2_2_4_A, C1=sky130_fd_sc_hd__nor2_2_5_A
+
+sky130_fd_sc_hd__and3_2_23  [and3_2]
+    out: X=O_7_
+    in : A=sky130_fd_sc_hd__or2_2_11_B, B=sky130_fd_sc_hd__o31a_2_3_X, C=sky130_fd_sc_hd__and3_2_25_C
+
+sky130_fd_sc_hd__and3_2_12  [and3_2]
+    out: X=sky130_fd_sc_hd__and3_2_13_C
+    in : A=sky130_fd_sc_hd__and3_2_12_A, B=sky130_fd_sc_hd__and3_2_12_B, C=sky130_fd_sc_hd__and3_2_12_C
+
+sky130_fd_sc_hd__xnor2_2_16  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__xnor2_2_26_B
+    in : A=sky130_fd_sc_hd__xor2_2_20_A, B=sky130_fd_sc_hd__xor2_2_17_B
+
+sky130_fd_sc_hd__xnor2_2_27  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__o32a_2_2_A2
+    in : A=sky130_fd_sc_hd__or2_2_8_B, B=sky130_fd_sc_hd__and3_2_16_X
+
+sky130_fd_sc_hd__clkbuf_8_4  [clkbuf_8]
+    out: X=sky130_fd_sc_hd__clkbuf_8_4_X
+    in : A=sky130_fd_sc_hd__clkbuf_8_9_A
+
+sky130_fd_sc_hd__dfrtp_2_80  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__nand4_2_9_C
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_9_X, D=sky130_fd_sc_hd__o21a_2_21_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__mux2_1_7  [mux2_1]
+    out: X=sky130_fd_sc_hd__mux2_1_7_X
+    in : A0=sky130_fd_sc_hd__mux2_1_7_A0, A1=sky130_fd_sc_hd__or2_2_7_X, S=sky130_fd_sc_hd__inv_2_8_A
+
+sky130_fd_sc_hd__o2bb2a_2_0  [o2bb2a_2]
+    out: X=sky130_fd_sc_hd__xnor2_2_8_B
+    in : A1_N=sky130_fd_sc_hd__or4_2_4_C, A2_N=sky130_fd_sc_hd__xor2_2_1_B, B1=sky130_fd_sc_hd__nand2_2_2_Y, B2=sky130_fd_sc_hd__xor2_2_9_A
+
+sky130_fd_sc_hd__or4b_2_1  [or4b_2]
+    out: X=sky130_fd_sc_hd__or4_2_3_C
+    in : A=sky130_fd_sc_hd__or4b_2_3_B, B=sky130_fd_sc_hd__or4b_2_2_C, C=sky130_fd_sc_hd__or4b_2_3_C, D_N=sky130_fd_sc_hd__or4b_2_3_A
+
+sky130_fd_sc_hd__xor2_2_20  [xor2_2]
+    out: X=sky130_fd_sc_hd__xor2_2_20_X
+    in : A=sky130_fd_sc_hd__xor2_2_20_A, B=sky130_fd_sc_hd__xor2_2_20_B
+
+sky130_fd_sc_hd__and2b_2_7  [and2b_2]
+    out: X=sky130_fd_sc_hd__o31a_2_0_A1
+    in : A_N=sky130_fd_sc_hd__or2_2_9_A, B=sky130_fd_sc_hd__or2_2_9_B
+
+sky130_fd_sc_hd__a21oi_2_2  [a21oi_2]
+    out: Y=sky130_fd_sc_hd__a21oi_2_2_Y
+    in : A1=sky130_fd_sc_hd__or2_2_5_A, A2=sky130_fd_sc_hd__o21ba_2_0_X, B1=sky130_fd_sc_hd__or4_2_0_A
+
+sky130_fd_sc_hd__and4_2_3  [and4_2]
+    out: X=sky130_fd_sc_hd__and4_2_3_X
+    in : A=sky130_fd_sc_hd__and4_2_3_A, B=sky130_fd_sc_hd__and4_2_3_B, C=sky130_fd_sc_hd__and4_2_3_C, D=sky130_fd_sc_hd__nor3_2_2_Y
+
+sky130_fd_sc_hd__decap_3_18  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_29  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__o211a_2_2  [o211a_2]
+    out: X=sky130_fd_sc_hd__or4b_2_3_B
+    in : A1=sky130_fd_sc_hd__o311a_2_0_X, A2=sky130_fd_sc_hd__a31o_2_5_X, B1=sky130_fd_sc_hd__nor2_2_20_Y, C1=sky130_fd_sc_hd__or3_2_7_X
+
+sky130_fd_sc_hd__and3_2_24  [and3_2]
+    out: X=O_2_
+    in : A=sky130_fd_sc_hd__or2_2_11_B, B=sky130_fd_sc_hd__o31a_2_7_X, C=sky130_fd_sc_hd__and3_2_25_C
+
+sky130_fd_sc_hd__and3_2_13  [and3_2]
+    out: X=sky130_fd_sc_hd__and4b_2_3_D
+    in : A=sky130_fd_sc_hd__and4_2_5_X, B=sky130_fd_sc_hd__and4_2_6_X, C=sky130_fd_sc_hd__and3_2_13_C
+
+sky130_fd_sc_hd__or2_2_10  [or2_2]
+    out: X=sky130_fd_sc_hd__or2_2_10_X
+    in : A=sky130_fd_sc_hd__or2_2_10_A, B=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__xnor2_2_28  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__xnor2_2_28_Y
+    in : A=sky130_fd_sc_hd__or2_2_9_A, B=sky130_fd_sc_hd__or3b_2_0_A
+
+sky130_fd_sc_hd__xnor2_2_17  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__xnor2_2_26_A
+    in : A=sky130_fd_sc_hd__xor2_2_14_B, B=sky130_fd_sc_hd__xor2_2_19_A
+
+sky130_fd_sc_hd__clkbuf_8_5  [clkbuf_8]
+    out: X=sky130_fd_sc_hd__clkbuf_8_5_X
+    in : A=sky130_fd_sc_hd__clkbuf_8_9_A
+
+sky130_fd_sc_hd__dfrtp_2_70  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__o21a_2_27_A1
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_11_X, D=sky130_fd_sc_hd__dfrtp_2_70_D, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_81  [dfrtp_2]
+    out: Q=success
+    in : CLK=sky130_fd_sc_hd__dfxtp_2_2_CLK, D=sky130_fd_sc_hd__a32o_2_4_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__mux2_1_8  [mux2_1]
+    out: X=sky130_fd_sc_hd__mux2_1_8_X
+    in : A0=sky130_fd_sc_hd__mux2_1_8_A0, A1=sky130_fd_sc_hd__mux2_1_8_A1, S=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__or4b_2_2  [or4b_2]
+    out: X=sky130_fd_sc_hd__or4_2_2_C
+    in : A=sky130_fd_sc_hd__or4b_2_3_A, B=sky130_fd_sc_hd__or4b_2_3_B, C=sky130_fd_sc_hd__or4b_2_2_C, D_N=sky130_fd_sc_hd__or4b_2_3_C
+
+sky130_fd_sc_hd__xor2_2_10  [xor2_2]
+    out: X=sky130_fd_sc_hd__xor2_2_10_X
+    in : A=sky130_fd_sc_hd__or3_2_8_C, B=sky130_fd_sc_hd__and4_2_4_X
+
+sky130_fd_sc_hd__and2b_2_8  [and2b_2]
+    out: X=sky130_fd_sc_hd__and3_2_10_B
+    in : A_N=sky130_fd_sc_hd__and4_2_3_A, B=sky130_fd_sc_hd__or3_2_8_A
+
+sky130_fd_sc_hd__a21oi_2_3  [a21oi_2]
+    out: Y=sky130_fd_sc_hd__or3_2_7_C
+    in : A1=sky130_fd_sc_hd__nand2_2_3_Y, A2=sky130_fd_sc_hd__or3_2_4_X, B1=sky130_fd_sc_hd__or4_2_0_B
+
+sky130_fd_sc_hd__and4_2_4  [and4_2]
+    out: X=sky130_fd_sc_hd__and4_2_4_X
+    in : A=sky130_fd_sc_hd__nor3_2_2_B, B=sky130_fd_sc_hd__and4_2_4_B, C=sky130_fd_sc_hd__inv_2_10_A, D=sky130_fd_sc_hd__and4_2_4_D
+
+sky130_fd_sc_hd__decap_3_19  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__nand2b_2_0  [nand2b_2]
+    out: Y=sky130_fd_sc_hd__mux2_1_4_S
+    in : A_N=sky130_fd_sc_hd__and3_2_0_C, B=sky130_fd_sc_hd__or2_2_4_B
+
+sky130_fd_sc_hd__o211a_2_3  [o211a_2]
+    out: X=sky130_fd_sc_hd__or4b_2_3_A
+    in : A1=sky130_fd_sc_hd__xor2_2_5_X, A2=sky130_fd_sc_hd__a21o_2_3_X, B1=sky130_fd_sc_hd__o211ai_2_0_Y, C1=sky130_fd_sc_hd__nor2_2_20_Y
+
+sky130_fd_sc_hd__and3_2_25  [and3_2]
+    out: X=O_0_
+    in : A=sky130_fd_sc_hd__or2_2_11_B, B=sky130_fd_sc_hd__o31a_2_9_X, C=sky130_fd_sc_hd__and3_2_25_C
+
+sky130_fd_sc_hd__and3_2_14  [and3_2]
+    out: X=sky130_fd_sc_hd__xor2_2_11_B
+    in : A=sky130_fd_sc_hd__or4_2_4_B, B=sky130_fd_sc_hd__or4_2_4_A, C=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__o211ai_2_0  [o211ai_2]
+    out: Y=sky130_fd_sc_hd__o211ai_2_0_Y
+    in : A1=sky130_fd_sc_hd__or2_2_5_A, A2=sky130_fd_sc_hd__mux2_1_2_X, B1=sky130_fd_sc_hd__a211o_2_1_X, C1=sky130_fd_sc_hd__xor2_2_5_X
+
+sky130_fd_sc_hd__or2_2_11  [or2_2]
+    out: X=sky130_fd_sc_hd__or2_2_11_X
+    in : A=sky130_fd_sc_hd__or2_2_11_A, B=sky130_fd_sc_hd__or2_2_11_B
+
+sky130_fd_sc_hd__xnor2_2_18  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__xnor2_2_18_Y
+    in : A=sky130_fd_sc_hd__or3_2_9_X, B=sky130_fd_sc_hd__xor2_2_15_X
+
+sky130_fd_sc_hd__clkbuf_8_6  [clkbuf_8]
+    out: X=sky130_fd_sc_hd__clkbuf_8_6_X
+    in : A=sky130_fd_sc_hd__clkbuf_8_9_A
+
+sky130_fd_sc_hd__dfrtp_2_60  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__nand4_2_7_C
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_8_X, D=sky130_fd_sc_hd__o21a_2_19_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_82  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__a32o_2_3_B1
+    in : CLK=sky130_fd_sc_hd__dfxtp_2_2_CLK, D=sky130_fd_sc_hd__a32o_2_3_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_71  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__nand4_2_8_C
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_9_X, D=sky130_fd_sc_hd__o21a_2_23_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__mux2_1_9  [mux2_1]
+    out: X=sky130_fd_sc_hd__mux2_1_9_X
+    in : A0=sky130_fd_sc_hd__mux2_1_9_A0, A1=sky130_fd_sc_hd__mux2_1_9_A1, S=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__or4_2_0  [or4_2]
+    out: X=sky130_fd_sc_hd__or4_2_0_X
+    in : A=sky130_fd_sc_hd__or4_2_0_A, B=sky130_fd_sc_hd__or4_2_0_B, C=sky130_fd_sc_hd__or4_2_0_C, D=sky130_fd_sc_hd__or4_2_0_D
+
+sky130_fd_sc_hd__or4b_2_3  [or4b_2]
+    out: X=sky130_fd_sc_hd__or4_2_5_C
+    in : A=sky130_fd_sc_hd__or4b_2_3_A, B=sky130_fd_sc_hd__or4b_2_3_B, C=sky130_fd_sc_hd__or4b_2_3_C, D_N=sky130_fd_sc_hd__or4b_2_2_C
+
+sky130_fd_sc_hd__xor2_2_11  [xor2_2]
+    out: X=sky130_fd_sc_hd__xor2_2_11_X
+    in : A=sky130_fd_sc_hd__or4_2_4_C, B=sky130_fd_sc_hd__xor2_2_11_B
+
+sky130_fd_sc_hd__and2b_2_9  [and2b_2]
+    out: X=sky130_fd_sc_hd__and2b_2_9_X
+    in : A_N=sky130_fd_sc_hd__and4_2_4_X, B=sky130_fd_sc_hd__and2b_2_9_B
+
+sky130_fd_sc_hd__clkbuf_4_0  [clkbuf_4]
+    out: X=sky130_fd_sc_hd__clkbuf_4_0_X
+    in : A=sky130_fd_sc_hd__clkbuf_8_1_X
+
+sky130_fd_sc_hd__a21oi_2_4  [a21oi_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_21_A
+    in : A1=sky130_fd_sc_hd__and3_2_4_A, A2=sky130_fd_sc_hd__and3_2_4_B, B1=sky130_fd_sc_hd__or3_2_5_X
+
+sky130_fd_sc_hd__and4_2_5  [and4_2]
+    out: X=sky130_fd_sc_hd__and4_2_5_X
+    in : A=sky130_fd_sc_hd__and4_2_5_A, B=sky130_fd_sc_hd__and4_2_5_B, C=sky130_fd_sc_hd__and4_2_5_C, D=sky130_fd_sc_hd__and4_2_5_D
+
+sky130_fd_sc_hd__nand2b_2_1  [nand2b_2]
+    out: Y=sky130_fd_sc_hd__nand2b_2_1_Y
+    in : A_N=sky130_fd_sc_hd__o21a_2_4_A1, B=sky130_fd_sc_hd__o21a_2_4_A2
+
+sky130_fd_sc_hd__o211a_2_4  [o211a_2]
+    out: X=sky130_fd_sc_hd__or4b_2_3_C
+    in : A1=sky130_fd_sc_hd__xor2_2_5_X, A2=sky130_fd_sc_hd__o21ai_2_1_Y, B1=sky130_fd_sc_hd__a221o_2_0_X, C1=sky130_fd_sc_hd__nor2_2_20_Y
+
+sky130_fd_sc_hd__and3_2_15  [and3_2]
+    out: X=sky130_fd_sc_hd__o31a_2_2_A1
+    in : A=sky130_fd_sc_hd__or3b_2_0_A, B=sky130_fd_sc_hd__or2_2_9_A, C=sky130_fd_sc_hd__or2_2_9_B
+
+sky130_fd_sc_hd__or2_2_12  [or2_2]
+    out: X=sky130_fd_sc_hd__or2_2_12_X
+    in : A=sky130_fd_sc_hd__or2_2_12_A, B=sky130_fd_sc_hd__or2_2_12_B
+
+sky130_fd_sc_hd__xnor2_2_19  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__xnor2_2_19_Y
+    in : A=sky130_fd_sc_hd__xnor2_2_21_B, B=sky130_fd_sc_hd__xor2_2_19_X
+
+sky130_fd_sc_hd__clkbuf_8_7  [clkbuf_8]
+    out: X=sky130_fd_sc_hd__clkbuf_8_7_X
+    in : A=sky130_fd_sc_hd__clkbuf_8_9_A
+
+sky130_fd_sc_hd__dfrtp_2_61  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__or4_2_9_A
+    in : CLK=sky130_fd_sc_hd__dfxtp_2_3_CLK, D=sky130_fd_sc_hd__a21o_2_18_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_50  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__xor2_2_19_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_7_X, D=sky130_fd_sc_hd__o22a_2_3_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_83  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__or2_2_11_B
+    in : CLK=sky130_fd_sc_hd__dfxtp_2_2_CLK, D=sky130_fd_sc_hd__or2_2_11_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_72  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__inv_2_20_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_11_X, D=sky130_fd_sc_hd__o21a_2_26_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__inv_2_20  [inv_2]
+    out: Y=sky130_fd_sc_hd__or4_2_6_B
+    in : A=sky130_fd_sc_hd__inv_2_20_A
+
+sky130_fd_sc_hd__or4_2_1  [or4_2]
+    out: X=sky130_fd_sc_hd__or4_2_1_X
+    in : A=sky130_fd_sc_hd__or4_2_1_A, B=sky130_fd_sc_hd__or4_2_1_B, C=sky130_fd_sc_hd__or4_2_1_C, D=sky130_fd_sc_hd__or4_2_1_D
+
+sky130_fd_sc_hd__or4b_2_4  [or4b_2]
+    out: X=sky130_fd_sc_hd__or4_2_9_C
+    in : A=sky130_fd_sc_hd__or4_2_4_B, B=sky130_fd_sc_hd__or4_2_4_D, C=sky130_fd_sc_hd__or4_2_4_C, D_N=sky130_fd_sc_hd__or4_2_4_A
+
+sky130_fd_sc_hd__xor2_2_12  [xor2_2]
+    out: X=sky130_fd_sc_hd__xor2_2_12_X
+    in : A=sky130_fd_sc_hd__xor2_2_14_B, B=sky130_fd_sc_hd__o31a_2_1_X
+
+sky130_fd_sc_hd__decap_3_200  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__clkbuf_4_1  [clkbuf_4]
+    out: X=sky130_fd_sc_hd__clkbuf_4_1_X
+    in : A=sky130_fd_sc_hd__clkbuf_8_0_X
+
+sky130_fd_sc_hd__a21oi_2_5  [a21oi_2]
+    out: Y=sky130_fd_sc_hd__a21oi_2_5_Y
+    in : A1=sky130_fd_sc_hd__xor2_2_0_B, A2=sky130_fd_sc_hd__xor2_2_4_A, B1=sky130_fd_sc_hd__xor2_2_9_A
+
+sky130_fd_sc_hd__and4_2_6  [and4_2]
+    out: X=sky130_fd_sc_hd__and4_2_6_X
+    in : A=sky130_fd_sc_hd__and4_2_6_A, B=sky130_fd_sc_hd__and4_2_6_B, C=sky130_fd_sc_hd__and4_2_6_C, D=sky130_fd_sc_hd__and4_2_6_D
+
+sky130_fd_sc_hd__nand2b_2_2  [nand2b_2]
+    out: Y=sky130_fd_sc_hd__nand2b_2_2_Y
+    in : A_N=sky130_fd_sc_hd__and2b_2_3_B, B=sky130_fd_sc_hd__nand4_2_1_Y
+
+sky130_fd_sc_hd__o211a_2_5  [o211a_2]
+    out: X=sky130_fd_sc_hd__or4b_2_2_C
+    in : A1=sky130_fd_sc_hd__xor2_2_5_X, A2=sky130_fd_sc_hd__mux2_1_3_X, B1=sky130_fd_sc_hd__a211o_2_0_X, C1=sky130_fd_sc_hd__nor2_2_20_Y
+
+sky130_fd_sc_hd__a221oi_2_0  [a221oi_2]
+    out: Y=sky130_fd_sc_hd__dfrtp_2_45_D
+    in : A1=sky130_fd_sc_hd__inv_2_7_A, A2=sky130_fd_sc_hd__inv_2_9_A, B1=sky130_fd_sc_hd__and4_2_7_X, B2=sky130_fd_sc_hd__or4_2_4_D, C1=sky130_fd_sc_hd__a41oi_2_0_Y
+
+sky130_fd_sc_hd__and3_2_16  [and3_2]
+    out: X=sky130_fd_sc_hd__and3_2_16_X
+    in : A=sky130_fd_sc_hd__or3b_2_0_A, B=sky130_fd_sc_hd__or2_2_9_A, C=sky130_fd_sc_hd__or2_2_9_B
+
+sky130_fd_sc_hd__clkbuf_8_8  [clkbuf_8]
+    out: X=sky130_fd_sc_hd__clkbuf_8_8_X
+    in : A=sky130_fd_sc_hd__clkbuf_8_9_A
+
+sky130_fd_sc_hd__dfrtp_2_51  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__xor2_2_19_B
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_7_X, D=sky130_fd_sc_hd__a221o_2_2_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_40  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__mux2_1_9_A0
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_5_X, D=sky130_fd_sc_hd__mux2_1_9_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_73  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__nand4_2_13_C
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_11_X, D=sky130_fd_sc_hd__o21a_2_25_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_62  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__inv_2_18_A
+    in : CLK=sky130_fd_sc_hd__dfxtp_2_3_CLK, D=sky130_fd_sc_hd__o21a_2_20_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__inv_2_21  [inv_2]
+    out: Y=sky130_fd_sc_hd__inv_2_21_Y
+    in : A=sky130_fd_sc_hd__or2_2_8_B
+
+sky130_fd_sc_hd__inv_2_10  [inv_2]
+    out: Y=sky130_fd_sc_hd__inv_2_10_Y
+    in : A=sky130_fd_sc_hd__inv_2_10_A
+
+sky130_fd_sc_hd__nand2_2_0  [nand2_2]
+    out: Y=sky130_fd_sc_hd__and3_2_1_C
+    in : A=sky130_fd_sc_hd__or2_2_1_X, B=sky130_fd_sc_hd__or3_2_0_B
+
+sky130_fd_sc_hd__or4_2_2  [or4_2]
+    out: X=sky130_fd_sc_hd__or4_2_2_X
+    in : A=sky130_fd_sc_hd__or4_2_2_A, B=sky130_fd_sc_hd__or4_2_2_B, C=sky130_fd_sc_hd__or4_2_2_C, D=sky130_fd_sc_hd__or4_2_2_D
+
+sky130_fd_sc_hd__or4b_2_5  [or4b_2]
+    out: X=sky130_fd_sc_hd__or4_2_8_C
+    in : A=sky130_fd_sc_hd__or4_2_4_B, B=sky130_fd_sc_hd__or4_2_4_A, C=sky130_fd_sc_hd__or4_2_4_D, D_N=sky130_fd_sc_hd__or4_2_4_C
+
+sky130_fd_sc_hd__xor2_2_13  [xor2_2]
+    out: X=sky130_fd_sc_hd__xor2_2_13_X
+    in : A=sky130_fd_sc_hd__or2_2_12_A, B=sky130_fd_sc_hd__xor2_2_19_B
+
+sky130_fd_sc_hd__decap_3_201  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__and4bb_2_10  [and4bb_2]
+    out: X=sky130_fd_sc_hd__nand4_2_8_D
+    in : A_N=sky130_fd_sc_hd__or4_2_4_D, B_N=sky130_fd_sc_hd__or4_2_4_C, C=sky130_fd_sc_hd__or4_2_4_A, D=sky130_fd_sc_hd__or4_2_4_B
+
+sky130_fd_sc_hd__clkbuf_4_2  [clkbuf_4]
+    out: X=sky130_fd_sc_hd__clkbuf_4_2_X
+    in : A=sky130_fd_sc_hd__clkbuf_8_4_X
+
+sky130_fd_sc_hd__a21oi_2_6  [a21oi_2]
+    out: Y=sky130_fd_sc_hd__a21oi_2_6_Y
+    in : A1=sky130_fd_sc_hd__xor2_2_4_A, A2=sky130_fd_sc_hd__xnor2_2_4_A, B1=sky130_fd_sc_hd__or3_2_5_B
+
+sky130_fd_sc_hd__and4_2_7  [and4_2]
+    out: X=sky130_fd_sc_hd__and4_2_7_X
+    in : A=sky130_fd_sc_hd__or4_2_4_B, B=sky130_fd_sc_hd__or4_2_4_A, C=sky130_fd_sc_hd__or4_2_4_C, D=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__nand2b_2_3  [nand2b_2]
+    out: Y=sky130_fd_sc_hd__nand2b_2_3_Y
+    in : A_N=sky130_fd_sc_hd__o21a_2_8_A1, B=sky130_fd_sc_hd__o21a_2_8_A2
+
+sky130_fd_sc_hd__o211a_2_6  [o211a_2]
+    out: X=sky130_fd_sc_hd__or3_2_7_B
+    in : A1=sky130_fd_sc_hd__nand2_2_3_Y, A2=sky130_fd_sc_hd__or3_2_4_B, B1=sky130_fd_sc_hd__or4_2_0_B, C1=sky130_fd_sc_hd__or3_2_1_X
+
+sky130_fd_sc_hd__and3_2_17  [and3_2]
+    out: X=sky130_fd_sc_hd__and3_2_17_X
+    in : A=sky130_fd_sc_hd__or3b_2_0_A, B=sky130_fd_sc_hd__inv_2_14_Y, C=sky130_fd_sc_hd__and3_2_17_C
+
+sky130_fd_sc_hd__a21bo_2_0  [a21bo_2]
+    out: X=sky130_fd_sc_hd__a31o_2_5_A2
+    in : A1=sky130_fd_sc_hd__or3_2_0_B, A2=sky130_fd_sc_hd__or2_2_3_X, B1_N=sky130_fd_sc_hd__a32o_2_1_B2
+
+sky130_fd_sc_hd__a31oi_2_0  [a31oi_2]
+    out: Y=sky130_fd_sc_hd__o31a_2_0_A2
+    in : A1=sky130_fd_sc_hd__nor3_2_1_C, A2=sky130_fd_sc_hd__o32ai_2_0_B1, A3=sky130_fd_sc_hd__nand2b_2_8_Y, B1=sky130_fd_sc_hd__and3b_2_0_C
+
+sky130_fd_sc_hd__decap_3_0  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__o311a_2_0  [o311a_2]
+    out: X=sky130_fd_sc_hd__o311a_2_0_X
+    in : A1=sky130_fd_sc_hd__nor2_2_26_Y, A2=sky130_fd_sc_hd__or4_2_0_A, A3=sky130_fd_sc_hd__and3_2_0_X, B1=sky130_fd_sc_hd__or4_2_0_B, C1=sky130_fd_sc_hd__o311a_2_0_C1
+
+sky130_fd_sc_hd__a21oi_2_10  [a21oi_2]
+    out: Y=sky130_fd_sc_hd__xor2_2_1_B
+    in : A1=sky130_fd_sc_hd__xor2_2_0_B, A2=sky130_fd_sc_hd__xor2_2_7_X, B1=sky130_fd_sc_hd__nor2_2_6_Y
+
+sky130_fd_sc_hd__clkbuf_8_9  [clkbuf_8]
+    out: X=sky130_fd_sc_hd__clkbuf_8_9_X
+    in : A=sky130_fd_sc_hd__clkbuf_8_9_A
+
+sky130_fd_sc_hd__dfrtp_2_52  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__or4_2_5_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_4_9_A, D=sky130_fd_sc_hd__a21o_2_13_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_30  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__mux2_1_8_A1
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_2_X, D=sky130_fd_sc_hd__mux2_1_14_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_41  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__a22o_2_2_A2
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_8_X, D=sky130_fd_sc_hd__mux2_1_13_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_74  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__nand4_2_12_C
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_11_X, D=sky130_fd_sc_hd__o21a_2_27_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_63  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__o21a_2_23_A1
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_9_X, D=sky130_fd_sc_hd__dfrtp_2_63_D, RESET_B=rst_n
+
+sky130_fd_sc_hd__inv_2_11  [inv_2]
+    out: Y=sky130_fd_sc_hd__inv_2_23_A
+    in : A=sky130_fd_sc_hd__inv_2_11_A
+
+sky130_fd_sc_hd__inv_2_22  [inv_2]
+    out: Y=sky130_fd_sc_hd__inv_2_22_Y
+    in : A=success
+
+sky130_fd_sc_hd__nand2_2_1  [nand2_2]
+    out: Y=sky130_fd_sc_hd__and2_2_2_A
+    in : A=sky130_fd_sc_hd__xor2_2_3_A, B=sky130_fd_sc_hd__or2_2_0_B
+
+sky130_fd_sc_hd__or4_2_3  [or4_2]
+    out: X=sky130_fd_sc_hd__or4_2_3_X
+    in : A=sky130_fd_sc_hd__or4_2_3_A, B=sky130_fd_sc_hd__or4_2_3_B, C=sky130_fd_sc_hd__or4_2_3_C, D=sky130_fd_sc_hd__or4_2_3_D
+
+sky130_fd_sc_hd__o32a_2_0  [o32a_2]
+    out: X=sky130_fd_sc_hd__o32a_2_0_X
+    in : A1=sky130_fd_sc_hd__or4_2_0_A, A2=sky130_fd_sc_hd__and3_2_0_X, A3=sky130_fd_sc_hd__o32a_2_0_A3, B1=sky130_fd_sc_hd__o32a_2_1_B2, B2=sky130_fd_sc_hd__nor2_2_3_Y
+
+sky130_fd_sc_hd__or4b_2_6  [or4b_2]
+    out: X=sky130_fd_sc_hd__or4_2_7_C
+    in : A=sky130_fd_sc_hd__or4_2_4_A, B=sky130_fd_sc_hd__or4_2_4_D, C=sky130_fd_sc_hd__or4_2_4_C, D_N=sky130_fd_sc_hd__or4_2_4_B
+
+sky130_fd_sc_hd__xor2_2_14  [xor2_2]
+    out: X=sky130_fd_sc_hd__xor2_2_14_X
+    in : A=sky130_fd_sc_hd__xor2_2_16_A, B=sky130_fd_sc_hd__xor2_2_14_B
+
+sky130_fd_sc_hd__decap_3_202  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__and4bb_2_11  [and4bb_2]
+    out: X=sky130_fd_sc_hd__nand4_2_12_D
+    in : A_N=sky130_fd_sc_hd__or4_2_4_B, B_N=sky130_fd_sc_hd__or4_2_4_C, C=sky130_fd_sc_hd__or4_2_4_D, D=sky130_fd_sc_hd__or4_2_4_A
+
+sky130_fd_sc_hd__clkbuf_4_3  [clkbuf_4]
+    out: X=sky130_fd_sc_hd__clkbuf_4_3_X
+    in : A=sky130_fd_sc_hd__clkbuf_8_3_X
+
+sky130_fd_sc_hd__a21oi_2_7  [a21oi_2]
+    out: Y=sky130_fd_sc_hd__xor2_2_5_A
+    in : A1=sky130_fd_sc_hd__xor2_2_6_A, A2=sky130_fd_sc_hd__o22ai_2_0_Y, B1=sky130_fd_sc_hd__and4bb_2_0_X
+
+sky130_fd_sc_hd__nand2b_2_4  [nand2b_2]
+    out: Y=sky130_fd_sc_hd__nand2b_2_4_Y
+    in : A_N=sky130_fd_sc_hd__o21a_2_30_A1, B=sky130_fd_sc_hd__nand4_2_5_Y
+
+sky130_fd_sc_hd__o211a_2_7  [o211a_2]
+    out: X=sky130_fd_sc_hd__o211a_2_7_X
+    in : A1=sky130_fd_sc_hd__and3_2_7_C, A2=sky130_fd_sc_hd__mux2_1_5_A1, B1=sky130_fd_sc_hd__a31o_2_8_X, C1=sky130_fd_sc_hd__inv_2_5_Y
+
+sky130_fd_sc_hd__and3_2_18  [and3_2]
+    out: X=O_1_
+    in : A=sky130_fd_sc_hd__or2_2_11_B, B=sky130_fd_sc_hd__o31a_2_6_X, C=sky130_fd_sc_hd__and3_2_25_C
+
+sky130_fd_sc_hd__a21bo_2_1  [a21bo_2]
+    out: X=sky130_fd_sc_hd__a21o_2_3_A2
+    in : A1=sky130_fd_sc_hd__or4_2_0_A, A2=sky130_fd_sc_hd__nor2_2_5_Y, B1_N=sky130_fd_sc_hd__a211o_2_2_X
+
+sky130_fd_sc_hd__decap_3_1  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__o311a_2_1  [o311a_2]
+    out: X=sky130_fd_sc_hd__o311a_2_1_X
+    in : A1=sky130_fd_sc_hd__xor2_2_7_A, A2=sky130_fd_sc_hd__and3_2_7_C, A3=sky130_fd_sc_hd__mux2_1_5_A1, B1=sky130_fd_sc_hd__nand3_2_0_Y, C1=sky130_fd_sc_hd__a21o_2_9_X
+
+sky130_fd_sc_hd__a21oi_2_11  [a21oi_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_30_B
+    in : A1=I, A2=sky130_fd_sc_hd__inv_2_7_A, B1=sky130_fd_sc_hd__or3_2_8_A
+
+sky130_fd_sc_hd__dfrtp_2_20  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__and4_2_3_C
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_3_X, D=sky130_fd_sc_hd__xnor2_2_11_Y, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_42  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__mux2_1_15_A0
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_6_X, D=sky130_fd_sc_hd__mux2_1_15_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_31  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__mux2_1_19_A1
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_5_X, D=sky130_fd_sc_hd__mux2_1_18_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_75  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__nand4_2_11_C
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_10_X, D=sky130_fd_sc_hd__o21a_2_24_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_64  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__o21a_2_28_A1
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_11_X, D=sky130_fd_sc_hd__dfrtp_2_64_D, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_53  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__nand4_2_5_C
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_2_X, D=sky130_fd_sc_hd__o21a_2_30_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__inv_2_12  [inv_2]
+    out: Y=sky130_fd_sc_hd__inv_2_12_Y
+    in : A=sky130_fd_sc_hd__inv_2_12_A
+
+sky130_fd_sc_hd__inv_2_23  [inv_2]
+    out: Y=sky130_fd_sc_hd__inv_2_23_Y
+    in : A=sky130_fd_sc_hd__inv_2_23_A
+
+sky130_fd_sc_hd__nand2_2_2  [nand2_2]
+    out: Y=sky130_fd_sc_hd__nand2_2_2_Y
+    in : A=sky130_fd_sc_hd__xor2_2_7_A, B=sky130_fd_sc_hd__xor2_2_0_B
+
+sky130_fd_sc_hd__or4_2_4  [or4_2]
+    out: X=sky130_fd_sc_hd__or4_2_4_X
+    in : A=sky130_fd_sc_hd__or4_2_4_A, B=sky130_fd_sc_hd__or4_2_4_B, C=sky130_fd_sc_hd__or4_2_4_C, D=sky130_fd_sc_hd__or4_2_4_D
+
+sky130_fd_sc_hd__o32a_2_1  [o32a_2]
+    out: X=sky130_fd_sc_hd__o32a_2_1_X
+    in : A1=sky130_fd_sc_hd__or4_2_0_A, A2=sky130_fd_sc_hd__and3_2_0_X, A3=sky130_fd_sc_hd__o32a_2_1_A3, B1=sky130_fd_sc_hd__o32a_2_1_B1, B2=sky130_fd_sc_hd__o32a_2_1_B2
+
+sky130_fd_sc_hd__or4b_2_7  [or4b_2]
+    out: X=sky130_fd_sc_hd__or4_2_6_C
+    in : A=sky130_fd_sc_hd__or4_2_4_B, B=sky130_fd_sc_hd__or4_2_4_A, C=sky130_fd_sc_hd__or4_2_4_C, D_N=sky130_fd_sc_hd__or4_2_4_D
+
+sky130_fd_sc_hd__xor2_2_15  [xor2_2]
+    out: X=sky130_fd_sc_hd__xor2_2_15_X
+    in : A=sky130_fd_sc_hd__xor2_2_19_B, B=sky130_fd_sc_hd__or2_2_9_X
+
+sky130_fd_sc_hd__decap_3_203  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__a21boi_2_0  [a21boi_2]
+    out: Y=sky130_fd_sc_hd__o21ai_2_3_B1
+    in : A1=I, A2=sky130_fd_sc_hd__nor2_2_40_A, B1_N=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__and4bb_2_12  [and4bb_2]
+    out: X=sky130_fd_sc_hd__nand4_2_13_D
+    in : A_N=sky130_fd_sc_hd__or4_2_4_A, B_N=sky130_fd_sc_hd__or4_2_4_C, C=sky130_fd_sc_hd__or4_2_4_D, D=sky130_fd_sc_hd__or4_2_4_B
+
+sky130_fd_sc_hd__clkbuf_4_4  [clkbuf_4]
+    out: X=sky130_fd_sc_hd__clkbuf_4_4_X
+    in : A=sky130_fd_sc_hd__clkbuf_8_2_X
+
+sky130_fd_sc_hd__a21oi_2_8  [a21oi_2]
+    out: Y=sky130_fd_sc_hd__and3b_2_0_C
+    in : A1=sky130_fd_sc_hd__or3b_2_0_A, A2=sky130_fd_sc_hd__or2_2_9_A, B1=sky130_fd_sc_hd__or2_2_8_B
+
+sky130_fd_sc_hd__nand2b_2_5  [nand2b_2]
+    out: Y=sky130_fd_sc_hd__dfrtp_2_4_D
+    in : A_N=sky130_fd_sc_hd__o21a_2_5_A1, B=sky130_fd_sc_hd__o21a_2_5_A2
+
+sky130_fd_sc_hd__o211a_2_8  [o211a_2]
+    out: X=sky130_fd_sc_hd__o211a_2_8_X
+    in : A1=sky130_fd_sc_hd__inv_2_8_A, A2=sky130_fd_sc_hd__mux2_1_7_A0, B1=sky130_fd_sc_hd__or2_2_7_X, C1=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__and3_2_19  [and3_2]
+    out: X=O_6_
+    in : A=sky130_fd_sc_hd__or2_2_11_B, B=sky130_fd_sc_hd__o31a_2_4_X, C=sky130_fd_sc_hd__and3_2_25_C
+
+sky130_fd_sc_hd__o22a_2_0  [o22a_2]
+    out: X=sky130_fd_sc_hd__o22a_2_0_X
+    in : A1=sky130_fd_sc_hd__or3_2_3_B, A2=sky130_fd_sc_hd__mux2_1_4_S, B1=sky130_fd_sc_hd__or2_2_4_X, B2=sky130_fd_sc_hd__nor2_2_4_Y
+
+sky130_fd_sc_hd__and2b_2_20  [and2b_2]
+    out: X=sky130_fd_sc_hd__and4_2_1_C
+    in : A_N=sky130_fd_sc_hd__nand4_2_5_C, B=sky130_fd_sc_hd__o21a_2_30_A1
+
+sky130_fd_sc_hd__decap_3_2  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__a21oi_2_12  [a21oi_2]
+    out: Y=sky130_fd_sc_hd__dfrtp_2_29_D
+    in : A1=sky130_fd_sc_hd__inv_2_8_Y, A2=sky130_fd_sc_hd__mux2_1_7_A0, B1=sky130_fd_sc_hd__mux2_1_6_X
+
+sky130_fd_sc_hd__dfrtp_2_10  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__o21a_2_30_A1
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_2_X, D=sky130_fd_sc_hd__nand2b_2_4_Y, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_21  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__nor3_2_2_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_3_X, D=sky130_fd_sc_hd__o21a_2_12_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_43  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__or4_2_4_B
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_5_X, D=sky130_fd_sc_hd__dfrtp_2_43_D, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_32  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__mux2_1_9_A1
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_6_X, D=sky130_fd_sc_hd__mux2_1_17_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_65  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__inv_2_19_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_9_X, D=sky130_fd_sc_hd__o21a_2_22_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_76  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__inv_2_17_A
+    in : CLK=sky130_fd_sc_hd__dfxtp_2_3_CLK, D=sky130_fd_sc_hd__o21a_2_29_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_54  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__inv_2_16_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_4_9_A, D=sky130_fd_sc_hd__o21a_2_17_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__inv_2_24  [inv_2]
+    out: Y=sky130_fd_sc_hd__nor3_2_3_C
+    in : A=sky130_fd_sc_hd__or4b_2_8_X
+
+sky130_fd_sc_hd__inv_2_13  [inv_2]
+    out: Y=sky130_fd_sc_hd__inv_2_13_Y
+    in : A=sky130_fd_sc_hd__or2_2_8_B
+
+sky130_fd_sc_hd__nand2_2_3  [nand2_2]
+    out: Y=sky130_fd_sc_hd__nand2_2_3_Y
+    in : A=sky130_fd_sc_hd__or4_2_0_A, B=sky130_fd_sc_hd__o21a_2_3_A2
+
+sky130_fd_sc_hd__or4_2_5  [or4_2]
+    out: X=sky130_fd_sc_hd__or4_2_5_X
+    in : A=sky130_fd_sc_hd__or4_2_5_A, B=sky130_fd_sc_hd__or4_2_5_B, C=sky130_fd_sc_hd__or4_2_5_C, D=sky130_fd_sc_hd__or4_2_5_D
+
+sky130_fd_sc_hd__and4b_2_0  [and4b_2]
+    out: X=sky130_fd_sc_hd__or3_2_6_B
+    in : A_N=sky130_fd_sc_hd__or2_2_8_B, B=sky130_fd_sc_hd__or2_2_9_B, C=sky130_fd_sc_hd__or2_2_9_A, D=sky130_fd_sc_hd__or3b_2_0_A
+
+sky130_fd_sc_hd__nor3_2_0  [nor3_2]
+    out: Y=sky130_fd_sc_hd__nor3_2_0_Y
+    in : A=sky130_fd_sc_hd__or3b_2_0_A, B=sky130_fd_sc_hd__or2_2_9_A, C=sky130_fd_sc_hd__or2_2_9_B
+
+sky130_fd_sc_hd__o32a_2_2  [o32a_2]
+    out: X=sky130_fd_sc_hd__o32a_2_2_X
+    in : A1=sky130_fd_sc_hd__inv_2_12_Y, A2=sky130_fd_sc_hd__o32a_2_2_A2, A3=sky130_fd_sc_hd__o32a_2_2_A3, B1=sky130_fd_sc_hd__o32a_2_2_B1, B2=sky130_fd_sc_hd__o32a_2_2_B2
+
+sky130_fd_sc_hd__or4b_2_8  [or4b_2]
+    out: X=sky130_fd_sc_hd__or4b_2_8_X
+    in : A=sky130_fd_sc_hd__or4b_2_8_A, B=success, C=sky130_fd_sc_hd__or4b_2_8_C, D_N=sky130_fd_sc_hd__a32o_2_3_B1
+
+sky130_fd_sc_hd__xor2_2_16  [xor2_2]
+    out: X=sky130_fd_sc_hd__xor2_2_16_X
+    in : A=sky130_fd_sc_hd__xor2_2_16_A, B=sky130_fd_sc_hd__or2_2_12_B
+
+sky130_fd_sc_hd__a21boi_2_1  [a21boi_2]
+    out: Y=sky130_fd_sc_hd__dfxtp_2_1_D
+    in : A1=sky130_fd_sc_hd__and3_2_25_C, A2=sky130_fd_sc_hd__xnor2_2_28_Y, B1_N=sky130_fd_sc_hd__or2_2_11_B
+
+sky130_fd_sc_hd__and4bb_2_13  [and4bb_2]
+    out: X=sky130_fd_sc_hd__nand4_2_10_D
+    in : A_N=sky130_fd_sc_hd__or4_2_4_A, B_N=sky130_fd_sc_hd__or4_2_4_D, C=sky130_fd_sc_hd__or4_2_4_C, D=sky130_fd_sc_hd__or4_2_4_B
+
+sky130_fd_sc_hd__clkbuf_4_5  [clkbuf_4]
+    out: X=sky130_fd_sc_hd__clkbuf_4_5_X
+    in : A=sky130_fd_sc_hd__clkbuf_8_5_X
+
+sky130_fd_sc_hd__a21oi_2_9  [a21oi_2]
+    out: Y=sky130_fd_sc_hd__or3_2_6_A
+    in : A1=sky130_fd_sc_hd__or3b_2_0_A, A2=sky130_fd_sc_hd__or2_2_9_A, B1=sky130_fd_sc_hd__or2_2_8_B
+
+sky130_fd_sc_hd__nand2b_2_6  [nand2b_2]
+    out: Y=sky130_fd_sc_hd__and3_2_4_A
+    in : A_N=sky130_fd_sc_hd__xnor2_2_4_A, B=sky130_fd_sc_hd__xor2_2_4_X
+
+sky130_fd_sc_hd__o211a_2_9  [o211a_2]
+    out: X=sky130_fd_sc_hd__o211a_2_9_X
+    in : A1=sky130_fd_sc_hd__or2_2_9_A, A2=sky130_fd_sc_hd__or2_2_8_X, B1=sky130_fd_sc_hd__o21a_2_15_A2, C1=sky130_fd_sc_hd__o21ai_2_5_Y
+
+sky130_fd_sc_hd__a221o_2_0  [a221o_2]
+    out: X=sky130_fd_sc_hd__a221o_2_0_X
+    in : A1=sky130_fd_sc_hd__or4_2_0_A, A2=sky130_fd_sc_hd__o22ai_2_1_Y, B1=sky130_fd_sc_hd__or2_2_5_X, B2=sky130_fd_sc_hd__a21oi_2_2_Y, C1=sky130_fd_sc_hd__or3_2_7_A
+
+sky130_fd_sc_hd__o22a_2_1  [o22a_2]
+    out: X=sky130_fd_sc_hd__or3_2_16_A
+    in : A1=sky130_fd_sc_hd__or2_2_9_A, A2=sky130_fd_sc_hd__or2_2_9_B, B1=sky130_fd_sc_hd__or3_2_6_A, B2=sky130_fd_sc_hd__or3_2_6_B
+
+sky130_fd_sc_hd__o21a_2_30  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_30_X
+    in : A1=sky130_fd_sc_hd__o21a_2_30_A1, A2=sky130_fd_sc_hd__nand4_2_5_Y, B1=sky130_fd_sc_hd__a31o_2_25_X
+
+sky130_fd_sc_hd__and2b_2_10  [and2b_2]
+    out: X=sky130_fd_sc_hd__dfrtp_2_25_D
+    in : A_N=sky130_fd_sc_hd__and3_2_11_X, B=sky130_fd_sc_hd__a21o_2_10_X
+
+sky130_fd_sc_hd__and2b_2_21  [and2b_2]
+    out: X=sky130_fd_sc_hd__and3_2_5_C
+    in : A_N=sky130_fd_sc_hd__nand4_2_6_C, B=sky130_fd_sc_hd__o21a_2_18_A1
+
+sky130_fd_sc_hd__decap_3_3  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__a21oi_2_13  [a21oi_2]
+    out: Y=sky130_fd_sc_hd__a21oi_2_13_Y
+    in : A1=sky130_fd_sc_hd__or4_2_4_A, A2=sky130_fd_sc_hd__inv_2_7_A, B1=sky130_fd_sc_hd__or4_2_4_B
+
+sky130_fd_sc_hd__dfrtp_2_22  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__or3_2_8_C
+    in : CLK=sky130_fd_sc_hd__dfrtp_2_8_CLK, D=sky130_fd_sc_hd__xor2_2_10_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_11  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__and2b_2_3_B
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_1_X, D=sky130_fd_sc_hd__nand2b_2_2_Y, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_33  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__mux2_1_12_A1
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_2_X, D=sky130_fd_sc_hd__mux2_1_10_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_66  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__o21a_2_21_A1
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_10_X, D=sky130_fd_sc_hd__dfrtp_2_66_D, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_77  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__or4_2_7_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_9_X, D=sky130_fd_sc_hd__a21o_2_14_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_55  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__nand4_2_6_C
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_8_X, D=sky130_fd_sc_hd__o21a_2_18_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_44  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__or4_2_4_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_5_X, D=sky130_fd_sc_hd__nor2_2_31_Y, RESET_B=rst_n
+
+sky130_fd_sc_hd__inv_2_14  [inv_2]
+    out: Y=sky130_fd_sc_hd__inv_2_14_Y
+    in : A=sky130_fd_sc_hd__or2_2_8_B
+
+sky130_fd_sc_hd__nand2_2_4  [nand2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_0_B
+    in : A=sky130_fd_sc_hd__or4_2_4_A, B=sky130_fd_sc_hd__xor2_2_7_A
+
+sky130_fd_sc_hd__or4_2_6  [or4_2]
+    out: X=sky130_fd_sc_hd__or4_2_6_X
+    in : A=sky130_fd_sc_hd__or4_2_6_A, B=sky130_fd_sc_hd__or4_2_6_B, C=sky130_fd_sc_hd__or4_2_6_C, D=sky130_fd_sc_hd__or4_2_6_D
+
+sky130_fd_sc_hd__and4b_2_1  [and4b_2]
+    out: X=sky130_fd_sc_hd__nand4_2_5_D
+    in : A_N=sky130_fd_sc_hd__or4b_2_2_C, B=sky130_fd_sc_hd__or4b_2_3_C, C=sky130_fd_sc_hd__or4b_2_3_B, D=sky130_fd_sc_hd__or4b_2_3_A
+
+sky130_fd_sc_hd__nor3_2_1  [nor3_2]
+    out: Y=sky130_fd_sc_hd__nor3_2_1_Y
+    in : A=sky130_fd_sc_hd__or2_2_9_B, B=sky130_fd_sc_hd__nor3_2_1_B, C=sky130_fd_sc_hd__nor3_2_1_C
+
+sky130_fd_sc_hd__o32a_2_3  [o32a_2]
+    out: X=sky130_fd_sc_hd__o32a_2_3_X
+    in : A1=sky130_fd_sc_hd__o32a_2_3_A1, A2=sky130_fd_sc_hd__o32a_2_3_A2, A3=sky130_fd_sc_hd__o32a_2_3_A3, B1=sky130_fd_sc_hd__or2_2_10_X, B2=sky130_fd_sc_hd__or2_2_12_A
+
+sky130_fd_sc_hd__xor2_2_17  [xor2_2]
+    out: X=sky130_fd_sc_hd__xor2_2_17_X
+    in : A=sky130_fd_sc_hd__xor2_2_19_A, B=sky130_fd_sc_hd__xor2_2_17_B
+
+sky130_fd_sc_hd__a21boi_2_2  [a21boi_2]
+    out: Y=sky130_fd_sc_hd__dfxtp_2_0_D
+    in : A1=sky130_fd_sc_hd__inv_2_21_Y, A2=sky130_fd_sc_hd__nand3_2_1_Y, B1_N=sky130_fd_sc_hd__or2_2_11_B
+
+sky130_fd_sc_hd__clkbuf_4_6  [clkbuf_4]
+    out: X=sky130_fd_sc_hd__clkbuf_4_6_X
+    in : A=sky130_fd_sc_hd__clkbuf_8_6_X
+
+sky130_fd_sc_hd__and3_2_0  [and3_2]
+    out: X=sky130_fd_sc_hd__and3_2_0_X
+    in : A=sky130_fd_sc_hd__or2_2_4_A, B=sky130_fd_sc_hd__or3_2_0_B, C=sky130_fd_sc_hd__and3_2_0_C
+
+sky130_fd_sc_hd__nand2b_2_7  [nand2b_2]
+    out: Y=sky130_fd_sc_hd__a21o_2_6_A2
+    in : A_N=sky130_fd_sc_hd__or2_2_9_B, B=sky130_fd_sc_hd__or3b_2_0_A
+
+sky130_fd_sc_hd__o22a_2_2  [o22a_2]
+    out: X=sky130_fd_sc_hd__o22a_2_2_X
+    in : A1=sky130_fd_sc_hd__or2_2_8_B, A2=sky130_fd_sc_hd__and2_2_8_A, B1=sky130_fd_sc_hd__and2_2_8_B, B2=sky130_fd_sc_hd__nor3_2_1_B
+
+sky130_fd_sc_hd__a221o_2_1  [a221o_2]
+    out: X=sky130_fd_sc_hd__a221o_2_1_X
+    in : A1=sky130_fd_sc_hd__or4bb_2_0_X, A2=sky130_fd_sc_hd__mux2_1_12_A1, B1=sky130_fd_sc_hd__conb_1_2_HI, B2=sky130_fd_sc_hd__mux2_1_12_A0, C1=sky130_fd_sc_hd__a22o_2_2_X
+
+sky130_fd_sc_hd__o21a_2_20  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_20_X
+    in : A1=sky130_fd_sc_hd__inv_2_18_A, A2=sky130_fd_sc_hd__nor2_2_43_Y, B1=sky130_fd_sc_hd__or4_2_7_X
+
+sky130_fd_sc_hd__and2_2_10  [and2_2]
+    out: X=sky130_fd_sc_hd__and3_2_5_B
+    in : A=sky130_fd_sc_hd__or4_2_5_A, B=sky130_fd_sc_hd__or4_2_5_B
+
+sky130_fd_sc_hd__and2b_2_11  [and2b_2]
+    out: X=sky130_fd_sc_hd__inv_2_7_A
+    in : A_N=sky130_fd_sc_hd__or2_2_11_A, B=enable
+
+sky130_fd_sc_hd__and2b_2_22  [and2b_2]
+    out: X=sky130_fd_sc_hd__and3_2_5_A
+    in : A_N=sky130_fd_sc_hd__nand4_2_4_C, B=sky130_fd_sc_hd__o21a_2_16_A1
+
+sky130_fd_sc_hd__a211o_2_0  [a211o_2]
+    out: X=sky130_fd_sc_hd__a211o_2_0_X
+    in : A1=sky130_fd_sc_hd__or2_2_5_A, A2=sky130_fd_sc_hd__a32o_2_1_X, B1=sky130_fd_sc_hd__o221a_2_0_X, C1=sky130_fd_sc_hd__or3_2_7_A
+
+sky130_fd_sc_hd__decap_3_4  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__dfxtp_2_0  [dfxtp_2]
+    out: Q=sky130_fd_sc_hd__or2_2_8_B
+    in : CLK=sky130_fd_sc_hd__dfxtp_2_3_CLK, D=sky130_fd_sc_hd__dfxtp_2_0_D
+
+sky130_fd_sc_hd__a21oi_2_14  [a21oi_2]
+    out: Y=sky130_fd_sc_hd__o221a_2_2_B2
+    in : A1=sky130_fd_sc_hd__or3b_2_0_A, A2=sky130_fd_sc_hd__or2_2_8_B, B1=sky130_fd_sc_hd__or2_2_9_B
+
+sky130_fd_sc_hd__dfrtp_2_23  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__or3_2_8_A
+    in : CLK=sky130_fd_sc_hd__dfrtp_2_8_CLK, D=sky130_fd_sc_hd__nor2_2_30_Y, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_12  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__o21a_2_8_A1
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_1_X, D=sky130_fd_sc_hd__nand2b_2_3_Y, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_34  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__mux2_1_8_A0
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_2_X, D=sky130_fd_sc_hd__mux2_1_8_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_67  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__o21a_2_24_A1
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_11_X, D=sky130_fd_sc_hd__dfrtp_2_67_D, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_56  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__nand4_2_4_C
+    in : CLK=sky130_fd_sc_hd__clkbuf_4_9_A, D=sky130_fd_sc_hd__o21a_2_16_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_45  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__or4_2_4_D
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_5_X, D=sky130_fd_sc_hd__dfrtp_2_45_D, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_78  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__nand4_2_10_C
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_10_X, D=sky130_fd_sc_hd__o21a_2_28_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__inv_2_15  [inv_2]
+    out: Y=sky130_fd_sc_hd__inv_2_15_Y
+    in : A=sky130_fd_sc_hd__or3b_2_0_A
+
+sky130_fd_sc_hd__nand2_2_5  [nand2_2]
+    out: Y=sky130_fd_sc_hd__nand2_2_5_Y
+    in : A=sky130_fd_sc_hd__or3_2_0_B, B=sky130_fd_sc_hd__or3_2_2_B
+
+sky130_fd_sc_hd__or4_2_7  [or4_2]
+    out: X=sky130_fd_sc_hd__or4_2_7_X
+    in : A=sky130_fd_sc_hd__or4_2_7_A, B=sky130_fd_sc_hd__or4_2_7_B, C=sky130_fd_sc_hd__or4_2_7_C, D=sky130_fd_sc_hd__or4_2_7_D
+
+sky130_fd_sc_hd__and4b_2_2  [and4b_2]
+    out: X=sky130_fd_sc_hd__and4b_2_2_X
+    in : A_N=sky130_fd_sc_hd__or4_2_4_D, B=sky130_fd_sc_hd__or4_2_4_C, C=sky130_fd_sc_hd__or4_2_4_A, D=sky130_fd_sc_hd__or4_2_4_B
+
+sky130_fd_sc_hd__buf_2_0  [buf_2]
+    out: X=sky130_fd_sc_hd__buf_2_0_X
+    in : A=sky130_fd_sc_hd__or4_2_4_X
+
+sky130_fd_sc_hd__inv_2_0  [inv_2]
+    out: Y=sky130_fd_sc_hd__inv_2_0_Y
+    in : A=sky130_fd_sc_hd__or3_2_3_C
+
+sky130_fd_sc_hd__nor3_2_2  [nor3_2]
+    out: Y=sky130_fd_sc_hd__nor3_2_2_Y
+    in : A=sky130_fd_sc_hd__nor3_2_2_A, B=sky130_fd_sc_hd__nor3_2_2_B, C=sky130_fd_sc_hd__or3_2_8_X
+
+sky130_fd_sc_hd__xor2_2_18  [xor2_2]
+    out: X=sky130_fd_sc_hd__xor2_2_18_X
+    in : A=sky130_fd_sc_hd__xor2_2_19_A, B=sky130_fd_sc_hd__o32a_2_2_X
+
+sky130_fd_sc_hd__a21boi_2_3  [a21boi_2]
+    out: Y=sky130_fd_sc_hd__dfxtp_2_2_D
+    in : A1=sky130_fd_sc_hd__or3b_2_0_A, A2=sky130_fd_sc_hd__and3_2_25_C, B1_N=sky130_fd_sc_hd__or2_2_11_B
+
+sky130_fd_sc_hd__clkbuf_4_7  [clkbuf_4]
+    out: X=sky130_fd_sc_hd__clkbuf_4_7_X
+    in : A=sky130_fd_sc_hd__clkbuf_8_7_X
+
+sky130_fd_sc_hd__and3_2_1  [and3_2]
+    out: X=sky130_fd_sc_hd__and3_2_1_X
+    in : A=sky130_fd_sc_hd__or2_2_4_A, B=sky130_fd_sc_hd__inv_2_4_Y, C=sky130_fd_sc_hd__and3_2_1_C
+
+sky130_fd_sc_hd__nand2b_2_8  [nand2b_2]
+    out: Y=sky130_fd_sc_hd__nand2b_2_8_Y
+    in : A_N=sky130_fd_sc_hd__or2_2_8_B, B=sky130_fd_sc_hd__or2_2_9_B
+
+sky130_fd_sc_hd__o22a_2_3  [o22a_2]
+    out: X=sky130_fd_sc_hd__o22a_2_3_X
+    in : A1=sky130_fd_sc_hd__xor2_2_19_A, A2=sky130_fd_sc_hd__or2_2_10_X, B1=sky130_fd_sc_hd__o22a_2_3_B1, B2=sky130_fd_sc_hd__o22a_2_3_B2
+
+sky130_fd_sc_hd__a221o_2_2  [a221o_2]
+    out: X=sky130_fd_sc_hd__a221o_2_2_X
+    in : A1=sky130_fd_sc_hd__inv_2_7_A, A2=sky130_fd_sc_hd__xor2_2_16_A, B1=sky130_fd_sc_hd__xor2_2_19_B, B2=sky130_fd_sc_hd__nor2_2_39_Y, C1=sky130_fd_sc_hd__nor2_2_46_Y
+
+sky130_fd_sc_hd__o21a_2_21  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_21_X
+    in : A1=sky130_fd_sc_hd__o21a_2_21_A1, A2=sky130_fd_sc_hd__nand4_2_9_Y, B1=sky130_fd_sc_hd__a31o_2_24_X
+
+sky130_fd_sc_hd__o21a_2_10  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_10_X
+    in : A1=sky130_fd_sc_hd__and2b_2_3_B, A2=sky130_fd_sc_hd__nand4_2_1_Y, B1=sky130_fd_sc_hd__a31o_2_3_X
+
+sky130_fd_sc_hd__and2_2_11  [and2_2]
+    out: X=sky130_fd_sc_hd__and4_2_6_A
+    in : A=sky130_fd_sc_hd__or4_2_9_A, B=sky130_fd_sc_hd__or4_2_9_B
+
+sky130_fd_sc_hd__and2b_2_23  [and2b_2]
+    out: X=sky130_fd_sc_hd__and4_2_6_B
+    in : A_N=sky130_fd_sc_hd__nand4_2_7_C, B=sky130_fd_sc_hd__o21a_2_19_A1
+
+sky130_fd_sc_hd__and2b_2_12  [and2b_2]
+    out: X=sky130_fd_sc_hd__and3_2_17_C
+    in : A_N=sky130_fd_sc_hd__or2_2_9_B, B=sky130_fd_sc_hd__or2_2_9_A
+
+sky130_fd_sc_hd__a211o_2_1  [a211o_2]
+    out: X=sky130_fd_sc_hd__a211o_2_1_X
+    in : A1=sky130_fd_sc_hd__or4_2_0_A, A2=sky130_fd_sc_hd__or2_2_4_B, B1=sky130_fd_sc_hd__mux2_1_4_X, C1=sky130_fd_sc_hd__or4_2_0_B
+
+sky130_fd_sc_hd__decap_3_5  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__dfxtp_2_1  [dfxtp_2]
+    out: Q=sky130_fd_sc_hd__or2_2_9_A
+    in : CLK=sky130_fd_sc_hd__dfxtp_2_2_CLK, D=sky130_fd_sc_hd__dfxtp_2_1_D
+
+sky130_fd_sc_hd__a21oi_2_15  [a21oi_2]
+    out: Y=sky130_fd_sc_hd__a22o_2_21_B2
+    in : A1=sky130_fd_sc_hd__or2_2_8_X, A2=sky130_fd_sc_hd__nor2_2_32_B, B1=sky130_fd_sc_hd__mux2_1_20_X
+
+sky130_fd_sc_hd__dfrtp_2_24  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__and4_2_3_A
+    in : CLK=sky130_fd_sc_hd__dfrtp_2_8_CLK, D=sky130_fd_sc_hd__a32o_2_2_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_13  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__or4_2_2_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_0_X, D=sky130_fd_sc_hd__a21o_2_1_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_68  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__o21a_2_25_A1
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_10_X, D=sky130_fd_sc_hd__dfrtp_2_68_D, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_57  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__o21a_2_19_A1
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_8_X, D=sky130_fd_sc_hd__dfrtp_2_57_D, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_35  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__mux2_1_16_A0
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_2_X, D=sky130_fd_sc_hd__mux2_1_16_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_46  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__or4_2_4_C
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_5_X, D=sky130_fd_sc_hd__xor2_2_11_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_79  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__or4_2_8_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_9_X, D=sky130_fd_sc_hd__a21o_2_15_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__inv_2_16  [inv_2]
+    out: Y=sky130_fd_sc_hd__or4_2_5_B
+    in : A=sky130_fd_sc_hd__inv_2_16_A
+
+sky130_fd_sc_hd__nand2_2_6  [nand2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_5_A
+    in : A=sky130_fd_sc_hd__xor2_2_3_A, B=sky130_fd_sc_hd__or3_2_3_A
+
+sky130_fd_sc_hd__or4_2_8  [or4_2]
+    out: X=sky130_fd_sc_hd__or4_2_8_X
+    in : A=sky130_fd_sc_hd__or4_2_8_A, B=sky130_fd_sc_hd__or4_2_8_B, C=sky130_fd_sc_hd__or4_2_8_C, D=sky130_fd_sc_hd__or4_2_8_D
+
+sky130_fd_sc_hd__and4b_2_3  [and4b_2]
+    out: X=sky130_fd_sc_hd__and4b_2_3_X
+    in : A_N=sky130_fd_sc_hd__or2_2_11_B, B=sky130_fd_sc_hd__or2_2_11_A, C=sky130_fd_sc_hd__and3_2_6_X, D=sky130_fd_sc_hd__and4b_2_3_D
+
+sky130_fd_sc_hd__nor3_2_3  [nor3_2]
+    out: Y=sky130_fd_sc_hd__nor3_2_3_Y
+    in : A=sky130_fd_sc_hd__nor3_2_3_A, B=sky130_fd_sc_hd__nor3_2_3_B, C=sky130_fd_sc_hd__nor3_2_3_C
+
+sky130_fd_sc_hd__inv_2_1  [inv_2]
+    out: Y=sky130_fd_sc_hd__or4_2_1_B
+    in : A=sky130_fd_sc_hd__inv_2_1_A
+
+sky130_fd_sc_hd__xor2_2_19  [xor2_2]
+    out: X=sky130_fd_sc_hd__xor2_2_19_X
+    in : A=sky130_fd_sc_hd__xor2_2_19_A, B=sky130_fd_sc_hd__xor2_2_19_B
+
+sky130_fd_sc_hd__clkbuf_4_8  [clkbuf_4]
+    out: X=sky130_fd_sc_hd__clkbuf_4_8_X
+    in : A=sky130_fd_sc_hd__clkbuf_8_8_X
+
+sky130_fd_sc_hd__or3b_2_0  [or3b_2]
+    out: X=sky130_fd_sc_hd__or3b_2_0_X
+    in : A=sky130_fd_sc_hd__or3b_2_0_A, B=sky130_fd_sc_hd__or2_2_9_B, C_N=sky130_fd_sc_hd__or2_2_9_A
+
+sky130_fd_sc_hd__xor2_2_0  [xor2_2]
+    out: X=sky130_fd_sc_hd__xor2_2_0_X
+    in : A=sky130_fd_sc_hd__xor2_2_7_A, B=sky130_fd_sc_hd__xor2_2_0_B
+
+sky130_fd_sc_hd__and3_2_2  [and3_2]
+    out: X=sky130_fd_sc_hd__or3_2_5_C
+    in : A=sky130_fd_sc_hd__and3_2_2_A, B=sky130_fd_sc_hd__and3_2_2_B, C=sky130_fd_sc_hd__and3_2_2_C
+
+sky130_fd_sc_hd__nand2b_2_9  [nand2b_2]
+    out: Y=sky130_fd_sc_hd__o32ai_2_0_B1
+    in : A_N=sky130_fd_sc_hd__or2_2_9_B, B=sky130_fd_sc_hd__or2_2_8_B
+
+sky130_fd_sc_hd__a221o_2_3  [a221o_2]
+    out: X=sky130_fd_sc_hd__o22a_2_3_B2
+    in : A1=sky130_fd_sc_hd__inv_2_7_A, A2=sky130_fd_sc_hd__or2_2_12_A, B1=sky130_fd_sc_hd__nor2_2_34_Y, B2=sky130_fd_sc_hd__nor3b_2_0_B, C1=sky130_fd_sc_hd__nor2_2_39_Y
+
+sky130_fd_sc_hd__o21a_2_22  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_22_X
+    in : A1=sky130_fd_sc_hd__inv_2_19_A, A2=sky130_fd_sc_hd__nor2_2_44_Y, B1=sky130_fd_sc_hd__or4_2_8_X
+
+sky130_fd_sc_hd__o21a_2_11  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_11_X
+    in : A1=sky130_fd_sc_hd__or3_2_8_B, A2=sky130_fd_sc_hd__and3_2_11_X, B1=sky130_fd_sc_hd__xnor2_2_11_B
+
+sky130_fd_sc_hd__and2_2_12  [and2_2]
+    out: X=sky130_fd_sc_hd__and4_2_6_D
+    in : A=sky130_fd_sc_hd__or4_2_7_A, B=sky130_fd_sc_hd__or4_2_7_B
+
+sky130_fd_sc_hd__and2b_2_13  [and2b_2]
+    out: X=sky130_fd_sc_hd__nor2_2_32_B
+    in : A_N=sky130_fd_sc_hd__or2_2_9_A, B=sky130_fd_sc_hd__or3b_2_0_A
+
+sky130_fd_sc_hd__and2b_2_24  [and2b_2]
+    out: X=sky130_fd_sc_hd__and4_2_6_C
+    in : A_N=sky130_fd_sc_hd__nand4_2_8_C, B=sky130_fd_sc_hd__o21a_2_23_A1
+
+sky130_fd_sc_hd__a211o_2_2  [a211o_2]
+    out: X=sky130_fd_sc_hd__a211o_2_2_X
+    in : A1=sky130_fd_sc_hd__or2_2_4_A, A2=sky130_fd_sc_hd__nand2_2_9_Y, B1=sky130_fd_sc_hd__or4_2_0_D, C1=sky130_fd_sc_hd__or4_2_0_A
+
+sky130_fd_sc_hd__decap_3_6  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__dfxtp_2_2  [dfxtp_2]
+    out: Q=sky130_fd_sc_hd__or3b_2_0_A
+    in : CLK=sky130_fd_sc_hd__dfxtp_2_2_CLK, D=sky130_fd_sc_hd__dfxtp_2_2_D
+
+sky130_fd_sc_hd__a21oi_2_16  [a21oi_2]
+    out: Y=sky130_fd_sc_hd__xnor2_2_14_B
+    in : A1=sky130_fd_sc_hd__inv_2_12_A, A2=sky130_fd_sc_hd__o31a_2_1_B1, B1=sky130_fd_sc_hd__or3_2_9_A
+
+sky130_fd_sc_hd__dfrtp_2_25  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__and4_2_3_B
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_3_X, D=sky130_fd_sc_hd__dfrtp_2_25_D, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_14  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__o21a_2_4_A1
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_0_X, D=sky130_fd_sc_hd__nand2b_2_1_Y, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_47  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__or2_2_11_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_8_X, D=sky130_fd_sc_hd__a31o_2_13_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_58  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__o21a_2_18_A1
+    in : CLK=sky130_fd_sc_hd__clkbuf_4_9_A, D=sky130_fd_sc_hd__dfrtp_2_58_D, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_36  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__mux2_1_12_A0
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_6_X, D=sky130_fd_sc_hd__mux2_1_12_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_69  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__or4_2_6_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_10_X, D=sky130_fd_sc_hd__a21o_2_16_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__o21bai_2_0  [o21bai_2]
+    out: Y=sky130_fd_sc_hd__o21bai_2_0_Y
+    in : A1=sky130_fd_sc_hd__nor3_2_1_B, A2=sky130_fd_sc_hd__o32ai_2_0_B1, B1_N=sky130_fd_sc_hd__xnor2_2_6_A
+
+sky130_fd_sc_hd__inv_2_17  [inv_2]
+    out: Y=sky130_fd_sc_hd__or4_2_9_B
+    in : A=sky130_fd_sc_hd__inv_2_17_A
+
+sky130_fd_sc_hd__nand2_2_7  [nand2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_9_B
+    in : A=sky130_fd_sc_hd__nor2_2_8_A, B=sky130_fd_sc_hd__nor2_2_0_B
+
+sky130_fd_sc_hd__or4_2_9  [or4_2]
+    out: X=sky130_fd_sc_hd__or4_2_9_X
+    in : A=sky130_fd_sc_hd__or4_2_9_A, B=sky130_fd_sc_hd__or4_2_9_B, C=sky130_fd_sc_hd__or4_2_9_C, D=sky130_fd_sc_hd__or4_2_9_D
+
+sky130_fd_sc_hd__inv_2_2  [inv_2]
+    out: Y=sky130_fd_sc_hd__or4_2_2_B
+    in : A=sky130_fd_sc_hd__inv_2_2_A
+
+sky130_fd_sc_hd__a41oi_2_0  [a41oi_2]
+    out: Y=sky130_fd_sc_hd__a41oi_2_0_Y
+    in : A1=sky130_fd_sc_hd__or4_2_4_B, A2=sky130_fd_sc_hd__or4_2_4_A, A3=sky130_fd_sc_hd__or4_2_4_C, A4=sky130_fd_sc_hd__inv_2_7_A, B1=sky130_fd_sc_hd__or4_2_4_D
+
+sky130_fd_sc_hd__clkbuf_4_9  [clkbuf_4]
+    out: X=sky130_fd_sc_hd__clkbuf_4_9_X
+    in : A=sky130_fd_sc_hd__clkbuf_4_9_A
+
+sky130_fd_sc_hd__xor2_2_1  [xor2_2]
+    out: X=sky130_fd_sc_hd__xor2_2_1_X
+    in : A=sky130_fd_sc_hd__or4_2_4_C, B=sky130_fd_sc_hd__xor2_2_1_B
+
+sky130_fd_sc_hd__and3_2_3  [and3_2]
+    out: X=sky130_fd_sc_hd__and3_2_3_X
+    in : A=sky130_fd_sc_hd__or4_2_0_B, B=sky130_fd_sc_hd__and3_2_3_B, C=sky130_fd_sc_hd__and3_2_3_C
+
+sky130_fd_sc_hd__a221o_2_4  [a221o_2]
+    out: X=sky130_fd_sc_hd__a221o_2_4_X
+    in : A1=sky130_fd_sc_hd__inv_2_7_A, A2=sky130_fd_sc_hd__xor2_2_19_A, B1=sky130_fd_sc_hd__nor2_2_39_Y, B2=sky130_fd_sc_hd__xor2_2_14_B, C1=sky130_fd_sc_hd__o21a_2_14_X
+
+sky130_fd_sc_hd__o21a_2_23  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_23_X
+    in : A1=sky130_fd_sc_hd__o21a_2_23_A1, A2=sky130_fd_sc_hd__nand4_2_8_Y, B1=sky130_fd_sc_hd__a31o_2_19_X
+
+sky130_fd_sc_hd__o21a_2_12  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_12_X
+    in : A1=sky130_fd_sc_hd__o21a_2_12_A1, A2=sky130_fd_sc_hd__xnor2_2_11_B, B1=sky130_fd_sc_hd__a31o_2_9_X
+
+sky130_fd_sc_hd__and2_2_13  [and2_2]
+    out: X=sky130_fd_sc_hd__and4_2_5_B
+    in : A=sky130_fd_sc_hd__or4_2_8_A, B=sky130_fd_sc_hd__or4_2_8_B
+
+sky130_fd_sc_hd__and2b_2_14  [and2b_2]
+    out: X=sky130_fd_sc_hd__o31a_2_2_A2
+    in : A_N=sky130_fd_sc_hd__or2_2_9_A, B=sky130_fd_sc_hd__or3b_2_0_A
+
+sky130_fd_sc_hd__and2b_2_25  [and2b_2]
+    out: X=sky130_fd_sc_hd__and4_2_5_A
+    in : A_N=sky130_fd_sc_hd__nand4_2_9_C, B=sky130_fd_sc_hd__o21a_2_21_A1
+
+sky130_fd_sc_hd__a211o_2_3  [a211o_2]
+    out: X=sky130_fd_sc_hd__a211o_2_3_X
+    in : A1=sky130_fd_sc_hd__or3b_2_0_A, A2=sky130_fd_sc_hd__or2_2_9_B, B1=sky130_fd_sc_hd__inv_2_13_Y, C1=sky130_fd_sc_hd__o31a_2_1_A3
+
+sky130_fd_sc_hd__decap_3_7  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__dfxtp_2_3  [dfxtp_2]
+    out: Q=sky130_fd_sc_hd__or2_2_9_B
+    in : CLK=sky130_fd_sc_hd__dfxtp_2_3_CLK, D=sky130_fd_sc_hd__dfxtp_2_3_D
+
+sky130_fd_sc_hd__a21oi_2_17  [a21oi_2]
+    out: Y=sky130_fd_sc_hd__a22o_2_7_A1
+    in : A1=sky130_fd_sc_hd__or3b_2_0_A, A2=sky130_fd_sc_hd__and3_2_17_C, B1=sky130_fd_sc_hd__or2_2_8_B
+
+sky130_fd_sc_hd__dfrtp_2_15  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__xor2_2_0_B
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_4_X, D=sky130_fd_sc_hd__o211a_2_7_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_48  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__xor2_2_14_B
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_7_X, D=sky130_fd_sc_hd__a221o_2_4_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_26  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__or3_2_8_B
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_3_X, D=sky130_fd_sc_hd__o21a_2_11_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_59  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__o21a_2_16_A1
+    in : CLK=sky130_fd_sc_hd__clkbuf_4_9_A, D=sky130_fd_sc_hd__dfrtp_2_59_D, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_37  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__inv_2_11_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_6_X, D=sky130_fd_sc_hd__a31o_2_12_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__inv_2_18  [inv_2]
+    out: Y=sky130_fd_sc_hd__or4_2_7_B
+    in : A=sky130_fd_sc_hd__inv_2_18_A
+
+sky130_fd_sc_hd__nand2_2_8  [nand2_2]
+    out: Y=sky130_fd_sc_hd__xnor2_2_0_A
+    in : A=sky130_fd_sc_hd__or4_2_4_B, B=sky130_fd_sc_hd__xor2_2_0_X
+
+sky130_fd_sc_hd__inv_2_3  [inv_2]
+    out: Y=sky130_fd_sc_hd__or4_2_3_B
+    in : A=sky130_fd_sc_hd__inv_2_3_A
+
+sky130_fd_sc_hd__mux2_1_20  [mux2_1]
+    out: X=sky130_fd_sc_hd__mux2_1_20_X
+    in : A0=sky130_fd_sc_hd__or2_2_9_A, A1=sky130_fd_sc_hd__or2_2_8_B, S=sky130_fd_sc_hd__or2_2_9_B
+
+sky130_fd_sc_hd__xor2_2_2  [xor2_2]
+    out: X=sky130_fd_sc_hd__or3_2_3_B
+    in : A=sky130_fd_sc_hd__xor2_2_2_A, B=sky130_fd_sc_hd__xor2_2_2_B
+
+sky130_fd_sc_hd__and3_2_4  [and3_2]
+    out: X=sky130_fd_sc_hd__and3_2_4_X
+    in : A=sky130_fd_sc_hd__and3_2_4_A, B=sky130_fd_sc_hd__and3_2_4_B, C=sky130_fd_sc_hd__or3_2_5_X
+
+sky130_fd_sc_hd__a221o_2_5  [a221o_2]
+    out: X=sky130_fd_sc_hd__dfstp_2_0_D
+    in : A1=sky130_fd_sc_hd__inv_2_7_A, A2=sky130_fd_sc_hd__a22o_2_4_B2, B1=sky130_fd_sc_hd__xor2_2_17_B, B2=sky130_fd_sc_hd__nor2_2_39_Y, C1=sky130_fd_sc_hd__nor2_2_40_Y
+
+sky130_fd_sc_hd__o21a_2_24  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_24_X
+    in : A1=sky130_fd_sc_hd__o21a_2_24_A1, A2=sky130_fd_sc_hd__o21a_2_24_A2, B1=sky130_fd_sc_hd__a31o_2_20_X
+
+sky130_fd_sc_hd__o21a_2_13  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_13_X
+    in : A1=sky130_fd_sc_hd__inv_2_15_Y, A2=sky130_fd_sc_hd__o31a_2_2_A1, B1=sky130_fd_sc_hd__inv_2_14_Y
+
+sky130_fd_sc_hd__and2_2_14  [and2_2]
+    out: X=sky130_fd_sc_hd__and3_2_12_B
+    in : A=sky130_fd_sc_hd__or4_2_6_A, B=sky130_fd_sc_hd__or4_2_6_B
+
+sky130_fd_sc_hd__a32o_2_0  [a32o_2]
+    out: X=sky130_fd_sc_hd__xor2_2_2_A
+    in : A1=sky130_fd_sc_hd__or4_2_4_B, A2=sky130_fd_sc_hd__xor2_2_0_X, A3=sky130_fd_sc_hd__xor2_2_1_X, B1=sky130_fd_sc_hd__xor2_2_3_A, B2=sky130_fd_sc_hd__xor2_2_3_B
+
+sky130_fd_sc_hd__and2b_2_26  [and2b_2]
+    out: X=sky130_fd_sc_hd__and4_2_5_D
+    in : A_N=sky130_fd_sc_hd__nand4_2_10_C, B=sky130_fd_sc_hd__o21a_2_28_A1
+
+sky130_fd_sc_hd__and2b_2_15  [and2b_2]
+    out: X=sky130_fd_sc_hd__o32a_2_2_B1
+    in : A_N=sky130_fd_sc_hd__or3_2_9_B, B=sky130_fd_sc_hd__nand2_2_29_Y
+
+sky130_fd_sc_hd__a211o_2_4  [a211o_2]
+    out: X=sky130_fd_sc_hd__or3_2_15_A
+    in : A1=sky130_fd_sc_hd__or2_2_9_A, A2=sky130_fd_sc_hd__or3_2_17_A, B1=sky130_fd_sc_hd__or3_2_6_C, C1=sky130_fd_sc_hd__or3_2_6_B
+
+sky130_fd_sc_hd__decap_3_8  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__a21oi_2_18  [a21oi_2]
+    out: Y=sky130_fd_sc_hd__or3_2_17_C
+    in : A1=sky130_fd_sc_hd__nor3_2_3_B, A2=sky130_fd_sc_hd__nor3_2_3_C, B1=sky130_fd_sc_hd__nor3_2_3_A
+
+sky130_fd_sc_hd__dfrtp_2_16  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__xor2_2_7_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_3_X, D=sky130_fd_sc_hd__mux2_1_5_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_49  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__a22o_2_4_B2
+    in : CLK=sky130_fd_sc_hd__clkbuf_4_9_A, D=sky130_fd_sc_hd__a31o_2_14_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_27  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__or2_2_7_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_4_X, D=sky130_fd_sc_hd__a22o_2_1_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_38  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__a22o_2_2_B2
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_6_X, D=sky130_fd_sc_hd__mux2_1_11_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__inv_2_19  [inv_2]
+    out: Y=sky130_fd_sc_hd__or4_2_8_B
+    in : A=sky130_fd_sc_hd__inv_2_19_A
+
+sky130_fd_sc_hd__nand2_2_9  [nand2_2]
+    out: Y=sky130_fd_sc_hd__nand2_2_9_Y
+    in : A=sky130_fd_sc_hd__xor2_2_3_A, B=sky130_fd_sc_hd__inv_2_4_A
+
+sky130_fd_sc_hd__or3_2_0  [or3_2]
+    out: X=sky130_fd_sc_hd__or3_2_0_X
+    in : A=sky130_fd_sc_hd__or3_2_3_A, B=sky130_fd_sc_hd__or3_2_0_B, C=sky130_fd_sc_hd__or3_2_2_B
+
+sky130_fd_sc_hd__inv_2_4  [inv_2]
+    out: Y=sky130_fd_sc_hd__inv_2_4_Y
+    in : A=sky130_fd_sc_hd__inv_2_4_A
+
+sky130_fd_sc_hd__mux2_1_10  [mux2_1]
+    out: X=sky130_fd_sc_hd__mux2_1_10_X
+    in : A0=sky130_fd_sc_hd__mux2_1_12_A1, A1=sky130_fd_sc_hd__mux2_1_8_A0, S=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__xor2_2_3  [xor2_2]
+    out: X=sky130_fd_sc_hd__or2_2_2_A
+    in : A=sky130_fd_sc_hd__xor2_2_3_A, B=sky130_fd_sc_hd__xor2_2_3_B
+
+sky130_fd_sc_hd__and3_2_5  [and3_2]
+    out: X=sky130_fd_sc_hd__and3_2_6_C
+    in : A=sky130_fd_sc_hd__and3_2_5_A, B=sky130_fd_sc_hd__and3_2_5_B, C=sky130_fd_sc_hd__and3_2_5_C
+
+sky130_fd_sc_hd__o21a_2_25  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_25_X
+    in : A1=sky130_fd_sc_hd__o21a_2_25_A1, A2=sky130_fd_sc_hd__o21a_2_25_A2, B1=sky130_fd_sc_hd__a31o_2_21_X
+
+sky130_fd_sc_hd__o21a_2_14  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_14_X
+    in : A1=sky130_fd_sc_hd__xor2_2_13_X, A2=sky130_fd_sc_hd__xor2_2_14_X, B1=sky130_fd_sc_hd__o21a_2_14_B1
+
+sky130_fd_sc_hd__and2_2_15  [and2_2]
+    out: X=sky130_fd_sc_hd__and2_2_15_X
+    in : A=sky130_fd_sc_hd__inv_2_6_Y, B=sky130_fd_sc_hd__and4_2_3_X
+
+sky130_fd_sc_hd__a32o_2_1  [a32o_2]
+    out: X=sky130_fd_sc_hd__a32o_2_1_X
+    in : A1=sky130_fd_sc_hd__or4_2_0_A, A2=sky130_fd_sc_hd__o21a_2_3_A2, A3=sky130_fd_sc_hd__or2_2_4_X, B1=sky130_fd_sc_hd__o22a_2_0_X, B2=sky130_fd_sc_hd__a32o_2_1_B2
+
+sky130_fd_sc_hd__and2b_2_27  [and2b_2]
+    out: X=sky130_fd_sc_hd__and3_2_12_C
+    in : A_N=sky130_fd_sc_hd__nand4_2_13_C, B=sky130_fd_sc_hd__o21a_2_25_A1
+
+sky130_fd_sc_hd__and2b_2_16  [and2b_2]
+    out: X=sky130_fd_sc_hd__and2b_2_16_X
+    in : A_N=sky130_fd_sc_hd__inv_2_7_A, B=sky130_fd_sc_hd__or2_2_10_A
+
+sky130_fd_sc_hd__decap_3_9  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_190  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__a21oi_2_19  [a21oi_2]
+    out: Y=sky130_fd_sc_hd__o21a_2_14_B1
+    in : A1=sky130_fd_sc_hd__xor2_2_13_X, A2=sky130_fd_sc_hd__xor2_2_14_X, B1=sky130_fd_sc_hd__nor2_2_46_A
+
+sky130_fd_sc_hd__a22o_2_0  [a22o_2]
+    out: X=sky130_fd_sc_hd__a22o_2_0_X
+    in : A1=sky130_fd_sc_hd__nand2_2_5_Y, A2=sky130_fd_sc_hd__or3_2_4_B, B1=sky130_fd_sc_hd__or3_2_3_C, B2=sky130_fd_sc_hd__or2_2_4_A
+
+sky130_fd_sc_hd__dfrtp_2_28  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__inv_2_6_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_4_X, D=sky130_fd_sc_hd__a31o_2_11_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_17  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__xor2_2_9_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_4_X, D=sky130_fd_sc_hd__xor2_2_9_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_39  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__mux2_1_19_A0
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_8_X, D=sky130_fd_sc_hd__mux2_1_19_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__or3_2_1  [or3_2]
+    out: X=sky130_fd_sc_hd__or3_2_1_X
+    in : A=sky130_fd_sc_hd__or4_2_0_A, B=sky130_fd_sc_hd__or3_2_1_B, C=sky130_fd_sc_hd__or3_2_1_C
+
+sky130_fd_sc_hd__inv_2_5  [inv_2]
+    out: Y=sky130_fd_sc_hd__inv_2_5_Y
+    in : A=sky130_fd_sc_hd__inv_2_5_A
+
+sky130_fd_sc_hd__mux2_1_11  [mux2_1]
+    out: X=sky130_fd_sc_hd__mux2_1_11_X
+    in : A0=sky130_fd_sc_hd__a22o_2_2_B2, A1=sky130_fd_sc_hd__mux2_1_12_A0, S=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__xor2_2_4  [xor2_2]
+    out: X=sky130_fd_sc_hd__xor2_2_4_X
+    in : A=sky130_fd_sc_hd__xor2_2_4_A, B=sky130_fd_sc_hd__xor2_2_7_X
+
+sky130_fd_sc_hd__and3_2_6  [and3_2]
+    out: X=sky130_fd_sc_hd__and3_2_6_X
+    in : A=sky130_fd_sc_hd__and4_2_1_X, B=sky130_fd_sc_hd__and4_2_0_X, C=sky130_fd_sc_hd__and3_2_6_C
+
+sky130_fd_sc_hd__o21a_2_15  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_15_X
+    in : A1=sky130_fd_sc_hd__or2_2_9_A, A2=sky130_fd_sc_hd__o21a_2_15_A2, B1=sky130_fd_sc_hd__o21ai_2_5_Y
+
+sky130_fd_sc_hd__o21a_2_26  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_26_X
+    in : A1=sky130_fd_sc_hd__inv_2_20_A, A2=sky130_fd_sc_hd__nor2_2_45_Y, B1=sky130_fd_sc_hd__or4_2_6_X
+
+sky130_fd_sc_hd__and2_2_16  [and2_2]
+    out: X=sky130_fd_sc_hd__or2_2_10_A
+    in : A=sky130_fd_sc_hd__or2_2_11_B, B=sky130_fd_sc_hd__and3_2_25_C
+
+sky130_fd_sc_hd__a32o_2_2  [a32o_2]
+    out: X=sky130_fd_sc_hd__a32o_2_2_X
+    in : A1=I, A2=sky130_fd_sc_hd__inv_2_7_A, A3=sky130_fd_sc_hd__and3_2_10_B, B1=sky130_fd_sc_hd__inv_2_10_Y, B2=sky130_fd_sc_hd__and4_2_3_A
+
+sky130_fd_sc_hd__and2b_2_28  [and2b_2]
+    out: X=sky130_fd_sc_hd__and4_2_5_C
+    in : A_N=sky130_fd_sc_hd__nand4_2_11_C, B=sky130_fd_sc_hd__o21a_2_24_A1
+
+sky130_fd_sc_hd__and2b_2_17  [and2b_2]
+    out: X=sky130_fd_sc_hd__o31a_2_1_A3
+    in : A_N=sky130_fd_sc_hd__or3b_2_0_A, B=sky130_fd_sc_hd__or2_2_9_A
+
+sky130_fd_sc_hd__nand2_2_30  [nand2_2]
+    out: Y=sky130_fd_sc_hd__o31a_2_1_B1
+    in : A=sky130_fd_sc_hd__or2_2_9_A, B=sky130_fd_sc_hd__or2_2_8_B
+
+sky130_fd_sc_hd__diode_2_0  [diode_2]
+    in : DIODE=sky130_fd_sc_hd__or4b_2_3_B
+
+sky130_fd_sc_hd__decap_3_191  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_180  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__dfrtp_2_18  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__xor2_2_4_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_4_X, D=sky130_fd_sc_hd__o311a_2_1_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__dfrtp_2_29  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__inv_2_8_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_4_X, D=sky130_fd_sc_hd__dfrtp_2_29_D, RESET_B=rst_n
+
+sky130_fd_sc_hd__a22o_2_1  [a22o_2]
+    out: X=sky130_fd_sc_hd__a22o_2_1_X
+    in : A1=sky130_fd_sc_hd__inv_2_7_Y, A2=sky130_fd_sc_hd__or2_2_7_A, B1=sky130_fd_sc_hd__o211a_2_8_X, B2=sky130_fd_sc_hd__inv_2_9_Y
+
+sky130_fd_sc_hd__clkbuf_4_10  [clkbuf_4]
+    out: X=sky130_fd_sc_hd__clkbuf_4_10_X
+    in : A=sky130_fd_sc_hd__clkbuf_8_9_X
+
+sky130_fd_sc_hd__or3_2_2  [or3_2]
+    out: X=sky130_fd_sc_hd__or4_2_0_C
+    in : A=sky130_fd_sc_hd__or3_2_3_A, B=sky130_fd_sc_hd__or3_2_2_B, C=sky130_fd_sc_hd__or3_2_2_C
+
+sky130_fd_sc_hd__inv_2_6  [inv_2]
+    out: Y=sky130_fd_sc_hd__inv_2_6_Y
+    in : A=sky130_fd_sc_hd__inv_2_6_A
+
+sky130_fd_sc_hd__mux2_1_12  [mux2_1]
+    out: X=sky130_fd_sc_hd__mux2_1_12_X
+    in : A0=sky130_fd_sc_hd__mux2_1_12_A0, A1=sky130_fd_sc_hd__mux2_1_12_A1, S=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__a311o_2_0  [a311o_2]
+    out: X=sky130_fd_sc_hd__and3_2_3_B
+    in : A1=sky130_fd_sc_hd__xor2_2_3_A, A2=sky130_fd_sc_hd__or4_2_0_A, A3=sky130_fd_sc_hd__or2_2_0_B, B1=sky130_fd_sc_hd__or3_2_4_B, C1=sky130_fd_sc_hd__and3_2_1_X
+
+sky130_fd_sc_hd__dfstp_2_0  [dfstp_2]
+    out: Q=sky130_fd_sc_hd__xor2_2_17_B
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_7_X, D=sky130_fd_sc_hd__dfstp_2_0_D, SET_B=rst_n
+
+sky130_fd_sc_hd__xor2_2_5  [xor2_2]
+    out: X=sky130_fd_sc_hd__xor2_2_5_X
+    in : A=sky130_fd_sc_hd__xor2_2_5_A, B=sky130_fd_sc_hd__xor2_2_5_B
+
+sky130_fd_sc_hd__and3_2_7  [and3_2]
+    out: X=sky130_fd_sc_hd__and3_2_7_X
+    in : A=sky130_fd_sc_hd__inv_2_9_A, B=sky130_fd_sc_hd__inv_2_7_A, C=sky130_fd_sc_hd__and3_2_7_C
+
+sky130_fd_sc_hd__o21a_2_16  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_16_X
+    in : A1=sky130_fd_sc_hd__o21a_2_16_A1, A2=sky130_fd_sc_hd__nand4_2_4_Y, B1=sky130_fd_sc_hd__a31o_2_17_X
+
+sky130_fd_sc_hd__o21a_2_27  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_27_X
+    in : A1=sky130_fd_sc_hd__o21a_2_27_A1, A2=sky130_fd_sc_hd__o21a_2_27_A2, B1=sky130_fd_sc_hd__a31o_2_22_X
+
+sky130_fd_sc_hd__a32o_2_3  [a32o_2]
+    out: X=sky130_fd_sc_hd__a32o_2_3_X
+    in : A1=sky130_fd_sc_hd__inv_2_23_Y, A2=sky130_fd_sc_hd__and2_2_15_X, A3=sky130_fd_sc_hd__and4b_2_3_X, B1=sky130_fd_sc_hd__a32o_2_3_B1, B2=sky130_fd_sc_hd__a32o_2_4_B2
+
+sky130_fd_sc_hd__clkbuf_16_0  [clkbuf_16]
+    out: X=sky130_fd_sc_hd__clkbuf_8_9_A
+    in : A=clk
+
+sky130_fd_sc_hd__and2b_2_29  [and2b_2]
+    out: X=sky130_fd_sc_hd__and3_2_12_A
+    in : A_N=sky130_fd_sc_hd__nand4_2_12_C, B=sky130_fd_sc_hd__o21a_2_27_A1
+
+sky130_fd_sc_hd__and2b_2_18  [and2b_2]
+    out: X=sky130_fd_sc_hd__o32a_2_3_A1
+    in : A_N=sky130_fd_sc_hd__xor2_2_16_X, B=sky130_fd_sc_hd__nor2_2_34_Y
+
+sky130_fd_sc_hd__nand2_2_20  [nand2_2]
+    out: Y=sky130_fd_sc_hd__and2_2_8_B
+    in : A=sky130_fd_sc_hd__or2_2_9_B, B=sky130_fd_sc_hd__or2_2_8_B
+
+sky130_fd_sc_hd__nand2_2_31  [nand2_2]
+    out: Y=sky130_fd_sc_hd__xor2_2_20_B
+    in : A=sky130_fd_sc_hd__nand2_2_31_A, B=sky130_fd_sc_hd__a22o_2_3_X
+
+sky130_fd_sc_hd__decap_3_170  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_192  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_181  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__diode_2_1  [diode_2]
+    in : DIODE=enable
+
+sky130_fd_sc_hd__dfrtp_2_19  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__nor3_2_2_B
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_3_X, D=sky130_fd_sc_hd__and2b_2_9_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__a22o_2_2  [a22o_2]
+    out: X=sky130_fd_sc_hd__a22o_2_2_X
+    in : A1=sky130_fd_sc_hd__or4_2_4_X, A2=sky130_fd_sc_hd__a22o_2_2_A2, B1=sky130_fd_sc_hd__buf_2_0_X, B2=sky130_fd_sc_hd__a22o_2_2_B2
+
+sky130_fd_sc_hd__clkbuf_4_11  [clkbuf_4]
+    out: X=sky130_fd_sc_hd__clkbuf_4_11_X
+    in : A=sky130_fd_sc_hd__clkbuf_8_11_X
+
+sky130_fd_sc_hd__o31a_2_10  [o31a_2]
+    out: X=sky130_fd_sc_hd__o31a_2_10_X
+    in : A1=sky130_fd_sc_hd__o31a_2_9_A1, A2=sky130_fd_sc_hd__a22o_2_13_X, A3=sky130_fd_sc_hd__a22o_2_17_X, B1=sky130_fd_sc_hd__or3_2_15_X
+
+sky130_fd_sc_hd__or3_2_3  [or3_2]
+    out: X=sky130_fd_sc_hd__or3_2_3_X
+    in : A=sky130_fd_sc_hd__or3_2_3_A, B=sky130_fd_sc_hd__or3_2_3_B, C=sky130_fd_sc_hd__or3_2_3_C
+
+sky130_fd_sc_hd__inv_2_7  [inv_2]
+    out: Y=sky130_fd_sc_hd__inv_2_7_Y
+    in : A=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__mux2_1_13  [mux2_1]
+    out: X=sky130_fd_sc_hd__mux2_1_13_X
+    in : A0=sky130_fd_sc_hd__a22o_2_2_A2, A1=I, S=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__a311o_2_1  [a311o_2]
+    out: X=sky130_fd_sc_hd__o31a_2_0_B1
+    in : A1=sky130_fd_sc_hd__nor3_2_1_C, A2=sky130_fd_sc_hd__o32ai_2_0_B1, A3=sky130_fd_sc_hd__nand2b_2_8_Y, B1=sky130_fd_sc_hd__and2b_2_6_X, C1=sky130_fd_sc_hd__and3b_2_0_C
+
+sky130_fd_sc_hd__dfstp_2_1  [dfstp_2]
+    out: Q=sky130_fd_sc_hd__xor2_2_16_A
+    in : CLK=sky130_fd_sc_hd__dfxtp_2_3_CLK, D=sky130_fd_sc_hd__o221a_2_1_X, SET_B=rst_n
+
+sky130_fd_sc_hd__o31a_2_0  [o31a_2]
+    out: X=sky130_fd_sc_hd__o31a_2_0_X
+    in : A1=sky130_fd_sc_hd__o31a_2_0_A1, A2=sky130_fd_sc_hd__o31a_2_0_A2, A3=sky130_fd_sc_hd__nor3_2_1_Y, B1=sky130_fd_sc_hd__o31a_2_0_B1
+
+sky130_fd_sc_hd__xor2_2_6  [xor2_2]
+    out: X=sky130_fd_sc_hd__or2_2_5_A
+    in : A=sky130_fd_sc_hd__xor2_2_6_A, B=sky130_fd_sc_hd__xor2_2_6_B
+
+sky130_fd_sc_hd__and3_2_8  [and3_2]
+    out: X=sky130_fd_sc_hd__and4_2_4_D
+    in : A=sky130_fd_sc_hd__and4_2_3_A, B=sky130_fd_sc_hd__and4_2_3_B, C=sky130_fd_sc_hd__or3_2_8_B
+
+sky130_fd_sc_hd__dfrtp_2_0  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__nand4_2_0_C
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_0_X, D=sky130_fd_sc_hd__o21a_2_4_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__o21a_2_28  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_28_X
+    in : A1=sky130_fd_sc_hd__o21a_2_28_A1, A2=sky130_fd_sc_hd__o21a_2_28_A2, B1=sky130_fd_sc_hd__a31o_2_23_X
+
+sky130_fd_sc_hd__o21a_2_17  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_17_X
+    in : A1=sky130_fd_sc_hd__inv_2_16_A, A2=sky130_fd_sc_hd__nor2_2_42_Y, B1=sky130_fd_sc_hd__or4_2_5_X
+
+sky130_fd_sc_hd__a32o_2_4  [a32o_2]
+    out: X=sky130_fd_sc_hd__a32o_2_4_X
+    in : A1=sky130_fd_sc_hd__inv_2_23_A, A2=sky130_fd_sc_hd__and2_2_15_X, A3=sky130_fd_sc_hd__and4b_2_3_X, B1=success, B2=sky130_fd_sc_hd__a32o_2_4_B2
+
+sky130_fd_sc_hd__and2b_2_19  [and2b_2]
+    out: X=sky130_fd_sc_hd__and2b_2_19_X
+    in : A_N=sky130_fd_sc_hd__or2_2_8_X, B=sky130_fd_sc_hd__o221a_2_2_C1
+
+sky130_fd_sc_hd__a22o_2_20  [a22o_2]
+    out: X=sky130_fd_sc_hd__o31a_2_3_A3
+    in : A1=sky130_fd_sc_hd__xnor2_2_13_Y, A2=sky130_fd_sc_hd__or3_2_17_B, B1=sky130_fd_sc_hd__nor3b_2_3_Y, B2=sky130_fd_sc_hd__conb_1_0_LO
+
+sky130_fd_sc_hd__nand2_2_10  [nand2_2]
+    out: Y=sky130_fd_sc_hd__a31o_2_5_A3
+    in : A=sky130_fd_sc_hd__or4_2_0_A, B=sky130_fd_sc_hd__o31ai_2_1_Y
+
+sky130_fd_sc_hd__nand2_2_21  [nand2_2]
+    out: Y=sky130_fd_sc_hd__and3_2_2_A
+    in : A=sky130_fd_sc_hd__xor2_2_7_A, B=sky130_fd_sc_hd__xor2_2_9_A
+
+sky130_fd_sc_hd__nand2_2_32  [nand2_2]
+    out: Y=sky130_fd_sc_hd__inv_2_12_A
+    in : A=sky130_fd_sc_hd__or2_2_9_B, B=sky130_fd_sc_hd__o31a_2_1_A3
+
+sky130_fd_sc_hd__decap_3_160  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_193  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__diode_2_2  [diode_2]
+    in : DIODE=sky130_fd_sc_hd__conb_1_4_LO
+
+sky130_fd_sc_hd__decap_3_182  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_171  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__a22o_2_3  [a22o_2]
+    out: X=sky130_fd_sc_hd__a22o_2_3_X
+    in : A1=sky130_fd_sc_hd__or3_2_9_A, A2=sky130_fd_sc_hd__or2_2_9_X, B1=sky130_fd_sc_hd__o32a_2_2_A2, B2=sky130_fd_sc_hd__or3b_2_0_X
+
+sky130_fd_sc_hd__clkbuf_4_12  [clkbuf_4]
+    out: X=sky130_fd_sc_hd__clkbuf_4_12_X
+    in : A=sky130_fd_sc_hd__clkbuf_8_10_X
+
+sky130_fd_sc_hd__or3_2_4  [or3_2]
+    out: X=sky130_fd_sc_hd__or3_2_4_X
+    in : A=sky130_fd_sc_hd__or4_2_0_A, B=sky130_fd_sc_hd__or3_2_4_B, C=sky130_fd_sc_hd__or3_2_4_C
+
+sky130_fd_sc_hd__inv_2_8  [inv_2]
+    out: Y=sky130_fd_sc_hd__inv_2_8_Y
+    in : A=sky130_fd_sc_hd__inv_2_8_A
+
+sky130_fd_sc_hd__mux2_1_14  [mux2_1]
+    out: X=sky130_fd_sc_hd__mux2_1_14_X
+    in : A0=sky130_fd_sc_hd__mux2_1_8_A1, A1=sky130_fd_sc_hd__mux2_1_15_A0, S=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__dfstp_2_2  [dfstp_2]
+    out: Q=sky130_fd_sc_hd__xor2_2_20_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_7_X, D=sky130_fd_sc_hd__dfstp_2_2_D, SET_B=rst_n
+
+sky130_fd_sc_hd__o31a_2_1  [o31a_2]
+    out: X=sky130_fd_sc_hd__o31a_2_1_X
+    in : A1=sky130_fd_sc_hd__or2_2_9_B, A2=sky130_fd_sc_hd__or3_2_9_A, A3=sky130_fd_sc_hd__o31a_2_1_A3, B1=sky130_fd_sc_hd__o31a_2_1_B1
+
+sky130_fd_sc_hd__xor2_2_7  [xor2_2]
+    out: X=sky130_fd_sc_hd__xor2_2_7_X
+    in : A=sky130_fd_sc_hd__xor2_2_7_A, B=sky130_fd_sc_hd__xor2_2_9_A
+
+sky130_fd_sc_hd__and3_2_9  [and3_2]
+    out: X=sky130_fd_sc_hd__inv_2_10_A
+    in : A=sky130_fd_sc_hd__or3_2_8_A, B=I, C=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__dfrtp_2_1  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__inv_2_1_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_0_X, D=sky130_fd_sc_hd__o21a_2_7_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__o21a_2_29  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_29_X
+    in : A1=sky130_fd_sc_hd__inv_2_17_A, A2=sky130_fd_sc_hd__nor2_2_41_Y, B1=sky130_fd_sc_hd__or4_2_9_X
+
+sky130_fd_sc_hd__o21a_2_18  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_18_X
+    in : A1=sky130_fd_sc_hd__o21a_2_18_A1, A2=sky130_fd_sc_hd__nand4_2_6_Y, B1=sky130_fd_sc_hd__a31o_2_16_X
+
+sky130_fd_sc_hd__o21a_2_0  [o21a_2]
+    out: X=sky130_fd_sc_hd__or4_2_0_D
+    in : A1=sky130_fd_sc_hd__or3_2_3_A, A2=sky130_fd_sc_hd__or3_2_3_C, B1=sky130_fd_sc_hd__or3_2_3_B
+
+sky130_fd_sc_hd__a22o_2_21  [a22o_2]
+    out: X=sky130_fd_sc_hd__o31a_2_9_A2
+    in : A1=sky130_fd_sc_hd__o31a_2_2_X, A2=sky130_fd_sc_hd__nor3b_2_2_Y, B1=sky130_fd_sc_hd__nor3_2_3_Y, B2=sky130_fd_sc_hd__a22o_2_21_B2
+
+sky130_fd_sc_hd__a22o_2_10  [a22o_2]
+    out: X=sky130_fd_sc_hd__o31a_2_9_A3
+    in : A1=sky130_fd_sc_hd__xnor2_2_14_Y, A2=sky130_fd_sc_hd__or3_2_17_B, B1=sky130_fd_sc_hd__nor3b_2_3_Y, B2=sky130_fd_sc_hd__o21bai_2_0_Y
+
+sky130_fd_sc_hd__nand2_2_11  [nand2_2]
+    out: Y=sky130_fd_sc_hd__o21a_2_3_A2
+    in : A=sky130_fd_sc_hd__or2_2_4_A, B=sky130_fd_sc_hd__nand2_2_5_Y
+
+sky130_fd_sc_hd__nand2_2_33  [nand2_2]
+    out: Y=sky130_fd_sc_hd__or4_2_9_D
+    in : A=I, B=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__nand2_2_22  [nand2_2]
+    out: Y=sky130_fd_sc_hd__and3_2_2_B
+    in : A=sky130_fd_sc_hd__xor2_2_4_A, B=sky130_fd_sc_hd__xor2_2_7_X
+
+sky130_fd_sc_hd__decap_3_161  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_150  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_194  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__diode_2_3  [diode_2]
+    in : DIODE=sky130_fd_sc_hd__and4_2_3_X
+
+sky130_fd_sc_hd__decap_3_183  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_172  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__a22o_2_4  [a22o_2]
+    out: X=sky130_fd_sc_hd__a22o_2_4_X
+    in : A1=sky130_fd_sc_hd__inv_2_7_A, A2=sky130_fd_sc_hd__xor2_2_20_A, B1=sky130_fd_sc_hd__nor2_2_39_Y, B2=sky130_fd_sc_hd__a22o_2_4_B2
+
+sky130_fd_sc_hd__nand4_2_0  [nand4_2]
+    out: Y=sky130_fd_sc_hd__o21a_2_4_A2
+    in : A=I, B=sky130_fd_sc_hd__inv_2_7_A, C=sky130_fd_sc_hd__nand4_2_0_C, D=sky130_fd_sc_hd__nor4_2_0_Y
+
+sky130_fd_sc_hd__clkbuf_4_13  [clkbuf_4]
+    out: X=sky130_fd_sc_hd__clkbuf_4_13_X
+    in : A=sky130_fd_sc_hd__dfxtp_2_2_CLK
+
+sky130_fd_sc_hd__or3_2_5  [or3_2]
+    out: X=sky130_fd_sc_hd__or3_2_5_X
+    in : A=sky130_fd_sc_hd__or3_2_5_A, B=sky130_fd_sc_hd__or3_2_5_B, C=sky130_fd_sc_hd__or3_2_5_C
+
+sky130_fd_sc_hd__inv_2_9  [inv_2]
+    out: Y=sky130_fd_sc_hd__inv_2_9_Y
+    in : A=sky130_fd_sc_hd__inv_2_9_A
+
+sky130_fd_sc_hd__and3b_2_0  [and3b_2]
+    out: X=sky130_fd_sc_hd__xnor2_2_6_A
+    in : A_N=sky130_fd_sc_hd__nor3_2_1_B, B=sky130_fd_sc_hd__and2_2_7_B, C=sky130_fd_sc_hd__and3b_2_0_C
+
+sky130_fd_sc_hd__nor2_2_0  [nor2_2]
+    out: Y=sky130_fd_sc_hd__xor2_2_3_B
+    in : A=sky130_fd_sc_hd__nor2_2_8_A, B=sky130_fd_sc_hd__nor2_2_0_B
+
+sky130_fd_sc_hd__mux2_1_15  [mux2_1]
+    out: X=sky130_fd_sc_hd__mux2_1_15_X
+    in : A0=sky130_fd_sc_hd__mux2_1_15_A0, A1=sky130_fd_sc_hd__mux2_1_16_A0, S=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__dfstp_2_3  [dfstp_2]
+    out: Q=sky130_fd_sc_hd__or2_2_12_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_7_X, D=sky130_fd_sc_hd__o32a_2_3_X, SET_B=rst_n
+
+sky130_fd_sc_hd__o31a_2_2  [o31a_2]
+    out: X=sky130_fd_sc_hd__o31a_2_2_X
+    in : A1=sky130_fd_sc_hd__o31a_2_2_A1, A2=sky130_fd_sc_hd__o31a_2_2_A2, A3=sky130_fd_sc_hd__o31a_2_2_A3, B1=sky130_fd_sc_hd__inv_2_14_Y
+
+sky130_fd_sc_hd__nor2_2_40  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_40_Y
+    in : A=sky130_fd_sc_hd__nor2_2_40_A, B=sky130_fd_sc_hd__nor2_2_46_A
+
+sky130_fd_sc_hd__xor2_2_8  [xor2_2]
+    out: X=sky130_fd_sc_hd__or4_2_0_A
+    in : A=sky130_fd_sc_hd__xor2_2_8_A, B=sky130_fd_sc_hd__xor2_2_8_B
+
+sky130_fd_sc_hd__dfrtp_2_2  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__or4_2_1_A
+    in : CLK=sky130_fd_sc_hd__dfrtp_2_8_CLK, D=sky130_fd_sc_hd__a21o_2_0_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__o21a_2_19  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_19_X
+    in : A1=sky130_fd_sc_hd__o21a_2_19_A1, A2=sky130_fd_sc_hd__nand4_2_7_Y, B1=sky130_fd_sc_hd__a31o_2_18_X
+
+sky130_fd_sc_hd__o21a_2_1  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_1_X
+    in : A1=sky130_fd_sc_hd__or3_2_3_B, A2=sky130_fd_sc_hd__and2_2_2_X, B1=sky130_fd_sc_hd__or2_2_4_X
+
+sky130_fd_sc_hd__xnor2_2_0  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__xor2_2_3_A
+    in : A=sky130_fd_sc_hd__xnor2_2_0_A, B=sky130_fd_sc_hd__xor2_2_1_X
+
+sky130_fd_sc_hd__a22o_2_11  [a22o_2]
+    out: X=sky130_fd_sc_hd__o31a_2_6_A3
+    in : A1=sky130_fd_sc_hd__xnor2_2_18_Y, A2=sky130_fd_sc_hd__or3_2_17_B, B1=sky130_fd_sc_hd__nor3b_2_3_Y, B2=sky130_fd_sc_hd__o31a_2_0_X
+
+sky130_fd_sc_hd__a22o_2_22  [a22o_2]
+    out: X=sky130_fd_sc_hd__a22o_2_22_X
+    in : A1=sky130_fd_sc_hd__or3b_2_0_A, A2=sky130_fd_sc_hd__or3_2_9_C, B1=sky130_fd_sc_hd__nand2_2_31_A, B2=sky130_fd_sc_hd__or2_2_9_B
+
+sky130_fd_sc_hd__nand2_2_12  [nand2_2]
+    out: Y=sky130_fd_sc_hd__o311a_2_0_C1
+    in : A=sky130_fd_sc_hd__or4_2_0_A, B=sky130_fd_sc_hd__mux2_1_1_X
+
+sky130_fd_sc_hd__nand2_2_23  [nand2_2]
+    out: Y=sky130_fd_sc_hd__mux2_1_5_A1
+    in : A=sky130_fd_sc_hd__inv_2_9_A, B=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__nand2_2_34  [nand2_2]
+    out: Y=sky130_fd_sc_hd__or4_2_5_D
+    in : A=I, B=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__decap_3_140  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_151  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_195  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__diode_2_4  [diode_2]
+    in : DIODE=sky130_fd_sc_hd__and3_2_6_X
+
+sky130_fd_sc_hd__decap_3_184  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_173  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_162  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__a22o_2_5  [a22o_2]
+    out: X=sky130_fd_sc_hd__a22o_2_5_X
+    in : A1=sky130_fd_sc_hd__inv_2_7_A, A2=sky130_fd_sc_hd__xor2_2_14_B, B1=sky130_fd_sc_hd__xor2_2_20_A, B2=sky130_fd_sc_hd__nor2_2_39_Y
+
+sky130_fd_sc_hd__nand4_2_1  [nand4_2]
+    out: Y=sky130_fd_sc_hd__nand4_2_1_Y
+    in : A=I, B=sky130_fd_sc_hd__inv_2_7_A, C=sky130_fd_sc_hd__nand4_2_1_C, D=sky130_fd_sc_hd__nand4_2_1_D
+
+sky130_fd_sc_hd__clkbuf_4_14  [clkbuf_4]
+    out: X=sky130_fd_sc_hd__clkbuf_4_14_X
+    in : A=sky130_fd_sc_hd__dfrtp_2_8_CLK
+
+sky130_fd_sc_hd__a21o_2_10  [a21o_2]
+    out: X=sky130_fd_sc_hd__a21o_2_10_X
+    in : A1=sky130_fd_sc_hd__and4_2_3_A, A2=sky130_fd_sc_hd__inv_2_10_A, B1=sky130_fd_sc_hd__and4_2_3_B
+
+sky130_fd_sc_hd__or3_2_6  [or3_2]
+    out: X=sky130_fd_sc_hd__or3_2_6_X
+    in : A=sky130_fd_sc_hd__or3_2_6_A, B=sky130_fd_sc_hd__or3_2_6_B, C=sky130_fd_sc_hd__or3_2_6_C
+
+sky130_fd_sc_hd__and3b_2_1  [and3b_2]
+    out: X=sky130_fd_sc_hd__and3b_2_1_X
+    in : A_N=sky130_fd_sc_hd__or2_2_8_B, B=sky130_fd_sc_hd__or2_2_9_B, C=sky130_fd_sc_hd__or2_2_9_A
+
+sky130_fd_sc_hd__nor2_2_1  [nor2_2]
+    out: Y=sky130_fd_sc_hd__or3_2_2_B
+    in : A=sky130_fd_sc_hd__nor2_2_4_Y, B=sky130_fd_sc_hd__or2_2_0_B
+
+sky130_fd_sc_hd__mux2_1_16  [mux2_1]
+    out: X=sky130_fd_sc_hd__mux2_1_16_X
+    in : A0=sky130_fd_sc_hd__mux2_1_16_A0, A1=sky130_fd_sc_hd__mux2_1_9_A0, S=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__nand2b_2_20  [nand2b_2]
+    out: Y=sky130_fd_sc_hd__dfrtp_2_70_D
+    in : A_N=sky130_fd_sc_hd__o21a_2_27_A1, B=sky130_fd_sc_hd__o21a_2_27_A2
+
+sky130_fd_sc_hd__o31a_2_3  [o31a_2]
+    out: X=sky130_fd_sc_hd__o31a_2_3_X
+    in : A1=sky130_fd_sc_hd__o31a_2_9_A1, A2=sky130_fd_sc_hd__a22o_2_6_X, A3=sky130_fd_sc_hd__o31a_2_3_A3, B1=sky130_fd_sc_hd__or3_2_13_X
+
+sky130_fd_sc_hd__nor2_2_41  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_41_Y
+    in : A=sky130_fd_sc_hd__or4_2_9_C, B=sky130_fd_sc_hd__or4_2_9_D
+
+sky130_fd_sc_hd__nor2_2_30  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_30_Y
+    in : A=sky130_fd_sc_hd__inv_2_10_A, B=sky130_fd_sc_hd__nor2_2_30_B
+
+sky130_fd_sc_hd__xor2_2_9  [xor2_2]
+    out: X=sky130_fd_sc_hd__xor2_2_9_X
+    in : A=sky130_fd_sc_hd__xor2_2_9_A, B=sky130_fd_sc_hd__inv_2_5_A
+
+sky130_fd_sc_hd__and2_2_0  [and2_2]
+    out: X=sky130_fd_sc_hd__and3_2_0_C
+    in : A=sky130_fd_sc_hd__or2_2_1_X, B=sky130_fd_sc_hd__or2_2_0_B
+
+sky130_fd_sc_hd__dfrtp_2_3  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__or4_2_3_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_0_X, D=sky130_fd_sc_hd__a21o_2_2_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__o21a_2_2  [o21a_2]
+    out: X=sky130_fd_sc_hd__or2_2_6_B
+    in : A1=sky130_fd_sc_hd__or3_2_3_B, A2=sky130_fd_sc_hd__inv_2_4_A, B1=sky130_fd_sc_hd__or2_2_4_B
+
+sky130_fd_sc_hd__xnor2_2_1  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_8_A
+    in : A=sky130_fd_sc_hd__or4_2_4_B, B=sky130_fd_sc_hd__xor2_2_0_X
+
+sky130_fd_sc_hd__a22o_2_12  [a22o_2]
+    out: X=sky130_fd_sc_hd__o31a_2_5_A2
+    in : A1=sky130_fd_sc_hd__conb_1_4_LO, A2=sky130_fd_sc_hd__nor3b_2_2_Y, B1=sky130_fd_sc_hd__nor3_2_3_Y, B2=sky130_fd_sc_hd__o211a_2_9_X
+
+sky130_fd_sc_hd__nand2_2_35  [nand2_2]
+    out: Y=sky130_fd_sc_hd__or4_2_6_D
+    in : A=I, B=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__nand2_2_24  [nand2_2]
+    out: Y=sky130_fd_sc_hd__xnor2_2_11_B
+    in : A=sky130_fd_sc_hd__inv_2_10_A, B=sky130_fd_sc_hd__and4_2_4_D
+
+sky130_fd_sc_hd__nand2_2_13  [nand2_2]
+    out: Y=sky130_fd_sc_hd__or4_2_3_D
+    in : A=I, B=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__nor4b_2_0  [nor4b_2]
+    out: Y=sky130_fd_sc_hd__or3_2_6_C
+    in : A=sky130_fd_sc_hd__or3b_2_0_A, B=sky130_fd_sc_hd__or2_2_9_A, C=sky130_fd_sc_hd__or2_2_9_B, D_N=sky130_fd_sc_hd__or2_2_8_B
+
+sky130_fd_sc_hd__decap_3_130  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_141  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_152  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__diode_2_5  [diode_2]
+    in : DIODE=sky130_fd_sc_hd__and4_2_3_X
+
+sky130_fd_sc_hd__decap_3_185  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_174  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_163  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_196  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__a22o_2_6  [a22o_2]
+    out: X=sky130_fd_sc_hd__a22o_2_6_X
+    in : A1=sky130_fd_sc_hd__conb_1_5_LO, A2=sky130_fd_sc_hd__nor3b_2_2_Y, B1=sky130_fd_sc_hd__nor3_2_3_Y, B2=sky130_fd_sc_hd__conb_1_3_LO
+
+sky130_fd_sc_hd__nand4_2_2  [nand4_2]
+    out: Y=sky130_fd_sc_hd__o21a_2_8_A2
+    in : A=I, B=sky130_fd_sc_hd__inv_2_7_A, C=sky130_fd_sc_hd__nand4_2_2_C, D=sky130_fd_sc_hd__nand4_2_2_D
+
+sky130_fd_sc_hd__a21o_2_11  [a21o_2]
+    out: X=sky130_fd_sc_hd__dfstp_2_2_D
+    in : A1=sky130_fd_sc_hd__and2b_2_16_X, A2=sky130_fd_sc_hd__xnor2_2_19_Y, B1=sky130_fd_sc_hd__a22o_2_5_X
+
+sky130_fd_sc_hd__or3_2_7  [or3_2]
+    out: X=sky130_fd_sc_hd__or3_2_7_X
+    in : A=sky130_fd_sc_hd__or3_2_7_A, B=sky130_fd_sc_hd__or3_2_7_B, C=sky130_fd_sc_hd__or3_2_7_C
+
+sky130_fd_sc_hd__and3b_2_2  [and3b_2]
+    out: X=sky130_fd_sc_hd__and3b_2_2_X
+    in : A_N=sky130_fd_sc_hd__or2_2_8_B, B=sky130_fd_sc_hd__nor2_2_32_B, C=sky130_fd_sc_hd__or2_2_9_B
+
+sky130_fd_sc_hd__nor2_2_2  [nor2_2]
+    out: Y=sky130_fd_sc_hd__or3_2_2_C
+    in : A=sky130_fd_sc_hd__or3_2_0_B, B=sky130_fd_sc_hd__inv_2_4_A
+
+sky130_fd_sc_hd__mux2_1_17  [mux2_1]
+    out: X=sky130_fd_sc_hd__mux2_1_17_X
+    in : A0=sky130_fd_sc_hd__mux2_1_9_A1, A1=sky130_fd_sc_hd__mux2_1_19_A0, S=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__nand2b_2_21  [nand2b_2]
+    out: Y=sky130_fd_sc_hd__dfrtp_2_64_D
+    in : A_N=sky130_fd_sc_hd__o21a_2_28_A1, B=sky130_fd_sc_hd__o21a_2_28_A2
+
+sky130_fd_sc_hd__nand2b_2_10  [nand2b_2]
+    out: Y=sky130_fd_sc_hd__and2_2_7_B
+    in : A_N=sky130_fd_sc_hd__or3b_2_0_A, B=sky130_fd_sc_hd__or2_2_9_B
+
+sky130_fd_sc_hd__o31a_2_4  [o31a_2]
+    out: X=sky130_fd_sc_hd__o31a_2_4_X
+    in : A1=sky130_fd_sc_hd__o31a_2_9_A1, A2=sky130_fd_sc_hd__a22o_2_7_X, A3=sky130_fd_sc_hd__a22o_2_9_X, B1=sky130_fd_sc_hd__or3_2_12_X
+
+sky130_fd_sc_hd__nor2_2_20  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_20_Y
+    in : A=sky130_fd_sc_hd__nor2_2_20_A, B=sky130_fd_sc_hd__o211a_2_0_X
+
+sky130_fd_sc_hd__nor2_2_31  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_31_Y
+    in : A=sky130_fd_sc_hd__inv_2_9_A, B=sky130_fd_sc_hd__nor2_2_31_B
+
+sky130_fd_sc_hd__nor2_2_42  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_42_Y
+    in : A=sky130_fd_sc_hd__or4_2_5_C, B=sky130_fd_sc_hd__or4_2_5_D
+
+sky130_fd_sc_hd__decap_3_90  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__and2_2_1  [and2_2]
+    out: X=sky130_fd_sc_hd__or2_2_1_A
+    in : A=sky130_fd_sc_hd__or4_2_4_A, B=sky130_fd_sc_hd__xor2_2_7_A
+
+sky130_fd_sc_hd__dfrtp_2_4  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__o21a_2_5_A1
+    in : CLK=sky130_fd_sc_hd__dfrtp_2_8_CLK, D=sky130_fd_sc_hd__dfrtp_2_4_D, RESET_B=rst_n
+
+sky130_fd_sc_hd__o21a_2_3  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_3_X
+    in : A1=sky130_fd_sc_hd__or3_2_3_A, A2=sky130_fd_sc_hd__o21a_2_3_A2, B1=sky130_fd_sc_hd__or2_2_3_X
+
+sky130_fd_sc_hd__xnor2_2_2  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__or3_2_0_B
+    in : A=sky130_fd_sc_hd__xor2_2_3_A, B=sky130_fd_sc_hd__xor2_2_3_B
+
+sky130_fd_sc_hd__a22o_2_13  [a22o_2]
+    out: X=sky130_fd_sc_hd__a22o_2_13_X
+    in : A1=sky130_fd_sc_hd__a22o_2_13_A1, A2=sky130_fd_sc_hd__nor3b_2_2_Y, B1=sky130_fd_sc_hd__nor3_2_3_Y, B2=sky130_fd_sc_hd__o221a_2_2_X
+
+sky130_fd_sc_hd__nand2_2_36  [nand2_2]
+    out: Y=sky130_fd_sc_hd__or4_2_7_D
+    in : A=I, B=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__nor4b_2_1  [nor4b_2]
+    out: Y=sky130_fd_sc_hd__or4b_2_8_A
+    in : A=sky130_fd_sc_hd__and4_2_3_A, B=sky130_fd_sc_hd__and4_2_3_B, C=sky130_fd_sc_hd__and4_2_3_C, D_N=sky130_fd_sc_hd__nor3_2_2_Y
+
+sky130_fd_sc_hd__nand2_2_14  [nand2_2]
+    out: Y=sky130_fd_sc_hd__or4_2_1_D
+    in : A=I, B=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__nand2_2_25  [nand2_2]
+    out: Y=sky130_fd_sc_hd__mux2_1_7_A0
+    in : A=sky130_fd_sc_hd__or2_2_7_A, B=I
+
+sky130_fd_sc_hd__decap_3_131  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_120  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_142  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__diode_2_6  [diode_2]
+    in : DIODE=sky130_fd_sc_hd__and3_2_6_X
+
+sky130_fd_sc_hd__decap_3_186  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_175  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_164  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_153  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_197  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__a22o_2_7  [a22o_2]
+    out: X=sky130_fd_sc_hd__a22o_2_7_X
+    in : A1=sky130_fd_sc_hd__a22o_2_7_A1, A2=sky130_fd_sc_hd__nor3b_2_2_Y, B1=sky130_fd_sc_hd__nor3_2_3_Y, B2=sky130_fd_sc_hd__o21a_2_15_X
+
+sky130_fd_sc_hd__nand4_2_3  [nand4_2]
+    out: Y=sky130_fd_sc_hd__o21a_2_5_A2
+    in : A=I, B=sky130_fd_sc_hd__inv_2_7_A, C=sky130_fd_sc_hd__nand4_2_3_C, D=sky130_fd_sc_hd__nand4_2_3_D
+
+sky130_fd_sc_hd__a21o_2_12  [a21o_2]
+    out: X=sky130_fd_sc_hd__o32a_2_3_A3
+    in : A1=sky130_fd_sc_hd__inv_2_7_A, A2=sky130_fd_sc_hd__xor2_2_19_B, B1=sky130_fd_sc_hd__nor2_2_39_Y
+
+sky130_fd_sc_hd__or3_2_8  [or3_2]
+    out: X=sky130_fd_sc_hd__or3_2_8_X
+    in : A=sky130_fd_sc_hd__or3_2_8_A, B=sky130_fd_sc_hd__or3_2_8_B, C=sky130_fd_sc_hd__or3_2_8_C
+
+sky130_fd_sc_hd__and3b_2_3  [and3b_2]
+    out: X=sky130_fd_sc_hd__o32a_2_3_A2
+    in : A_N=sky130_fd_sc_hd__inv_2_7_A, B=sky130_fd_sc_hd__nor2_2_40_A, C=sky130_fd_sc_hd__xor2_2_16_X
+
+sky130_fd_sc_hd__nor2_2_3  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_3_Y
+    in : A=sky130_fd_sc_hd__or3_2_3_B, B=sky130_fd_sc_hd__nor2_2_3_B
+
+sky130_fd_sc_hd__mux2_1_18  [mux2_1]
+    out: X=sky130_fd_sc_hd__mux2_1_18_X
+    in : A0=sky130_fd_sc_hd__mux2_1_19_A1, A1=sky130_fd_sc_hd__a22o_2_2_A2, S=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__nand2b_2_22  [nand2b_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_46_A
+    in : A_N=sky130_fd_sc_hd__inv_2_7_A, B=sky130_fd_sc_hd__or2_2_10_A
+
+sky130_fd_sc_hd__nand2b_2_11  [nand2b_2]
+    out: Y=sky130_fd_sc_hd__nand2_2_31_A
+    in : A_N=sky130_fd_sc_hd__or2_2_9_A, B=sky130_fd_sc_hd__or3b_2_0_A
+
+sky130_fd_sc_hd__o31a_2_5  [o31a_2]
+    out: X=sky130_fd_sc_hd__o31a_2_5_X
+    in : A1=sky130_fd_sc_hd__o31a_2_9_A1, A2=sky130_fd_sc_hd__o31a_2_5_A2, A3=sky130_fd_sc_hd__a22o_2_8_X, B1=sky130_fd_sc_hd__or3_2_17_X
+
+sky130_fd_sc_hd__conb_1_0  [conb_1]
+    out: HI=sky130_fd_sc_hd__conb_1_0_HI, LO=sky130_fd_sc_hd__conb_1_0_LO
+
+sky130_fd_sc_hd__nor2_2_10  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_3_B
+    in : A=sky130_fd_sc_hd__or3_2_0_B, B=sky130_fd_sc_hd__or3_2_2_B
+
+sky130_fd_sc_hd__nor2_2_21  [nor2_2]
+    out: Y=sky130_fd_sc_hd__xor2_2_8_B
+    in : A=sky130_fd_sc_hd__nor2_2_21_A, B=sky130_fd_sc_hd__and3_2_4_X
+
+sky130_fd_sc_hd__nor2_2_32  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_32_Y
+    in : A=sky130_fd_sc_hd__or2_2_8_B, B=sky130_fd_sc_hd__nor2_2_32_B
+
+sky130_fd_sc_hd__nor2_2_43  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_43_Y
+    in : A=sky130_fd_sc_hd__or4_2_7_C, B=sky130_fd_sc_hd__or4_2_7_D
+
+sky130_fd_sc_hd__decap_3_80  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_91  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__and2_2_2  [and2_2]
+    out: X=sky130_fd_sc_hd__and2_2_2_X
+    in : A=sky130_fd_sc_hd__and2_2_2_A, B=sky130_fd_sc_hd__and3_2_1_C
+
+sky130_fd_sc_hd__dfrtp_2_5  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__nand4_2_2_C
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_1_X, D=sky130_fd_sc_hd__o21a_2_8_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__o21a_2_4  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_4_X
+    in : A1=sky130_fd_sc_hd__o21a_2_4_A1, A2=sky130_fd_sc_hd__o21a_2_4_A2, B1=sky130_fd_sc_hd__a31o_2_1_X
+
+sky130_fd_sc_hd__xnor2_2_3  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__and3_2_2_C
+    in : A=sky130_fd_sc_hd__xor2_2_0_B, B=sky130_fd_sc_hd__xor2_2_4_A
+
+sky130_fd_sc_hd__a22o_2_14  [a22o_2]
+    out: X=sky130_fd_sc_hd__o31a_2_8_A2
+    in : A1=sky130_fd_sc_hd__and3_2_17_X, A2=sky130_fd_sc_hd__nor3b_2_2_Y, B1=sky130_fd_sc_hd__nor3_2_3_Y, B2=sky130_fd_sc_hd__and3b_2_2_X
+
+sky130_fd_sc_hd__nand2_2_26  [nand2_2]
+    out: Y=sky130_fd_sc_hd__o21a_2_12_A1
+    in : A=sky130_fd_sc_hd__and4_2_3_C, B=sky130_fd_sc_hd__nor3_2_2_A
+
+sky130_fd_sc_hd__nand2_2_15  [nand2_2]
+    out: Y=sky130_fd_sc_hd__or4_2_2_D
+    in : A=I, B=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__nand2_2_37  [nand2_2]
+    out: Y=sky130_fd_sc_hd__or4_2_8_D
+    in : A=I, B=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__decap_3_110  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_132  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_121  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_143  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_176  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_165  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_154  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__diode_2_7  [diode_2]
+    in : DIODE=sky130_fd_sc_hd__and3_2_6_X
+
+sky130_fd_sc_hd__decap_3_198  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_187  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__a22o_2_8  [a22o_2]
+    out: X=sky130_fd_sc_hd__a22o_2_8_X
+    in : A1=sky130_fd_sc_hd__xor2_2_12_X, A2=sky130_fd_sc_hd__or3_2_17_B, B1=sky130_fd_sc_hd__nor3b_2_3_Y, B2=sky130_fd_sc_hd__o32ai_2_0_Y
+
+sky130_fd_sc_hd__nand4_2_4  [nand4_2]
+    out: Y=sky130_fd_sc_hd__nand4_2_4_Y
+    in : A=I, B=sky130_fd_sc_hd__inv_2_7_A, C=sky130_fd_sc_hd__nand4_2_4_C, D=sky130_fd_sc_hd__nand4_2_4_D
+
+sky130_fd_sc_hd__a21o_2_13  [a21o_2]
+    out: X=sky130_fd_sc_hd__a21o_2_13_X
+    in : A1=sky130_fd_sc_hd__inv_2_16_A, A2=sky130_fd_sc_hd__nor2_2_42_Y, B1=sky130_fd_sc_hd__or4_2_5_A
+
+sky130_fd_sc_hd__or3_2_9  [or3_2]
+    out: X=sky130_fd_sc_hd__or3_2_9_X
+    in : A=sky130_fd_sc_hd__or3_2_9_A, B=sky130_fd_sc_hd__or3_2_9_B, C=sky130_fd_sc_hd__or3_2_9_C
+
+sky130_fd_sc_hd__nor2_2_4  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_4_Y
+    in : A=sky130_fd_sc_hd__or2_2_1_A, B=sky130_fd_sc_hd__or2_2_1_B
+
+sky130_fd_sc_hd__mux2_1_19  [mux2_1]
+    out: X=sky130_fd_sc_hd__mux2_1_19_X
+    in : A0=sky130_fd_sc_hd__mux2_1_19_A0, A1=sky130_fd_sc_hd__mux2_1_19_A1, S=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__nand2b_2_23  [nand2b_2]
+    out: Y=sky130_fd_sc_hd__a32o_2_4_B2
+    in : A_N=sky130_fd_sc_hd__or2_2_11_B, B=sky130_fd_sc_hd__or2_2_11_A
+
+sky130_fd_sc_hd__nand2b_2_12  [nand2b_2]
+    out: Y=sky130_fd_sc_hd__o221a_2_2_C1
+    in : A_N=sky130_fd_sc_hd__or3b_2_0_A, B=sky130_fd_sc_hd__or2_2_9_A
+
+sky130_fd_sc_hd__o31a_2_6  [o31a_2]
+    out: X=sky130_fd_sc_hd__o31a_2_6_X
+    in : A1=sky130_fd_sc_hd__o31a_2_9_A1, A2=sky130_fd_sc_hd__o31a_2_6_A2, A3=sky130_fd_sc_hd__o31a_2_6_A3, B1=sky130_fd_sc_hd__or3_2_10_X
+
+sky130_fd_sc_hd__conb_1_1  [conb_1]
+    out: HI=sky130_fd_sc_hd__conb_1_1_HI, LO=sky130_fd_sc_hd__or3_2_13_A
+
+sky130_fd_sc_hd__nor2_2_11  [nor2_2]
+    out: Y=sky130_fd_sc_hd__or3_2_1_C
+    in : A=sky130_fd_sc_hd__or3_2_3_B, B=sky130_fd_sc_hd__or2_2_4_B
+
+sky130_fd_sc_hd__nor2_2_22  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor3_2_1_B
+    in : A=sky130_fd_sc_hd__or3b_2_0_A, B=sky130_fd_sc_hd__or2_2_9_A
+
+sky130_fd_sc_hd__nor2_2_44  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_44_Y
+    in : A=sky130_fd_sc_hd__or4_2_8_C, B=sky130_fd_sc_hd__or4_2_8_D
+
+sky130_fd_sc_hd__nor2_2_33  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_33_Y
+    in : A=sky130_fd_sc_hd__or3b_2_0_A, B=sky130_fd_sc_hd__or2_2_9_A
+
+sky130_fd_sc_hd__decap_3_70  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_81  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_92  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__o211a_2_10  [o211a_2]
+    out: X=sky130_fd_sc_hd__o211a_2_10_X
+    in : A1=sky130_fd_sc_hd__inv_2_15_Y, A2=sky130_fd_sc_hd__or2_2_9_B, B1=sky130_fd_sc_hd__inv_2_14_Y, C1=sky130_fd_sc_hd__or2_2_9_A
+
+sky130_fd_sc_hd__and2_2_3  [and2_2]
+    out: X=sky130_fd_sc_hd__and4_2_0_A
+    in : A=sky130_fd_sc_hd__or4_2_1_A, B=sky130_fd_sc_hd__or4_2_1_B
+
+sky130_fd_sc_hd__dfrtp_2_6  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__nand4_2_1_C
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_1_X, D=sky130_fd_sc_hd__o21a_2_10_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__o21a_2_5  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_5_X
+    in : A1=sky130_fd_sc_hd__o21a_2_5_A1, A2=sky130_fd_sc_hd__o21a_2_5_A2, B1=sky130_fd_sc_hd__a31o_2_4_X
+
+sky130_fd_sc_hd__xnor2_2_4  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__xnor2_2_5_B
+    in : A=sky130_fd_sc_hd__xnor2_2_4_A, B=sky130_fd_sc_hd__xor2_2_4_X
+
+sky130_fd_sc_hd__a22o_2_15  [a22o_2]
+    out: X=sky130_fd_sc_hd__o31a_2_6_A2
+    in : A1=sky130_fd_sc_hd__o21a_2_13_X, A2=sky130_fd_sc_hd__nor3b_2_2_Y, B1=sky130_fd_sc_hd__nor3_2_3_Y, B2=sky130_fd_sc_hd__and3b_2_1_X
+
+sky130_fd_sc_hd__nand2_2_16  [nand2_2]
+    out: Y=sky130_fd_sc_hd__and3_2_4_B
+    in : A=sky130_fd_sc_hd__or4_2_4_D, B=sky130_fd_sc_hd__xnor2_2_5_B
+
+sky130_fd_sc_hd__nand2_2_27  [nand2_2]
+    out: Y=sky130_fd_sc_hd__o21a_2_15_A2
+    in : A=sky130_fd_sc_hd__or3b_2_0_A, B=sky130_fd_sc_hd__or2_2_8_X
+
+sky130_fd_sc_hd__nand2_2_38  [nand2_2]
+    out: Y=sky130_fd_sc_hd__nand2_2_38_Y
+    in : A=sky130_fd_sc_hd__or2_2_12_A, B=sky130_fd_sc_hd__or2_2_12_B
+
+sky130_fd_sc_hd__decap_3_100  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_133  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_122  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_111  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_177  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_166  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_144  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_155  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__diode_2_8  [diode_2]
+    in : DIODE=sky130_fd_sc_hd__and3_2_6_X
+
+sky130_fd_sc_hd__decap_3_199  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_188  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__a22o_2_9  [a22o_2]
+    out: X=sky130_fd_sc_hd__a22o_2_9_X
+    in : A1=sky130_fd_sc_hd__a22o_2_9_A1, A2=sky130_fd_sc_hd__or3_2_17_B, B1=sky130_fd_sc_hd__nor3b_2_3_Y, B2=sky130_fd_sc_hd__o22a_2_2_X
+
+sky130_fd_sc_hd__nand4_2_5  [nand4_2]
+    out: Y=sky130_fd_sc_hd__nand4_2_5_Y
+    in : A=I, B=sky130_fd_sc_hd__inv_2_7_A, C=sky130_fd_sc_hd__nand4_2_5_C, D=sky130_fd_sc_hd__nand4_2_5_D
+
+sky130_fd_sc_hd__a21o_2_14  [a21o_2]
+    out: X=sky130_fd_sc_hd__a21o_2_14_X
+    in : A1=sky130_fd_sc_hd__inv_2_18_A, A2=sky130_fd_sc_hd__nor2_2_43_Y, B1=sky130_fd_sc_hd__or4_2_7_A
+
+sky130_fd_sc_hd__nor2_2_5  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_5_Y
+    in : A=sky130_fd_sc_hd__nor2_2_5_A, B=sky130_fd_sc_hd__or3_2_3_B
+
+sky130_fd_sc_hd__nand2b_2_13  [nand2b_2]
+    out: Y=sky130_fd_sc_hd__dfrtp_2_58_D
+    in : A_N=sky130_fd_sc_hd__o21a_2_18_A1, B=sky130_fd_sc_hd__nand4_2_6_Y
+
+sky130_fd_sc_hd__o31a_2_7  [o31a_2]
+    out: X=sky130_fd_sc_hd__o31a_2_7_X
+    in : A1=sky130_fd_sc_hd__o31a_2_9_A1, A2=sky130_fd_sc_hd__o31a_2_7_A2, A3=sky130_fd_sc_hd__o31a_2_7_A3, B1=sky130_fd_sc_hd__or3_2_11_X
+
+sky130_fd_sc_hd__conb_1_2  [conb_1]
+    out: HI=sky130_fd_sc_hd__conb_1_2_HI, LO=sky130_fd_sc_hd__conb_1_2_LO
+
+sky130_fd_sc_hd__nor2_2_12  [nor2_2]
+    out: Y=sky130_fd_sc_hd__or3_2_4_B
+    in : A=sky130_fd_sc_hd__or2_2_4_A, B=sky130_fd_sc_hd__nor2_2_3_B
+
+sky130_fd_sc_hd__nor2_2_23  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_23_Y
+    in : A=sky130_fd_sc_hd__or2_2_8_B, B=sky130_fd_sc_hd__and2_2_8_A
+
+sky130_fd_sc_hd__nor2_2_45  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_45_Y
+    in : A=sky130_fd_sc_hd__or4_2_6_C, B=sky130_fd_sc_hd__or4_2_6_D
+
+sky130_fd_sc_hd__nor2_2_34  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_34_Y
+    in : A=sky130_fd_sc_hd__inv_2_7_A, B=sky130_fd_sc_hd__nor2_2_40_A
+
+sky130_fd_sc_hd__decap_3_60  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_71  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_93  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_82  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__o211a_2_11  [o211a_2]
+    out: X=sky130_fd_sc_hd__dfxtp_2_3_D
+    in : A1=sky130_fd_sc_hd__or2_2_8_B, A2=sky130_fd_sc_hd__nand3_2_1_Y, B1=sky130_fd_sc_hd__a21o_2_17_X, C1=sky130_fd_sc_hd__or2_2_11_B
+
+sky130_fd_sc_hd__and2_2_4  [and2_2]
+    out: X=sky130_fd_sc_hd__and4_2_1_B
+    in : A=sky130_fd_sc_hd__or4_2_2_A, B=sky130_fd_sc_hd__or4_2_2_B
+
+sky130_fd_sc_hd__dfrtp_2_7  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__inv_2_2_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_1_X, D=sky130_fd_sc_hd__o21a_2_9_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__o21a_2_6  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_6_X
+    in : A1=sky130_fd_sc_hd__inv_2_3_A, A2=sky130_fd_sc_hd__o21a_2_6_A2, B1=sky130_fd_sc_hd__or4_2_3_X
+
+sky130_fd_sc_hd__xnor2_2_5  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__xnor2_2_8_A
+    in : A=sky130_fd_sc_hd__or4_2_4_D, B=sky130_fd_sc_hd__xnor2_2_5_B
+
+sky130_fd_sc_hd__o22ai_2_0  [o22ai_2]
+    out: Y=sky130_fd_sc_hd__o22ai_2_0_Y
+    in : A1=sky130_fd_sc_hd__xor2_2_0_B, A2=sky130_fd_sc_hd__and3_2_2_B, B1=sky130_fd_sc_hd__a21oi_2_5_Y, B2=sky130_fd_sc_hd__a31o_2_7_X
+
+sky130_fd_sc_hd__a22o_2_16  [a22o_2]
+    out: X=sky130_fd_sc_hd__o31a_2_7_A2
+    in : A1=sky130_fd_sc_hd__o211a_2_10_X, A2=sky130_fd_sc_hd__nor3b_2_2_Y, B1=sky130_fd_sc_hd__nor3_2_3_Y, B2=sky130_fd_sc_hd__and2b_2_19_X
+
+sky130_fd_sc_hd__a31o_2_0  [a31o_2]
+    out: X=sky130_fd_sc_hd__a31o_2_0_X
+    in : A1=sky130_fd_sc_hd__or3_2_3_B, A2=sky130_fd_sc_hd__and2_2_2_A, A3=sky130_fd_sc_hd__and3_2_1_C, B1=sky130_fd_sc_hd__and3_2_0_C
+
+sky130_fd_sc_hd__nand2_2_17  [nand2_2]
+    out: Y=sky130_fd_sc_hd__xnor2_2_4_A
+    in : A=sky130_fd_sc_hd__xor2_2_0_B, B=sky130_fd_sc_hd__xor2_2_9_A
+
+sky130_fd_sc_hd__nand2_2_28  [nand2_2]
+    out: Y=sky130_fd_sc_hd__o32a_2_2_B2
+    in : A=sky130_fd_sc_hd__or2_2_9_X, B=sky130_fd_sc_hd__o32a_2_2_A2
+
+sky130_fd_sc_hd__decap_3_101  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_134  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_123  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_112  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_167  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_145  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_156  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__diode_2_9  [diode_2]
+    in : DIODE=sky130_fd_sc_hd__and4_2_3_X
+
+sky130_fd_sc_hd__decap_3_189  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_178  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__nand4_2_6  [nand4_2]
+    out: Y=sky130_fd_sc_hd__nand4_2_6_Y
+    in : A=I, B=sky130_fd_sc_hd__inv_2_7_A, C=sky130_fd_sc_hd__nand4_2_6_C, D=sky130_fd_sc_hd__nand4_2_6_D
+
+sky130_fd_sc_hd__a21o_2_15  [a21o_2]
+    out: X=sky130_fd_sc_hd__a21o_2_15_X
+    in : A1=sky130_fd_sc_hd__inv_2_19_A, A2=sky130_fd_sc_hd__nor2_2_44_Y, B1=sky130_fd_sc_hd__or4_2_8_A
+
+sky130_fd_sc_hd__or2_2_0  [or2_2]
+    out: X=sky130_fd_sc_hd__or2_2_4_B
+    in : A=sky130_fd_sc_hd__or2_2_2_A, B=sky130_fd_sc_hd__or2_2_0_B
+
+sky130_fd_sc_hd__nor2_2_6  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_6_Y
+    in : A=sky130_fd_sc_hd__xor2_2_0_B, B=sky130_fd_sc_hd__xor2_2_9_A
+
+sky130_fd_sc_hd__nand2b_2_14  [nand2b_2]
+    out: Y=sky130_fd_sc_hd__dfrtp_2_57_D
+    in : A_N=sky130_fd_sc_hd__o21a_2_19_A1, B=sky130_fd_sc_hd__nand4_2_7_Y
+
+sky130_fd_sc_hd__o31a_2_8  [o31a_2]
+    out: X=sky130_fd_sc_hd__o31a_2_8_X
+    in : A1=sky130_fd_sc_hd__o31a_2_9_A1, A2=sky130_fd_sc_hd__o31a_2_8_A2, A3=sky130_fd_sc_hd__o31a_2_8_A3, B1=sky130_fd_sc_hd__or3_2_14_X
+
+sky130_fd_sc_hd__conb_1_3  [conb_1]
+    out: HI=sky130_fd_sc_hd__conb_1_3_HI, LO=sky130_fd_sc_hd__conb_1_3_LO
+
+sky130_fd_sc_hd__nor2_2_13  [nor2_2]
+    out: Y=sky130_fd_sc_hd__o32a_2_1_A3
+    in : A=sky130_fd_sc_hd__or2_2_4_A, B=sky130_fd_sc_hd__or3_2_0_X
+
+sky130_fd_sc_hd__nor2_2_46  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_46_Y
+    in : A=sky130_fd_sc_hd__nor2_2_46_A, B=sky130_fd_sc_hd__nor2_2_46_B
+
+sky130_fd_sc_hd__nor2_2_24  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_24_Y
+    in : A=sky130_fd_sc_hd__or2_2_9_A, B=sky130_fd_sc_hd__or2_2_8_B
+
+sky130_fd_sc_hd__nor2_2_35  [nor2_2]
+    out: Y=sky130_fd_sc_hd__o32a_2_2_A3
+    in : A=sky130_fd_sc_hd__or2_2_9_B, B=sky130_fd_sc_hd__o32a_2_2_B1
+
+sky130_fd_sc_hd__decap_3_50  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_72  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_61  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_94  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_83  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__a31o_2_20  [a31o_2]
+    out: X=sky130_fd_sc_hd__a31o_2_20_X
+    in : A1=I, A2=sky130_fd_sc_hd__inv_2_7_A, A3=sky130_fd_sc_hd__and4b_2_2_X, B1=sky130_fd_sc_hd__nand4_2_11_C
+
+sky130_fd_sc_hd__and2_2_5  [and2_2]
+    out: X=sky130_fd_sc_hd__and4_2_0_D
+    in : A=sky130_fd_sc_hd__or4_2_3_A, B=sky130_fd_sc_hd__or4_2_3_B
+
+sky130_fd_sc_hd__dfrtp_2_8  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__nand4_2_3_C
+    in : CLK=sky130_fd_sc_hd__dfrtp_2_8_CLK, D=sky130_fd_sc_hd__o21a_2_5_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__o21a_2_7  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_7_X
+    in : A1=sky130_fd_sc_hd__inv_2_1_A, A2=sky130_fd_sc_hd__o21a_2_7_A2, B1=sky130_fd_sc_hd__or4_2_1_X
+
+sky130_fd_sc_hd__xnor2_2_6  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__xnor2_2_6_Y
+    in : A=sky130_fd_sc_hd__xnor2_2_6_A, B=sky130_fd_sc_hd__a21o_2_6_X
+
+sky130_fd_sc_hd__o22ai_2_1  [o22ai_2]
+    out: Y=sky130_fd_sc_hd__o22ai_2_1_Y
+    in : A1=sky130_fd_sc_hd__or2_2_4_A, A2=sky130_fd_sc_hd__nand2_2_5_Y, B1=sky130_fd_sc_hd__or3_2_3_X, B2=sky130_fd_sc_hd__or2_2_5_A
+
+sky130_fd_sc_hd__a22o_2_17  [a22o_2]
+    out: X=sky130_fd_sc_hd__a22o_2_17_X
+    in : A1=sky130_fd_sc_hd__xor2_2_18_X, A2=sky130_fd_sc_hd__or3_2_17_B, B1=sky130_fd_sc_hd__nor3b_2_3_Y, B2=sky130_fd_sc_hd__xnor2_2_6_Y
+
+sky130_fd_sc_hd__a31o_2_1  [a31o_2]
+    out: X=sky130_fd_sc_hd__a31o_2_1_X
+    in : A1=I, A2=sky130_fd_sc_hd__inv_2_7_A, A3=sky130_fd_sc_hd__nor4_2_0_Y, B1=sky130_fd_sc_hd__nand4_2_0_C
+
+sky130_fd_sc_hd__nand2_2_18  [nand2_2]
+    out: Y=sky130_fd_sc_hd__a21o_2_8_A2
+    in : A=sky130_fd_sc_hd__xnor2_2_8_A, B=sky130_fd_sc_hd__xnor2_2_8_B
+
+sky130_fd_sc_hd__nand2_2_29  [nand2_2]
+    out: Y=sky130_fd_sc_hd__nand2_2_29_Y
+    in : A=sky130_fd_sc_hd__or3b_2_0_A, B=sky130_fd_sc_hd__or2_2_9_A
+
+sky130_fd_sc_hd__decap_3_124  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_113  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_102  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_135  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_146  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_168  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_157  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_179  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__o21ai_2_0  [o21ai_2]
+    out: Y=sky130_fd_sc_hd__and3_2_3_C
+    in : A1=sky130_fd_sc_hd__or3_2_4_B, A2=sky130_fd_sc_hd__and3_2_1_X, B1=sky130_fd_sc_hd__or4_2_0_A
+
+sky130_fd_sc_hd__nand4_2_7  [nand4_2]
+    out: Y=sky130_fd_sc_hd__nand4_2_7_Y
+    in : A=I, B=sky130_fd_sc_hd__inv_2_7_A, C=sky130_fd_sc_hd__nand4_2_7_C, D=sky130_fd_sc_hd__nor4_2_1_Y
+
+sky130_fd_sc_hd__a21o_2_16  [a21o_2]
+    out: X=sky130_fd_sc_hd__a21o_2_16_X
+    in : A1=sky130_fd_sc_hd__inv_2_20_A, A2=sky130_fd_sc_hd__nor2_2_45_Y, B1=sky130_fd_sc_hd__or4_2_6_A
+
+sky130_fd_sc_hd__a21o_2_0  [a21o_2]
+    out: X=sky130_fd_sc_hd__a21o_2_0_X
+    in : A1=sky130_fd_sc_hd__inv_2_1_A, A2=sky130_fd_sc_hd__o21a_2_7_A2, B1=sky130_fd_sc_hd__or4_2_1_A
+
+sky130_fd_sc_hd__or2_2_1  [or2_2]
+    out: X=sky130_fd_sc_hd__or2_2_1_X
+    in : A=sky130_fd_sc_hd__or2_2_1_A, B=sky130_fd_sc_hd__or2_2_1_B
+
+sky130_fd_sc_hd__nor2_2_7  [nor2_2]
+    out: Y=sky130_fd_sc_hd__or2_2_1_B
+    in : A=sky130_fd_sc_hd__or4_2_4_A, B=sky130_fd_sc_hd__xor2_2_7_A
+
+sky130_fd_sc_hd__nand2b_2_15  [nand2b_2]
+    out: Y=sky130_fd_sc_hd__dfrtp_2_59_D
+    in : A_N=sky130_fd_sc_hd__o21a_2_16_A1, B=sky130_fd_sc_hd__nand4_2_4_Y
+
+sky130_fd_sc_hd__o31a_2_9  [o31a_2]
+    out: X=sky130_fd_sc_hd__o31a_2_9_X
+    in : A1=sky130_fd_sc_hd__o31a_2_9_A1, A2=sky130_fd_sc_hd__o31a_2_9_A2, A3=sky130_fd_sc_hd__o31a_2_9_A3, B1=sky130_fd_sc_hd__or3_2_16_X
+
+sky130_fd_sc_hd__conb_1_4  [conb_1]
+    out: HI=sky130_fd_sc_hd__conb_1_4_HI, LO=sky130_fd_sc_hd__conb_1_4_LO
+
+sky130_fd_sc_hd__nor2_2_14  [nor2_2]
+    out: Y=sky130_fd_sc_hd__o21a_2_6_A2
+    in : A=sky130_fd_sc_hd__or4_2_3_C, B=sky130_fd_sc_hd__or4_2_3_D
+
+sky130_fd_sc_hd__nor2_2_47  [nor2_2]
+    out: Y=sky130_fd_sc_hd__o31a_2_9_A1
+    in : A=sky130_fd_sc_hd__or3_2_17_B, B=sky130_fd_sc_hd__or3_2_17_C
+
+sky130_fd_sc_hd__nor2_2_25  [nor2_2]
+    out: Y=sky130_fd_sc_hd__or3_2_5_A
+    in : A=sky130_fd_sc_hd__xor2_2_0_B, B=sky130_fd_sc_hd__and3_2_2_B
+
+sky130_fd_sc_hd__nor2_2_36  [nor2_2]
+    out: Y=sky130_fd_sc_hd__or3_2_9_A
+    in : A=sky130_fd_sc_hd__or3b_2_0_A, B=sky130_fd_sc_hd__inv_2_13_Y
+
+sky130_fd_sc_hd__decap_3_51  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_40  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_62  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_73  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_84  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_95  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__a31o_2_21  [a31o_2]
+    out: X=sky130_fd_sc_hd__a31o_2_21_X
+    in : A1=I, A2=sky130_fd_sc_hd__inv_2_7_A, A3=sky130_fd_sc_hd__nand4_2_13_D, B1=sky130_fd_sc_hd__nand4_2_13_C
+
+sky130_fd_sc_hd__a31o_2_10  [a31o_2]
+    out: X=sky130_fd_sc_hd__and2b_2_9_B
+    in : A1=sky130_fd_sc_hd__and4_2_4_B, A2=sky130_fd_sc_hd__inv_2_10_A, A3=sky130_fd_sc_hd__and4_2_4_D, B1=sky130_fd_sc_hd__nor3_2_2_B
+
+sky130_fd_sc_hd__and2_2_6  [and2_2]
+    out: X=sky130_fd_sc_hd__nor3_2_1_C
+    in : A=sky130_fd_sc_hd__or3b_2_0_A, B=sky130_fd_sc_hd__or2_2_9_A
+
+sky130_fd_sc_hd__dfrtp_2_9  [dfrtp_2]
+    out: Q=sky130_fd_sc_hd__inv_2_3_A
+    in : CLK=sky130_fd_sc_hd__clkbuf_8_0_X, D=sky130_fd_sc_hd__o21a_2_6_X, RESET_B=rst_n
+
+sky130_fd_sc_hd__o21a_2_8  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_8_X
+    in : A1=sky130_fd_sc_hd__o21a_2_8_A1, A2=sky130_fd_sc_hd__o21a_2_8_A2, B1=sky130_fd_sc_hd__a31o_2_2_X
+
+sky130_fd_sc_hd__xnor2_2_7  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__or3_2_7_A
+    in : A=sky130_fd_sc_hd__xor2_2_5_A, B=sky130_fd_sc_hd__xor2_2_5_B
+
+sky130_fd_sc_hd__or3_2_10  [or3_2]
+    out: X=sky130_fd_sc_hd__or3_2_10_X
+    in : A=sky130_fd_sc_hd__or3_2_10_A, B=sky130_fd_sc_hd__or3_2_17_B, C=sky130_fd_sc_hd__or3_2_17_C
+
+sky130_fd_sc_hd__a22o_2_18  [a22o_2]
+    out: X=sky130_fd_sc_hd__o31a_2_7_A3
+    in : A1=sky130_fd_sc_hd__xnor2_2_22_Y, A2=sky130_fd_sc_hd__or3_2_17_B, B1=sky130_fd_sc_hd__nor3b_2_3_Y, B2=sky130_fd_sc_hd__and2_2_8_X
+
+sky130_fd_sc_hd__a31o_2_2  [a31o_2]
+    out: X=sky130_fd_sc_hd__a31o_2_2_X
+    in : A1=I, A2=sky130_fd_sc_hd__inv_2_7_A, A3=sky130_fd_sc_hd__nand4_2_2_D, B1=sky130_fd_sc_hd__nand4_2_2_C
+
+sky130_fd_sc_hd__nand2_2_19  [nand2_2]
+    out: Y=sky130_fd_sc_hd__and2_2_8_A
+    in : A=sky130_fd_sc_hd__or3b_2_0_A, B=sky130_fd_sc_hd__or2_2_9_A
+
+sky130_fd_sc_hd__and4bb_2_0  [and4bb_2]
+    out: X=sky130_fd_sc_hd__and4bb_2_0_X
+    in : A_N=sky130_fd_sc_hd__xor2_2_7_A, B_N=sky130_fd_sc_hd__xor2_2_0_B, C=sky130_fd_sc_hd__xor2_2_9_A, D=sky130_fd_sc_hd__xor2_2_4_A
+
+sky130_fd_sc_hd__decap_3_125  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_114  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_103  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_136  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_147  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_158  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_169  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__o21ai_2_1  [o21ai_2]
+    out: Y=sky130_fd_sc_hd__o21ai_2_1_Y
+    in : A1=sky130_fd_sc_hd__or2_2_5_A, A2=sky130_fd_sc_hd__o32a_2_0_X, B1=sky130_fd_sc_hd__or4_2_0_X
+
+sky130_fd_sc_hd__nand4_2_8  [nand4_2]
+    out: Y=sky130_fd_sc_hd__nand4_2_8_Y
+    in : A=I, B=sky130_fd_sc_hd__inv_2_7_A, C=sky130_fd_sc_hd__nand4_2_8_C, D=sky130_fd_sc_hd__nand4_2_8_D
+
+sky130_fd_sc_hd__a21o_2_17  [a21o_2]
+    out: X=sky130_fd_sc_hd__a21o_2_17_X
+    in : A1=sky130_fd_sc_hd__or2_2_9_A, A2=sky130_fd_sc_hd__or3b_2_0_A, B1=sky130_fd_sc_hd__or2_2_9_B
+
+sky130_fd_sc_hd__a21o_2_1  [a21o_2]
+    out: X=sky130_fd_sc_hd__a21o_2_1_X
+    in : A1=sky130_fd_sc_hd__inv_2_2_A, A2=sky130_fd_sc_hd__o21a_2_9_A2, B1=sky130_fd_sc_hd__or4_2_2_A
+
+sky130_fd_sc_hd__or2_2_2  [or2_2]
+    out: X=sky130_fd_sc_hd__or3_2_3_C
+    in : A=sky130_fd_sc_hd__or2_2_2_A, B=sky130_fd_sc_hd__or3_2_2_B
+
+sky130_fd_sc_hd__nor2_2_8  [nor2_2]
+    out: Y=sky130_fd_sc_hd__or3_2_3_A
+    in : A=sky130_fd_sc_hd__nor2_2_8_A, B=sky130_fd_sc_hd__or2_2_1_X
+
+sky130_fd_sc_hd__nand2b_2_16  [nand2b_2]
+    out: Y=sky130_fd_sc_hd__dfrtp_2_66_D
+    in : A_N=sky130_fd_sc_hd__o21a_2_21_A1, B=sky130_fd_sc_hd__nand4_2_9_Y
+
+sky130_fd_sc_hd__conb_1_5  [conb_1]
+    out: HI=sky130_fd_sc_hd__conb_1_5_HI, LO=sky130_fd_sc_hd__conb_1_5_LO
+
+sky130_fd_sc_hd__nor2_2_37  [nor2_2]
+    out: Y=sky130_fd_sc_hd__or3_2_9_C
+    in : A=sky130_fd_sc_hd__or2_2_9_B, B=sky130_fd_sc_hd__or2_2_8_B
+
+sky130_fd_sc_hd__nor2_2_26  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_26_Y
+    in : A=sky130_fd_sc_hd__nor2_2_5_A, B=sky130_fd_sc_hd__or2_2_4_A
+
+sky130_fd_sc_hd__nor2_2_15  [nor2_2]
+    out: Y=sky130_fd_sc_hd__o21a_2_7_A2
+    in : A=sky130_fd_sc_hd__or4_2_1_C, B=sky130_fd_sc_hd__or4_2_1_D
+
+sky130_fd_sc_hd__nor2_2_48  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor3_2_3_B
+    in : A=sky130_fd_sc_hd__or4b_2_8_A, B=sky130_fd_sc_hd__o21ba_2_1_X
+
+sky130_fd_sc_hd__nand3b_2_0  [nand3b_2]
+    out: Y=sky130_fd_sc_hd__and3_2_7_C
+    in : A_N=sky130_fd_sc_hd__xor2_2_9_A, B=sky130_fd_sc_hd__xor2_2_4_A, C=sky130_fd_sc_hd__xor2_2_0_B
+
+sky130_fd_sc_hd__decap_3_30  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_52  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_41  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_63  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_96  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_74  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_85  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__a31o_2_22  [a31o_2]
+    out: X=sky130_fd_sc_hd__a31o_2_22_X
+    in : A1=I, A2=sky130_fd_sc_hd__inv_2_7_A, A3=sky130_fd_sc_hd__nand4_2_12_D, B1=sky130_fd_sc_hd__nand4_2_12_C
+
+sky130_fd_sc_hd__a31o_2_11  [a31o_2]
+    out: X=sky130_fd_sc_hd__a31o_2_11_X
+    in : A1=sky130_fd_sc_hd__inv_2_9_A, A2=sky130_fd_sc_hd__inv_2_7_A, A3=sky130_fd_sc_hd__mux2_1_7_X, B1=sky130_fd_sc_hd__inv_2_6_A
+
+sky130_fd_sc_hd__and2_2_7  [and2_2]
+    out: X=sky130_fd_sc_hd__and2_2_7_X
+    in : A=sky130_fd_sc_hd__or2_2_9_A, B=sky130_fd_sc_hd__and2_2_7_B
+
+sky130_fd_sc_hd__o21a_2_9  [o21a_2]
+    out: X=sky130_fd_sc_hd__o21a_2_9_X
+    in : A1=sky130_fd_sc_hd__inv_2_2_A, A2=sky130_fd_sc_hd__o21a_2_9_A2, B1=sky130_fd_sc_hd__or4_2_2_X
+
+sky130_fd_sc_hd__xnor2_2_8  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__xor2_2_2_B
+    in : A=sky130_fd_sc_hd__xnor2_2_8_A, B=sky130_fd_sc_hd__xnor2_2_8_B
+
+sky130_fd_sc_hd__or3_2_11  [or3_2]
+    out: X=sky130_fd_sc_hd__or3_2_11_X
+    in : A=sky130_fd_sc_hd__or3_2_11_A, B=sky130_fd_sc_hd__or3_2_17_B, C=sky130_fd_sc_hd__or3_2_17_C
+
+sky130_fd_sc_hd__a22o_2_19  [a22o_2]
+    out: X=sky130_fd_sc_hd__o31a_2_8_A3
+    in : A1=sky130_fd_sc_hd__xor2_2_20_X, A2=sky130_fd_sc_hd__or3_2_17_B, B1=sky130_fd_sc_hd__nor3b_2_3_Y, B2=sky130_fd_sc_hd__nor2_2_23_Y
+
+sky130_fd_sc_hd__a2111oi_2_0  [a2111oi_2]
+    out: Y=sky130_fd_sc_hd__a22o_2_13_A1
+    in : A1=sky130_fd_sc_hd__or3b_2_0_A, A2=sky130_fd_sc_hd__or2_2_9_B, B1=sky130_fd_sc_hd__or2_2_8_B, C1=sky130_fd_sc_hd__and3_2_17_C, D1=sky130_fd_sc_hd__nor2_2_33_Y
+
+sky130_fd_sc_hd__a31o_2_3  [a31o_2]
+    out: X=sky130_fd_sc_hd__a31o_2_3_X
+    in : A1=I, A2=sky130_fd_sc_hd__inv_2_7_A, A3=sky130_fd_sc_hd__nand4_2_1_D, B1=sky130_fd_sc_hd__nand4_2_1_C
+
+sky130_fd_sc_hd__and4bb_2_1  [and4bb_2]
+    out: X=sky130_fd_sc_hd__nand4_2_3_D
+    in : A_N=sky130_fd_sc_hd__or4b_2_2_C, B_N=sky130_fd_sc_hd__or4b_2_3_C, C=sky130_fd_sc_hd__or4b_2_3_B, D=sky130_fd_sc_hd__or4b_2_3_A
+
+sky130_fd_sc_hd__decap_3_115  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_104  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_126  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_137  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_159  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_148  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__o21ai_2_2  [o21ai_2]
+    out: Y=sky130_fd_sc_hd__o21ai_2_2_Y
+    in : A1=sky130_fd_sc_hd__or3_2_3_B, A2=sky130_fd_sc_hd__inv_2_0_Y, B1=sky130_fd_sc_hd__or4_2_0_A
+
+sky130_fd_sc_hd__nand4_2_9  [nand4_2]
+    out: Y=sky130_fd_sc_hd__nand4_2_9_Y
+    in : A=I, B=sky130_fd_sc_hd__inv_2_7_A, C=sky130_fd_sc_hd__nand4_2_9_C, D=sky130_fd_sc_hd__nand4_2_9_D
+
+sky130_fd_sc_hd__a21o_2_18  [a21o_2]
+    out: X=sky130_fd_sc_hd__a21o_2_18_X
+    in : A1=sky130_fd_sc_hd__inv_2_17_A, A2=sky130_fd_sc_hd__nor2_2_41_Y, B1=sky130_fd_sc_hd__or4_2_9_A
+
+sky130_fd_sc_hd__a21o_2_2  [a21o_2]
+    out: X=sky130_fd_sc_hd__a21o_2_2_X
+    in : A1=sky130_fd_sc_hd__inv_2_3_A, A2=sky130_fd_sc_hd__o21a_2_6_A2, B1=sky130_fd_sc_hd__or4_2_3_A
+
+sky130_fd_sc_hd__or2_2_3  [or2_2]
+    out: X=sky130_fd_sc_hd__or2_2_3_X
+    in : A=sky130_fd_sc_hd__or2_2_4_A, B=sky130_fd_sc_hd__or3_2_2_B
+
+sky130_fd_sc_hd__nor2_2_9  [nor2_2]
+    out: Y=sky130_fd_sc_hd__inv_2_4_A
+    in : A=sky130_fd_sc_hd__or2_2_1_B, B=sky130_fd_sc_hd__nor2_2_9_B
+
+sky130_fd_sc_hd__nand2b_2_17  [nand2b_2]
+    out: Y=sky130_fd_sc_hd__dfrtp_2_63_D
+    in : A_N=sky130_fd_sc_hd__o21a_2_23_A1, B=sky130_fd_sc_hd__nand4_2_8_Y
+
+sky130_fd_sc_hd__nor2_2_38  [nor2_2]
+    out: Y=sky130_fd_sc_hd__or3_2_9_B
+    in : A=sky130_fd_sc_hd__or3b_2_0_A, B=sky130_fd_sc_hd__or2_2_9_A
+
+sky130_fd_sc_hd__nor2_2_27  [nor2_2]
+    out: Y=sky130_fd_sc_hd__o32a_2_1_B1
+    in : A=sky130_fd_sc_hd__nor2_2_3_B, B=sky130_fd_sc_hd__o21a_2_3_A2
+
+sky130_fd_sc_hd__nor2_2_16  [nor2_2]
+    out: Y=sky130_fd_sc_hd__o21a_2_9_A2
+    in : A=sky130_fd_sc_hd__or4_2_2_C, B=sky130_fd_sc_hd__or4_2_2_D
+
+sky130_fd_sc_hd__decap_3_20  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_42  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_53  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_31  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_97  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_75  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_64  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_86  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__a31o_2_23  [a31o_2]
+    out: X=sky130_fd_sc_hd__a31o_2_23_X
+    in : A1=I, A2=sky130_fd_sc_hd__inv_2_7_A, A3=sky130_fd_sc_hd__nand4_2_10_D, B1=sky130_fd_sc_hd__nand4_2_10_C
+
+sky130_fd_sc_hd__a31o_2_12  [a31o_2]
+    out: X=sky130_fd_sc_hd__a31o_2_12_X
+    in : A1=I, A2=sky130_fd_sc_hd__inv_2_7_A, A3=sky130_fd_sc_hd__a221o_2_1_X, B1=sky130_fd_sc_hd__inv_2_11_A
+
+sky130_fd_sc_hd__and2_2_8  [and2_2]
+    out: X=sky130_fd_sc_hd__and2_2_8_X
+    in : A=sky130_fd_sc_hd__and2_2_8_A, B=sky130_fd_sc_hd__and2_2_8_B
+
+sky130_fd_sc_hd__xnor2_2_9  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__or2_2_4_A
+    in : A=sky130_fd_sc_hd__xor2_2_2_A, B=sky130_fd_sc_hd__xor2_2_2_B
+
+sky130_fd_sc_hd__or3_2_12  [or3_2]
+    out: X=sky130_fd_sc_hd__or3_2_12_X
+    in : A=sky130_fd_sc_hd__or3_2_6_X, B=sky130_fd_sc_hd__or3_2_17_B, C=sky130_fd_sc_hd__or3_2_17_C
+
+sky130_fd_sc_hd__a31o_2_4  [a31o_2]
+    out: X=sky130_fd_sc_hd__a31o_2_4_X
+    in : A1=I, A2=sky130_fd_sc_hd__inv_2_7_A, A3=sky130_fd_sc_hd__nand4_2_3_D, B1=sky130_fd_sc_hd__nand4_2_3_C
+
+sky130_fd_sc_hd__and4bb_2_2  [and4bb_2]
+    out: X=sky130_fd_sc_hd__nand4_2_1_D
+    in : A_N=sky130_fd_sc_hd__or4b_2_3_A, B_N=sky130_fd_sc_hd__or4b_2_2_C, C=sky130_fd_sc_hd__or4b_2_3_C, D=sky130_fd_sc_hd__or4b_2_3_B
+
+sky130_fd_sc_hd__clkbuf_8_10  [clkbuf_8]
+    out: X=sky130_fd_sc_hd__clkbuf_8_10_X
+    in : A=sky130_fd_sc_hd__clkbuf_8_9_A
+
+sky130_fd_sc_hd__decap_3_116  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_105  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_127  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_138  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_149  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__o21ai_2_3  [o21ai_2]
+    out: Y=sky130_fd_sc_hd__o21ai_2_3_Y
+    in : A1=I, A2=sky130_fd_sc_hd__nor2_2_40_A, B1=sky130_fd_sc_hd__o21ai_2_3_B1
+
+sky130_fd_sc_hd__a21o_2_3  [a21o_2]
+    out: X=sky130_fd_sc_hd__a21o_2_3_X
+    in : A1=sky130_fd_sc_hd__or2_2_5_A, A2=sky130_fd_sc_hd__a21o_2_3_A2, B1=sky130_fd_sc_hd__and3_2_3_X
+
+sky130_fd_sc_hd__or2_2_4  [or2_2]
+    out: X=sky130_fd_sc_hd__or2_2_4_X
+    in : A=sky130_fd_sc_hd__or2_2_4_A, B=sky130_fd_sc_hd__or2_2_4_B
+
+sky130_fd_sc_hd__nand2b_2_18  [nand2b_2]
+    out: Y=sky130_fd_sc_hd__dfrtp_2_67_D
+    in : A_N=sky130_fd_sc_hd__o21a_2_24_A1, B=sky130_fd_sc_hd__o21a_2_24_A2
+
+sky130_fd_sc_hd__nor2_2_17  [nor2_2]
+    out: Y=sky130_fd_sc_hd__or3_2_5_B
+    in : A=sky130_fd_sc_hd__and3_2_2_A, B=sky130_fd_sc_hd__and3_2_2_C
+
+sky130_fd_sc_hd__nor2_2_28  [nor2_2]
+    out: Y=sky130_fd_sc_hd__or3_2_1_B
+    in : A=sky130_fd_sc_hd__or3_2_3_B, B=sky130_fd_sc_hd__and2_2_2_A
+
+sky130_fd_sc_hd__nor2_2_39  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_39_Y
+    in : A=sky130_fd_sc_hd__or2_2_10_A, B=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__decap_3_10  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_21  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_43  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_54  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_32  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_76  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_65  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_87  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_98  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__a31o_2_13  [a31o_2]
+    out: X=sky130_fd_sc_hd__a31o_2_13_X
+    in : A1=sky130_fd_sc_hd__inv_2_9_A, A2=sky130_fd_sc_hd__nor2_2_29_Y, A3=sky130_fd_sc_hd__inv_2_7_A, B1=sky130_fd_sc_hd__or2_2_11_A
+
+sky130_fd_sc_hd__a31o_2_24  [a31o_2]
+    out: X=sky130_fd_sc_hd__a31o_2_24_X
+    in : A1=I, A2=sky130_fd_sc_hd__inv_2_7_A, A3=sky130_fd_sc_hd__nand4_2_9_D, B1=sky130_fd_sc_hd__nand4_2_9_C
+
+sky130_fd_sc_hd__and2_2_9  [and2_2]
+    out: X=sky130_fd_sc_hd__and4_2_4_B
+    in : A=sky130_fd_sc_hd__and4_2_3_C, B=sky130_fd_sc_hd__nor3_2_2_A
+
+sky130_fd_sc_hd__or3_2_13  [or3_2]
+    out: X=sky130_fd_sc_hd__or3_2_13_X
+    in : A=sky130_fd_sc_hd__or3_2_13_A, B=sky130_fd_sc_hd__or3_2_17_B, C=sky130_fd_sc_hd__or3_2_17_C
+
+sky130_fd_sc_hd__a31o_2_5  [a31o_2]
+    out: X=sky130_fd_sc_hd__a31o_2_5_X
+    in : A1=sky130_fd_sc_hd__or2_2_5_A, A2=sky130_fd_sc_hd__a31o_2_5_A2, A3=sky130_fd_sc_hd__a31o_2_5_A3, B1=sky130_fd_sc_hd__xor2_2_5_X
+
+sky130_fd_sc_hd__xnor2_2_20  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__xnor2_2_21_B
+    in : A=sky130_fd_sc_hd__or2_2_12_A, B=sky130_fd_sc_hd__xor2_2_20_A
+
+sky130_fd_sc_hd__and4bb_2_3  [and4bb_2]
+    out: X=sky130_fd_sc_hd__nand4_2_2_D
+    in : A_N=sky130_fd_sc_hd__or4b_2_3_B, B_N=sky130_fd_sc_hd__or4b_2_2_C, C=sky130_fd_sc_hd__or4b_2_3_C, D=sky130_fd_sc_hd__or4b_2_3_A
+
+sky130_fd_sc_hd__clkbuf_8_11  [clkbuf_8]
+    out: X=sky130_fd_sc_hd__clkbuf_8_11_X
+    in : A=sky130_fd_sc_hd__clkbuf_8_9_A
+
+sky130_fd_sc_hd__decap_3_106  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_128  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_117  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_139  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__o21ai_2_4  [o21ai_2]
+    out: Y=sky130_fd_sc_hd__o21ai_2_4_Y
+    in : A1=sky130_fd_sc_hd__inv_2_12_Y, A2=sky130_fd_sc_hd__o32a_2_2_B2, B1=sky130_fd_sc_hd__a211o_2_3_X
+
+sky130_fd_sc_hd__nand3_2_0  [nand3_2]
+    out: Y=sky130_fd_sc_hd__nand3_2_0_Y
+    in : A=sky130_fd_sc_hd__xor2_2_9_A, B=sky130_fd_sc_hd__xor2_2_4_A, C=sky130_fd_sc_hd__inv_2_5_A
+
+sky130_fd_sc_hd__mux2_1_0  [mux2_1]
+    out: X=sky130_fd_sc_hd__mux2_1_0_X
+    in : A0=sky130_fd_sc_hd__o21a_2_3_X, A1=sky130_fd_sc_hd__a31o_2_0_X, S=sky130_fd_sc_hd__or4_2_0_A
+
+sky130_fd_sc_hd__a21o_2_4  [a21o_2]
+    out: X=sky130_fd_sc_hd__xor2_2_5_B
+    in : A1=sky130_fd_sc_hd__xnor2_2_4_A, A2=sky130_fd_sc_hd__or3_2_5_B, B1=sky130_fd_sc_hd__a21oi_2_6_Y
+
+sky130_fd_sc_hd__or2_2_5  [or2_2]
+    out: X=sky130_fd_sc_hd__or2_2_5_X
+    in : A=sky130_fd_sc_hd__or2_2_5_A, B=sky130_fd_sc_hd__or3_2_1_B
+
+sky130_fd_sc_hd__nand2b_2_19  [nand2b_2]
+    out: Y=sky130_fd_sc_hd__dfrtp_2_68_D
+    in : A_N=sky130_fd_sc_hd__o21a_2_25_A1, B=sky130_fd_sc_hd__o21a_2_25_A2
+
+sky130_fd_sc_hd__and2b_2_0  [and2b_2]
+    out: X=sky130_fd_sc_hd__or2_2_0_B
+    in : A_N=sky130_fd_sc_hd__xor2_2_3_B, B=sky130_fd_sc_hd__nor2_2_9_B
+
+sky130_fd_sc_hd__nor2_2_18  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_20_A
+    in : A=sky130_fd_sc_hd__xor2_2_5_A, B=sky130_fd_sc_hd__xor2_2_5_B
+
+sky130_fd_sc_hd__nor2_2_29  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_29_Y
+    in : A=sky130_fd_sc_hd__xor2_2_7_A, B=sky130_fd_sc_hd__and3_2_7_C
+
+sky130_fd_sc_hd__decap_3_11  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_44  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_22  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_33  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_77  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_55  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_66  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_88  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_99  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__a31o_2_14  [a31o_2]
+    out: X=sky130_fd_sc_hd__a31o_2_14_X
+    in : A1=sky130_fd_sc_hd__and2b_2_16_X, A2=sky130_fd_sc_hd__nand2_2_38_Y, A3=sky130_fd_sc_hd__or2_2_12_X, B1=sky130_fd_sc_hd__a22o_2_4_X
+
+sky130_fd_sc_hd__a31o_2_25  [a31o_2]
+    out: X=sky130_fd_sc_hd__a31o_2_25_X
+    in : A1=I, A2=sky130_fd_sc_hd__inv_2_7_A, A3=sky130_fd_sc_hd__nand4_2_5_D, B1=sky130_fd_sc_hd__nand4_2_5_C
+
+sky130_fd_sc_hd__or3_2_14  [or3_2]
+    out: X=sky130_fd_sc_hd__or3_2_14_X
+    in : A=sky130_fd_sc_hd__or3_2_14_A, B=sky130_fd_sc_hd__or3_2_17_B, C=sky130_fd_sc_hd__or3_2_17_C
+
+sky130_fd_sc_hd__a31o_2_6  [a31o_2]
+    out: X=sky130_fd_sc_hd__or3_2_11_A
+    in : A1=sky130_fd_sc_hd__or3b_2_0_A, A2=sky130_fd_sc_hd__or2_2_9_B, A3=sky130_fd_sc_hd__nor2_2_24_Y, B1=sky130_fd_sc_hd__nor3_2_0_Y
+
+sky130_fd_sc_hd__xnor2_2_10  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__or4_2_0_B
+    in : A=sky130_fd_sc_hd__xor2_2_6_A, B=sky130_fd_sc_hd__xor2_2_6_B
+
+sky130_fd_sc_hd__xnor2_2_21  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__xnor2_2_21_Y
+    in : A=sky130_fd_sc_hd__a22o_2_4_B2, B=sky130_fd_sc_hd__xnor2_2_21_B
+
+sky130_fd_sc_hd__and4bb_2_4  [and4bb_2]
+    out: X=sky130_fd_sc_hd__or3_2_14_A
+    in : A_N=sky130_fd_sc_hd__or2_2_9_B, B_N=sky130_fd_sc_hd__or2_2_8_B, C=sky130_fd_sc_hd__or3b_2_0_A, D=sky130_fd_sc_hd__or2_2_9_A
+
+sky130_fd_sc_hd__clkbuf_8_12  [clkbuf_8]
+    out: X=sky130_fd_sc_hd__dfxtp_2_2_CLK
+    in : A=sky130_fd_sc_hd__clkbuf_8_9_A
+
+sky130_fd_sc_hd__decap_3_107  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_129  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_118  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__o21ai_2_5  [o21ai_2]
+    out: Y=sky130_fd_sc_hd__o21ai_2_5_Y
+    in : A1=sky130_fd_sc_hd__or2_2_9_A, A2=sky130_fd_sc_hd__or2_2_9_B, B1=sky130_fd_sc_hd__or2_2_8_B
+
+sky130_fd_sc_hd__nand3_2_1  [nand3_2]
+    out: Y=sky130_fd_sc_hd__nand3_2_1_Y
+    in : A=sky130_fd_sc_hd__or2_2_9_B, B=sky130_fd_sc_hd__or2_2_9_A, C=sky130_fd_sc_hd__or3b_2_0_A
+
+sky130_fd_sc_hd__mux2_1_1  [mux2_1]
+    out: X=sky130_fd_sc_hd__mux2_1_1_X
+    in : A0=sky130_fd_sc_hd__or3_2_0_X, A1=sky130_fd_sc_hd__or4_2_0_C, S=sky130_fd_sc_hd__or3_2_3_B
+
+sky130_fd_sc_hd__a21o_2_5  [a21o_2]
+    out: X=sky130_fd_sc_hd__xor2_2_6_A
+    in : A1=sky130_fd_sc_hd__xor2_2_8_A, A2=sky130_fd_sc_hd__xor2_2_8_B, B1=sky130_fd_sc_hd__nor2_2_21_A
+
+sky130_fd_sc_hd__o32ai_2_0  [o32ai_2]
+    out: Y=sky130_fd_sc_hd__o32ai_2_0_Y
+    in : A1=sky130_fd_sc_hd__o31a_2_0_A1, A2=sky130_fd_sc_hd__o31a_2_0_A2, A3=sky130_fd_sc_hd__and2_2_7_X, B1=sky130_fd_sc_hd__o32ai_2_0_B1, B2=sky130_fd_sc_hd__or3b_2_0_A
+
+sky130_fd_sc_hd__or2_2_6  [or2_2]
+    out: X=sky130_fd_sc_hd__or2_2_6_X
+    in : A=sky130_fd_sc_hd__or3_2_1_C, B=sky130_fd_sc_hd__or2_2_6_B
+
+sky130_fd_sc_hd__o21ba_2_0  [o21ba_2]
+    out: X=sky130_fd_sc_hd__o21ba_2_0_X
+    in : A1=sky130_fd_sc_hd__or2_2_4_A, A2=sky130_fd_sc_hd__nand2_2_9_Y, B1_N=sky130_fd_sc_hd__nor2_2_5_Y
+
+sky130_fd_sc_hd__and2b_2_1  [and2b_2]
+    out: X=sky130_fd_sc_hd__and4_2_0_B
+    in : A_N=sky130_fd_sc_hd__nand4_2_0_C, B=sky130_fd_sc_hd__o21a_2_4_A1
+
+sky130_fd_sc_hd__or4bb_2_0  [or4bb_2]
+    out: X=sky130_fd_sc_hd__or4bb_2_0_X
+    in : A=sky130_fd_sc_hd__or4_2_4_A, B=sky130_fd_sc_hd__or4_2_4_C, C_N=sky130_fd_sc_hd__or4_2_4_D, D_N=sky130_fd_sc_hd__or4_2_4_B
+
+sky130_fd_sc_hd__nor2_2_19  [nor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_19_Y
+    in : A=sky130_fd_sc_hd__xnor2_2_8_A, B=sky130_fd_sc_hd__xnor2_2_8_B
+
+sky130_fd_sc_hd__decap_3_45  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_12  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_23  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_34  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_56  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_67  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_78  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_89  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__a31o_2_15  [a31o_2]
+    out: X=sky130_fd_sc_hd__a31o_2_15_X
+    in : A1=sky130_fd_sc_hd__or2_2_9_B, A2=sky130_fd_sc_hd__inv_2_13_Y, A3=sky130_fd_sc_hd__nand2_2_29_Y, B1=sky130_fd_sc_hd__a22oi_2_0_Y
+
+sky130_fd_sc_hd__nand4_2_10  [nand4_2]
+    out: Y=sky130_fd_sc_hd__o21a_2_28_A2
+    in : A=I, B=sky130_fd_sc_hd__inv_2_7_A, C=sky130_fd_sc_hd__nand4_2_10_C, D=sky130_fd_sc_hd__nand4_2_10_D
+
+sky130_fd_sc_hd__or3_2_15  [or3_2]
+    out: X=sky130_fd_sc_hd__or3_2_15_X
+    in : A=sky130_fd_sc_hd__or3_2_15_A, B=sky130_fd_sc_hd__or3_2_17_B, C=sky130_fd_sc_hd__or3_2_17_C
+
+sky130_fd_sc_hd__a31o_2_7  [a31o_2]
+    out: X=sky130_fd_sc_hd__a31o_2_7_X
+    in : A1=sky130_fd_sc_hd__xor2_2_0_B, A2=sky130_fd_sc_hd__xor2_2_9_A, A3=sky130_fd_sc_hd__xor2_2_4_A, B1=sky130_fd_sc_hd__or3_2_5_B
+
+sky130_fd_sc_hd__xnor2_2_22  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__xnor2_2_22_Y
+    in : A=sky130_fd_sc_hd__or2_2_12_A, B=sky130_fd_sc_hd__o21ai_2_4_Y
+
+sky130_fd_sc_hd__xnor2_2_11  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__xnor2_2_11_Y
+    in : A=sky130_fd_sc_hd__and4_2_3_C, B=sky130_fd_sc_hd__xnor2_2_11_B
+
+sky130_fd_sc_hd__and4bb_2_5  [and4bb_2]
+    out: X=sky130_fd_sc_hd__and3_2_10_A
+    in : A_N=sky130_fd_sc_hd__and4_2_3_B, B_N=sky130_fd_sc_hd__or3_2_8_C, C=sky130_fd_sc_hd__nor3_2_2_B, D=sky130_fd_sc_hd__or3_2_8_B
+
+sky130_fd_sc_hd__clkbuf_8_13  [clkbuf_8]
+    out: X=sky130_fd_sc_hd__clkbuf_4_9_A
+    in : A=sky130_fd_sc_hd__clkbuf_8_9_A
+
+sky130_fd_sc_hd__decap_3_119  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_108  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__nor3b_2_0  [nor3b_2]
+    out: Y=sky130_fd_sc_hd__o22a_2_3_B1
+    in : A=sky130_fd_sc_hd__inv_2_7_A, B=sky130_fd_sc_hd__nor3b_2_0_B, C_N=sky130_fd_sc_hd__nor2_2_40_A
+
+sky130_fd_sc_hd__mux2_1_2  [mux2_1]
+    out: X=sky130_fd_sc_hd__mux2_1_2_X
+    in : A0=sky130_fd_sc_hd__or2_2_6_X, A1=sky130_fd_sc_hd__a22o_2_0_X, S=sky130_fd_sc_hd__or4_2_0_A
+
+sky130_fd_sc_hd__a21o_2_6  [a21o_2]
+    out: X=sky130_fd_sc_hd__a21o_2_6_X
+    in : A1=sky130_fd_sc_hd__and2_2_7_B, A2=sky130_fd_sc_hd__a21o_2_6_A2, B1=sky130_fd_sc_hd__or2_2_9_A
+
+sky130_fd_sc_hd__or2_2_7  [or2_2]
+    out: X=sky130_fd_sc_hd__or2_2_7_X
+    in : A=sky130_fd_sc_hd__or2_2_7_A, B=I
+
+sky130_fd_sc_hd__o21ba_2_1  [o21ba_2]
+    out: X=sky130_fd_sc_hd__o21ba_2_1_X
+    in : A1=success, A2=sky130_fd_sc_hd__a32o_2_3_B1, B1_N=sky130_fd_sc_hd__or4b_2_8_C
+
+sky130_fd_sc_hd__and2b_2_2  [and2b_2]
+    out: X=sky130_fd_sc_hd__and4_2_0_C
+    in : A_N=sky130_fd_sc_hd__nand4_2_3_C, B=sky130_fd_sc_hd__o21a_2_5_A1
+
+sky130_fd_sc_hd__o31ai_2_0  [o31ai_2]
+    out: Y=sky130_fd_sc_hd__o32a_2_1_B2
+    in : A1=sky130_fd_sc_hd__or2_2_4_A, A2=sky130_fd_sc_hd__or3_2_2_C, A3=sky130_fd_sc_hd__inv_2_0_Y, B1=sky130_fd_sc_hd__or4_2_0_A
+
+sky130_fd_sc_hd__decap_3_13  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_24  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_35  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_46  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_57  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_68  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__decap_3_79  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__a31o_2_16  [a31o_2]
+    out: X=sky130_fd_sc_hd__a31o_2_16_X
+    in : A1=I, A2=sky130_fd_sc_hd__inv_2_7_A, A3=sky130_fd_sc_hd__nand4_2_6_D, B1=sky130_fd_sc_hd__nand4_2_6_C
+
+sky130_fd_sc_hd__nand4_2_11  [nand4_2]
+    out: Y=sky130_fd_sc_hd__o21a_2_24_A2
+    in : A=I, B=sky130_fd_sc_hd__inv_2_7_A, C=sky130_fd_sc_hd__nand4_2_11_C, D=sky130_fd_sc_hd__and4b_2_2_X
+
+sky130_fd_sc_hd__or3_2_16  [or3_2]
+    out: X=sky130_fd_sc_hd__or3_2_16_X
+    in : A=sky130_fd_sc_hd__or3_2_16_A, B=sky130_fd_sc_hd__or3_2_17_B, C=sky130_fd_sc_hd__or3_2_17_C
+
+sky130_fd_sc_hd__a31o_2_8  [a31o_2]
+    out: X=sky130_fd_sc_hd__a31o_2_8_X
+    in : A1=sky130_fd_sc_hd__inv_2_9_A, A2=sky130_fd_sc_hd__inv_2_7_A, A3=sky130_fd_sc_hd__xor2_2_7_A, B1=sky130_fd_sc_hd__xor2_2_0_B
+
+sky130_fd_sc_hd__xnor2_2_23  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__or2_2_12_B
+    in : A=sky130_fd_sc_hd__a22o_2_4_B2, B=sky130_fd_sc_hd__xnor2_2_26_A
+
+sky130_fd_sc_hd__and4bb_2_6  [and4bb_2]
+    out: X=sky130_fd_sc_hd__inv_2_9_A
+    in : A_N=sky130_fd_sc_hd__or4_2_4_A, B_N=sky130_fd_sc_hd__or4_2_4_C, C=sky130_fd_sc_hd__or4_2_4_D, D=sky130_fd_sc_hd__or4_2_4_B
+
+sky130_fd_sc_hd__xnor2_2_12  [xnor2_2]
+    out: Y=sky130_fd_sc_hd__nor2_2_31_B
+    in : A=sky130_fd_sc_hd__or4_2_4_A, B=sky130_fd_sc_hd__inv_2_7_A
+
+sky130_fd_sc_hd__clkbuf_8_14  [clkbuf_8]
+    out: X=sky130_fd_sc_hd__dfxtp_2_3_CLK
+    in : A=sky130_fd_sc_hd__clkbuf_8_9_A
+
+sky130_fd_sc_hd__decap_3_109  [decap_3]
+    (power-only cell, e.g. decap/tap/fill)
+
+sky130_fd_sc_hd__nor3b_2_1  [nor3b_2]
+    out: Y=sky130_fd_sc_hd__o31a_2_2_A3
+    in : A=sky130_fd_sc_hd__or3b_2_0_A, B=sky130_fd_sc_hd__or2_2_9_B, C_N=sky130_fd_sc_hd__or2_2_9_A
+
+sky130_fd_sc_hd__clkbuf_8_0  [clkbuf_8]
+    out: X=sky130_fd_sc_hd__clkbuf_8_0_X
+    in : A=sky130_fd_sc_hd__clkbuf_8_9_A
+
+sky130_fd_sc_hd__mux2_1_3  [mux2_1]
+    out: X=sky130_fd_sc_hd__mux2_1_3_X
+    in : A0=sky130_fd_sc_hd__o32a_2_1_X, A1=sky130_fd_sc_hd__mux2_1_0_X, S=sky130_fd_sc_hd__or2_2_5_A
+
+sky130_fd_sc_hd__a21o_2_7  [a21o_2]
+    out: X=sky130_fd_sc_hd__or3_2_10_A
+    in : A1=sky130_fd_sc_hd__or3b_2_0_A, A2=sky130_fd_sc_hd__nor2_2_24_Y, B1=sky130_fd_sc_hd__or3_2_6_C
