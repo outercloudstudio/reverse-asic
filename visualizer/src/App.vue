@@ -26,6 +26,8 @@ onMounted(() => {
 	for(const instanceName of Object.keys(data)) {
 		const instance = (data as any)[instanceName]
 
+		if(['rst_n', 'en', 'clk'].includes(instanceName)) continue
+
 		let label = instance.type
 		let x = Math.random()
 		let y = Math.random()
@@ -54,10 +56,12 @@ onMounted(() => {
 	for(const instanceName of Object.keys(data)) {
 		const instance = (data as any)[instanceName]
 
-		console.log(instance)
+		if(['rst_n', 'en', 'clk'].includes(instanceName)) continue
 
 		for(const outPort of Object.keys(instance.outPorts)) {
 			for(const connection of instance.outPorts[outPort]) {
+				if(['rst_n', 'en', 'clk'].includes(connection.name)) continue
+
 				if(!connection.port) {
 					graph.addDirectedEdge(instanceName, connection.name, { label: `${outPort} -> ${connection.name}`, size: 1, color: 'grey' }) 
 
@@ -89,6 +93,42 @@ onMounted(() => {
 			arrow: EdgeArrowProgram,
 		},
 	})
+
+	let draggedNode: string | null = null
+	let isDragging = false
+
+	sigmaInstance.on('downNode', (e) => {
+		isDragging = true
+		draggedNode = e.node
+		graph.setNodeAttribute(draggedNode, 'highlighted', true)
+
+		if (!sigmaInstance.getCustomBBox()) sigmaInstance.setCustomBBox(sigmaInstance.getBBox())
+	})
+
+	sigmaInstance.on('moveBody', ({ event }) => {
+		if (!isDragging || !draggedNode) return
+
+		const pos = sigmaInstance.viewportToGraph(event)
+
+		graph.setNodeAttribute(draggedNode, 'x', pos.x)
+		graph.setNodeAttribute(draggedNode, 'y', pos.y)
+
+		event.preventSigmaDefault()
+		event.original.preventDefault()
+		event.original.stopPropagation()
+	})
+
+	const handleUp = () => {
+		if (draggedNode) {
+			graph.removeNodeAttribute(draggedNode, 'highlighted')
+		}
+
+		isDragging = false
+		draggedNode = null
+	}
+
+	sigmaInstance.getMouseCaptor().on('mouseup', handleUp)
+	sigmaInstance.getMouseCaptor().on('mouseleave', handleUp)
 })
 </script>
 
