@@ -1,3878 +1,1819 @@
-[
-  {
-    "name": "sky130_fd_sc_hd__decap_3",
-    "ports": [
-      "VPWR",
-      "VGND",
-      "VPB",
-      "VNB"
-    ],
-    "instances": []
+{
+  "A": {
+    "type": "A",
+    "inPorts": {},
+    "outPorts": {
+      "A": [
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_12",
+          "port": "A1"
+        }
+      ]
+    }
   },
-  {
-    "name": "sky130_fd_sc_hd__mux2_1",
-    "ports": [
-      "S",
-      "A1",
-      "A0",
-      "X",
-      "VGND",
-      "VPWR",
-      "VPB",
-      "VNB"
-    ],
-    "instances": []
+  "B": {
+    "type": "B",
+    "inPorts": {},
+    "outPorts": {
+      "B": [
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_5",
+          "port": "A1"
+        }
+      ]
+    }
   },
-  {
-    "name": "sky130_fd_sc_hd__nand2_2",
-    "ports": [
-      "Y",
-      "A",
-      "B",
-      "VGND",
-      "VPWR",
-      "VPB",
-      "VNB"
-    ],
-    "instances": []
+  "clk": {
+    "type": "clk",
+    "inPorts": {},
+    "outPorts": {
+      "clk": [
+        {
+          "name": "sky130_fd_sc_hd__clkbuf_16_2",
+          "port": "A"
+        }
+      ]
+    }
   },
-  {
-    "name": "sky130_fd_sc_hd__a21bo_2",
-    "ports": [
-      "B1_N",
-      "A2",
-      "X",
-      "A1",
-      "VGND",
-      "VPWR",
-      "VPB",
-      "VNB"
-    ],
-    "instances": []
+  "en": {
+    "type": "en",
+    "inPorts": {},
+    "outPorts": {
+      "en": [
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_4",
+          "port": "S"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_5",
+          "port": "S"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_6",
+          "port": "S"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_7",
+          "port": "S"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_8",
+          "port": "S"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_9",
+          "port": "S"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_10",
+          "port": "S"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_11",
+          "port": "S"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_12",
+          "port": "S"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_13",
+          "port": "S"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_14",
+          "port": "S"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_15",
+          "port": "S"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_0",
+          "port": "S"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_1",
+          "port": "S"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_2",
+          "port": "S"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_3",
+          "port": "S"
+        }
+      ]
+    }
   },
-  {
-    "name": "sky130_fd_sc_hd__a21boi_2",
-    "ports": [
-      "B1_N",
-      "A2",
-      "A1",
-      "Y",
-      "VPWR",
-      "VGND",
-      "VPB",
-      "VNB"
-    ],
-    "instances": []
+  "rst_n": {
+    "type": "rst_n",
+    "inPorts": {},
+    "outPorts": {
+      "rst_n": [
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_10",
+          "port": "RESET_B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_11",
+          "port": "RESET_B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_12",
+          "port": "RESET_B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_13",
+          "port": "RESET_B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_14",
+          "port": "RESET_B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_15",
+          "port": "RESET_B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_0",
+          "port": "RESET_B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_1",
+          "port": "RESET_B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_2",
+          "port": "RESET_B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_3",
+          "port": "RESET_B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_4",
+          "port": "RESET_B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_5",
+          "port": "RESET_B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_6",
+          "port": "RESET_B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_7",
+          "port": "RESET_B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_8",
+          "port": "RESET_B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_9",
+          "port": "RESET_B"
+        }
+      ]
+    }
   },
-  {
-    "name": "sky130_fd_sc_hd__dfrtp_2",
-    "ports": [
-      "Q",
-      "RESET_B",
-      "D",
-      "CLK",
-      "VGND",
-      "VPWR",
-      "VPB",
-      "VNB"
-    ],
-    "instances": []
+  "sky130_fd_sc_hd__mux2_1_12": {
+    "type": "sky130_fd_sc_hd__mux2_1",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_11",
+          "port": "D"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_12",
+          "port": "X"
+        }
+      ]
+    }
   },
-  {
-    "name": "sky130_fd_sc_hd__and3_2",
-    "ports": [
-      "B",
-      "X",
-      "A",
-      "C",
-      "VPWR",
-      "VGND",
-      "VPB",
-      "VNB"
-    ],
-    "instances": []
+  "sky130_fd_sc_hd__mux2_1_5": {
+    "type": "sky130_fd_sc_hd__mux2_1",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_5",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_1",
+          "port": "D"
+        }
+      ]
+    }
   },
-  {
-    "name": "sky130_fd_sc_hd__xor2_2",
-    "ports": [
-      "X",
-      "B",
-      "A",
-      "VPWR",
-      "VGND",
-      "VPB",
-      "VNB"
-    ],
-    "instances": []
+  "sky130_fd_sc_hd__clkbuf_16_2": {
+    "type": "sky130_fd_sc_hd__clkbuf_16",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__clkbuf_16_0",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__clkbuf_16_1",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__clkbuf_16_2",
+          "port": "X"
+        }
+      ]
+    }
   },
-  {
-    "name": "sky130_fd_sc_hd__o21bai_2",
-    "ports": [
-      "B1_N",
-      "Y",
-      "A2",
-      "A1",
-      "VGND",
-      "VPWR",
-      "VPB",
-      "VNB"
-    ],
-    "instances": []
+  "sky130_fd_sc_hd__mux2_1_4": {
+    "type": "sky130_fd_sc_hd__mux2_1",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_4",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_5",
+          "port": "D"
+        }
+      ]
+    }
   },
-  {
-    "name": "sky130_fd_sc_hd__clkbuf_16",
-    "ports": [
-      "X",
-      "A",
-      "VGND",
-      "VPWR",
-      "VPB",
-      "VNB"
-    ],
-    "instances": []
+  "sky130_fd_sc_hd__mux2_1_6": {
+    "type": "sky130_fd_sc_hd__mux2_1",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_6",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_3",
+          "port": "D"
+        }
+      ]
+    }
   },
-  {
-    "name": "sky130_fd_sc_hd__nor2_2",
-    "ports": [
-      "B",
-      "Y",
-      "A",
-      "VGND",
-      "VPWR",
-      "VPB",
-      "VNB"
-    ],
-    "instances": []
+  "sky130_fd_sc_hd__mux2_1_7": {
+    "type": "sky130_fd_sc_hd__mux2_1",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_7",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_4",
+          "port": "D"
+        }
+      ]
+    }
   },
-  {
-    "name": "sky130_fd_sc_hd__xnor2_2",
-    "ports": [
-      "Y",
-      "A",
-      "B",
-      "VGND",
-      "VPWR",
-      "VPB",
-      "VNB"
-    ],
-    "instances": []
+  "sky130_fd_sc_hd__mux2_1_8": {
+    "type": "sky130_fd_sc_hd__mux2_1",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_8",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_8",
+          "port": "D"
+        }
+      ]
+    }
   },
-  {
-    "name": "sky130_fd_sc_hd__and2_2",
-    "ports": [
-      "A",
-      "X",
-      "B",
-      "VPWR",
-      "VGND",
-      "VPB",
-      "VNB"
-    ],
-    "instances": []
+  "sky130_fd_sc_hd__mux2_1_9": {
+    "type": "sky130_fd_sc_hd__mux2_1",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_9",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_9",
+          "port": "D"
+        }
+      ]
+    }
   },
-  {
-    "name": "sky130_fd_sc_hd__a31o_2",
-    "ports": [
-      "X",
-      "B1",
-      "A3",
-      "A1",
-      "A2",
-      "VGND",
-      "VPWR",
-      "VPB",
-      "VNB"
-    ],
-    "instances": []
+  "sky130_fd_sc_hd__mux2_1_10": {
+    "type": "sky130_fd_sc_hd__mux2_1",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_12",
+          "port": "D"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_10",
+          "port": "X"
+        }
+      ]
+    }
   },
-  {
-    "name": "sky130_fd_sc_hd__or2_2",
-    "ports": [
-      "B",
-      "X",
-      "A",
-      "VPWR",
-      "VGND",
-      "VPB",
-      "VNB"
-    ],
-    "instances": []
+  "sky130_fd_sc_hd__mux2_1_11": {
+    "type": "sky130_fd_sc_hd__mux2_1",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_15",
+          "port": "D"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_11",
+          "port": "X"
+        }
+      ]
+    }
   },
-  {
-    "name": "sky130_fd_sc_hd__a21o_2",
-    "ports": [
-      "X",
-      "B1",
-      "A1",
-      "A2",
-      "VGND",
-      "VPWR",
-      "VPB",
-      "VNB"
-    ],
-    "instances": []
+  "sky130_fd_sc_hd__mux2_1_13": {
+    "type": "sky130_fd_sc_hd__mux2_1",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_10",
+          "port": "D"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_13",
+          "port": "X"
+        }
+      ]
+    }
   },
-  {
-    "name": "sky130_fd_sc_hd__and4bb_2",
-    "ports": [
-      "A_N",
-      "C",
-      "B_N",
-      "X",
-      "D",
-      "VGND",
-      "VPWR",
-      "VPB",
-      "VNB"
-    ],
-    "instances": []
+  "sky130_fd_sc_hd__mux2_1_14": {
+    "type": "sky130_fd_sc_hd__mux2_1",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_14",
+          "port": "D"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_14",
+          "port": "X"
+        }
+      ]
+    }
   },
-  {
-    "name": "adder_demo",
-    "ports": [
-      "A",
-      "B",
-      "S",
-      "clk",
-      "en",
-      "rst_n",
-      "VGND",
-      "VPWR"
-    ],
-    "instances": [
-      {
-        "name": "sky130_fd_sc_hd__decap_3_36",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_36",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_47",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_47",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_14",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_15",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_25",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_25",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__mux2_1_4",
-        "type": "sky130_fd_sc_hd__mux2_1",
-        "connections": {
-          "S": {
-            "instance": "en"
-          },
-          "A1": {
-            "instance": "sky130_fd_sc_hd__or2_2_4",
-            "port": "A"
-          },
-          "A0": {
-            "instance": "sky130_fd_sc_hd__nor2_2_7",
-            "port": "A"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__mux2_1_4",
-            "port": "X"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_48",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_49",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_37",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_40",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_26",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_26",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_15",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_15",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__mux2_1_5",
-        "type": "sky130_fd_sc_hd__mux2_1",
-        "connections": {
-          "S": {
-            "instance": "en"
-          },
-          "A1": {
-            "instance": "B"
-          },
-          "A0": {
-            "instance": "sky130_fd_sc_hd__or2_2_0",
-            "port": "A"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__mux2_1_5",
-            "port": "X"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_49",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_49",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_38",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_38",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_16",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_19",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_27",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_27",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__mux2_1_6",
-        "type": "sky130_fd_sc_hd__mux2_1",
-        "connections": {
-          "S": {
-            "instance": "en"
-          },
-          "A1": {
-            "instance": "sky130_fd_sc_hd__or2_2_0",
-            "port": "A"
-          },
-          "A0": {
-            "instance": "sky130_fd_sc_hd__xor2_2_4",
-            "port": "A"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__mux2_1_6",
-            "port": "X"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_39",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_39",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_28",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_32",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_17",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_18",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__mux2_1_7",
-        "type": "sky130_fd_sc_hd__mux2_1",
-        "connections": {
-          "S": {
-            "instance": "en"
-          },
-          "A1": {
-            "instance": "sky130_fd_sc_hd__xor2_2_4",
-            "port": "A"
-          },
-          "A0": {
-            "instance": "sky130_fd_sc_hd__or2_2_3",
-            "port": "A"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__mux2_1_7",
-            "port": "X"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_29",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_31",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_18",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_18",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__mux2_1_8",
-        "type": "sky130_fd_sc_hd__mux2_1",
-        "connections": {
-          "S": {
-            "instance": "en"
-          },
-          "A1": {
-            "instance": "sky130_fd_sc_hd__or2_2_0",
-            "port": "B"
-          },
-          "A0": {
-            "instance": "sky130_fd_sc_hd__xor2_2_4",
-            "port": "B"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__mux2_1_8",
-            "port": "X"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__mux2_1_8",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_19",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_19",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__mux2_1_9",
-        "type": "sky130_fd_sc_hd__mux2_1",
-        "connections": {
-          "S": {
-            "instance": "en"
-          },
-          "A1": {
-            "instance": "sky130_fd_sc_hd__or2_2_4",
-            "port": "B"
-          },
-          "A0": {
-            "instance": "sky130_fd_sc_hd__nor2_2_7",
-            "port": "B"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__mux2_1_9",
-            "port": "X"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__nand2_2_0",
-        "type": "sky130_fd_sc_hd__nand2_2",
-        "connections": {
-          "Y": {
-            "instance": "sky130_fd_sc_hd__and2_2_6",
-            "port": "A"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__or2_2_0",
-            "port": "A"
-          },
-          "B": {
-            "instance": "sky130_fd_sc_hd__or2_2_0",
-            "port": "B"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__a21bo_2_0",
-        "type": "sky130_fd_sc_hd__a21bo_2",
-        "connections": {
-          "B1_N": {
-            "instance": "sky130_fd_sc_hd__and2_2_1",
-            "port": "B"
-          },
-          "A2": {
-            "instance": "sky130_fd_sc_hd__xor2_2_1",
-            "port": "B"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__xor2_2_0",
-            "port": "B"
-          },
-          "A1": {
-            "instance": "sky130_fd_sc_hd__xor2_2_1",
-            "port": "A"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_0",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_2",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__nand2_2_1",
-        "type": "sky130_fd_sc_hd__nand2_2",
-        "connections": {
-          "Y": {
-            "instance": "sky130_fd_sc_hd__and2_2_1",
-            "port": "B"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__or2_2_3",
-            "port": "A"
-          },
-          "B": {
-            "instance": "sky130_fd_sc_hd__or2_2_3",
-            "port": "B"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_1",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_6",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__nand2_2_2",
-        "type": "sky130_fd_sc_hd__nand2_2",
-        "connections": {
-          "Y": {
-            "instance": "sky130_fd_sc_hd__nand2_2_3",
-            "port": "A"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__or2_2_4",
-            "port": "A"
-          },
-          "B": {
-            "instance": "sky130_fd_sc_hd__or2_2_4",
-            "port": "B"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__a21boi_2_0",
-        "type": "sky130_fd_sc_hd__a21boi_2",
-        "connections": {
-          "B1_N": {
-            "instance": "sky130_fd_sc_hd__nand2_2_3",
-            "port": "A"
-          },
-          "A2": {
-            "instance": "sky130_fd_sc_hd__a31o_2_3",
-            "port": "X"
-          },
-          "A1": {
-            "instance": "sky130_fd_sc_hd__or2_2_4",
-            "port": "X"
-          },
-          "Y": {
-            "instance": "sky130_fd_sc_hd__xnor2_2_1",
-            "port": "B"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_2",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_2",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__dfrtp_2_10",
-        "type": "sky130_fd_sc_hd__dfrtp_2",
-        "connections": {
-          "Q": {
-            "instance": "sky130_fd_sc_hd__or2_2_4",
-            "port": "B"
-          },
-          "RESET_B": {
-            "instance": "rst_n"
-          },
-          "D": {
-            "instance": "sky130_fd_sc_hd__mux2_1_13",
-            "port": "X"
-          },
-          "CLK": {
-            "instance": "sky130_fd_sc_hd__dfrtp_2_9",
-            "port": "CLK"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__nand2_2_3",
-        "type": "sky130_fd_sc_hd__nand2_2",
-        "connections": {
-          "Y": {
-            "instance": "sky130_fd_sc_hd__xnor2_2_2",
-            "port": "A"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__nand2_2_3",
-            "port": "A"
-          },
-          "B": {
-            "instance": "sky130_fd_sc_hd__or2_2_4",
-            "port": "X"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_3",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_4",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__dfrtp_2_11",
-        "type": "sky130_fd_sc_hd__dfrtp_2",
-        "connections": {
-          "Q": {
-            "instance": "sky130_fd_sc_hd__or2_2_0",
-            "port": "B"
-          },
-          "RESET_B": {
-            "instance": "rst_n"
-          },
-          "D": {
-            "instance": "sky130_fd_sc_hd__mux2_1_12",
-            "port": "X"
-          },
-          "CLK": {
-            "instance": "sky130_fd_sc_hd__dfrtp_2_9",
-            "port": "CLK"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__and3_2_0",
-        "type": "sky130_fd_sc_hd__and3_2",
-        "connections": {
-          "B": {
-            "instance": "sky130_fd_sc_hd__and3_2_0",
-            "port": "B"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__and3_2_0",
-            "port": "X"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__and3_2_0",
-            "port": "A"
-          },
-          "C": {
-            "instance": "sky130_fd_sc_hd__and3_2_0",
-            "port": "C"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_4",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_4",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__dfrtp_2_12",
-        "type": "sky130_fd_sc_hd__dfrtp_2",
-        "connections": {
-          "Q": {
-            "instance": "sky130_fd_sc_hd__or2_2_3",
-            "port": "B"
-          },
-          "RESET_B": {
-            "instance": "rst_n"
-          },
-          "D": {
-            "instance": "sky130_fd_sc_hd__mux2_1_10",
-            "port": "X"
-          },
-          "CLK": {
-            "instance": "sky130_fd_sc_hd__dfrtp_2_9",
-            "port": "CLK"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_5",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_5",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__dfrtp_2_13",
-        "type": "sky130_fd_sc_hd__dfrtp_2",
-        "connections": {
-          "Q": {
-            "instance": "sky130_fd_sc_hd__or2_2_1",
-            "port": "B"
-          },
-          "RESET_B": {
-            "instance": "rst_n"
-          },
-          "D": {
-            "instance": "sky130_fd_sc_hd__mux2_1_15",
-            "port": "X"
-          },
-          "CLK": {
-            "instance": "sky130_fd_sc_hd__dfrtp_2_9",
-            "port": "CLK"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__xor2_2_0",
-        "type": "sky130_fd_sc_hd__xor2_2",
-        "connections": {
-          "X": {
-            "instance": "sky130_fd_sc_hd__xor2_2_0",
-            "port": "X"
-          },
-          "B": {
-            "instance": "sky130_fd_sc_hd__xor2_2_0",
-            "port": "B"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__xor2_2_0",
-            "port": "A"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_6",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_6",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__dfrtp_2_14",
-        "type": "sky130_fd_sc_hd__dfrtp_2",
-        "connections": {
-          "Q": {
-            "instance": "sky130_fd_sc_hd__nor2_2_1",
-            "port": "B"
-          },
-          "RESET_B": {
-            "instance": "rst_n"
-          },
-          "D": {
-            "instance": "sky130_fd_sc_hd__mux2_1_14",
-            "port": "X"
-          },
-          "CLK": {
-            "instance": "sky130_fd_sc_hd__dfrtp_2_9",
-            "port": "CLK"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__o21bai_2_0",
-        "type": "sky130_fd_sc_hd__o21bai_2",
-        "connections": {
-          "B1_N": {
-            "instance": "sky130_fd_sc_hd__nor2_2_0",
-            "port": "A"
-          },
-          "Y": {
-            "instance": "sky130_fd_sc_hd__and3_2_0",
-            "port": "C"
-          },
-          "A2": {
-            "instance": "sky130_fd_sc_hd__xnor2_2_1",
-            "port": "B"
-          },
-          "A1": {
-            "instance": "sky130_fd_sc_hd__nor2_2_7",
-            "port": "Y"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__xor2_2_1",
-        "type": "sky130_fd_sc_hd__xor2_2",
-        "connections": {
-          "X": {
-            "instance": "sky130_fd_sc_hd__xor2_2_1",
-            "port": "X"
-          },
-          "B": {
-            "instance": "sky130_fd_sc_hd__xor2_2_1",
-            "port": "B"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__xor2_2_1",
-            "port": "A"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_7",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_8",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__dfrtp_2_15",
-        "type": "sky130_fd_sc_hd__dfrtp_2",
-        "connections": {
-          "Q": {
-            "instance": "sky130_fd_sc_hd__or2_2_2",
-            "port": "B"
-          },
-          "RESET_B": {
-            "instance": "rst_n"
-          },
-          "D": {
-            "instance": "sky130_fd_sc_hd__mux2_1_11",
-            "port": "X"
-          },
-          "CLK": {
-            "instance": "sky130_fd_sc_hd__dfrtp_2_9",
-            "port": "CLK"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__xor2_2_2",
-        "type": "sky130_fd_sc_hd__xor2_2",
-        "connections": {
-          "X": {
-            "instance": "sky130_fd_sc_hd__xor2_2_2",
-            "port": "X"
-          },
-          "B": {
-            "instance": "sky130_fd_sc_hd__xor2_2_2",
-            "port": "B"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__xor2_2_2",
-            "port": "A"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_8",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_8",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__mux2_1_10",
-        "type": "sky130_fd_sc_hd__mux2_1",
-        "connections": {
-          "S": {
-            "instance": "en"
-          },
-          "A1": {
-            "instance": "sky130_fd_sc_hd__xor2_2_4",
-            "port": "B"
-          },
-          "A0": {
-            "instance": "sky130_fd_sc_hd__or2_2_3",
-            "port": "B"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__mux2_1_10",
-            "port": "X"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__xor2_2_3",
-        "type": "sky130_fd_sc_hd__xor2_2",
-        "connections": {
-          "X": {
-            "instance": "sky130_fd_sc_hd__xor2_2_3",
-            "port": "X"
-          },
-          "B": {
-            "instance": "sky130_fd_sc_hd__xor2_2_3",
-            "port": "B"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__xor2_2_3",
-            "port": "A"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_9",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_9",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__mux2_1_11",
-        "type": "sky130_fd_sc_hd__mux2_1",
-        "connections": {
-          "S": {
-            "instance": "en"
-          },
-          "A1": {
-            "instance": "sky130_fd_sc_hd__nor2_2_1",
-            "port": "B"
-          },
-          "A0": {
-            "instance": "sky130_fd_sc_hd__or2_2_2",
-            "port": "B"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__mux2_1_11",
-            "port": "X"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__xor2_2_4",
-        "type": "sky130_fd_sc_hd__xor2_2",
-        "connections": {
-          "X": {
-            "instance": "sky130_fd_sc_hd__xor2_2_4",
-            "port": "X"
-          },
-          "B": {
-            "instance": "sky130_fd_sc_hd__xor2_2_4",
-            "port": "B"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__xor2_2_4",
-            "port": "A"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__mux2_1_12",
-        "type": "sky130_fd_sc_hd__mux2_1",
-        "connections": {
-          "S": {
-            "instance": "en"
-          },
-          "A1": {
-            "instance": "A"
-          },
-          "A0": {
-            "instance": "sky130_fd_sc_hd__or2_2_0",
-            "port": "B"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__mux2_1_12",
-            "port": "X"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__clkbuf_16_0",
-        "type": "sky130_fd_sc_hd__clkbuf_16",
-        "connections": {
-          "X": {
-            "instance": "sky130_fd_sc_hd__dfrtp_2_7",
-            "port": "CLK"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__clkbuf_16_2",
-            "port": "X"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__mux2_1_13",
-        "type": "sky130_fd_sc_hd__mux2_1",
-        "connections": {
-          "S": {
-            "instance": "en"
-          },
-          "A1": {
-            "instance": "sky130_fd_sc_hd__or2_2_2",
-            "port": "B"
-          },
-          "A0": {
-            "instance": "sky130_fd_sc_hd__or2_2_4",
-            "port": "B"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__mux2_1_13",
-            "port": "X"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__dfrtp_2_0",
-        "type": "sky130_fd_sc_hd__dfrtp_2",
-        "connections": {
-          "Q": {
-            "instance": "sky130_fd_sc_hd__nor2_2_1",
-            "port": "A"
-          },
-          "RESET_B": {
-            "instance": "rst_n"
-          },
-          "D": {
-            "instance": "sky130_fd_sc_hd__mux2_1_3",
-            "port": "X"
-          },
-          "CLK": {
-            "instance": "sky130_fd_sc_hd__dfrtp_2_7",
-            "port": "CLK"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__clkbuf_16_1",
-        "type": "sky130_fd_sc_hd__clkbuf_16",
-        "connections": {
-          "X": {
-            "instance": "sky130_fd_sc_hd__dfrtp_2_9",
-            "port": "CLK"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__clkbuf_16_2",
-            "port": "X"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__mux2_1_14",
-        "type": "sky130_fd_sc_hd__mux2_1",
-        "connections": {
-          "S": {
-            "instance": "en"
-          },
-          "A1": {
-            "instance": "sky130_fd_sc_hd__or2_2_1",
-            "port": "B"
-          },
-          "A0": {
-            "instance": "sky130_fd_sc_hd__nor2_2_1",
-            "port": "B"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__mux2_1_14",
-            "port": "X"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__dfrtp_2_1",
-        "type": "sky130_fd_sc_hd__dfrtp_2",
-        "connections": {
-          "Q": {
-            "instance": "sky130_fd_sc_hd__or2_2_0",
-            "port": "A"
-          },
-          "RESET_B": {
-            "instance": "rst_n"
-          },
-          "D": {
-            "instance": "sky130_fd_sc_hd__mux2_1_5",
-            "port": "X"
-          },
-          "CLK": {
-            "instance": "sky130_fd_sc_hd__dfrtp_2_7",
-            "port": "CLK"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__clkbuf_16_2",
-        "type": "sky130_fd_sc_hd__clkbuf_16",
-        "connections": {
-          "X": {
-            "instance": "sky130_fd_sc_hd__clkbuf_16_2",
-            "port": "X"
-          },
-          "A": {
-            "instance": "clk"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__mux2_1_15",
-        "type": "sky130_fd_sc_hd__mux2_1",
-        "connections": {
-          "S": {
-            "instance": "en"
-          },
-          "A1": {
-            "instance": "sky130_fd_sc_hd__or2_2_3",
-            "port": "B"
-          },
-          "A0": {
-            "instance": "sky130_fd_sc_hd__or2_2_1",
-            "port": "B"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__mux2_1_15",
-            "port": "X"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__nor2_2_0",
-        "type": "sky130_fd_sc_hd__nor2_2",
-        "connections": {
-          "B": {
-            "instance": "sky130_fd_sc_hd__nor2_2_7",
-            "port": "Y"
-          },
-          "Y": {
-            "instance": "sky130_fd_sc_hd__nor2_2_0",
-            "port": "Y"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__nor2_2_0",
-            "port": "A"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__dfrtp_2_2",
-        "type": "sky130_fd_sc_hd__dfrtp_2",
-        "connections": {
-          "Q": {
-            "instance": "sky130_fd_sc_hd__or2_2_2",
-            "port": "A"
-          },
-          "RESET_B": {
-            "instance": "rst_n"
-          },
-          "D": {
-            "instance": "sky130_fd_sc_hd__mux2_1_1",
-            "port": "X"
-          },
-          "CLK": {
-            "instance": "sky130_fd_sc_hd__dfrtp_2_7",
-            "port": "CLK"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__xnor2_2_0",
-        "type": "sky130_fd_sc_hd__xnor2_2",
-        "connections": {
-          "Y": {
-            "instance": "sky130_fd_sc_hd__xnor2_2_0",
-            "port": "Y"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__and2_2_6",
-            "port": "A"
-          },
-          "B": {
-            "instance": "sky130_fd_sc_hd__xor2_2_4",
-            "port": "X"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__nor2_2_1",
-        "type": "sky130_fd_sc_hd__nor2_2",
-        "connections": {
-          "B": {
-            "instance": "sky130_fd_sc_hd__nor2_2_1",
-            "port": "B"
-          },
-          "Y": {
-            "instance": "sky130_fd_sc_hd__nor2_2_4",
-            "port": "B"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__nor2_2_1",
-            "port": "A"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__and2_2_0",
-        "type": "sky130_fd_sc_hd__and2_2",
-        "connections": {
-          "A": {
-            "instance": "sky130_fd_sc_hd__nor2_2_1",
-            "port": "A"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__nor2_2_4",
-            "port": "A"
-          },
-          "B": {
-            "instance": "sky130_fd_sc_hd__nor2_2_1",
-            "port": "B"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__dfrtp_2_3",
-        "type": "sky130_fd_sc_hd__dfrtp_2",
-        "connections": {
-          "Q": {
-            "instance": "sky130_fd_sc_hd__xor2_2_4",
-            "port": "A"
-          },
-          "RESET_B": {
-            "instance": "rst_n"
-          },
-          "D": {
-            "instance": "sky130_fd_sc_hd__mux2_1_6",
-            "port": "X"
-          },
-          "CLK": {
-            "instance": "sky130_fd_sc_hd__dfrtp_2_7",
-            "port": "CLK"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__xnor2_2_1",
-        "type": "sky130_fd_sc_hd__xnor2_2",
-        "connections": {
-          "Y": {
-            "instance": "sky130_fd_sc_hd__and3_2_0",
-            "port": "B"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__nor2_2_0",
-            "port": "Y"
-          },
-          "B": {
-            "instance": "sky130_fd_sc_hd__xnor2_2_1",
-            "port": "B"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__nor2_2_2",
-        "type": "sky130_fd_sc_hd__nor2_2",
-        "connections": {
-          "B": {
-            "instance": "sky130_fd_sc_hd__nor2_2_2",
-            "port": "B"
-          },
-          "Y": {
-            "instance": "sky130_fd_sc_hd__xor2_2_0",
-            "port": "A"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__nor2_2_6",
-            "port": "Y"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__and2_2_1",
-        "type": "sky130_fd_sc_hd__and2_2",
-        "connections": {
-          "A": {
-            "instance": "sky130_fd_sc_hd__or2_2_3",
-            "port": "X"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__xor2_2_1",
-            "port": "B"
-          },
-          "B": {
-            "instance": "sky130_fd_sc_hd__and2_2_1",
-            "port": "B"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__dfrtp_2_4",
-        "type": "sky130_fd_sc_hd__dfrtp_2",
-        "connections": {
-          "Q": {
-            "instance": "sky130_fd_sc_hd__or2_2_3",
-            "port": "A"
-          },
-          "RESET_B": {
-            "instance": "rst_n"
-          },
-          "D": {
-            "instance": "sky130_fd_sc_hd__mux2_1_7",
-            "port": "X"
-          },
-          "CLK": {
-            "instance": "sky130_fd_sc_hd__dfrtp_2_7",
-            "port": "CLK"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__xnor2_2_2",
-        "type": "sky130_fd_sc_hd__xnor2_2",
-        "connections": {
-          "Y": {
-            "instance": "sky130_fd_sc_hd__and3_2_0",
-            "port": "A"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__xnor2_2_2",
-            "port": "A"
-          },
-          "B": {
-            "instance": "sky130_fd_sc_hd__a31o_2_3",
-            "port": "X"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__nor2_2_3",
-        "type": "sky130_fd_sc_hd__nor2_2",
-        "connections": {
-          "B": {
-            "instance": "sky130_fd_sc_hd__nor2_2_3",
-            "port": "B"
-          },
-          "Y": {
-            "instance": "sky130_fd_sc_hd__xor2_2_3",
-            "port": "A"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__nor2_2_5",
-            "port": "Y"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__and2_2_2",
-        "type": "sky130_fd_sc_hd__and2_2",
-        "connections": {
-          "A": {
-            "instance": "sky130_fd_sc_hd__xor2_2_4",
-            "port": "A"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__and2_2_2",
-            "port": "X"
-          },
-          "B": {
-            "instance": "sky130_fd_sc_hd__xor2_2_4",
-            "port": "B"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__dfrtp_2_5",
-        "type": "sky130_fd_sc_hd__dfrtp_2",
-        "connections": {
-          "Q": {
-            "instance": "sky130_fd_sc_hd__nor2_2_7",
-            "port": "A"
-          },
-          "RESET_B": {
-            "instance": "rst_n"
-          },
-          "D": {
-            "instance": "sky130_fd_sc_hd__mux2_1_4",
-            "port": "X"
-          },
-          "CLK": {
-            "instance": "sky130_fd_sc_hd__dfrtp_2_7",
-            "port": "CLK"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__nor2_2_4",
-        "type": "sky130_fd_sc_hd__nor2_2",
-        "connections": {
-          "B": {
-            "instance": "sky130_fd_sc_hd__nor2_2_4",
-            "port": "B"
-          },
-          "Y": {
-            "instance": "sky130_fd_sc_hd__xor2_2_2",
-            "port": "A"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__nor2_2_4",
-            "port": "A"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__and2_2_3",
-        "type": "sky130_fd_sc_hd__and2_2",
-        "connections": {
-          "A": {
-            "instance": "sky130_fd_sc_hd__or2_2_1",
-            "port": "A"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__nor2_2_2",
-            "port": "B"
-          },
-          "B": {
-            "instance": "sky130_fd_sc_hd__or2_2_1",
-            "port": "B"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__dfrtp_2_6",
-        "type": "sky130_fd_sc_hd__dfrtp_2",
-        "connections": {
-          "Q": {
-            "instance": "sky130_fd_sc_hd__or2_2_1",
-            "port": "A"
-          },
-          "RESET_B": {
-            "instance": "rst_n"
-          },
-          "D": {
-            "instance": "sky130_fd_sc_hd__mux2_1_0",
-            "port": "X"
-          },
-          "CLK": {
-            "instance": "sky130_fd_sc_hd__dfrtp_2_7",
-            "port": "CLK"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__nor2_2_5",
-        "type": "sky130_fd_sc_hd__nor2_2",
-        "connections": {
-          "B": {
-            "instance": "sky130_fd_sc_hd__or2_2_2",
-            "port": "B"
-          },
-          "Y": {
-            "instance": "sky130_fd_sc_hd__nor2_2_5",
-            "port": "Y"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__or2_2_2",
-            "port": "A"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__nor2_2_5",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__and2_2_4",
-        "type": "sky130_fd_sc_hd__and2_2",
-        "connections": {
-          "A": {
-            "instance": "sky130_fd_sc_hd__or2_2_2",
-            "port": "A"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__nor2_2_3",
-            "port": "B"
-          },
-          "B": {
-            "instance": "sky130_fd_sc_hd__or2_2_2",
-            "port": "B"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__nor2_2_5",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__dfrtp_2_7",
-        "type": "sky130_fd_sc_hd__dfrtp_2",
-        "connections": {
-          "Q": {
-            "instance": "sky130_fd_sc_hd__or2_2_4",
-            "port": "A"
-          },
-          "RESET_B": {
-            "instance": "rst_n"
-          },
-          "D": {
-            "instance": "sky130_fd_sc_hd__mux2_1_2",
-            "port": "X"
-          },
-          "CLK": {
-            "instance": "sky130_fd_sc_hd__dfrtp_2_7",
-            "port": "CLK"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__a31o_2_0",
-        "type": "sky130_fd_sc_hd__a31o_2",
-        "connections": {
-          "X": {
-            "instance": "sky130_fd_sc_hd__xor2_2_1",
-            "port": "A"
-          },
-          "B1": {
-            "instance": "sky130_fd_sc_hd__and2_2_2",
-            "port": "X"
-          },
-          "A3": {
-            "instance": "sky130_fd_sc_hd__xor2_2_4",
-            "port": "X"
-          },
-          "A1": {
-            "instance": "sky130_fd_sc_hd__or2_2_0",
-            "port": "A"
-          },
-          "A2": {
-            "instance": "sky130_fd_sc_hd__or2_2_0",
-            "port": "B"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__or2_2_0",
-        "type": "sky130_fd_sc_hd__or2_2",
-        "connections": {
-          "B": {
-            "instance": "sky130_fd_sc_hd__or2_2_0",
-            "port": "B"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__or2_2_0",
-            "port": "X"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__or2_2_0",
-            "port": "A"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__or2_2_0",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__nor2_2_6",
-        "type": "sky130_fd_sc_hd__nor2_2",
-        "connections": {
-          "B": {
-            "instance": "sky130_fd_sc_hd__or2_2_1",
-            "port": "B"
-          },
-          "Y": {
-            "instance": "sky130_fd_sc_hd__nor2_2_6",
-            "port": "Y"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__or2_2_1",
-            "port": "A"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_50",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_53",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__and2_2_5",
-        "type": "sky130_fd_sc_hd__and2_2",
-        "connections": {
-          "A": {
-            "instance": "sky130_fd_sc_hd__nor2_2_7",
-            "port": "A"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__nor2_2_0",
-            "port": "A"
-          },
-          "B": {
-            "instance": "sky130_fd_sc_hd__nor2_2_7",
-            "port": "B"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__dfrtp_2_8",
-        "type": "sky130_fd_sc_hd__dfrtp_2",
-        "connections": {
-          "Q": {
-            "instance": "sky130_fd_sc_hd__xor2_2_4",
-            "port": "B"
-          },
-          "RESET_B": {
-            "instance": "rst_n"
-          },
-          "D": {
-            "instance": "sky130_fd_sc_hd__mux2_1_8",
-            "port": "X"
-          },
-          "CLK": {
-            "instance": "sky130_fd_sc_hd__dfrtp_2_9",
-            "port": "CLK"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__a31o_2_1",
-        "type": "sky130_fd_sc_hd__a31o_2",
-        "connections": {
-          "X": {
-            "instance": "sky130_fd_sc_hd__xor2_2_2",
-            "port": "B"
-          },
-          "B1": {
-            "instance": "sky130_fd_sc_hd__a31o_2_4",
-            "port": "X"
-          },
-          "A3": {
-            "instance": "sky130_fd_sc_hd__xor2_2_0",
-            "port": "A"
-          },
-          "A1": {
-            "instance": "sky130_fd_sc_hd__xor2_2_1",
-            "port": "A"
-          },
-          "A2": {
-            "instance": "sky130_fd_sc_hd__xor2_2_1",
-            "port": "B"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__a21o_2_0",
-        "type": "sky130_fd_sc_hd__a21o_2",
-        "connections": {
-          "X": {
-            "instance": "sky130_fd_sc_hd__xor2_2_3",
-            "port": "B"
-          },
-          "B1": {
-            "instance": "sky130_fd_sc_hd__nor2_2_4",
-            "port": "A"
-          },
-          "A1": {
-            "instance": "sky130_fd_sc_hd__xor2_2_2",
-            "port": "A"
-          },
-          "A2": {
-            "instance": "sky130_fd_sc_hd__xor2_2_2",
-            "port": "B"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__or2_2_1",
-        "type": "sky130_fd_sc_hd__or2_2",
-        "connections": {
-          "B": {
-            "instance": "sky130_fd_sc_hd__or2_2_1",
-            "port": "B"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__or2_2_1",
-            "port": "X"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__or2_2_1",
-            "port": "A"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__nor2_2_7",
-        "type": "sky130_fd_sc_hd__nor2_2",
-        "connections": {
-          "B": {
-            "instance": "sky130_fd_sc_hd__nor2_2_7",
-            "port": "B"
-          },
-          "Y": {
-            "instance": "sky130_fd_sc_hd__nor2_2_7",
-            "port": "Y"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__nor2_2_7",
-            "port": "A"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_40",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_40",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_51",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_52",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__and2_2_6",
-        "type": "sky130_fd_sc_hd__and2_2",
-        "connections": {
-          "A": {
-            "instance": "sky130_fd_sc_hd__and2_2_6",
-            "port": "A"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__and2_2_6",
-            "port": "X"
-          },
-          "B": {
-            "instance": "sky130_fd_sc_hd__or2_2_0",
-            "port": "X"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__dfrtp_2_9",
-        "type": "sky130_fd_sc_hd__dfrtp_2",
-        "connections": {
-          "Q": {
-            "instance": "sky130_fd_sc_hd__nor2_2_7",
-            "port": "B"
-          },
-          "RESET_B": {
-            "instance": "rst_n"
-          },
-          "D": {
-            "instance": "sky130_fd_sc_hd__mux2_1_9",
-            "port": "X"
-          },
-          "CLK": {
-            "instance": "sky130_fd_sc_hd__dfrtp_2_9",
-            "port": "CLK"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__a31o_2_2",
-        "type": "sky130_fd_sc_hd__a31o_2",
-        "connections": {
-          "X": {
-            "instance": "sky130_fd_sc_hd__a31o_2_2",
-            "port": "X"
-          },
-          "B1": {
-            "instance": "sky130_fd_sc_hd__nor2_2_3",
-            "port": "B"
-          },
-          "A3": {
-            "instance": "sky130_fd_sc_hd__or2_2_2",
-            "port": "X"
-          },
-          "A1": {
-            "instance": "sky130_fd_sc_hd__nor2_2_1",
-            "port": "A"
-          },
-          "A2": {
-            "instance": "sky130_fd_sc_hd__nor2_2_1",
-            "port": "B"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__and4bb_2_0",
-        "type": "sky130_fd_sc_hd__and4bb_2",
-        "connections": {
-          "A_N": {
-            "instance": "sky130_fd_sc_hd__xnor2_2_0",
-            "port": "Y"
-          },
-          "C": {
-            "instance": "sky130_fd_sc_hd__and3_2_0",
-            "port": "X"
-          },
-          "B_N": {
-            "instance": "sky130_fd_sc_hd__and2_2_6",
-            "port": "X"
-          },
-          "X": {
-            "instance": "S"
-          },
-          "D": {
-            "instance": "sky130_fd_sc_hd__and4bb_2_1",
-            "port": "X"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__or2_2_2",
-        "type": "sky130_fd_sc_hd__or2_2",
-        "connections": {
-          "B": {
-            "instance": "sky130_fd_sc_hd__or2_2_2",
-            "port": "B"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__or2_2_2",
-            "port": "X"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__or2_2_2",
-            "port": "A"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_52",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_52",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_41",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_41",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_30",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_41",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__a31o_2_3",
-        "type": "sky130_fd_sc_hd__a31o_2",
-        "connections": {
-          "X": {
-            "instance": "sky130_fd_sc_hd__a31o_2_3",
-            "port": "X"
-          },
-          "B1": {
-            "instance": "sky130_fd_sc_hd__a31o_2_2",
-            "port": "X"
-          },
-          "A3": {
-            "instance": "sky130_fd_sc_hd__xor2_2_3",
-            "port": "A"
-          },
-          "A1": {
-            "instance": "sky130_fd_sc_hd__xor2_2_2",
-            "port": "A"
-          },
-          "A2": {
-            "instance": "sky130_fd_sc_hd__xor2_2_2",
-            "port": "B"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__and4bb_2_1",
-        "type": "sky130_fd_sc_hd__and4bb_2",
-        "connections": {
-          "A_N": {
-            "instance": "sky130_fd_sc_hd__xor2_2_0",
-            "port": "X"
-          },
-          "C": {
-            "instance": "sky130_fd_sc_hd__xor2_2_2",
-            "port": "X"
-          },
-          "B_N": {
-            "instance": "sky130_fd_sc_hd__xor2_2_1",
-            "port": "X"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__and4bb_2_1",
-            "port": "X"
-          },
-          "D": {
-            "instance": "sky130_fd_sc_hd__xor2_2_3",
-            "port": "X"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__or2_2_3",
-        "type": "sky130_fd_sc_hd__or2_2",
-        "connections": {
-          "B": {
-            "instance": "sky130_fd_sc_hd__or2_2_3",
-            "port": "B"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__or2_2_3",
-            "port": "X"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__or2_2_3",
-            "port": "A"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_53",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_53",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_42",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_47",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_31",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_31",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_20",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_27",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__a31o_2_4",
-        "type": "sky130_fd_sc_hd__a31o_2",
-        "connections": {
-          "X": {
-            "instance": "sky130_fd_sc_hd__a31o_2_4",
-            "port": "X"
-          },
-          "B1": {
-            "instance": "sky130_fd_sc_hd__nor2_2_2",
-            "port": "B"
-          },
-          "A3": {
-            "instance": "sky130_fd_sc_hd__or2_2_1",
-            "port": "X"
-          },
-          "A1": {
-            "instance": "sky130_fd_sc_hd__or2_2_3",
-            "port": "A"
-          },
-          "A2": {
-            "instance": "sky130_fd_sc_hd__or2_2_3",
-            "port": "B"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__or2_2_4",
-        "type": "sky130_fd_sc_hd__or2_2",
-        "connections": {
-          "B": {
-            "instance": "sky130_fd_sc_hd__or2_2_4",
-            "port": "B"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__or2_2_4",
-            "port": "X"
-          },
-          "A": {
-            "instance": "sky130_fd_sc_hd__or2_2_4",
-            "port": "A"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_54",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_54",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_43",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_55",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_32",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_32",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_10",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_9",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_21",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_22",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__mux2_1_0",
-        "type": "sky130_fd_sc_hd__mux2_1",
-        "connections": {
-          "S": {
-            "instance": "en"
-          },
-          "A1": {
-            "instance": "sky130_fd_sc_hd__or2_2_3",
-            "port": "A"
-          },
-          "A0": {
-            "instance": "sky130_fd_sc_hd__or2_2_1",
-            "port": "A"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__mux2_1_0",
-            "port": "X"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__mux2_1_0",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_55",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_55",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_44",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_45",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_33",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_57",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_22",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_22",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_11",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_12",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__mux2_1_1",
-        "type": "sky130_fd_sc_hd__mux2_1",
-        "connections": {
-          "S": {
-            "instance": "en"
-          },
-          "A1": {
-            "instance": "sky130_fd_sc_hd__nor2_2_1",
-            "port": "A"
-          },
-          "A0": {
-            "instance": "sky130_fd_sc_hd__or2_2_2",
-            "port": "A"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__mux2_1_1",
-            "port": "X"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_34",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_39",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_45",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_45",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_56",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_56",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_12",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_12",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_23",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_25",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__mux2_1_2",
-        "type": "sky130_fd_sc_hd__mux2_1",
-        "connections": {
-          "S": {
-            "instance": "en"
-          },
-          "A1": {
-            "instance": "sky130_fd_sc_hd__or2_2_2",
-            "port": "A"
-          },
-          "A0": {
-            "instance": "sky130_fd_sc_hd__or2_2_4",
-            "port": "A"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__mux2_1_2",
-            "port": "X"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_35",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_38",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_46",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_56",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_57",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_57",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_24",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_26",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__decap_3_13",
-        "type": "sky130_fd_sc_hd__decap_3",
-        "connections": {
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPB": {
-            "instance": "sky130_fd_sc_hd__decap_3_5",
-            "port": "VPB"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      },
-      {
-        "name": "sky130_fd_sc_hd__mux2_1_3",
-        "type": "sky130_fd_sc_hd__mux2_1",
-        "connections": {
-          "S": {
-            "instance": "en"
-          },
-          "A1": {
-            "instance": "sky130_fd_sc_hd__or2_2_1",
-            "port": "A"
-          },
-          "A0": {
-            "instance": "sky130_fd_sc_hd__nor2_2_1",
-            "port": "A"
-          },
-          "X": {
-            "instance": "sky130_fd_sc_hd__mux2_1_3",
-            "port": "X"
-          },
-          "VGND": {
-            "instance": "VGND"
-          },
-          "VPWR": {
-            "instance": "VPWR"
-          },
-          "VPB": {
-            "instance": "VPWR"
-          },
-          "VNB": {
-            "instance": "VGND"
-          }
-        }
-      }
-    ]
+  "sky130_fd_sc_hd__mux2_1_15": {
+    "type": "sky130_fd_sc_hd__mux2_1",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_13",
+          "port": "D"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_15",
+          "port": "X"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__mux2_1_0": {
+    "type": "sky130_fd_sc_hd__mux2_1",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_6",
+          "port": "D"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_0",
+          "port": "X"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__mux2_1_1": {
+    "type": "sky130_fd_sc_hd__mux2_1",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_2",
+          "port": "D"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_1",
+          "port": "X"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__mux2_1_2": {
+    "type": "sky130_fd_sc_hd__mux2_1",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_7",
+          "port": "D"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_2",
+          "port": "X"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__mux2_1_3": {
+    "type": "sky130_fd_sc_hd__mux2_1",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_0",
+          "port": "D"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_3",
+          "port": "X"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__dfrtp_2_10": {
+    "type": "sky130_fd_sc_hd__dfrtp_2",
+    "inPorts": {},
+    "outPorts": {
+      "Q": [
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_9",
+          "port": "A1"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nand2_2_2",
+          "port": "B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_10",
+          "port": "Q"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_13",
+          "port": "A0"
+        },
+        {
+          "name": "sky130_fd_sc_hd__or2_2_4",
+          "port": "B"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__dfrtp_2_11": {
+    "type": "sky130_fd_sc_hd__dfrtp_2",
+    "inPorts": {},
+    "outPorts": {
+      "Q": [
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_8",
+          "port": "A1"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nand2_2_0",
+          "port": "B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_11",
+          "port": "Q"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_12",
+          "port": "A0"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_0",
+          "port": "A2"
+        },
+        {
+          "name": "sky130_fd_sc_hd__or2_2_0",
+          "port": "B"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__dfrtp_2_12": {
+    "type": "sky130_fd_sc_hd__dfrtp_2",
+    "inPorts": {},
+    "outPorts": {
+      "Q": [
+        {
+          "name": "sky130_fd_sc_hd__nand2_2_1",
+          "port": "B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_12",
+          "port": "Q"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_10",
+          "port": "A0"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_15",
+          "port": "A1"
+        },
+        {
+          "name": "sky130_fd_sc_hd__or2_2_3",
+          "port": "B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_4",
+          "port": "A2"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__dfrtp_2_13": {
+    "type": "sky130_fd_sc_hd__dfrtp_2",
+    "inPorts": {},
+    "outPorts": {
+      "Q": [
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_13",
+          "port": "Q"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_14",
+          "port": "A1"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_15",
+          "port": "A0"
+        },
+        {
+          "name": "sky130_fd_sc_hd__and2_2_3",
+          "port": "B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nor2_2_6",
+          "port": "B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__or2_2_1",
+          "port": "B"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__dfrtp_2_14": {
+    "type": "sky130_fd_sc_hd__dfrtp_2",
+    "inPorts": {},
+    "outPorts": {
+      "Q": [
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_14",
+          "port": "Q"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_11",
+          "port": "A1"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_14",
+          "port": "A0"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nor2_2_1",
+          "port": "B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__and2_2_0",
+          "port": "B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_2",
+          "port": "A2"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__dfrtp_2_15": {
+    "type": "sky130_fd_sc_hd__dfrtp_2",
+    "inPorts": {},
+    "outPorts": {
+      "Q": [
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_15",
+          "port": "Q"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_11",
+          "port": "A0"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_13",
+          "port": "A1"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nor2_2_5",
+          "port": "B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__and2_2_4",
+          "port": "B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__or2_2_2",
+          "port": "B"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__dfrtp_2_0": {
+    "type": "sky130_fd_sc_hd__dfrtp_2",
+    "inPorts": {},
+    "outPorts": {
+      "Q": [
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_0",
+          "port": "Q"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nor2_2_1",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__and2_2_0",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_2",
+          "port": "A1"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_1",
+          "port": "A1"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_3",
+          "port": "A0"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__dfrtp_2_1": {
+    "type": "sky130_fd_sc_hd__dfrtp_2",
+    "inPorts": {},
+    "outPorts": {
+      "Q": [
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_5",
+          "port": "A0"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_6",
+          "port": "A1"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nand2_2_0",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_1",
+          "port": "Q"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_0",
+          "port": "A1"
+        },
+        {
+          "name": "sky130_fd_sc_hd__or2_2_0",
+          "port": "A"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__dfrtp_2_2": {
+    "type": "sky130_fd_sc_hd__dfrtp_2",
+    "inPorts": {},
+    "outPorts": {
+      "Q": [
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_2",
+          "port": "Q"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nor2_2_5",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__and2_2_4",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__or2_2_2",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_1",
+          "port": "A0"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_2",
+          "port": "A1"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__dfrtp_2_3": {
+    "type": "sky130_fd_sc_hd__dfrtp_2",
+    "inPorts": {},
+    "outPorts": {
+      "Q": [
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_6",
+          "port": "A0"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_7",
+          "port": "A1"
+        },
+        {
+          "name": "sky130_fd_sc_hd__xor2_2_4",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_3",
+          "port": "Q"
+        },
+        {
+          "name": "sky130_fd_sc_hd__and2_2_2",
+          "port": "A"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__dfrtp_2_4": {
+    "type": "sky130_fd_sc_hd__dfrtp_2",
+    "inPorts": {},
+    "outPorts": {
+      "Q": [
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_7",
+          "port": "A0"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nand2_2_1",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_4",
+          "port": "Q"
+        },
+        {
+          "name": "sky130_fd_sc_hd__or2_2_3",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_4",
+          "port": "A1"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_0",
+          "port": "A1"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__dfrtp_2_5": {
+    "type": "sky130_fd_sc_hd__dfrtp_2",
+    "inPorts": {},
+    "outPorts": {
+      "Q": [
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_4",
+          "port": "A0"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_5",
+          "port": "Q"
+        },
+        {
+          "name": "sky130_fd_sc_hd__and2_2_5",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nor2_2_7",
+          "port": "A"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__dfrtp_2_6": {
+    "type": "sky130_fd_sc_hd__dfrtp_2",
+    "inPorts": {},
+    "outPorts": {
+      "Q": [
+        {
+          "name": "sky130_fd_sc_hd__and2_2_3",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_6",
+          "port": "Q"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nor2_2_6",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__or2_2_1",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_0",
+          "port": "A0"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_3",
+          "port": "A1"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__dfrtp_2_7": {
+    "type": "sky130_fd_sc_hd__dfrtp_2",
+    "inPorts": {},
+    "outPorts": {
+      "Q": [
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_4",
+          "port": "A1"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nand2_2_2",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_7",
+          "port": "Q"
+        },
+        {
+          "name": "sky130_fd_sc_hd__or2_2_4",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_2",
+          "port": "A0"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__dfrtp_2_8": {
+    "type": "sky130_fd_sc_hd__dfrtp_2",
+    "inPorts": {},
+    "outPorts": {
+      "Q": [
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_8",
+          "port": "A0"
+        },
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_10",
+          "port": "A1"
+        },
+        {
+          "name": "sky130_fd_sc_hd__xor2_2_4",
+          "port": "B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__and2_2_2",
+          "port": "B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_8",
+          "port": "Q"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__dfrtp_2_9": {
+    "type": "sky130_fd_sc_hd__dfrtp_2",
+    "inPorts": {},
+    "outPorts": {
+      "Q": [
+        {
+          "name": "sky130_fd_sc_hd__mux2_1_9",
+          "port": "A0"
+        },
+        {
+          "name": "sky130_fd_sc_hd__and2_2_5",
+          "port": "B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nor2_2_7",
+          "port": "B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_9",
+          "port": "Q"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__clkbuf_16_0": {
+    "type": "sky130_fd_sc_hd__clkbuf_16",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__clkbuf_16_0",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_0",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_1",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_2",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_3",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_4",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_5",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_6",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_7",
+          "port": "CLK"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__clkbuf_16_1": {
+    "type": "sky130_fd_sc_hd__clkbuf_16",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_10",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_11",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_12",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_13",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_14",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_15",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__clkbuf_16_1",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_8",
+          "port": "CLK"
+        },
+        {
+          "name": "sky130_fd_sc_hd__dfrtp_2_9",
+          "port": "CLK"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__nand2_2_2": {
+    "type": "sky130_fd_sc_hd__nand2_2",
+    "inPorts": {},
+    "outPorts": {
+      "Y": [
+        {
+          "name": "sky130_fd_sc_hd__nand2_2_2",
+          "port": "Y"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a21boi_2_0",
+          "port": "B1_N"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nand2_2_3",
+          "port": "A"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__or2_2_4": {
+    "type": "sky130_fd_sc_hd__or2_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__a21boi_2_0",
+          "port": "A1"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nand2_2_3",
+          "port": "B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__or2_2_4",
+          "port": "X"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__nand2_2_0": {
+    "type": "sky130_fd_sc_hd__nand2_2",
+    "inPorts": {},
+    "outPorts": {
+      "Y": [
+        {
+          "name": "sky130_fd_sc_hd__nand2_2_0",
+          "port": "Y"
+        },
+        {
+          "name": "sky130_fd_sc_hd__xnor2_2_0",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__and2_2_6",
+          "port": "A"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__a31o_2_0": {
+    "type": "sky130_fd_sc_hd__a31o_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__a21bo_2_0",
+          "port": "A1"
+        },
+        {
+          "name": "sky130_fd_sc_hd__xor2_2_1",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_0",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_1",
+          "port": "A1"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__or2_2_0": {
+    "type": "sky130_fd_sc_hd__or2_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__or2_2_0",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__and2_2_6",
+          "port": "B"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__nand2_2_1": {
+    "type": "sky130_fd_sc_hd__nand2_2",
+    "inPorts": {},
+    "outPorts": {
+      "Y": [
+        {
+          "name": "sky130_fd_sc_hd__a21bo_2_0",
+          "port": "B1_N"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nand2_2_1",
+          "port": "Y"
+        },
+        {
+          "name": "sky130_fd_sc_hd__and2_2_1",
+          "port": "B"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__or2_2_3": {
+    "type": "sky130_fd_sc_hd__or2_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__and2_2_1",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__or2_2_3",
+          "port": "X"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__a31o_2_4": {
+    "type": "sky130_fd_sc_hd__a31o_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_1",
+          "port": "B1"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_4",
+          "port": "X"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__and2_2_3": {
+    "type": "sky130_fd_sc_hd__and2_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__nor2_2_2",
+          "port": "B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__and2_2_3",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_4",
+          "port": "B1"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__nor2_2_6": {
+    "type": "sky130_fd_sc_hd__nor2_2",
+    "inPorts": {},
+    "outPorts": {
+      "Y": [
+        {
+          "name": "sky130_fd_sc_hd__nor2_2_2",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nor2_2_6",
+          "port": "Y"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__or2_2_1": {
+    "type": "sky130_fd_sc_hd__or2_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__or2_2_1",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_4",
+          "port": "A3"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__nor2_2_1": {
+    "type": "sky130_fd_sc_hd__nor2_2",
+    "inPorts": {},
+    "outPorts": {
+      "Y": [
+        {
+          "name": "sky130_fd_sc_hd__nor2_2_1",
+          "port": "Y"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nor2_2_4",
+          "port": "B"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__and2_2_0": {
+    "type": "sky130_fd_sc_hd__and2_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__and2_2_0",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nor2_2_4",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a21o_2_0",
+          "port": "B1"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__a31o_2_2": {
+    "type": "sky130_fd_sc_hd__a31o_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_2",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_3",
+          "port": "B1"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__nor2_2_5": {
+    "type": "sky130_fd_sc_hd__nor2_2",
+    "inPorts": {},
+    "outPorts": {
+      "Y": [
+        {
+          "name": "sky130_fd_sc_hd__nor2_2_3",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nor2_2_5",
+          "port": "Y"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__and2_2_4": {
+    "type": "sky130_fd_sc_hd__and2_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__nor2_2_3",
+          "port": "B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__and2_2_4",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_2",
+          "port": "B1"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__or2_2_2": {
+    "type": "sky130_fd_sc_hd__or2_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_2",
+          "port": "A3"
+        },
+        {
+          "name": "sky130_fd_sc_hd__or2_2_2",
+          "port": "X"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__xor2_2_4": {
+    "type": "sky130_fd_sc_hd__xor2_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__xor2_2_4",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__xnor2_2_0",
+          "port": "B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_0",
+          "port": "A3"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__and2_2_2": {
+    "type": "sky130_fd_sc_hd__and2_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__and2_2_2",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_0",
+          "port": "B1"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__and2_2_5": {
+    "type": "sky130_fd_sc_hd__and2_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__o21bai_2_0",
+          "port": "B1_N"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nor2_2_0",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__and2_2_5",
+          "port": "X"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__nor2_2_7": {
+    "type": "sky130_fd_sc_hd__nor2_2",
+    "inPorts": {},
+    "outPorts": {
+      "Y": [
+        {
+          "name": "sky130_fd_sc_hd__o21bai_2_0",
+          "port": "A1"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nor2_2_0",
+          "port": "B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nor2_2_7",
+          "port": "Y"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__a21boi_2_0": {
+    "type": "sky130_fd_sc_hd__a21boi_2",
+    "inPorts": {},
+    "outPorts": {
+      "Y": [
+        {
+          "name": "sky130_fd_sc_hd__a21boi_2_0",
+          "port": "Y"
+        },
+        {
+          "name": "sky130_fd_sc_hd__o21bai_2_0",
+          "port": "A2"
+        },
+        {
+          "name": "sky130_fd_sc_hd__xnor2_2_1",
+          "port": "B"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__nand2_2_3": {
+    "type": "sky130_fd_sc_hd__nand2_2",
+    "inPorts": {},
+    "outPorts": {
+      "Y": [
+        {
+          "name": "sky130_fd_sc_hd__nand2_2_3",
+          "port": "Y"
+        },
+        {
+          "name": "sky130_fd_sc_hd__xnor2_2_2",
+          "port": "A"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__xnor2_2_0": {
+    "type": "sky130_fd_sc_hd__xnor2_2",
+    "inPorts": {},
+    "outPorts": {
+      "Y": [
+        {
+          "name": "sky130_fd_sc_hd__xnor2_2_0",
+          "port": "Y"
+        },
+        {
+          "name": "sky130_fd_sc_hd__and4bb_2_0",
+          "port": "A_N"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__and2_2_6": {
+    "type": "sky130_fd_sc_hd__and2_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__and2_2_6",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__and4bb_2_0",
+          "port": "B_N"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__a21bo_2_0": {
+    "type": "sky130_fd_sc_hd__a21bo_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__a21bo_2_0",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__xor2_2_0",
+          "port": "B"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__xor2_2_1": {
+    "type": "sky130_fd_sc_hd__xor2_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__xor2_2_1",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__and4bb_2_1",
+          "port": "B_N"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__a31o_2_1": {
+    "type": "sky130_fd_sc_hd__a31o_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__xor2_2_2",
+          "port": "B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_1",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a21o_2_0",
+          "port": "A2"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_3",
+          "port": "A2"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__and2_2_1": {
+    "type": "sky130_fd_sc_hd__and2_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__a21bo_2_0",
+          "port": "A2"
+        },
+        {
+          "name": "sky130_fd_sc_hd__xor2_2_1",
+          "port": "B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__and2_2_1",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_1",
+          "port": "A2"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__nor2_2_2": {
+    "type": "sky130_fd_sc_hd__nor2_2",
+    "inPorts": {},
+    "outPorts": {
+      "Y": [
+        {
+          "name": "sky130_fd_sc_hd__xor2_2_0",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nor2_2_2",
+          "port": "Y"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_1",
+          "port": "A3"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__nor2_2_4": {
+    "type": "sky130_fd_sc_hd__nor2_2",
+    "inPorts": {},
+    "outPorts": {
+      "Y": [
+        {
+          "name": "sky130_fd_sc_hd__xor2_2_2",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nor2_2_4",
+          "port": "Y"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a21o_2_0",
+          "port": "A1"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_3",
+          "port": "A1"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__a21o_2_0": {
+    "type": "sky130_fd_sc_hd__a21o_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__xor2_2_3",
+          "port": "B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a21o_2_0",
+          "port": "X"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__a31o_2_3": {
+    "type": "sky130_fd_sc_hd__a31o_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__a21boi_2_0",
+          "port": "A2"
+        },
+        {
+          "name": "sky130_fd_sc_hd__xnor2_2_2",
+          "port": "B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_3",
+          "port": "X"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__nor2_2_3": {
+    "type": "sky130_fd_sc_hd__nor2_2",
+    "inPorts": {},
+    "outPorts": {
+      "Y": [
+        {
+          "name": "sky130_fd_sc_hd__xor2_2_3",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__nor2_2_3",
+          "port": "Y"
+        },
+        {
+          "name": "sky130_fd_sc_hd__a31o_2_3",
+          "port": "A3"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__o21bai_2_0": {
+    "type": "sky130_fd_sc_hd__o21bai_2",
+    "inPorts": {},
+    "outPorts": {
+      "Y": [
+        {
+          "name": "sky130_fd_sc_hd__and3_2_0",
+          "port": "C"
+        },
+        {
+          "name": "sky130_fd_sc_hd__o21bai_2_0",
+          "port": "Y"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__nor2_2_0": {
+    "type": "sky130_fd_sc_hd__nor2_2",
+    "inPorts": {},
+    "outPorts": {
+      "Y": [
+        {
+          "name": "sky130_fd_sc_hd__nor2_2_0",
+          "port": "Y"
+        },
+        {
+          "name": "sky130_fd_sc_hd__xnor2_2_1",
+          "port": "A"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__xnor2_2_1": {
+    "type": "sky130_fd_sc_hd__xnor2_2",
+    "inPorts": {},
+    "outPorts": {
+      "Y": [
+        {
+          "name": "sky130_fd_sc_hd__and3_2_0",
+          "port": "B"
+        },
+        {
+          "name": "sky130_fd_sc_hd__xnor2_2_1",
+          "port": "Y"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__xnor2_2_2": {
+    "type": "sky130_fd_sc_hd__xnor2_2",
+    "inPorts": {},
+    "outPorts": {
+      "Y": [
+        {
+          "name": "sky130_fd_sc_hd__and3_2_0",
+          "port": "A"
+        },
+        {
+          "name": "sky130_fd_sc_hd__xnor2_2_2",
+          "port": "Y"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__and4bb_2_0": {
+    "type": "sky130_fd_sc_hd__and4bb_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "S",
+          "port": "X"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__xor2_2_0": {
+    "type": "sky130_fd_sc_hd__xor2_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__xor2_2_0",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__and4bb_2_1",
+          "port": "A_N"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__and4bb_2_1": {
+    "type": "sky130_fd_sc_hd__and4bb_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__and4bb_2_0",
+          "port": "D"
+        },
+        {
+          "name": "sky130_fd_sc_hd__and4bb_2_1",
+          "port": "X"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__xor2_2_2": {
+    "type": "sky130_fd_sc_hd__xor2_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__xor2_2_2",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__and4bb_2_1",
+          "port": "C"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__xor2_2_3": {
+    "type": "sky130_fd_sc_hd__xor2_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__xor2_2_3",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__and4bb_2_1",
+          "port": "D"
+        }
+      ]
+    }
+  },
+  "sky130_fd_sc_hd__and3_2_0": {
+    "type": "sky130_fd_sc_hd__and3_2",
+    "inPorts": {},
+    "outPorts": {
+      "X": [
+        {
+          "name": "sky130_fd_sc_hd__and3_2_0",
+          "port": "X"
+        },
+        {
+          "name": "sky130_fd_sc_hd__and4bb_2_0",
+          "port": "C"
+        }
+      ]
+    }
+  },
+  "S": {
+    "type": "S",
+    "inPorts": {},
+    "outPorts": {}
   }
-]
+}

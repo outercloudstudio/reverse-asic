@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Graph from 'graphology'
 import { Sigma } from 'sigma'
+import { EdgeArrowProgram } from 'sigma/rendering'
 import circular from 'graphology-layout/circular'
 import forceAtlas2 from 'graphology-layout-forceatlas2'
 import { onMounted, useTemplateRef } from 'vue'
@@ -12,58 +13,72 @@ const container = useTemplateRef('container')
 onMounted(() => {
 	if(!container.value) return
 
-	const graph = new Graph({ multi: true })
+	const graph = new Graph({ multi: true, type: 'directed' })
 	// const graph = new Graph()
 
-	for(const io of ['A', 'B', 'S', 'clk', 'en', 'rst_n']) {
-		graph.addNode(io, { label: io, x: 0, y: 0, size: 10, color: 'red' })
-	}
+	// for(const io of ['A', 'B', 'S', 'clk', 'en', 'rst_n']) {
+	// 	graph.addNode(io, { label: io, x: io === 'S' ? 1000 : -1000, y: 0, size: 10, color: 'red' })
+	// }
 
-	const targetCircuit = data.find(circuit => circuit.name === 'adder_demo')!
+	const inputPorts = ['A', 'B', 'clk', 'en', 'rst_n', 'VPWR', 'VGND', 'VPB', 'VND']
+	const outputPorts = ['S']
 
-	for(const instance of targetCircuit.instances) {
-		const label = instance.type.startsWith('sky130_fd_sc_hd__') ? instance.type.substring('sky130_fd_sc_hd__'.length) : instance.type
+	for(const instanceName of Object.keys(data)) {
+		const instance = (data as any)[instanceName]
 
-		graph.addNode(instance.name, { label, x: 0, y: 0, size: 10, color: 'blue' })
+		let x = Math.random()
+		let y = Math.random()
 
-		for(const port of data.find(circuit => circuit.name === instance.type)!.ports) {
-			graph.addNode(instance.name + '/' + port, { label: port, x: 0, y: 0, size: 4, color: 'green' })
-			graph.addEdge(instance.name, instance.name + '/' + port, { size: 1, color: 'grey' })
+		if(inputPorts.includes(instanceName)) {
+			x = -1000
+			// y = 0
 		}
+
+		if(outputPorts.includes(instanceName)) {
+			x = 1000
+			// y = 0
+		}
+
+		graph.addNode(instanceName, { label: instance.type,  x, y, size: 10, color: (inputPorts.includes(instanceName) || outputPorts.includes(instanceName)) ? 'red' : 'blue' })
 	}
 
-	for(const instance of targetCircuit.instances) {
-		for(const port of Object.keys(instance.connections)) {
-			const targetInstance = (instance.connections as any)[port].instance
-			const targetPort = (instance.connections as any)[port].port
+	for(const instanceName of Object.keys(data)) {
+		const instance = (data as any)[instanceName]
 
-			if(['VPWR', 'VGND'].includes(targetInstance)) continue
+		console.log(instance)
 
-			if(targetPort) {
-				if(graph.hasEdge(instance.name + '/' + port, targetInstance + '/' + targetPort)) console.warn('Duplicate edge!', instance.name + '/' + port, targetInstance + '/' + targetPort)
+		for(const outPort of Object.keys(instance.outPorts)) {
+			for(const connection of instance.outPorts[outPort]) {
+				if(!connection.port) {
+					graph.addDirectedEdge(instanceName, connection.name, { label: `${outPort} -> ${connection.name}`, size: 1, color: 'grey' }) 
 
-				graph.addEdge(instance.name + '/' + port, targetInstance + '/' + targetPort, { size: 1, color: 'green' })
-			} else {
-				if(graph.hasEdge(instance.name + '/' + port, targetInstance)) console.warn('Duplicate edge!', instance.name + '/' + port, targetInstance)
+					continue
+				}
 
-				graph.addEdge(instance.name + '/' + port, targetInstance, { size: 1, color: 'green' })
+				graph.addDirectedEdge(instanceName, connection.name, { label: `${outPort} -> ${connection.port}`, size: 1, color: 'grey' })
 			}
 		}
 	}
 
-	circular.assign(graph)
+	// circular.assign(graph)
 
 	forceAtlas2.assign(graph, {
-		iterations: 100,
+		iterations: 20,
 		settings: {
 			gravity: 1,
-			scalingRatio: 10,
+			scalingRatio: 1,
 			barnesHutOptimize: true,
+			slowDown: 3,
+			adjustSizes: false,
 		}
 	})
 
 	const sigmaInstance = new Sigma(graph, container.value, {
 		renderEdgeLabels: true,
+		defaultEdgeType: 'arrow',
+		edgeProgramClasses: {
+			arrow: EdgeArrowProgram,
+		},
 	})
 })
 </script>
