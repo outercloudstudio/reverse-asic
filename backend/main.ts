@@ -167,6 +167,12 @@ function reduceRegisters(graph: CircuitGraph) {
 	console.log(`Inferred ${registersInferred} registers!`)
 }
 
+function cleanName(name: string) {
+	if(name.startsWith('sky130_fd_sc_hd__')) return name.substring('sky130_fd_sc_hd__'.length)
+
+	return name
+}
+
 class Circuit {
 	public constructor(public name: string, public inPorts: string[], public outPorts: string[], public graph: CircuitGraph) {}
 	
@@ -298,6 +304,66 @@ class Circuit {
 		removeExtraneous(graph)
 
 		return new Circuit(name, inPorts, outPorts, graph)
+	}
+
+	private generateSignalCode(context: { prelude: string, main: string, handledNodes: string[] }, name: string) {
+		const node = this.graph[name]
+		
+		// console.log(name, node.type)
+
+		if(node.type === 'input' && name !== 'success') {
+		// if(node.type === 'input' && name !== 'S') {
+			return 'io'
+		}
+
+		if([
+			'sky130_fd_sc_hd__dfrtp_2',
+			'sky130_fd_sc_hd__dfstp_2',
+			'sky130_fd_sc_hd__dfxtp_2',
+		].includes(node.type)) {
+			if(!context.handledNodes.includes(name)) {
+				context.handledNodes.push(name)
+
+				const inputs: Record<string, string> = {}
+
+				for(const port of Object.keys(node.inPorts)) {
+					const value = this.generateSignalCode(context, node.inPorts[port].name)
+
+					inputs[port] = `${value}.${node.inPorts[port].port}`
+				}
+
+				context.prelude += `\n${cleanName(name)} = new ${cleanName(node.type)}()`
+
+				context.main += `\n${cleanName(name)}.next = ${cleanName(node.type)}.eval({${Object.entries(inputs).map(([key, value]) => `${key}: ${value}`).join(', ')}})`
+			}
+			
+			return cleanName(name)
+		}
+
+		if(!context.handledNodes.includes(name)) {
+			context.handledNodes.push(name)
+			
+			const inputs: Record<string, string> = {}
+
+			for(const port of Object.keys(node.inPorts)) {
+				const value = this.generateSignalCode(context, node.inPorts[port].name)
+
+				inputs[port] = `${value}.${node.inPorts[port].port}`
+			}
+
+			context.main += `\nconst ${cleanName(name)} = ${cleanName(node.type)}({${Object.entries(inputs).map(([key, value]) => `${key}: ${value}`).join(', ')}})`
+		}
+
+		return cleanName(name)
+	}
+
+	public generateCode(): string {
+		const context = { prelude: '', main: '', handledNodes: [] }
+
+		this.generateSignalCode(context, 'success')
+		// this.generateSignalCode(context, 'S')
+
+		return context.prelude + '\n' + context.main
 	}
 }
 
@@ -437,3 +503,5 @@ const project = Project.parse(spiceSource)
 
 // await Deno.writeTextFile('../visualizer/src/data.json', JSON.stringify(project.circuits.find(circuit => circuit.name === 'adder_demo')?.graph, null, 2))
 await Deno.writeTextFile('../visualizer/src/data.json', JSON.stringify(project.circuits.find(circuit => circuit.name === 'puzzle')?.graph, null, 2))
+// await Deno.writeTextFile('.code.js', project.circuits.find(circuit => circuit.name === 'adder_demo')!.generateCode())
+await Deno.writeTextFile('.code.js', project.circuits.find(circuit => circuit.name === 'puzzle')!.generateCode())
