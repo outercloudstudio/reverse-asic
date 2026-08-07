@@ -27,7 +27,7 @@ onMounted(() => {
 	for(const instanceName of Object.keys(data)) {
 		const instance = (data as any)[instanceName]
 
-		if(['rst_n', 'clk'].includes(instanceName)) continue
+		if(['rst_n', 'clk', 'VPWR', 'VGND'].includes(instanceName)) continue
 
 		let label = instanceName
 		let x = Math.random()
@@ -61,11 +61,11 @@ onMounted(() => {
 	for(const instanceName of Object.keys(data)) {
 		const instance = (data as any)[instanceName]
 
-		if(['rst_n','clk'].includes(instanceName)) continue
+		if(['rst_n','clk', 'VPWR', 'VGND'].includes(instanceName)) continue
 
 		for(const outPort of Object.keys(instance.outPorts)) {
 			for(const connection of instance.outPorts[outPort]) {
-				if(['rst_n','clk'].includes(connection.name)) continue
+				if(['rst_n','clk', 'VPWR', 'VGND'].includes(connection.name)) continue
 
 				if(!connection.port) {
 					graph.addDirectedEdge(instanceName, connection.name, { label: `${outPort} -> ${connection.name}`, size: 1, color: 'grey' }) 

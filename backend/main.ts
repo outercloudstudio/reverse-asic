@@ -123,8 +123,8 @@ function reduceRegisters(graph: CircuitGraph) {
 		const inputLockName = node.inPorts['D'].name
 		const inputLockNode = graph[inputLockName]
 
-		if(!node.outPorts['Q'].some(otherConnection => otherConnection.name === inputLockName) || inputLockNode.type !== 'sky130_fd_sc_hd__mux2_1') {
-			console.warn(`Possible register didn't match recursive mux pattern ${name}!`)
+		if(inputLockNode.type !== 'sky130_fd_sc_hd__mux2_1' || inputLockNode.inPorts['A0'].name !== name || !node.outPorts['Q'].some(otherConnection => otherConnection.name === inputLockName)) {
+			// console.warn(`Possible register didn't match recursive mux pattern ${name}!`)
 			
 			continue
 		}
@@ -144,17 +144,13 @@ function reduceRegisters(graph: CircuitGraph) {
 			}
 		}
 
-		if(graph[inputLockName].inPorts['A1'])
-			closeConnection(graph, graph[inputLockName].inPorts['A1'], inputLockName, [{ name: registerName, port: 'next' }])
+		closeConnection(graph, graph[inputLockName].inPorts['A1'], inputLockName, [{ name: registerName, port: 'next' }])
 		
-		if(graph[inputLockName].inPorts['S'])
-			closeConnection(graph, graph[inputLockName].inPorts['S'], inputLockName, [{ name: registerName, port: 'enable' }])
+		closeConnection(graph, graph[inputLockName].inPorts['S'], inputLockName, [{ name: registerName, port: 'enable' }])
 
-		if(node.inPorts['RESET_B'])
-			closeConnection(graph, node.inPorts['RESET_B'], name, [{ name: registerName, port: 'reset_n' }])
+		closeConnection(graph, node.inPorts['RESET_B'], name, [{ name: registerName, port: 'reset_n' }])
 		
-		if(node.inPorts['CLK'])
-			closeConnection(graph, node.inPorts['CLK'], name, [{ name: registerName, port: 'clk' }])
+		closeConnection(graph, node.inPorts['CLK'], name, [{ name: registerName, port: 'clk' }])
 		
 		closeConnection(graph, { name: `register_${registersInferred}`, port: 'value' }, name, node.outPorts['Q'].filter(otherConnection => otherConnection.name !== inputLockName))
 
@@ -208,8 +204,6 @@ class Circuit {
 		const frontier: string[] = []
 
 		for(const port of inPorts) {
-			if(['VPWR', 'VGND'].includes(port)) continue
-
 			visited.add(port)
 			frontier.push(port)
 		}
@@ -299,9 +293,9 @@ class Circuit {
 			}
 		}
 
-		reduceClockBuffers(graph)
-		// reduceRegisters(graph)
 		removeExtraneous(graph)
+		reduceClockBuffers(graph)
+		reduceRegisters(graph)
 
 		return new Circuit(name, inPorts, outPorts, graph)
 	}
@@ -342,7 +336,7 @@ class Circuit {
 
 		if(!context.handledNodes.includes(name)) {
 			context.handledNodes.push(name)
-			
+
 			const inputs: Record<string, string> = {}
 
 			for(const port of Object.keys(node.inPorts)) {
@@ -442,6 +436,7 @@ const CIRCUIT_DEFINITIONS: Circuit[] = [
 	new Circuit('sky130_fd_sc_hd__clkbuf_8', ['A', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
 	new Circuit('sky130_fd_sc_hd__clkbuf_4', ['A', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
 	new Circuit('sky130_fd_sc_hd__buf_2', ['A', 'VPWR', 'VGND', 'VPB', 'VND'], ['X'], {}),
+	new Circuit('sky130_fd_sc_hd__conb_1', ['VPWR', 'VGND', 'VPB', 'VND'], ['LO', 'HI'], {}),
 ]
 
 class Project {
