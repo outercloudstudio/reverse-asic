@@ -37,7 +37,7 @@ function reduceClockBuffers(graph: CircuitGraph) {
 		if(node.type === 'sky130_fd_sc_hd__clkbuf_16' || node.type === 'sky130_fd_sc_hd__clkbuf_8' || node.type === 'sky130_fd_sc_hd__clkbuf_4') {
 			const inputConnection = node.inPorts['A']
 
-			closeConnection(graph, inputConnection, name, node.outPorts['X'])
+			closeConnection(graph, inputConnection, name, node.outPorts['X'] ?? [])
 			
 			delete graph[name]
 
@@ -232,7 +232,7 @@ class Circuit {
 			}
 		}
 
-		// reduceClockBuffers(graph)
+		reduceClockBuffers(graph)
 		// reduceRegisters(graph)
 
 		return new Circuit(name, inPorts, outPorts, graph)
@@ -363,7 +363,7 @@ class Project {
 		}
 
 		// circuits.push(Circuit.parse(circuitDefinitions['adder_demo'].lines, ['A', 'B', 'clk', 'en', 'rst_n', 'VGND', 'VPWR'], ['S'], CIRCUIT_DEFINITIONS, circuitDefinitions))
-		circuits.push(Circuit.parse(circuitDefinitions['puzzle'].lines, ['I', 'clk', 'en', 'rst_n', 'VGND', 'VPWR'], ['success', 'O[0]', 'O[1]', 'O[2]', 'O[3]', 'O[4]', 'O[5]', 'O[6]', 'O[7]'], CIRCUIT_DEFINITIONS, circuitDefinitions))
+		circuits.push(Circuit.parse(circuitDefinitions['puzzle'].lines, ['I', 'clk', 'enable', 'rst_n', 'VGND', 'VPWR'], ['success', 'O[0]', 'O[1]', 'O[2]', 'O[3]', 'O[4]', 'O[5]', 'O[6]', 'O[7]'], CIRCUIT_DEFINITIONS, circuitDefinitions))
 
 		return new Project(circuits)
 	}
