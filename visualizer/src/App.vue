@@ -44,6 +44,9 @@ onMounted(() => {
 		}
 
 		if(instance.type === 'sky130_fd_sc_hd__clkbuf_16') color = 'grey'
+		if(instance.type === 'register') color = 'orange'
+		if(instance.type === 'sky130_fd_sc_hd__dfrtp_2') color = 'green'
+		if(instance.type === 'sky130_fd_sc_hd__mux2_1') color = 'purple'
 
 		graph.addNode(instanceName, { label,  x, y, size: 10, color })
 	}

@@ -1,5 +1,25 @@
 type CircuitGraph = Record<string, { type: string, inPorts: Record<string, { name: string, port: string }>, outPorts: Record<string, { name: string, port: string }[]> }>
 
+function closeConnection(graph: CircuitGraph, input: { name: string, port: string }, cut: string, outputs: { name: string, port: string }[]) {
+	const index = graph[input.name].outPorts[input.port].findIndex(connection => connection.name === cut)
+	graph[input.name].outPorts[input.port].splice(index, 1)
+	graph[input.name].outPorts[input.port] = graph[input.name].outPorts[input.port].concat(outputs.filter(output => !graph[input.name].outPorts[input.port].some(otherOutput => otherOutput.name === output.name && otherOutput.port === output.port)))
+	
+	for(const connection of outputs) {
+		graph[connection.name].inPorts[connection.port] = input
+	}
+}
+
+// function fixOutConnection(graph: CircuitGraph, target: string, from: { name: string, port: string }, to: { name: string, port: string }[]) {
+// 	const index = graph[from.name].outPorts[from.port].findIndex(connection => connection.name === target)
+// 	graph[from.name].outPorts[from.port].splice(index, 1)
+// 	graph[from.name].outPorts[from.port] = graph[from.name].outPorts[from.port].concat(to)
+// }
+
+// function fixInConnection(graph: CircuitGraph, from: { name: string, port: string }, to: { name: string, port: string }) {
+// 	graph[to.name].inPorts[to.port] = from
+// }
+
 function reduceClockBuffers(graph: CircuitGraph) {
 	const visited: Set<string> = new Set()
 	const frontier: string[] = []
@@ -16,14 +36,8 @@ function reduceClockBuffers(graph: CircuitGraph) {
 
 		if(node.type === 'sky130_fd_sc_hd__clkbuf_16') {
 			const inputConnection = node.inPorts['A']
-			
-			const index = graph[inputConnection.name].outPorts[inputConnection.port].findIndex(connection => connection.name === name)
-			graph[inputConnection.name].outPorts[inputConnection.port].splice(index, 1)
-			graph[inputConnection.name].outPorts[inputConnection.port] = graph[inputConnection.name].outPorts[inputConnection.port].concat(node.outPorts['X'])
 
-			for(const connection of node.outPorts['X']) {
-				graph[connection.name].inPorts[connection.port] = inputConnection
-			}
+			closeConnection(graph, inputConnection, name, node.outPorts['X'])
 			
 			delete graph[name]
 
@@ -41,6 +55,55 @@ function reduceClockBuffers(graph: CircuitGraph) {
 	}
 
 	console.log(`Removed ${clockBuffsRemoved} clock buffs!`)
+}
+
+function reduceRegisters(graph: CircuitGraph) {
+	let registersInferred = 0
+	
+	const clockConnections = JSON.parse(JSON.stringify(graph['clk'].outPorts['clk']))
+	for(const connection of clockConnections) {
+		const name = connection.name
+		const node = graph[name]
+
+		const inputLockName = node.inPorts['D'].name
+		const inputLockNode = graph[inputLockName]
+
+		if(!node.outPorts['Q'].some(otherConnection => otherConnection.name === inputLockName)) {
+			console.warn(`Possible register didn't match recursive mux pattern ${name}!`)
+			
+			continue
+		}
+
+		const registerName = `register_${registersInferred}`
+
+		graph[registerName] = {
+			type: 'register',
+			inPorts: {
+				'reset_n': node.inPorts['RESET_B'],
+				'clk': node.inPorts['CLK'],
+				'next': graph[inputLockName].inPorts['A1'],
+				'enable': graph[inputLockName].inPorts['S'],
+			},
+			outPorts: {
+				'value': node.outPorts['Q'].filter(otherConnection => otherConnection.name !== inputLockName)
+			}
+		}
+
+		closeConnection(graph, graph[inputLockName].inPorts['A1'], inputLockName, [{ name: registerName, port: 'next' }])
+		closeConnection(graph, graph[inputLockName].inPorts['S'], inputLockName, [{ name: registerName, port: 'enable' }])
+
+		closeConnection(graph, node.inPorts['RESET_B'], name, [{ name: registerName, port: 'reset_n' }])
+		closeConnection(graph, node.inPorts['CLK'], name, [{ name: registerName, port: 'clk' }])
+		
+		closeConnection(graph, { name: `register_${registersInferred}`, port: 'value' }, name, node.outPorts['Q'].filter(otherConnection => otherConnection.name !== inputLockName))
+
+		delete graph[name]
+		delete graph[inputLockName]
+
+		registersInferred++
+	}
+
+	console.log(`Inferred ${registersInferred} registers!`)
 }
 
 class Circuit {
@@ -170,6 +233,7 @@ class Circuit {
 		}
 
 		reduceClockBuffers(graph)
+		reduceRegisters(graph)
 
 		return new Circuit(name, inPorts, outPorts, graph)
 	}
@@ -247,12 +311,15 @@ class Project {
 		}
 
 		circuits.push(Circuit.parse(circuitDefinitions['adder_demo'].lines, ['A', 'B', 'clk', 'en', 'rst_n', 'VGND', 'VPWR'], ['S'], CIRCUIT_DEFINITIONS, circuitDefinitions))
+		// circuits.push(Circuit.parse(circuitDefinitions['puzzle'].lines, ['A', 'B', 'clk', 'en', 'rst_n', 'VGND', 'VPWR'], ['S'], CIRCUIT_DEFINITIONS, circuitDefinitions))
 
 		return new Project(circuits)
 	}
 }
 
 const spiceSource = await Deno.readTextFile('./adder_demo.spice')
+// const spiceSource = await Deno.readTextFile('./puzzle.spice')
 const project = Project.parse(spiceSource)
 
 await Deno.writeTextFile('../visualizer/src/data.json', JSON.stringify(project.circuits.find(circuit => circuit.name === 'adder_demo')?.graph, null, 2))
+// await Deno.writeTextFile('../visualizer/src/data.json', JSON.stringify(project.circuits.find(circuit => circuit.name === 'puzzle')?.graph, null, 2))
