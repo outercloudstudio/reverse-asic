@@ -27,13 +27,13 @@ onMounted(() => {
 	for(const instanceName of Object.keys(data)) {
 		const instance = (data as any)[instanceName]
 
-		// if(['rst_n', 'en', 'clk'].includes(instanceName)) continue
+		if(['rst_n', 'clk'].includes(instanceName)) continue
 
-		let label = instance.type
+		let label = instanceName
 		let x = Math.random()
 		let y = Math.random()
 		let color = 'blue'
-
+		
 		if(inputPorts.includes(instanceName)) {
 			label = instanceName
 			x = -1000
@@ -45,6 +45,8 @@ onMounted(() => {
 			x = 1000
 			color = 'red'
 		}
+		
+		if(label.startsWith('sky130_fd_sc_hd__')) label = label.substring('sky130_fd_sc_hd__'.length)
 
 		if(instance.type === 'sky130_fd_sc_hd__clkbuf_16') color = 'grey'
 		if(instance.type === 'sky130_fd_sc_hd__clkbuf_8') color = 'grey'
@@ -59,11 +61,11 @@ onMounted(() => {
 	for(const instanceName of Object.keys(data)) {
 		const instance = (data as any)[instanceName]
 
-		// if(['rst_n', 'en', 'clk'].includes(instanceName)) continue
+		if(['rst_n','clk'].includes(instanceName)) continue
 
 		for(const outPort of Object.keys(instance.outPorts)) {
 			for(const connection of instance.outPorts[outPort]) {
-				// if(['rst_n', 'en', 'clk'].includes(connection.name)) continue
+				if(['rst_n','clk'].includes(connection.name)) continue
 
 				if(!connection.port) {
 					graph.addDirectedEdge(instanceName, connection.name, { label: `${outPort} -> ${connection.name}`, size: 1, color: 'grey' }) 

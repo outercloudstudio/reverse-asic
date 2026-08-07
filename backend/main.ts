@@ -57,6 +57,61 @@ function reduceClockBuffers(graph: CircuitGraph) {
 	console.log(`Removed ${clockBuffsRemoved} clock buffs!`)
 }
 
+function removeExtraneous(graph: CircuitGraph) {
+	const ports = ['success', 'O[0]', 'O[1]', 'O[2]', 'O[3]', 'O[4]', 'O[5]', 'O[6]', 'O[7]']
+
+	const portsServed: Record<string, Set<string>> = {}
+
+	let nodesRemoved = 0
+
+	for(const ioPort of ports) {
+		const visited: Set<string> = new Set()
+		const frontier: string[] = []
+
+		visited.add(ioPort)
+		frontier.push(ioPort)
+
+		while(frontier.length > 0) {
+			const name = frontier.shift()!
+
+			const node = graph[name]
+
+			if(!portsServed[name]) portsServed[name] = new Set()
+			
+			portsServed[name].add(ioPort)
+
+			for(const port of Object.keys(node.inPorts)) {
+				if(visited.has(node.inPorts[port].name)) continue
+
+				visited.add(node.inPorts[port].name)
+				frontier.push(node.inPorts[port].name)
+			}
+		}
+	}
+
+	const removed = new Set()
+
+	const keys = Object.keys(graph)
+	for(const name of keys) {
+		if(portsServed[name] && portsServed[name].has('success')) continue 
+		
+		delete graph[name]
+
+		removed.add(name)
+			
+		nodesRemoved++
+	}
+
+
+	for(const name of Object.keys(graph)) {
+		for(const port of Object.keys(graph[name].outPorts)) {
+			graph[name].outPorts[port] = graph[name].outPorts[port].filter(connection => !removed.has(connection.name))
+		}
+	}
+
+	console.log(`Removed ${nodesRemoved} extra nodes!`)
+}
+
 function reduceRegisters(graph: CircuitGraph) {
 	let registersInferred = 0
 	
@@ -68,7 +123,7 @@ function reduceRegisters(graph: CircuitGraph) {
 		const inputLockName = node.inPorts['D'].name
 		const inputLockNode = graph[inputLockName]
 
-		if(!node.outPorts['Q'].some(otherConnection => otherConnection.name === inputLockName)) {
+		if(!node.outPorts['Q'].some(otherConnection => otherConnection.name === inputLockName) || inputLockNode.type !== 'sky130_fd_sc_hd__mux2_1') {
 			console.warn(`Possible register didn't match recursive mux pattern ${name}!`)
 			
 			continue
@@ -89,11 +144,17 @@ function reduceRegisters(graph: CircuitGraph) {
 			}
 		}
 
-		closeConnection(graph, graph[inputLockName].inPorts['A1'], inputLockName, [{ name: registerName, port: 'next' }])
-		closeConnection(graph, graph[inputLockName].inPorts['S'], inputLockName, [{ name: registerName, port: 'enable' }])
+		if(graph[inputLockName].inPorts['A1'])
+			closeConnection(graph, graph[inputLockName].inPorts['A1'], inputLockName, [{ name: registerName, port: 'next' }])
+		
+		if(graph[inputLockName].inPorts['S'])
+			closeConnection(graph, graph[inputLockName].inPorts['S'], inputLockName, [{ name: registerName, port: 'enable' }])
 
-		closeConnection(graph, node.inPorts['RESET_B'], name, [{ name: registerName, port: 'reset_n' }])
-		closeConnection(graph, node.inPorts['CLK'], name, [{ name: registerName, port: 'clk' }])
+		if(node.inPorts['RESET_B'])
+			closeConnection(graph, node.inPorts['RESET_B'], name, [{ name: registerName, port: 'reset_n' }])
+		
+		if(node.inPorts['CLK'])
+			closeConnection(graph, node.inPorts['CLK'], name, [{ name: registerName, port: 'clk' }])
 		
 		closeConnection(graph, { name: `register_${registersInferred}`, port: 'value' }, name, node.outPorts['Q'].filter(otherConnection => otherConnection.name !== inputLockName))
 
@@ -173,7 +234,7 @@ class Circuit {
 						graph[name].outPorts[port].push({ name: connectionId, port: connectionId })
 
 						if(!graph[connectionId]) graph[connectionId] = { type: 'input', inPorts: {}, outPorts: {} }
-						graph[connectionId].inPorts[connectionId] = { name: connectionId, port }
+						graph[connectionId].inPorts[connectionId] = { name, port }
 
 						if(visited.has(connectionId)) continue
 					
@@ -234,6 +295,7 @@ class Circuit {
 
 		reduceClockBuffers(graph)
 		// reduceRegisters(graph)
+		removeExtraneous(graph)
 
 		return new Circuit(name, inPorts, outPorts, graph)
 	}
