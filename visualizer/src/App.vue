@@ -26,20 +26,26 @@ onMounted(() => {
 	for(const instanceName of Object.keys(data)) {
 		const instance = (data as any)[instanceName]
 
+		let label = instance.type
 		let x = Math.random()
 		let y = Math.random()
+		let color = 'blue'
 
 		if(inputPorts.includes(instanceName)) {
+			label = instanceName
 			x = -1000
-			// y = 0
+			color = 'red'
 		}
-
+		
 		if(outputPorts.includes(instanceName)) {
+			label = instanceName
 			x = 1000
-			// y = 0
+			color = 'red'
 		}
 
-		graph.addNode(instanceName, { label: instance.type,  x, y, size: 10, color: (inputPorts.includes(instanceName) || outputPorts.includes(instanceName)) ? 'red' : 'blue' })
+		if(instance.type === 'sky130_fd_sc_hd__clkbuf_16') color = 'grey'
+
+		graph.addNode(instanceName, { label,  x, y, size: 10, color })
 	}
 
 	for(const instanceName of Object.keys(data)) {

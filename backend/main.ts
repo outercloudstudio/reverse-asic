@@ -1,133 +1,31 @@
 type CircuitGraph = Record<string, { type: string, inPorts: Record<string, { name: string, port: string }>, outPorts: Record<string, { name: string, port: string }[]> }>
 
-// class Circuit {
-// 	private constructor(public name: string, public ports: string[], public graph: CircuitGraph) {}
+function reduceClockBuffers(graph: CircuitGraph) {
+	const visited: Set<string> = new Set()
+	const frontier: string[] = []
 
-// 	public static parse(lines: string[], circuitDefinitions: { name: string, ports: string[] }[]): Circuit {
-// 		const items = lines[0].split(' ')
-// 		const name = items[1]
-// 		const ports = items.slice(2)
+	visited.add('clk')
+	frontier.push('clk')
 
-// 		if(name !== 'adder_demo') {
-// 			return new Circuit(name, ports, {})
-// 		}
+	while(frontier.length > 0) {
+		const name = frontier.shift()!
 
-// 		const instances: { name: string, type: string, connections: Record<string, { instance: string, port: string }> }[] = []
+		const node = graph[name]
 
-// 		for(const line of lines.slice(1)) {
-// 			const instanceItems = line.split(' ')
+		if(node.type === 'sky130_fd_sc_hd__clkbuf_16') {
+			continue
+		}
+		
+		for(const port of Object.keys(node.outPorts)) {
+			for(const otherNode of node.outPorts[port]) {
+				if(visited.has(otherNode.name)) continue
 
-// 			const instanceName = instanceItems[0].slice(1)
-// 			const instanceType = instanceItems[instanceItems.length - 1]
-
-// 			const connections: Record<string, { instance: string, port: string }> = {}
-
-// 			for(let index = 0; index < instanceItems.length - 2; index++) {
-// 				const connectionId = instanceItems[index + 1]
-// 				const connectionInstance = connectionId.split('/')[0]
-// 				const connectionPort = connectionId.split('/')[1]
-
-// 				if(!connectionPort) {
-// 					connections[circuitDefinitions.find(circuit => circuit.name === instanceType)!.ports[index]] = { instance: connectionInstance, port: connectionPort }
-// 				} else {
-// 					connections[circuitDefinitions.find(circuit => circuit.name === instanceType)!.ports[index]] = { instance: connectionInstance, port: connectionPort }
-// 				}
-// 			}
-			
-// 			instances.push({
-// 				name: instanceName,
-// 				type: instanceType,
-// 				connections
-// 			})
-// 		}
-
-// 		const visited: Set<string> = new Set()
-// 		visited.add('S')
-// 		const frontier: string[] = []
-// 		frontier.push('S')
-
-// 		const outputPorts: Record<string, Set<string>> = {}
-
-// 		// while(frontier.length > 0) {
-// 		// 	const node = frontier.shift()
-
-// 		// 	const otherConnections = instances.filter(instance => Object.values(instance.connections).some(connection => connection.instance === node))
-
-// 		// 	for(const connection of otherConnections) {
-// 		// 		if(visited.has(connection.name)) continue
-
-// 		// 		if(!outputPorts[connection.name]) outputPorts[connection.name] = new Set()
-				
-// 		// 		for(const port of Object.keys(connection.connections)) {
-// 		// 			if(connection.connections[port].instance !== node) continue
-
-// 		// 			outputPorts[connection.name].add(port)
-// 		// 		}
-
-// 		// 		frontier.push(connection.name)
-// 		// 		visited.add(connection.name)
-// 		// 	}
-
-// 		// 	const instance = instances.find(instance => instance.name === node)
-
-// 		// 	if(!instance) continue
-
-// 		// 	const connections = Object.values(instance.connections)
-
-// 		// 	for(const connection of connections) {
-// 		// 		if(visited.has(connection.instance)) continue
-
-// 		// 		if(!outputPorts[connection.instance]) outputPorts[connection.instance] = new Set()
-// 		// 		outputPorts[connection.instance].add(connection.port)
-
-// 		// 		frontier.push(connection.instance)
-// 		// 		visited.add(connection.instance)
-// 		// 	}
-// 		// }
-
-// 		const graph: CircuitGraph = {}
-
-// 		// for(const instance of instances) {
-// 		// 	const otherConnections = instances.filter(instance => Object.values(instance.connections).some(connection => connection.instance === instance.name))
-// 		// 	const connections = Object.keys(instance.connections)
-
-// 		// 	const inPorts: Record<string, { name: string, port: string }> = {}
-// 		// 	const outPorts: Record<string, { name: string, port: string }> = {}
-
-// 		// 	const instanceOutputPorts = outputPorts[instance.name]
-
-// 		// 	for(const connection of otherConnections) {
-// 		// 		for(const port of Object.keys(connection.connections)) {
-// 		// 			if(connection.connections[port].instance !== instance.name) continue
-
-// 		// 			if(instanceOutputPorts.has(connection.connections[port].port)) {
-// 		// 				outPorts[connection.connections[port].port] = { name: connection.name, port: port }
-// 		// 			} else {
-// 		// 				inPorts[connection.connections[port].port] = { name: connection.name, port: port }
-// 		// 			}
-// 		// 		}
-// 		// 	}
-
-// 		// 	for(const port of connections) {
-// 		// 		if(instanceOutputPorts.has(port)) {
-// 		// 			outPorts[port] = { name: instance.connections[port].instance, port: instance.connections[port].port }
-// 		// 		} else {
-// 		// 			inPorts[port] = { name: instance.connections[port].instance, port: instance.connections[port].port }
-// 		// 		}
-// 		// 	}
-
-// 		// 	graph[instance.name] = {
-// 		// 		type: instance.type,
-// 		// 		inPorts,
-// 		// 		outPorts
-// 		// 	}
-// 		// }
-
-// 		console.log(graph)
-
-// 		return new Circuit(name, ports, graph)
-// 	}
-// }
+				visited.add(otherNode.name)
+				frontier.push(otherNode.name)
+			}
+		}
+	}
+}
 
 class Circuit {
 	public constructor(public name: string, public inPorts: string[], public outPorts: string[], public graph: CircuitGraph) {}
@@ -182,7 +80,7 @@ class Circuit {
 					
 				graph[name] = {
 					type: circuit.name,
-					inPorts: {},
+					inPorts: graph[name]?.inPorts ?? {},
 					outPorts: {}
 				}
 
@@ -193,7 +91,10 @@ class Circuit {
 
 					if(outPorts.includes(connectionId)) {
 						if(!graph[name].outPorts[port]) graph[name].outPorts[port] = []
-						graph[name].outPorts[port].push({ name: connectionId, port })
+						graph[name].outPorts[port].push({ name: connectionId, port: connectionId })
+
+						if(!graph[connectionId]) graph[connectionId] = { type: 'input', inPorts: {}, outPorts: {} }
+						graph[connectionId].inPorts[connectionId] = { name: connectionId, port }
 
 						if(visited.has(connectionId)) continue
 					
@@ -203,10 +104,17 @@ class Circuit {
 						const connectingInstances = Object.entries(instances).filter(([_, instance]) => Object.values(instance.connections).some(connection => connection === connectionId)).map(([otherName, _]) => otherName)
 
 						for(const otherName of connectingInstances) {
+							if(otherName === name) continue
+							
 							if(!graph[name].outPorts[port]) graph[name].outPorts[port] = []
 							graph[name].outPorts[port] = graph[name].outPorts[port].concat(
 								Object.entries(instances[otherName].connections).filter(([_, connection]) => connection === connectionId).map(([port, _]) => ({ name: otherName, port }))
 							)
+
+							if(!graph[otherName]) graph[otherName] = { type: 'unknown', inPorts: {}, outPorts: {} }
+							for(const [otherPort, _] of Object.entries(instances[otherName].connections).filter(([_, connection]) => connection === connectionId)) {
+								graph[otherName].inPorts[otherPort] = { name, port }
+							}
 							
 							if(visited.has(otherName)) continue
 							
@@ -219,16 +127,23 @@ class Circuit {
 				const connectingInstances = Object.entries(instances).filter(([_, instance]) => Object.values(instance.connections).some(connection => connection === name)).map(([otherName, _]) => otherName)
 
 				graph[name] = {
-					type: name,
-					inPorts: {},
+					type: 'input',
+					inPorts: graph[name]?.inPorts ?? {},
 					outPorts: {}
 				}
 
 				if(outPorts.includes(name)) continue
 
 				for(const otherName of connectingInstances) {
+					if(otherName === name) continue
+
 					if(!graph[name].outPorts[name]) graph[name].outPorts[name] = []
 					graph[name].outPorts[name].push({ name: otherName, port: Object.entries(instances[otherName].connections).find(([port, connection]) => connection === name)![0] })
+
+					if(!graph[otherName]) graph[otherName] = { type: 'unknown', inPorts: {}, outPorts: {} }
+					for(const [otherPort, _] of Object.entries(instances[otherName].connections).filter(([_, connection]) => connection === name)) {
+						graph[otherName].inPorts[otherPort] = { name, port: name }
+					}
 					
 					if(visited.has(otherName)) continue
 					
@@ -237,6 +152,8 @@ class Circuit {
 				}
 			}
 		}
+
+		reduceClockBuffers(graph)
 
 		return new Circuit(name, inPorts, outPorts, graph)
 	}
