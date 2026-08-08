@@ -164,6 +164,52 @@ function reduceRegisters(graph: CircuitGraph) {
 }
 
 function cleanName(name: string) {
+	if(name === 'register_10') return 'inputShift_00'
+	if(name === 'register_5') return 'inputShift_01_IGNORED'
+	if(name === 'register_11') return 'inputShift_02_IGNORED'
+	if(name === 'register_7') return 'inputShift_03_IGNORED'
+	if(name === 'register_4') return 'inputShift_04_IGNORED'
+	if(name === 'register_3') return 'inputShift_05_IGNORED'
+	if(name === 'register_6') return 'inputShift_06_IGNORED'
+	if(name === 'register_0') return 'inputShift_07_IGNORED'
+	if(name === 'register_2') return 'inputShift_08_IGNORED'
+	if(name === 'register_1') return 'inputShift_09'
+	if(name === 'register_8') return 'inputShift_10'
+	if(name === 'register_9') return 'inputShift_11'
+
+	if(name === 'sky130_fd_sc_hd__and2b_2_11') return 'enableGate'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_47') return 'lockRegister'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_81') return 'successRegister'
+	if(name === 'sky130_fd_sc_hd__inv_2_7') return 'enableGate_N'
+	if(name === 'sky130_fd_sc_hd__nand2_2_35') return 'locked'
+	
+	if(name === 'sky130_fd_sc_hd__and4bb_2_6') return 'lockCondition_1'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_16') return 'lockConditionRegister_2'
+	if(name === 'sky130_fd_sc_hd__nand3b_2_0') return 'lockCondition_3'
+	
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_37') return 'failRegister1'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_28') return 'failRegister2'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_83') return 'failRegister3'
+
+	if(name === 'sky130_fd_sc_hd__nand2_2_33') return 'lowIGated1'
+	if(name === 'sky130_fd_sc_hd__nand2_2_36') return 'lowIGated2'
+	if(name === 'sky130_fd_sc_hd__nand2_2_14') return 'lowIGated3'
+	if(name === 'sky130_fd_sc_hd__nand2_2_37') return 'lowIGated4'
+
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_29') return 'weirdLockRegister1'
+	if(name === 'sky130_fd_sc_hd__inv_2_8') return 'weirdLockRegister1_N'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_27') return 'weirdLockRegister2'
+
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_44') return 'chunkOrRegister1'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_43') return 'chunkOrRegister2'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_46') return 'chunkOrRegister3'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_45') return 'chunkOrRegister4'
+
+	if(name === 'sky130_fd_sc_hd__or4b_2_7') return 'chunkOr1'
+	if(name === 'sky130_fd_sc_hd__or4b_2_5') return 'chunkOr2'
+	if(name === 'sky130_fd_sc_hd__or4b_2_4') return 'chunkOr3'
+	if(name === 'sky130_fd_sc_hd__or4b_2_6') return 'chunkOr4'
+
 	if(name.startsWith('sky130_fd_sc_hd__')) return name.substring('sky130_fd_sc_hd__'.length)
 
 	return name
@@ -307,31 +353,7 @@ class Circuit {
 
 		if(node.type === 'input' && name !== 'success') {
 		// if(node.type === 'input' && name !== 'S') {
-			return 'io'
-		}
-
-		if([
-			'sky130_fd_sc_hd__dfrtp_2',
-			'sky130_fd_sc_hd__dfstp_2',
-			'sky130_fd_sc_hd__dfxtp_2',
-		].includes(node.type)) {
-			if(!context.handledNodes.includes(name)) {
-				context.handledNodes.push(name)
-
-				const inputs: Record<string, string> = {}
-
-				for(const port of Object.keys(node.inPorts)) {
-					const value = this.generateSignalCode(context, node.inPorts[port].name)
-
-					inputs[port] = `${value}.${node.inPorts[port].port}`
-				}
-
-				context.prelude += `\n${cleanName(name)} = new ${cleanName(node.type)}()`
-
-				context.main += `\n${cleanName(name)}.next = ${cleanName(node.type)}.eval({${Object.entries(inputs).map(([key, value]) => `${key}: ${value}`).join(', ')}})`
-			}
-			
-			return cleanName(name)
+			return name
 		}
 
 		if(!context.handledNodes.includes(name)) {
@@ -340,14 +362,289 @@ class Circuit {
 			const inputs: Record<string, string> = {}
 
 			for(const port of Object.keys(node.inPorts)) {
+				if(['VGND', 'VNB', 'VPWR', 'VPB'].includes(port)) continue
+
 				const value = this.generateSignalCode(context, node.inPorts[port].name)
 
-				inputs[port] = `${value}.${node.inPorts[port].port}`
+				inputs[port] = value
 			}
 
-			context.main += `\nconst ${cleanName(name)} = ${cleanName(node.type)}({${Object.entries(inputs).map(([key, value]) => `${key}: ${value}`).join(', ')}})`
-		}
+			if(node.type === 'sky130_fd_sc_hd__dfrtp_2') {
+				context.main += `\nconst ${cleanName(name)} = new Register(${inputs['D']}, ${inputs['RESET_B']}) // ${cleanName(name)}`
 
+				return cleanName(name)
+			}
+
+			let format = `${cleanName(node.type)}({${Object.entries(inputs).map(([key, value]) => `${key}: ${value}`).join(', ')}})`
+
+			if(node.type === 'sky130_fd_sc_hd__buf_2') {
+				format = `${inputs['A']}`
+				
+				if(node.outPorts['X'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__xnor2_2') {
+				format = `(${inputs['A']} === ${inputs['B']})`
+				
+				if(node.outPorts['Y'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__xor2_2') {
+				format = `(${inputs['A']} !== ${inputs['B']})`
+				
+				if(node.outPorts['X'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__nor2_2') {
+				format = `!(${inputs['A']} || ${inputs['B']})`
+				
+				if(node.outPorts['Y'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__nor3_2') {
+				format = `!(${inputs['A']} || ${inputs['B']} || ${inputs['C']})`
+				
+				if(node.outPorts['Y'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__nor4_2') {
+				format = `!(${inputs['A']} || ${inputs['B']} || ${inputs['C']} || ${inputs['D']})`
+				
+				if(node.outPorts['Y'].length === 1) {
+					return format
+				}
+			}
+
+
+			if(node.type === 'sky130_fd_sc_hd__nand2_2') {
+				format = `!(${inputs['A']} && ${inputs['B']})`
+				
+				if(node.outPorts['Y'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__nand2b_2') {
+				format = `!(${inputs['A_N']} && ${inputs['B']})`
+				
+				if(node.outPorts['Y'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__nand3_2') {
+				format = `!(${inputs['A']} && ${inputs['B']} && ${inputs['C']})`
+				
+				if(node.outPorts['Y'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__nand3b_2') {
+				format = `!(!${inputs['A_N']} && ${inputs['B']} && ${inputs['C']})`
+				
+				if(node.outPorts['Y'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__nand4_2') {
+				format = `!(${inputs['A']} && ${inputs['B']} && ${inputs['C']} && ${inputs['D']})`
+				
+				if(node.outPorts['Y'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__and2_2') {
+				format = `(${inputs['A']} && ${inputs['B']})`
+				
+				if(node.outPorts['X'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__and2b_2') {
+				format = `(!${inputs['A_N']} && ${inputs['B']})`
+				
+				if(node.outPorts['X'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__and3_2') {
+				format = `(${inputs['A']} && ${inputs['B']} && ${inputs['C']})`
+				
+				if(node.outPorts['X'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__or2_2') {
+				format = `(${inputs['A']} || ${inputs['B']})`
+				
+				if(node.outPorts['X'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__or3_2') {
+				format = `(${inputs['A']} || ${inputs['B']} || ${inputs['C']})`
+				
+				if(node.outPorts['X'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__or4_2') {
+				format = `(${inputs['A']} || ${inputs['B']} || ${inputs['C']} || ${inputs['D']})`
+				
+				if(node.outPorts['X'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__or4b_2') {
+				format = `(${inputs['A']} || ${inputs['B']} || ${inputs['C']} || !${inputs['D_N']})`
+				
+				if(node.outPorts['X'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__or4bb_2') {
+				format = `(${inputs['A']} || ${inputs['B']} || !${inputs['C_N']} || !${inputs['D_N']})`
+				
+				if(node.outPorts['X'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__a32o_2') {
+				format = `((${inputs['A1']} && ${inputs['A2']} && ${inputs['A3']}) || ${inputs['B1']} || ${inputs['B2']})`
+				
+				if(node.outPorts['X'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__a21o_2') {
+				format = `((${inputs['A1']} && ${inputs['A2']}) || ${inputs['B1']})`
+				
+				if(node.outPorts['X'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__a21oi_2') {
+				format = `!((${inputs['A1']} && ${inputs['A2']}) || ${inputs['B1']})`
+				
+				if(node.outPorts['Y'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__a22o_2') {
+				format = `((${inputs['A1']} && ${inputs['A2']}) || ${inputs['B1']} || ${inputs['B2']})`
+				
+				if(node.outPorts['X'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__a31o_2') {
+				format = `((${inputs['A1']} && ${inputs['A2']} && ${inputs['A3']}) || ${inputs['B1']})`
+				
+				if(node.outPorts['X'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__o21a_2') {
+				format = `((${inputs['A1']} || ${inputs['A2']}) && ${inputs['B1']})`
+				
+				if(node.outPorts['X'].length === 1) {
+					return format
+				}
+			}
+
+			// if(node.type === 'sky130_fd_sc_hd__o211a_2') {
+			// 	format = `((${inputs['A1']} || ${inputs['A2']}) && ${inputs['B1']} && ${inputs['C1']})`
+				
+			// 	if(node.outPorts['X'].length === 1) {
+			// 		return format
+			// 	}
+			// }
+
+			if(node.type === 'sky130_fd_sc_hd__o32a_2') {
+				format = `((${inputs['A1']} || ${inputs['A2']} || ${inputs['A3']}) && ${inputs['B1']} && ${inputs['B2']})`
+				
+				if(node.outPorts['X'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__o22a_2') {
+				format = `((${inputs['A1']} || ${inputs['A2']}) && ${inputs['B1']} && ${inputs['B2']})`
+				
+				if(node.outPorts['X'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__inv_2') {
+				format = `!${inputs['A']}`
+				
+				if(node.outPorts['Y'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__and4_2') {
+				format = `(${inputs['A']} && ${inputs['B']} && ${inputs['C']} && ${inputs['D']})`
+				
+				if(node.outPorts['X'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__and4b_2') {
+				format = `(!${inputs['A_N']} && ${inputs['B']} && ${inputs['C']} && ${inputs['D']})`
+				
+				if(node.outPorts['X'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__and4bb_2') {
+				format = `(!${inputs['A_N']} && !${inputs['B_N']} && ${inputs['C']} && ${inputs['D']})`
+				
+				if(node.outPorts['X'].length === 1) {
+					return format
+				}
+			}
+
+			if(node.type === 'sky130_fd_sc_hd__mux2_1') {
+				format = `(${inputs['S']} ? ${inputs['A0']} : ${inputs['A1']})`
+				
+				if(node.outPorts['X'].length === 1) {
+					return format
+				}
+			}
+
+			context.main += `\nconst ${cleanName(name)} = ${format} // ${cleanName(name)}`
+		}
+		
 		return cleanName(name)
 	}
 
