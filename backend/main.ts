@@ -183,9 +183,16 @@ function cleanName(name: string) {
 	if(name === 'sky130_fd_sc_hd__inv_2_7') return 'enableGate_N'
 	if(name === 'sky130_fd_sc_hd__nand2_2_35') return 'locked'
 	
-	if(name === 'sky130_fd_sc_hd__and4bb_2_6') return 'lockCondition_1'
-	if(name === 'sky130_fd_sc_hd__dfrtp_2_16') return 'lockConditionRegister_2'
-	if(name === 'sky130_fd_sc_hd__nand3b_2_0') return 'lockCondition_3'
+	if(name === 'sky130_fd_sc_hd__and4bb_2_6') return 'lockBitComp1'
+	if(name === 'sky130_fd_sc_hd__nand3b_2_0') return 'lockBitComp2'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_44') return 'lockCounterRegister_Bit0'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_43') return 'lockCounterRegister_BitUNKNOWN_1'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_46') return 'lockCounterRegister_BitUNKNOWN_2'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_45') return 'lockCounterRegister_BitUNKNOWN_3'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_15') return 'lockCounterRegister_BitUNKNOWN_4'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_17') return 'lockCounterRegister_BitUNKNOWN_5'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_18') return 'lockCounterRegister_BitUNKNOWN_6'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_16') return 'lockCounterRegister_Bit7'
 	
 	if(name === 'sky130_fd_sc_hd__dfrtp_2_37') return 'failRegister1'
 	if(name === 'sky130_fd_sc_hd__dfrtp_2_28') return 'failRegister2'
@@ -200,15 +207,10 @@ function cleanName(name: string) {
 	if(name === 'sky130_fd_sc_hd__inv_2_8') return 'weirdLockRegister1_N'
 	if(name === 'sky130_fd_sc_hd__dfrtp_2_27') return 'weirdLockRegister2'
 
-	if(name === 'sky130_fd_sc_hd__dfrtp_2_44') return 'chunkOrRegister1'
-	if(name === 'sky130_fd_sc_hd__dfrtp_2_43') return 'chunkOrRegister2'
-	if(name === 'sky130_fd_sc_hd__dfrtp_2_46') return 'chunkOrRegister3'
-	if(name === 'sky130_fd_sc_hd__dfrtp_2_45') return 'chunkOrRegister4'
-
-	if(name === 'sky130_fd_sc_hd__or4b_2_7') return 'chunkOr1'
-	if(name === 'sky130_fd_sc_hd__or4b_2_5') return 'chunkOr2'
-	if(name === 'sky130_fd_sc_hd__or4b_2_4') return 'chunkOr3'
-	if(name === 'sky130_fd_sc_hd__or4b_2_6') return 'chunkOr4'
+	if(name === 'sky130_fd_sc_hd__or4b_2_7') return 'counterCheck1'
+	if(name === 'sky130_fd_sc_hd__or4b_2_5') return 'counterCheck2'
+	if(name === 'sky130_fd_sc_hd__or4b_2_4') return 'counterCheck3'
+	if(name === 'sky130_fd_sc_hd__or4b_2_6') return 'counterCheck4'
 
 	if(name.startsWith('sky130_fd_sc_hd__')) return name.substring('sky130_fd_sc_hd__'.length)
 
