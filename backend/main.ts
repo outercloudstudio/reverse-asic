@@ -545,7 +545,7 @@ class Circuit {
 			}
 
 			if(node.type === 'sky130_fd_sc_hd__a211oi_2') {
-				format = `!((${inputs['A1']} && ${inputs['A2']}) || ${inputs['B1']} || ${inputs['C1']}))`
+				format = `!((${inputs['A1']} && ${inputs['A2']}) || ${inputs['B1']} || ${inputs['C1']})`
 				
 				if(node.outPorts['Y'].length === 1) {
 					return format
@@ -553,7 +553,7 @@ class Circuit {
 			}
 
 			if(node.type === 'sky130_fd_sc_hd__a221o_2') {
-				format = `((${inputs['A1']} && ${inputs['A2']}) || (${inputs['B1']} && ${inputs['B2']}) || ${inputs['C1']}))`
+				format = `((${inputs['A1']} && ${inputs['A2']}) || (${inputs['B1']} && ${inputs['B2']}) || ${inputs['C1']})`
 				
 				if(node.outPorts['X'].length === 1) {
 					return format
@@ -561,7 +561,7 @@ class Circuit {
 			}
 
 			if(node.type === 'sky130_fd_sc_hd__a221oi_2') {
-				format = `!((${inputs['A1']} && ${inputs['A2']}) || (${inputs['B1']} && ${inputs['B2']}) || ${inputs['C1']}))`
+				format = `!((${inputs['A1']} && ${inputs['A2']}) || (${inputs['B1']} && ${inputs['B2']}) || ${inputs['C1']})`
 				
 				if(node.outPorts['Y'].length === 1) {
 					return format

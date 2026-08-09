@@ -2,9 +2,9 @@
 
 const lockCounterRegister_Bit0 = new Register(!(lockBitComp1 || (lockCounterRegister_Bit0 === enableGate)), rst_n) // lockCounterRegister_Bit0
 const and3_2_14 = (lockCounterRegister_BitUNKNOWN_1 && lockCounterRegister_Bit0 && enableGate) // and3_2_14
-const lockCounterRegister_BitUNKNOWN_1 = new Register(!((enableGate && lockBitComp1) || !((lockCounterRegister_Bit0 && enableGate) || lockCounterRegister_BitUNKNOWN_1) || and3_2_14)), rst_n) // lockCounterRegister_BitUNKNOWN_1
+const lockCounterRegister_BitUNKNOWN_1 = new Register(!((enableGate && lockBitComp1) || !((lockCounterRegister_Bit0 && enableGate) || lockCounterRegister_BitUNKNOWN_1) || and3_2_14), rst_n) // lockCounterRegister_BitUNKNOWN_1
 const lockCounterRegister_BitUNKNOWN_2 = new Register((lockCounterRegister_BitUNKNOWN_2 !== and3_2_14), rst_n) // lockCounterRegister_BitUNKNOWN_2
-const lockCounterRegister_BitUNKNOWN_3 = new Register(!((enableGate && lockBitComp1) || ((lockCounterRegister_BitUNKNOWN_1 && lockCounterRegister_Bit0 && lockCounterRegister_BitUNKNOWN_2 && enableGate) && lockCounterRegister_BitUNKNOWN_3) || !((lockCounterRegister_BitUNKNOWN_1 && lockCounterRegister_Bit0 && lockCounterRegister_BitUNKNOWN_2 && enableGate) || lockCounterRegister_BitUNKNOWN_3))), rst_n) // lockCounterRegister_BitUNKNOWN_3
+const lockCounterRegister_BitUNKNOWN_3 = new Register(!((enableGate && lockBitComp1) || ((lockCounterRegister_BitUNKNOWN_1 && lockCounterRegister_Bit0 && lockCounterRegister_BitUNKNOWN_2 && enableGate) && lockCounterRegister_BitUNKNOWN_3) || !((lockCounterRegister_BitUNKNOWN_1 && lockCounterRegister_Bit0 && lockCounterRegister_BitUNKNOWN_2 && enableGate) || lockCounterRegister_BitUNKNOWN_3)), rst_n) // lockCounterRegister_BitUNKNOWN_3
 const lockBitComp1 = (!lockCounterRegister_Bit0 && !lockCounterRegister_BitUNKNOWN_2 && lockCounterRegister_BitUNKNOWN_3 && lockCounterRegister_BitUNKNOWN_1) // lockBitComp1
 const and4_2_2 = (lockBitComp1 && enableGate && lockCounterRegister_BitUNKNOWN_4 && lockCounterRegister_Bit7) // and4_2_2
 const nand2_2_23 = !(lockBitComp1 && enableGate) // nand2_2_23
@@ -29,7 +29,7 @@ const inputShift_10 = register({reset_n: rst_n, clk: clk, next: inputShift_09, e
 const inputShift_11 = register({reset_n: rst_n, clk: clk, next: inputShift_10, enable: enableGate}) // inputShift_11
 const or4_2_4 = (lockCounterRegister_Bit0 || lockCounterRegister_BitUNKNOWN_1 || lockCounterRegister_BitUNKNOWN_2 || lockCounterRegister_BitUNKNOWN_3) // or4_2_4
 const conb_1_2 = 'HI or LOW' // conb_1_2
-const failRegister1 = new Register(((I && enableGate && (((lockCounterRegister_Bit0 || lockCounterRegister_BitUNKNOWN_2 || !lockCounterRegister_BitUNKNOWN_3 || !lockCounterRegister_BitUNKNOWN_1) && inputShift_09) || (conb_1_2 && inputShift_10) || ((or4_2_4 && inputShift_00) || (or4_2_4 && inputShift_11))))) || failRegister1), rst_n) // failRegister1
+const failRegister1 = new Register(((I && enableGate && (((lockCounterRegister_Bit0 || lockCounterRegister_BitUNKNOWN_2 || !lockCounterRegister_BitUNKNOWN_3 || !lockCounterRegister_BitUNKNOWN_1) && inputShift_09) || (conb_1_2 && inputShift_10) || ((or4_2_4 && inputShift_00) || (or4_2_4 && inputShift_11)))) || failRegister1), rst_n) // failRegister1
 const failRegister3 = new Register((lockRegister || failRegister3), rst_n) // failRegister3
 const locked = !(I && enableGate) // locked
 const inv_2_20 = !dfrtp_2_72 // inv_2_20
@@ -162,7 +162,7 @@ const and3_2_1 = (xnor2_2_9 && !nor2_2_9 && nand2_2_0) // and3_2_1
 const o211a_2_3 = ((xor2_2_5 || ((xor2_2_6 && ((xor2_2_8 && nor2_2_5) || !((xnor2_2_9 && nand2_2_9) || o21a_2_0 || xor2_2_8))) || (xnor2_2_10 && ((xnor2_2_0 && xor2_2_8 && and2b_2_0) || nor2_2_12 || and3_2_1) && !((nor2_2_12 || and3_2_1) && xor2_2_8)))) && !((xor2_2_6 || (xor2_2_8 ? (nor2_2_11 || ((xor2_2_2 || nor2_2_9) && or2_2_0)) : ((nand2_2_5 && nor2_2_12) || (or2_2_2 && xnor2_2_9)))) && ((xor2_2_8 && or2_2_0) || (nand2b_2_0 ? nor2_2_12 : xnor2_2_9) || xnor2_2_10) && xor2_2_5) && nor2_2_20) // o211a_2_3
 const inv_2_0 = !or2_2_2 // inv_2_0
 const o31ai_2_0 = !((xnor2_2_9 || nor2_2_2 || inv_2_0) && xor2_2_8) // o31ai_2_0
-const o211a_2_4 = ((xor2_2_5 || !((xor2_2_6 || ((xor2_2_8 || and3_2_0 || !((xnor2_2_9 && and2_2_0) || or3_2_0)) && (o31ai_2_0 || !(xor2_2_2 || nor2_2_10)))) && (xor2_2_8 || xnor2_2_10 || or3_2_2 || o21a_2_0))) && ((xor2_2_8 && !((xnor2_2_9 || nand2_2_5) && ((nor2_2_8 || xor2_2_2 || or2_2_2) || xor2_2_6))) || ((xor2_2_6 || nor2_2_28) && !((xor2_2_6 && ((xnor2_2_9 || nand2_2_9) && !nor2_2_5)) || xor2_2_8)) || xnor2_2_7)) && nor2_2_20) // o211a_2_4
+const o211a_2_4 = ((xor2_2_5 || !((xor2_2_6 || ((xor2_2_8 || and3_2_0 || !((xnor2_2_9 && and2_2_0) || or3_2_0)) && (o31ai_2_0 || !(xor2_2_2 || nor2_2_10)))) && (xor2_2_8 || xnor2_2_10 || or3_2_2 || o21a_2_0))) && ((xor2_2_8 && !((xnor2_2_9 || nand2_2_5) && ((nor2_2_8 || xor2_2_2 || or2_2_2) || xor2_2_6))) || ((xor2_2_6 || nor2_2_28) && !((xor2_2_6 && ((xnor2_2_9 || nand2_2_9) && !nor2_2_5)) || xor2_2_8)) || xnor2_2_7) && nor2_2_20) // o211a_2_4
 const or2_2_4 = (xnor2_2_9 || or2_2_0) // or2_2_4
 const o211a_2_5 = ((xor2_2_5 || (xor2_2_6 ? ((xor2_2_8 || and3_2_0 || !(xnor2_2_9 || or3_2_0)) && (!(nor2_2_10 || nand2_2_11) || o31ai_2_0)) : (xor2_2_8 ? ((nor2_2_8 || nand2_2_11) && or2_2_3) : ((xor2_2_2 && nand2_2_1 && nand2_2_0) || and2_2_0)))) && ((xor2_2_6 && ((xor2_2_8 && nand2_2_11 && or2_2_4) || (((xor2_2_2 || nand2b_2_0) && (or2_2_4 || nor2_2_4)) && a21oi_2_0))) || ((nor2_2_2 || !((xor2_2_2 || inv_2_0) && xor2_2_8)) && (((xor2_2_2 || (nand2_2_1 && nand2_2_0)) && or2_2_4) || xor2_2_8) && xnor2_2_10) || xnor2_2_7) && nor2_2_20) // o211a_2_5
 const or4b_2_0 = (o211a_2_3 || o211a_2_5 || o211a_2_4 || !o211a_2_2) // or4b_2_0
