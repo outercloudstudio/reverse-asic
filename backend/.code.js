@@ -9,9 +9,9 @@ const counterIs11 = (!counter_Bit0 && !counter_Bit2 && counter_Bit3 && counter_B
 const and4_2_2 = (counterIs11 && enableGate && counter2_Bit1 && counter2_Bit0) // and4_2_2
 const nand2_2_23 = !(counterIs11 && enableGate) // nand2_2_23
 const counter2_Bit1 = new Register(((lockBitComp2 || nand2_2_23) && ((counterIs11 && enableGate && counter2_Bit0) || counter2_Bit1) && !and4_2_2), rst_n) // counter2_Bit1
-const lockCounterRegister_BitUNKNOWN_5 = new Register((lockCounterRegister_BitUNKNOWN_5 !== and4_2_2), rst_n) // lockCounterRegister_BitUNKNOWN_5
-const counter2_Bit2 = new Register(((counter2_Bit0 || lockBitComp2 || nand2_2_23) && !(lockCounterRegister_BitUNKNOWN_5 && counter2_Bit2 && and4_2_2) && ((lockCounterRegister_BitUNKNOWN_5 && and4_2_2) || counter2_Bit2)), rst_n) // counter2_Bit2
-const lockBitComp2 = !(!lockCounterRegister_BitUNKNOWN_5 && counter2_Bit2 && counter2_Bit1) // lockBitComp2
+const counter2_Bit3 = new Register((counter2_Bit3 !== and4_2_2), rst_n) // counter2_Bit3
+const counter2_Bit2 = new Register(((counter2_Bit0 || lockBitComp2 || nand2_2_23) && !(counter2_Bit3 && counter2_Bit2 && and4_2_2) && ((counter2_Bit3 && and4_2_2) || counter2_Bit2)), rst_n) // counter2_Bit2
+const lockBitComp2 = !(!counter2_Bit3 && counter2_Bit2 && counter2_Bit1) // lockBitComp2
 const counter2_Bit0 = new Register((counter2_Bit0 ? (counterIs11 && enableGate && lockBitComp2) : nand2_2_23), rst_n) // counter2_Bit0
 const lockRegister = new Register(((counterIs11 && !(counter2_Bit0 || lockBitComp2) && enableGate) || lockRegister), rst_n) // lockRegister
 const enableGate = (!lockRegister && enable) // enableGate
@@ -27,10 +27,10 @@ const inputShift_08_IGNORED = register({reset_n: rst_n, clk: clk, next: inputShi
 const inputShift_09 = register({reset_n: rst_n, clk: clk, next: inputShift_08_IGNORED, enable: enableGate}) // inputShift_09
 const inputShift_10 = register({reset_n: rst_n, clk: clk, next: inputShift_09, enable: enableGate}) // inputShift_10
 const inputShift_11 = register({reset_n: rst_n, clk: clk, next: inputShift_10, enable: enableGate}) // inputShift_11
-const or4_2_4 = (counter_Bit0 || counter_Bit1 || counter_Bit2 || counter_Bit3) // or4_2_4
-const conb_1_2 = 'HI or LOW' // conb_1_2
-const failRegister1 = new Register(((I && enableGate && (((counter_Bit0 || counter_Bit2 || !counter_Bit3 || !counter_Bit1) && inputShift_09) || (conb_1_2 && inputShift_10) || ((or4_2_4 && inputShift_00) || (or4_2_4 && inputShift_11)))) || failRegister1), rst_n) // failRegister1
-const failRegister3 = new Register((lockRegister || failRegister3), rst_n) // failRegister3
+const counterGreaterThan0 = (counter_Bit0 || counter_Bit1 || counter_Bit2 || counter_Bit3) // counterGreaterThan0
+const counterNot10 = (counter_Bit0 || counter_Bit2 || !counter_Bit3 || !counter_Bit1) // counterNot10
+const failRegister1 = new Register(((I && enableGate && ((counterNot10 && inputShift_09) || inputShift_10 || (counterGreaterThan0 && inputShift_00) || (counterGreaterThan0 && inputShift_11))) || failRegister1), rst_n) // failRegister1
+const lockRegisterBuffered = new Register((lockRegister || lockRegisterBuffered), rst_n) // lockRegisterBuffered
 const locked = !(I && enableGate) // locked
 const inv_2_20 = !dfrtp_2_72 // inv_2_20
 const counterCheck1 = (counter_Bit1 || counter_Bit0 || counter_Bit2 || !counter_Bit3) // counterCheck1
@@ -94,15 +94,15 @@ const nand2_2_7 = !(xnor2_2_1 && nand2_2_4) // nand2_2_7
 const nor2_2_0 = !(xnor2_2_1 || nand2_2_4) // nor2_2_0
 const and2b_2_0 = (!nor2_2_0 && nand2_2_7) // and2b_2_0
 const and2_2_0 = (or2_2_1 && and2b_2_0) // and2_2_0
-const xor2_2_7 = (counter2_Bit0 !== lockCounterRegister_BitUNKNOWN_5) // xor2_2_7
-const a21oi_2_10 = !((counter2_Bit1 && xor2_2_7) || !(counter2_Bit1 || lockCounterRegister_BitUNKNOWN_5)) // a21oi_2_10
+const xor2_2_7 = (counter2_Bit0 !== counter2_Bit3) // xor2_2_7
+const a21oi_2_10 = !((counter2_Bit1 && xor2_2_7) || !(counter2_Bit1 || counter2_Bit3)) // a21oi_2_10
 const xor2_2_1 = (counter_Bit2 !== a21oi_2_10) // xor2_2_1
 const xnor2_2_0 = (!(counter_Bit1 && xor2_2_0) === xor2_2_1) // xnor2_2_0
 const xnor2_2_2 = (xnor2_2_0 === nor2_2_0) // xnor2_2_2
 const a32o_2_0 = ((counter_Bit1 && xor2_2_0 && xor2_2_1) || (xnor2_2_0 && nor2_2_0)) // a32o_2_0
-const o2bb2a_2_0 = ((!counter_Bit2 || !a21oi_2_10) && (!(counter2_Bit0 && counter2_Bit1) || lockCounterRegister_BitUNKNOWN_5)) // o2bb2a_2_0
+const o2bb2a_2_0 = ((!counter_Bit2 || !a21oi_2_10) && (!(counter2_Bit0 && counter2_Bit1) || counter2_Bit3)) // o2bb2a_2_0
 const xor2_2_4 = (counter2_Bit2 !== xor2_2_7) // xor2_2_4
-const nand2_2_17 = !(counter2_Bit1 && lockCounterRegister_BitUNKNOWN_5) // nand2_2_17
+const nand2_2_17 = !(counter2_Bit1 && counter2_Bit3) // nand2_2_17
 const xnor2_2_4 = (nand2_2_17 === xor2_2_4) // xnor2_2_4
 const xnor2_2_5 = (counter_Bit3 === xnor2_2_4) // xnor2_2_5
 const xnor2_2_8 = (xnor2_2_5 === o2bb2a_2_0) // xnor2_2_8
@@ -110,7 +110,7 @@ const xnor2_2_9 = (a32o_2_0 === xnor2_2_8) // xnor2_2_9
 const and3_2_0 = (xnor2_2_9 && xnor2_2_2 && and2_2_0) // and3_2_0
 const a21o_2_8 = ((a32o_2_0 && !(xnor2_2_5 && o2bb2a_2_0)) || !(xnor2_2_5 || o2bb2a_2_0)) // a21o_2_8
 const nand2b_2_6 = !(nand2_2_17 && xor2_2_4) // nand2b_2_6
-const nand2_2_21 = !(counter2_Bit0 && lockCounterRegister_BitUNKNOWN_5) // nand2_2_21
+const nand2_2_21 = !(counter2_Bit0 && counter2_Bit3) // nand2_2_21
 const nand2_2_22 = !(counter2_Bit2 && xor2_2_7) // nand2_2_22
 const xnor2_2_3 = (counter2_Bit1 === counter2_Bit2) // xnor2_2_3
 const nor2_2_17 = !(nand2_2_21 || xnor2_2_3) // nor2_2_17
@@ -128,8 +128,8 @@ const nor2_2_9 = !(nor2_2_7 || nand2_2_7) // nor2_2_9
 const nor2_2_2 = !(xnor2_2_2 || nor2_2_9) // nor2_2_2
 const or3_2_2 = (nor2_2_8 || nor2_2_1 || nor2_2_2) // or3_2_2
 const nand2_2_6 = !(xnor2_2_0 && nor2_2_8) // nand2_2_6
-const o22ai_2_0 = !((counter2_Bit1 || nand2_2_22) && (!((counter2_Bit1 && counter2_Bit2) || lockCounterRegister_BitUNKNOWN_5) || ((counter2_Bit1 && lockCounterRegister_BitUNKNOWN_5 && counter2_Bit2) || nor2_2_17))) // o22ai_2_0
-const and4bb_2_0 = (!counter2_Bit0 && !counter2_Bit1 && lockCounterRegister_BitUNKNOWN_5 && counter2_Bit2) // and4bb_2_0
+const o22ai_2_0 = !((counter2_Bit1 || nand2_2_22) && (!((counter2_Bit1 && counter2_Bit2) || counter2_Bit3) || ((counter2_Bit1 && counter2_Bit3 && counter2_Bit2) || nor2_2_17))) // o22ai_2_0
+const and4bb_2_0 = (!counter2_Bit0 && !counter2_Bit1 && counter2_Bit3 && counter2_Bit2) // and4bb_2_0
 const and2b_2_5 = (!and4bb_2_0 && o22ai_2_0) // and2b_2_5
 const a21o_2_5 = ((a21o_2_8 && nor2_2_21) || a21oi_2_4) // a21o_2_5
 const xnor2_2_10 = (a21o_2_5 === and2b_2_5) // xnor2_2_10
@@ -146,7 +146,7 @@ const nor2_2_28 = !(xor2_2_2 || nand2_2_1) // nor2_2_28
 const a21oi_2_7 = !((a21o_2_5 && o22ai_2_0) || and4bb_2_0) // a21oi_2_7
 const a21o_2_4 = ((nand2_2_17 && nor2_2_17) || !((counter2_Bit2 && nand2_2_17) || nor2_2_17)) // a21o_2_4
 const xnor2_2_7 = (a21oi_2_7 === a21o_2_4) // xnor2_2_7
-const nor2_2_20 = !(!(a21oi_2_7 || a21o_2_4) || ((counter2_Bit0 || counter2_Bit1) && lockCounterRegister_BitUNKNOWN_5 && counter2_Bit2)) // nor2_2_20
+const nor2_2_20 = !(!(a21oi_2_7 || a21o_2_4) || ((counter2_Bit0 || counter2_Bit1) && counter2_Bit3 && counter2_Bit2)) // nor2_2_20
 const a21oi_2_0 = !((xor2_2_2 && nor2_2_10) || xor2_2_8) // a21oi_2_0
 const or2_2_3 = (xnor2_2_9 || nor2_2_1) // or2_2_3
 const xor2_2_5 = (a21oi_2_7 !== a21o_2_4) // xor2_2_5
@@ -237,5 +237,5 @@ const weirdLockRegister1 = new Register(!((weirdLockRegister1_N && nand2_2_25) |
 const weirdLockRegister2 = new Register(((enableGate_N && weirdLockRegister2) || (((weirdLockRegister1 || nand2_2_25) && or2_2_7 && enableGate) && !counterIs11)), rst_n) // weirdLockRegister2
 const nand2_2_25 = !(weirdLockRegister2 && I) // nand2_2_25
 const failRegister2 = new Register(((counterIs11 && enableGate && (weirdLockRegister1 ? nand2_2_25 : or2_2_7)) || failRegister2), rst_n) // failRegister2
-const successRegister = new Register(((!failRegister1 && (!failRegister2 && (dfrtp_2_24 && dfrtp_2_25 && dfrtp_2_20 && !(dfrtp_2_21 || dfrtp_2_19 || (dfrtp_2_23 || dfrtp_2_26 || dfrtp_2_22)))) && (!failRegister3 && lockRegister && (((!dfrtp_2_6 && dfrtp_2_11) && (dfrtp_2_13 && inv_2_2) && (!dfrtp_2_53 && dfrtp_2_10) && (!dfrtp_2_5 && dfrtp_2_12)) && ((dfrtp_2_2 && inv_2_1) && (!dfrtp_2_0 && dfrtp_2_14) && (!dfrtp_2_8 && dfrtp_2_4) && (dfrtp_2_3 && inv_2_3)) && ((!dfrtp_2_56 && dfrtp_2_59) && (dfrtp_2_52 && inv_2_16) && (!dfrtp_2_55 && dfrtp_2_58))) && (((!dfrtp_2_80 && dfrtp_2_66) && (dfrtp_2_79 && inv_2_19) && (!dfrtp_2_75 && dfrtp_2_67) && (!dfrtp_2_78 && dfrtp_2_64)) && ((dfrtp_2_61 && inv_2_17) && (!dfrtp_2_60 && dfrtp_2_57) && (!dfrtp_2_71 && dfrtp_2_63) && (dfrtp_2_77 && inv_2_18)) && ((!dfrtp_2_74 && dfrtp_2_70) && (dfrtp_2_69 && inv_2_20) && (!dfrtp_2_73 && dfrtp_2_68))))) || (undefined && !(failRegister3 && lockRegister))), rst_n) // successRegister
+const successRegister = new Register(((!failRegister1 && (!failRegister2 && (dfrtp_2_24 && dfrtp_2_25 && dfrtp_2_20 && !(dfrtp_2_21 || dfrtp_2_19 || (dfrtp_2_23 || dfrtp_2_26 || dfrtp_2_22)))) && (!lockRegisterBuffered && lockRegister && (((!dfrtp_2_6 && dfrtp_2_11) && (dfrtp_2_13 && inv_2_2) && (!dfrtp_2_53 && dfrtp_2_10) && (!dfrtp_2_5 && dfrtp_2_12)) && ((dfrtp_2_2 && inv_2_1) && (!dfrtp_2_0 && dfrtp_2_14) && (!dfrtp_2_8 && dfrtp_2_4) && (dfrtp_2_3 && inv_2_3)) && ((!dfrtp_2_56 && dfrtp_2_59) && (dfrtp_2_52 && inv_2_16) && (!dfrtp_2_55 && dfrtp_2_58))) && (((!dfrtp_2_80 && dfrtp_2_66) && (dfrtp_2_79 && inv_2_19) && (!dfrtp_2_75 && dfrtp_2_67) && (!dfrtp_2_78 && dfrtp_2_64)) && ((dfrtp_2_61 && inv_2_17) && (!dfrtp_2_60 && dfrtp_2_57) && (!dfrtp_2_71 && dfrtp_2_63) && (dfrtp_2_77 && inv_2_18)) && ((!dfrtp_2_74 && dfrtp_2_70) && (dfrtp_2_69 && inv_2_20) && (!dfrtp_2_73 && dfrtp_2_68))))) || (undefined && !(lockRegisterBuffered && lockRegister))), rst_n) // successRegister
 const success = input({success: successRegister}) // success

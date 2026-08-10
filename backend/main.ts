@@ -190,13 +190,13 @@ function cleanName(name: string) {
 	if(name === 'sky130_fd_sc_hd__dfrtp_2_46') return 'counter_Bit2'
 	if(name === 'sky130_fd_sc_hd__dfrtp_2_45') return 'counter_Bit3'
 	if(name === 'sky130_fd_sc_hd__dfrtp_2_15') return 'counter2_Bit1'
-	if(name === 'sky130_fd_sc_hd__dfrtp_2_17') return 'lockCounterRegister_BitUNKNOWN_5'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_17') return 'counter2_Bit3'
 	if(name === 'sky130_fd_sc_hd__dfrtp_2_18') return 'counter2_Bit2'
 	if(name === 'sky130_fd_sc_hd__dfrtp_2_16') return 'counter2_Bit0'
 	
 	if(name === 'sky130_fd_sc_hd__dfrtp_2_37') return 'failRegister1'
 	if(name === 'sky130_fd_sc_hd__dfrtp_2_28') return 'failRegister2'
-	if(name === 'sky130_fd_sc_hd__dfrtp_2_83') return 'failRegister3'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_83') return 'lockRegisterBuffered'
 
 	if(name === 'sky130_fd_sc_hd__nand2_2_33') return 'lowIGated1'
 	if(name === 'sky130_fd_sc_hd__nand2_2_36') return 'lowIGated2'
@@ -211,6 +211,9 @@ function cleanName(name: string) {
 	if(name === 'sky130_fd_sc_hd__or4b_2_5') return 'counterCheck2'
 	if(name === 'sky130_fd_sc_hd__or4b_2_4') return 'counterCheck3'
 	if(name === 'sky130_fd_sc_hd__or4b_2_6') return 'counterCheck4'
+	
+	if(name === 'sky130_fd_sc_hd__or4_2_4') return 'counterGreaterThan0'
+	if(name === 'sky130_fd_sc_hd__or4bb_2_0') return 'counterNot10'
 
 	if(name.startsWith('sky130_fd_sc_hd__')) return name.substring('sky130_fd_sc_hd__'.length)
 
@@ -358,6 +361,8 @@ class Circuit {
 			return name
 		}
 
+		const forceNonInline = [ 'sky130_fd_sc_hd__or4bb_2_0' ]
+
 		if(!context.handledNodes.includes(name)) {
 			context.handledNodes.push(name)
 
@@ -388,7 +393,8 @@ class Circuit {
 			}
 
 			if(node.type === 'sky130_fd_sc_hd__conb_1') {
-				format = `'HI or LOW'`
+				// format = `'HI or LOW'`
+				return `'HI'`
 			}
 
 			if(node.type === 'sky130_fd_sc_hd__xnor2_2') {
@@ -531,7 +537,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__or4bb_2') {
 				format = `(${inputs['A']} || ${inputs['B']} || !${inputs['C_N']} || !${inputs['D_N']})`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 && !forceNonInline.includes(name)) {
 					return format
 				}
 			}
