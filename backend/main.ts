@@ -197,16 +197,16 @@ function cleanName(name: string) {
 	if(name === 'sky130_fd_sc_hd__dfrtp_2_37') return 'failRegister1'
 	if(name === 'sky130_fd_sc_hd__dfrtp_2_28') return 'failRegister2'
 	if(name === 'sky130_fd_sc_hd__dfrtp_2_83') return 'lockRegisterBuffered'
-
+	
 	if(name === 'sky130_fd_sc_hd__nand2_2_33') return 'lowIGated1'
 	if(name === 'sky130_fd_sc_hd__nand2_2_36') return 'lowIGated2'
 	if(name === 'sky130_fd_sc_hd__nand2_2_14') return 'lowIGated3'
 	if(name === 'sky130_fd_sc_hd__nand2_2_37') return 'lowIGated4'
-
+	
 	if(name === 'sky130_fd_sc_hd__dfrtp_2_29') return 'weirdLockRegister1'
 	if(name === 'sky130_fd_sc_hd__inv_2_8') return 'weirdLockRegister1_N'
 	if(name === 'sky130_fd_sc_hd__dfrtp_2_27') return 'weirdLockRegister2'
-
+	
 	if(name === 'sky130_fd_sc_hd__or4b_2_7') return 'counterCheck1'
 	if(name === 'sky130_fd_sc_hd__or4b_2_5') return 'counterCheck2'
 	if(name === 'sky130_fd_sc_hd__or4b_2_4') return 'counterCheck3'
@@ -214,6 +214,15 @@ function cleanName(name: string) {
 	
 	if(name === 'sky130_fd_sc_hd__or4_2_4') return 'counterGreaterThan0'
 	if(name === 'sky130_fd_sc_hd__or4bb_2_0') return 'counterNot10'
+	
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_24') return 'highInputCounter_Bit1'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_25') return 'highInputCounter_Bit2'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_20') return 'highInputCounter_Bit4'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_21') return 'highInputCounter_Bit5'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_19') return 'highInputCounter_Bit6'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_23') return 'highInputCounter_Bit0'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_26') return 'highInputCounter_Bit3'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_22') return 'highInputCounter_Bit7'
 
 	if(name.startsWith('sky130_fd_sc_hd__')) return name.substring('sky130_fd_sc_hd__'.length)
 
@@ -362,6 +371,14 @@ class Circuit {
 		}
 
 		const forceNonInline = [ 'sky130_fd_sc_hd__or4bb_2_0' ]
+		// const forceInline = [ 
+		// 	'sky130_fd_sc_hd__and3_2_9',
+		// 	'sky130_fd_sc_hd__and3_2_11',
+		// 	'sky130_fd_sc_hd__and3_2_8',
+		// 	'sky130_fd_sc_hd__nand2_2_24',
+		// 	'sky130_fd_sc_hd__and2_2_9',
+		// 	'sky130_fd_sc_hd__and4_2_4',
+		// ]
 
 		if(!context.handledNodes.includes(name)) {
 			context.handledNodes.push(name)
