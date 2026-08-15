@@ -181,7 +181,6 @@ function cleanName(name: string) {
 	if(name === 'sky130_fd_sc_hd__dfrtp_2_47') return 'lockRegister'
 	if(name === 'sky130_fd_sc_hd__dfrtp_2_81') return 'successRegister'
 	if(name === 'sky130_fd_sc_hd__inv_2_7') return 'enableGate_N'
-	if(name === 'sky130_fd_sc_hd__nand2_2_35') return 'locked'
 	
 	if(name === 'sky130_fd_sc_hd__and4bb_2_6') return 'counterIs11'
 	if(name === 'sky130_fd_sc_hd__nand3b_2_0') return 'lockBitComp2'
@@ -198,19 +197,9 @@ function cleanName(name: string) {
 	if(name === 'sky130_fd_sc_hd__dfrtp_2_28') return 'failRegister2'
 	if(name === 'sky130_fd_sc_hd__dfrtp_2_83') return 'lockRegisterBuffered'
 	
-	if(name === 'sky130_fd_sc_hd__nand2_2_33') return 'lowIGated1'
-	if(name === 'sky130_fd_sc_hd__nand2_2_36') return 'lowIGated2'
-	if(name === 'sky130_fd_sc_hd__nand2_2_14') return 'lowIGated3'
-	if(name === 'sky130_fd_sc_hd__nand2_2_37') return 'lowIGated4'
-	
 	if(name === 'sky130_fd_sc_hd__dfrtp_2_29') return 'weirdLockRegister1'
 	if(name === 'sky130_fd_sc_hd__inv_2_8') return 'weirdLockRegister1_N'
 	if(name === 'sky130_fd_sc_hd__dfrtp_2_27') return 'weirdLockRegister2'
-	
-	if(name === 'sky130_fd_sc_hd__or4b_2_7') return 'counterCheck1'
-	if(name === 'sky130_fd_sc_hd__or4b_2_5') return 'counterCheck2'
-	if(name === 'sky130_fd_sc_hd__or4b_2_4') return 'counterCheck3'
-	if(name === 'sky130_fd_sc_hd__or4b_2_6') return 'counterCheck4'
 	
 	if(name === 'sky130_fd_sc_hd__or4_2_4') return 'counterGreaterThan0'
 	if(name === 'sky130_fd_sc_hd__or4bb_2_0') return 'counterNot10'
@@ -223,6 +212,11 @@ function cleanName(name: string) {
 	if(name === 'sky130_fd_sc_hd__dfrtp_2_23') return 'highInputCounter_Bit0'
 	if(name === 'sky130_fd_sc_hd__dfrtp_2_26') return 'highInputCounter_Bit3'
 	if(name === 'sky130_fd_sc_hd__dfrtp_2_22') return 'highInputCounter_Bit7'
+
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_72') return 'io8NotTwice'
+	if(name === 'sky130_fd_sc_hd__dfrtp_2_69') return 'io8Twice'
+	// if(name === 'sky130_fd_sc_hd__dfrtp_2_73') return 'io10NotTwice'
+	// if(name === 'sky130_fd_sc_hd__dfrtp_2_68') return 'io10Twice'
 
 	if(name.startsWith('sky130_fd_sc_hd__')) return name.substring('sky130_fd_sc_hd__'.length)
 
@@ -371,17 +365,55 @@ class Circuit {
 		}
 
 		const forceNonInline = [ 'sky130_fd_sc_hd__or4bb_2_0' ]
-		// const forceInline = [ 
-		// 	'sky130_fd_sc_hd__and3_2_9',
-		// 	'sky130_fd_sc_hd__and3_2_11',
-		// 	'sky130_fd_sc_hd__and3_2_8',
-		// 	'sky130_fd_sc_hd__nand2_2_24',
-		// 	'sky130_fd_sc_hd__and2_2_9',
-		// 	'sky130_fd_sc_hd__and4_2_4',
-		// ]
+		const forceInline = [ 
+			// 'sky130_fd_sc_hd__and3_2_9',
+			// 'sky130_fd_sc_hd__and3_2_11',
+			// 'sky130_fd_sc_hd__and3_2_8',
+			// 'sky130_fd_sc_hd__nand2_2_24',
+			// 'sky130_fd_sc_hd__and2_2_9',
+			// 'sky130_fd_sc_hd__and4_2_4',
+			'sky130_fd_sc_hd__inv_2_2',
+			'sky130_fd_sc_hd__inv_2_1',
+			'sky130_fd_sc_hd__inv_2_3',
+			'sky130_fd_sc_hd__inv_2_16',
+			'sky130_fd_sc_hd__inv_2_19',
+			'sky130_fd_sc_hd__inv_2_17',
+			'sky130_fd_sc_hd__inv_2_18',
+			'sky130_fd_sc_hd__inv_2_20',
+
+			'sky130_fd_sc_hd__nor2_2_45',
+			'sky130_fd_sc_hd__and4bb_2_12',
+			'sky130_fd_sc_hd__nand4_2_13',
+			'sky130_fd_sc_hd__and4bb_2_11',
+			'sky130_fd_sc_hd__nand4_2_12',
+			'sky130_fd_sc_hd__nand2_2_33',
+			'sky130_fd_sc_hd__nand2_2_36',
+			'sky130_fd_sc_hd__nand2_2_14',
+			'sky130_fd_sc_hd__nand2_2_37',
+			'sky130_fd_sc_hd__nor2_2_44',
+			'sky130_fd_sc_hd__and4bb_2_9',
+			'sky130_fd_sc_hd__nand4_2_9',
+			'sky130_fd_sc_hd__and4bb_2_13',
+			'sky130_fd_sc_hd__nand4_2_10',
+			'sky130_fd_sc_hd__and4b_2_2',
+			'sky130_fd_sc_hd__nand4_2_11',
+			'sky130_fd_sc_hd__nor2_2_41',
+			'sky130_fd_sc_hd__nor4_2_1',
+			'sky130_fd_sc_hd__nand4_2_7',
+			'sky130_fd_sc_hd__nor2_2_43',
+			'sky130_fd_sc_hd__and4bb_2_10',
+			'sky130_fd_sc_hd__nand4_2_8',
+
+			'sky130_fd_sc_hd__or4b_2_7',
+			'sky130_fd_sc_hd__or4b_2_5',
+			'sky130_fd_sc_hd__or4b_2_4',
+			'sky130_fd_sc_hd__or4b_2_6',
+
+			'sky130_fd_sc_hd__nand2_2_35',
+		]
 
 		if(!context.handledNodes.includes(name)) {
-			context.handledNodes.push(name)
+			if(!forceInline.includes(name)) context.handledNodes.push(name)
 
 			const inputs: Record<string, string> = {}
 
@@ -404,7 +436,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__buf_2') {
 				format = `${inputs['A']}`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -417,7 +449,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__xnor2_2') {
 				format = `(${inputs['A']} === ${inputs['B']})`
 				
-				if(node.outPorts['Y'].length === 1) {
+				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -425,7 +457,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__xor2_2') {
 				format = `(${inputs['A']} !== ${inputs['B']})`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -433,7 +465,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__nor2_2') {
 				format = `!(${inputs['A']} || ${inputs['B']})`
 				
-				if(node.outPorts['Y'].length === 1) {
+				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -441,7 +473,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__nor3_2') {
 				format = `!(${inputs['A']} || ${inputs['B']} || ${inputs['C']})`
 				
-				if(node.outPorts['Y'].length === 1) {
+				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -449,7 +481,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__nor4_2') {
 				format = `!(${inputs['A']} || ${inputs['B']} || ${inputs['C']} || ${inputs['D']})`
 				
-				if(node.outPorts['Y'].length === 1) {
+				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -458,7 +490,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__nand2_2') {
 				format = `!(${inputs['A']} && ${inputs['B']})`
 				
-				if(node.outPorts['Y'].length === 1) {
+				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -466,7 +498,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__nand2b_2') {
 				format = `!(${inputs['A_N']} && ${inputs['B']})`
 				
-				if(node.outPorts['Y'].length === 1) {
+				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -474,7 +506,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__nand3_2') {
 				format = `!(${inputs['A']} && ${inputs['B']} && ${inputs['C']})`
 				
-				if(node.outPorts['Y'].length === 1) {
+				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -482,7 +514,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__nand3b_2') {
 				format = `!(!${inputs['A_N']} && ${inputs['B']} && ${inputs['C']})`
 				
-				if(node.outPorts['Y'].length === 1) {
+				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -490,7 +522,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__nand4_2') {
 				format = `!(${inputs['A']} && ${inputs['B']} && ${inputs['C']} && ${inputs['D']})`
 				
-				if(node.outPorts['Y'].length === 1) {
+				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -498,7 +530,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__and2_2') {
 				format = `(${inputs['A']} && ${inputs['B']})`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -506,7 +538,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__and2b_2') {
 				format = `(!${inputs['A_N']} && ${inputs['B']})`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -514,7 +546,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__and3_2') {
 				format = `(${inputs['A']} && ${inputs['B']} && ${inputs['C']})`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -522,7 +554,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__or2_2') {
 				format = `(${inputs['A']} || ${inputs['B']})`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -530,7 +562,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__or3_2') {
 				format = `(${inputs['A']} || ${inputs['B']} || ${inputs['C']})`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -538,7 +570,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__or4_2') {
 				format = `(${inputs['A']} || ${inputs['B']} || ${inputs['C']} || ${inputs['D']})`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -546,7 +578,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__or4b_2') {
 				format = `(${inputs['A']} || ${inputs['B']} || ${inputs['C']} || !${inputs['D_N']})`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -554,7 +586,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__or4bb_2') {
 				format = `(${inputs['A']} || ${inputs['B']} || !${inputs['C_N']} || !${inputs['D_N']})`
 				
-				if(node.outPorts['X'].length === 1 && !forceNonInline.includes(name)) {
+				if((node.outPorts['X'].length === 1 || forceInline.includes(name)) && !forceNonInline.includes(name)) {
 					return format
 				}
 			}
@@ -562,7 +594,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__a32o_2') {
 				format = `((${inputs['A1']} && ${inputs['A2']} && ${inputs['A3']}) || (${inputs['B1']} && ${inputs['B2']}))`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -570,7 +602,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__a211oi_2') {
 				format = `!((${inputs['A1']} && ${inputs['A2']}) || ${inputs['B1']} || ${inputs['C1']})`
 				
-				if(node.outPorts['Y'].length === 1) {
+				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -578,7 +610,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__a221o_2') {
 				format = `((${inputs['A1']} && ${inputs['A2']}) || (${inputs['B1']} && ${inputs['B2']}) || ${inputs['C1']})`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -586,7 +618,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__a221oi_2') {
 				format = `!((${inputs['A1']} && ${inputs['A2']}) || (${inputs['B1']} && ${inputs['B2']}) || ${inputs['C1']})`
 				
-				if(node.outPorts['Y'].length === 1) {
+				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -594,7 +626,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__a41oi_2') {
 				format = `!((${inputs['A1']} && ${inputs['A2']} && ${inputs['A3']} && ${inputs['A4']}) || ${inputs['B1']})`
 				
-				if(node.outPorts['Y'].length === 1) {
+				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -602,7 +634,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__a21o_2') {
 				format = `((${inputs['A1']} && ${inputs['A2']}) || ${inputs['B1']})`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -610,7 +642,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__a21bo_2') {
 				format = `((${inputs['A1']} && ${inputs['A2']}) || !${inputs['B1_N']})`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -618,7 +650,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__a21oi_2') {
 				format = `!((${inputs['A1']} && ${inputs['A2']}) || ${inputs['B1']})`
 				
-				if(node.outPorts['Y'].length === 1) {
+				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -626,7 +658,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__a22o_2') {
 				format = `((${inputs['A1']} && ${inputs['A2']}) || (${inputs['B1']} && ${inputs['B2']}))`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -634,7 +666,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__a211o_2') {
 				format = `((${inputs['A1']} && ${inputs['A2']}) || ${inputs['B1']} || ${inputs['C1']})`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -642,7 +674,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__a31o_2') {
 				format = `((${inputs['A1']} && ${inputs['A2']} && ${inputs['A3']}) || ${inputs['B1']})`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -650,7 +682,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__a311o_2') {
 				format = `((${inputs['A1']} && ${inputs['A2']} && ${inputs['A3']}) || ${inputs['B1']} || ${inputs['C1']})`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -658,7 +690,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__o21a_2') {
 				format = `((${inputs['A1']} || ${inputs['A2']}) && ${inputs['B1']})`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -666,7 +698,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__o21ba_2') {
 				format = `((${inputs['A1']} || ${inputs['A2']}) && !${inputs['B1_N']})`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -674,7 +706,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__o211a_2') {
 				format = `((${inputs['A1']} || ${inputs['A2']}) && ${inputs['B1']} && ${inputs['C1']})`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -682,7 +714,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__o32a_2') {
 				format = `((${inputs['A1']} || ${inputs['A2']} || ${inputs['A3']}) && (${inputs['B1']} || ${inputs['B2']}))`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -690,7 +722,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__o22a_2') {
 				format = `((${inputs['A1']} || ${inputs['A2']}) && (${inputs['B1']} || ${inputs['B2']}))`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -698,7 +730,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__o22ai_2') {
 				format = `!((${inputs['A1']} || ${inputs['A2']}) && (${inputs['B1']} || ${inputs['B2']}))`
 				
-				if(node.outPorts['Y'].length === 1) {
+				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -706,7 +738,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__o221a_2') {
 				format = `((${inputs['A1']} || ${inputs['A2']}) && (${inputs['B1']} || ${inputs['B2']}) && ${inputs['C1']})`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -714,7 +746,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__o211ai_2') {
 				format = `!((${inputs['A1']} || ${inputs['A2']}) && ${inputs['B1']} && ${inputs['C1']})`
 				
-				if(node.outPorts['Y'].length === 1) {
+				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -722,7 +754,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__o21ai_2') {
 				format = `!((${inputs['A1']} || ${inputs['A2']}) && ${inputs['B1']})`
 				
-				if(node.outPorts['Y'].length === 1) {
+				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -730,7 +762,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__o2bb2a_2') {
 				format = `((!${inputs['A1_N']} || !${inputs['A2_N']}) && (${inputs['B1']} || ${inputs['B2']}))`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -738,7 +770,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__o311a_2') {
 				format = `((${inputs['A1']} || ${inputs['A2']} || ${inputs['A3']}) && ${inputs['B1']} && ${inputs['C1']})`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -746,15 +778,15 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__o31ai_2') {
 				format = `!((${inputs['A1']} || ${inputs['A2']} || ${inputs['A3']}) && ${inputs['B1']})`
 				
-				if(node.outPorts['Y'].length === 1) {
+				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
 
 			if(node.type === 'sky130_fd_sc_hd__inv_2') {
 				format = `!${inputs['A']}`
-				
-				if(node.outPorts['Y'].length === 1) {
+
+				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -762,7 +794,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__and4_2') {
 				format = `(${inputs['A']} && ${inputs['B']} && ${inputs['C']} && ${inputs['D']})`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -770,7 +802,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__and4b_2') {
 				format = `(!${inputs['A_N']} && ${inputs['B']} && ${inputs['C']} && ${inputs['D']})`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -778,7 +810,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__and4bb_2') {
 				format = `(!${inputs['A_N']} && !${inputs['B_N']} && ${inputs['C']} && ${inputs['D']})`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
@@ -786,7 +818,7 @@ class Circuit {
 			if(node.type === 'sky130_fd_sc_hd__mux2_1') {
 				format = `(${inputs['S']} ? ${inputs['A0']} : ${inputs['A1']})`
 				
-				if(node.outPorts['X'].length === 1) {
+				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
 					return format
 				}
 			}
