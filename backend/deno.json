@@ -1,5 +1,7 @@
 {
   "tasks": {
-    "dev": "deno run --watch --allow-all main.ts"
+    "dev": "deno run --watch --allow-all main.ts",
+    "sat": "deno run --watch --allow-all sat.ts",
+    "drawer": "deno run --watch --allow-all drawer.ts"
   }
 }

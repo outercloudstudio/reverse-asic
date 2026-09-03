@@ -1535,9 +1535,9 @@ class Circuit {
 	public generateCode(): string {
 		const context = { prelude: '', main: '', handledNodes: [] }
 
-		// this.generateSignalCode(context, 'success')
-		const result = this.generateSignalCode(context, 'sky130_fd_sc_hd__a31o_2_16_simplify_and_simplify_and2')
-		context.main += `\nconst result = ${result}`
+		this.generateSignalCode(context, 'success')
+		// const result = this.generateSignalCode(context, 'sky130_fd_sc_hd__a31o_2_16_simplify_and_simplify_and2')
+		// context.main += `\nconst result = ${result}`
 		// this.generateSignalCode(context, 'S')
 
 		return context.prelude + '\n' + context.main
