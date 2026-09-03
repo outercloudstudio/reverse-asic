@@ -29,7 +29,7 @@ onMounted(() => {
 
 		if(['rst_n', 'clk', 'VPWR', 'VGND'].includes(instanceName)) continue
 
-		let label = instanceName
+		let label = instance.cleanName
 		let x = Math.random()
 		let y = Math.random()
 		let color = 'blue'
@@ -46,14 +46,16 @@ onMounted(() => {
 			color = 'red'
 		}
 		
-		if(label.startsWith('sky130_fd_sc_hd__')) label = label.substring('sky130_fd_sc_hd__'.length)
+		// if(label.startsWith('sky130_fd_sc_hd__')) label = label.substring('sky130_fd_sc_hd__'.length)
 
 		if(instance.type === 'sky130_fd_sc_hd__clkbuf_16') color = 'grey'
 		if(instance.type === 'sky130_fd_sc_hd__clkbuf_8') color = 'grey'
 		if(instance.type === 'sky130_fd_sc_hd__clkbuf_4') color = 'grey'
 		if(instance.type === 'register') color = 'orange'
-		if(instance.type === 'sky130_fd_sc_hd__dfrtp_2') color = 'green'
-		if(instance.type === 'sky130_fd_sc_hd__mux2_1') color = 'purple'
+		if(instance.type === 'sky130_fd_sc_hd__dfrtp_2') color = 'orange'
+
+		// if(instance.type === 'sky130_fd_sc_hd__and2_2') color = 'green'
+		// if(instance.type === 'sky130_fd_sc_hd__xnor2_2') color = 'purple'
 
 		graph.addNode(instanceName, { label,  x, y, size: 10, color })
 	}
