@@ -1196,6 +1196,49 @@ function simplify(graph: CircuitGraph) {
 	console.log(`Reduced ${reducedGates} gates!`)
 }
 
+function demorgan(graph: CircuitGraph) {
+	let pushedGates = 0
+
+	let changeDetected = true
+
+	while(changeDetected) {
+		changeDetected = false
+
+		for(const id of Object.keys(graph)) {
+			const node = graph[id]
+
+			if(node.type === 'sky130_fd_sc_hd__inv_2') {
+				const inputNode = graph[node.inPorts['A'].name]
+
+				if(inputNode.type !== 'sky130_fd_sc_hd__inv_2') continue
+				if(inputNode.outPorts['Y'].length > 1) continue
+				
+				for(const connection of node.outPorts['Y']) {
+					graph[connection.name].inPorts[connection.port] = inputNode.inPorts['A']
+				}
+
+				const src = graph[inputNode.inPorts['A'].name]
+
+				for(const port of Object.keys(src.outPorts)) {
+					src.outPorts[port] = src.outPorts[port].filter(connection => connection.name !== node.inPorts['A'].name || connection.port !== 'A')
+					src.outPorts[port] = src.outPorts[port].concat(node.outPorts['Y'])
+				}
+
+				delete graph[node.inPorts['A'].name]
+				delete graph[id]
+
+				pushedGates++
+
+				changeDetected = true
+
+				break
+			}
+		}
+	}
+
+	console.log(`Pushed ${pushedGates} gates!`)
+}
+
 function cleanName(name: string) {
 	if(name === 'register_10') return 'inputShift_00'
 	if(name === 'register_5') return 'inputShift_01_IGNORED'
@@ -1400,6 +1443,7 @@ class Circuit {
 		}
 
 		simplify(graph)
+		demorgan(graph)
 		removeExtraneous(graph)
 		reduceClockBuffers(graph)
 		reduceRegisters(graph)
@@ -1431,7 +1475,9 @@ class Circuit {
 				'sky130_fd_sc_hd__or2_2',
 				'sky130_fd_sc_hd__inv_2',
 				'sky130_fd_sc_hd__mux2_1',
-			].includes(node.type)) context.handledNodes.push(name)
+			].includes(node.type)) 
+			
+			context.handledNodes.push(name)
 
 			const inputs: Record<string, string> = {}
 
@@ -1489,7 +1535,9 @@ class Circuit {
 	public generateCode(): string {
 		const context = { prelude: '', main: '', handledNodes: [] }
 
-		this.generateSignalCode(context, 'success')
+		// this.generateSignalCode(context, 'success')
+		const result = this.generateSignalCode(context, 'sky130_fd_sc_hd__a31o_2_16_simplify_and_simplify_and2')
+		context.main += `\nconst result = ${result}`
 		// this.generateSignalCode(context, 'S')
 
 		return context.prelude + '\n' + context.main
