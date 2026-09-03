@@ -388,7 +388,7 @@ function simplify(graph: CircuitGraph) {
 
 			portInputPort(graph, { name: id, port: 'A' }, { name: `${id}_simplify_and`, port: 'A' })
 			portInputPort(graph, { name: id, port: 'B' }, { name: `${id}_simplify_and`, port: 'B' })
-			portInputPort(graph, { name: id, port: 'C' }, { name: `${id}_simplify_and2`, port: 'B' })
+			portInputPort(graph, { name: id, port: 'C' }, { name: `${id}_simplify_and2`, port: 'A' })
 			portInputPort(graph, { name: id, port: 'D' }, { name: `${id}_simplify_and2`, port: 'B' })
 
 			tiePorts(graph, { name: `${id}_simplify_and`, port: 'X' }, { name: `${id}_simplify_and3`, port: 'A' })
@@ -405,7 +405,7 @@ function simplify(graph: CircuitGraph) {
 
 			portInputPort(graph, { name: id, port: 'A_N' }, { name: `${id}_simplify_and_not`, port: 'A' })
 			portInputPort(graph, { name: id, port: 'B' }, { name: `${id}_simplify_and`, port: 'B' })
-			portInputPort(graph, { name: id, port: 'C' }, { name: `${id}_simplify_and2`, port: 'B' })
+			portInputPort(graph, { name: id, port: 'C' }, { name: `${id}_simplify_and2`, port: 'A' })
 			portInputPort(graph, { name: id, port: 'D' }, { name: `${id}_simplify_and2`, port: 'B' })
 
 			tiePorts(graph, { name: `${id}_simplify_and_not`, port: 'Y' }, { name: `${id}_simplify_and`, port: 'A' })
@@ -423,8 +423,8 @@ function simplify(graph: CircuitGraph) {
 			graph[`${id}_simplify_and_not2`] = { type: 'sky130_fd_sc_hd__inv_2', inPorts: {}, outPorts: {} }
 
 			portInputPort(graph, { name: id, port: 'A_N' }, { name: `${id}_simplify_and_not`, port: 'A' })
-			portInputPort(graph, { name: id, port: 'B_N' }, { name: `${id}_simplify_and_not2`, port: 'B' })
-			portInputPort(graph, { name: id, port: 'C' }, { name: `${id}_simplify_and2`, port: 'B' })
+			portInputPort(graph, { name: id, port: 'B_N' }, { name: `${id}_simplify_and_not2`, port: 'A' })
+			portInputPort(graph, { name: id, port: 'C' }, { name: `${id}_simplify_and2`, port: 'A' })
 			portInputPort(graph, { name: id, port: 'D' }, { name: `${id}_simplify_and2`, port: 'B' })
 
 			tiePorts(graph, { name: `${id}_simplify_and_not`, port: 'Y' }, { name: `${id}_simplify_and`, port: 'A' })
@@ -459,7 +459,7 @@ function simplify(graph: CircuitGraph) {
 
 			portInputPort(graph, { name: id, port: 'A' }, { name: `${id}_simplify_or`, port: 'A' })
 			portInputPort(graph, { name: id, port: 'B' }, { name: `${id}_simplify_or`, port: 'B' })
-			portInputPort(graph, { name: id, port: 'C' }, { name: `${id}_simplify_or2`, port: 'B' })
+			portInputPort(graph, { name: id, port: 'C' }, { name: `${id}_simplify_or2`, port: 'A' })
 			portInputPort(graph, { name: id, port: 'D' }, { name: `${id}_simplify_or2`, port: 'B' })
 
 			tiePorts(graph, { name: `${id}_simplify_or`, port: 'X' }, { name: `${id}_simplify_or3`, port: 'A' })
@@ -476,7 +476,7 @@ function simplify(graph: CircuitGraph) {
 
 			portInputPort(graph, { name: id, port: 'A' }, { name: `${id}_simplify_or`, port: 'A' })
 			portInputPort(graph, { name: id, port: 'B' }, { name: `${id}_simplify_or`, port: 'B' })
-			portInputPort(graph, { name: id, port: 'C' }, { name: `${id}_simplify_or2`, port: 'B' })
+			portInputPort(graph, { name: id, port: 'C' }, { name: `${id}_simplify_or2`, port: 'A' })
 			portInputPort(graph, { name: id, port: 'D_N' }, { name: `${id}_simplify_or_not`, port: 'A' })
 
 			tiePorts(graph, { name: `${id}_simplify_or_not`, port: 'Y' }, { name: `${id}_simplify_or2`, port: 'B' })
@@ -854,7 +854,7 @@ function simplify(graph: CircuitGraph) {
 			portInputPort(graph, { name: id, port: 'B1_N' }, { name: `${id}_simplify_not`, port: 'A' })
 
 			tiePorts(graph, { name: `${id}_simplify_or`, port: 'X' }, { name: `${id}_simplify_and`, port: 'A' })
-			tiePorts(graph, { name: `${id}_simplify_not`, port: 'Y' }, { name: `${id}_simplify_or`, port: 'B' })
+			tiePorts(graph, { name: `${id}_simplify_not`, port: 'Y' }, { name: `${id}_simplify_and`, port: 'B' })
 
 			portOutputPort(graph, { name: id, port: 'X' }, { name: `${id}_simplify_and`, port: 'X' })
 		}
@@ -1422,88 +1422,16 @@ class Circuit {
 			return name
 		}
 
-		const forceNonInline = [ 'sky130_fd_sc_hd__or4bb_2_0' ]
-		const forceInline = [ 
-			// 'sky130_fd_sc_hd__and3_2_9',
-			// 'sky130_fd_sc_hd__and3_2_11',
-			// 'sky130_fd_sc_hd__and3_2_8',
-			// 'sky130_fd_sc_hd__nand2_2_24',
-			// 'sky130_fd_sc_hd__and2_2_9',
-			// 'sky130_fd_sc_hd__and4_2_4',
-			'sky130_fd_sc_hd__inv_2_2',
-			'sky130_fd_sc_hd__inv_2_1',
-			'sky130_fd_sc_hd__inv_2_3',
-			'sky130_fd_sc_hd__inv_2_16',
-			'sky130_fd_sc_hd__inv_2_19',
-			'sky130_fd_sc_hd__inv_2_17',
-			'sky130_fd_sc_hd__inv_2_18',
-			'sky130_fd_sc_hd__inv_2_20',
-
-			'sky130_fd_sc_hd__nor2_2_45',
-			'sky130_fd_sc_hd__and4bb_2_12',
-			'sky130_fd_sc_hd__nand4_2_13',
-			'sky130_fd_sc_hd__and4bb_2_11',
-			'sky130_fd_sc_hd__nand4_2_12',
-			'sky130_fd_sc_hd__nand2_2_33',
-			'sky130_fd_sc_hd__nand2_2_36',
-			'sky130_fd_sc_hd__nand2_2_14',
-			'sky130_fd_sc_hd__nand2_2_37',
-			'sky130_fd_sc_hd__nor2_2_44',
-			'sky130_fd_sc_hd__and4bb_2_9',
-			'sky130_fd_sc_hd__nand4_2_9',
-			'sky130_fd_sc_hd__and4bb_2_13',
-			'sky130_fd_sc_hd__nand4_2_10',
-			'sky130_fd_sc_hd__and4b_2_2',
-			'sky130_fd_sc_hd__nand4_2_11',
-			'sky130_fd_sc_hd__nor2_2_41',
-			'sky130_fd_sc_hd__nor4_2_1',
-			'sky130_fd_sc_hd__nand4_2_7',
-			'sky130_fd_sc_hd__nor2_2_43',
-			'sky130_fd_sc_hd__and4bb_2_10',
-			'sky130_fd_sc_hd__nand4_2_8',
-
-			'sky130_fd_sc_hd__or4b_2_7',
-			'sky130_fd_sc_hd__or4b_2_5',
-			'sky130_fd_sc_hd__or4b_2_4',
-			'sky130_fd_sc_hd__or4b_2_6',
-
-			// 'sky130_fd_sc_hd__and2_2_1',
-			// 'sky130_fd_sc_hd__nor2_2_7',
-			// 'sky130_fd_sc_hd__or2_2_1',
-			// 'sky130_fd_sc_hd__nand2_2_4',
-			// 'sky130_fd_sc_hd__xor2_2_0',
-			// 'sky130_fd_sc_hd__xnor2_2_1',
-			// 'sky130_fd_sc_hd__nand2_2_7',
-			// 'sky130_fd_sc_hd__nor2_2_0',
-			// 'sky130_fd_sc_hd__and2b_2_0',
-
-			'sky130_fd_sc_hd__nand2_2_35',
-
-			'sky130_fd_sc_hd__nor2_2_15',
-			// 'sky130_fd_sc_hd__or4b_2_0',
-			// 'sky130_fd_sc_hd__o211a_2_3',
-			// 'sky130_fd_sc_hd__xor2_2_5',
-			// 'sky130_fd_sc_hd__a21oi_2_7',
-			// 'sky130_fd_sc_hd__a21o_2_5',
-			// 'sky130_fd_sc_hd__a21o_2_8',
-			// 'sky130_fd_sc_hd__a32o_2_0',
-			// 'sky130_fd_sc_hd__xor2_2_0',
-			// 'sky130_fd_sc_hd__xor2_2_1',
-			// 'sky130_fd_sc_hd__a21oi_2_10',
-			// 'sky130_fd_sc_hd__xor2_2_7',
-			// 'sky130_fd_sc_hd__xnor2_2_0',
-			// 'sky130_fd_sc_hd__nor2_2_6',
-			// 'sky130_fd_sc_hd__nor2_2_0',
-			// 'sky130_fd_sc_hd__xnor2_2_1',
-			// 'sky130_fd_sc_hd__nand2_2_4',
-			// 'sky130_fd_sc_hd__nand2_2_4',
-			// 'sky130_fd_sc_hd__nand2_2_8',
-			// 'sky130_fd_sc_hd__nand2_2_18',
-			// 'sky130_fd_sc_hd__xnor2_2_5',
-		]
-
 		if(!context.handledNodes.includes(name)) {
-			if(!forceInline.includes(name)) context.handledNodes.push(name)
+			if(![
+				'sky130_fd_sc_hd__buf_2',
+				'sky130_fd_sc_hd__conb_1',
+				'sky130_fd_sc_hd__xor2_2',
+				'sky130_fd_sc_hd__and2_2',
+				'sky130_fd_sc_hd__or2_2',
+				'sky130_fd_sc_hd__inv_2',
+				'sky130_fd_sc_hd__mux2_1',
+			].includes(node.type)) context.handledNodes.push(name)
 
 			const inputs: Record<string, string> = {}
 
@@ -1521,14 +1449,10 @@ class Circuit {
 				return cleanName(name)
 			}
 
-			let format = `${cleanName(node.type)}({${Object.entries(inputs).map(([key, value]) => `${key}: ${value}`).join(', ')}})`
+			const format = `${cleanName(node.type)}({${Object.entries(inputs).map(([key, value]) => `${key}: ${value}`).join(', ')}})`
 
 			if(node.type === 'sky130_fd_sc_hd__buf_2') {
-				format = `${inputs['A']}`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
+				return `${inputs['A']}`
 			}
 
 			if(node.type === 'sky130_fd_sc_hd__conb_1') {
@@ -1536,381 +1460,24 @@ class Circuit {
 				return `'HI'`
 			}
 
-			if(node.type === 'sky130_fd_sc_hd__xnor2_2') {
-				format = `(${inputs['A']} === ${inputs['B']})`
-				
-				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
 			if(node.type === 'sky130_fd_sc_hd__xor2_2') {
-				format = `(${inputs['A']} !== ${inputs['B']})`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__nor2_2') {
-				format = `!(${inputs['A']} || ${inputs['B']})`
-				
-				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__nor3_2') {
-				format = `!(${inputs['A']} || ${inputs['B']} || ${inputs['C']})`
-				
-				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__nor4_2') {
-				format = `!(${inputs['A']} || ${inputs['B']} || ${inputs['C']} || ${inputs['D']})`
-				
-				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-
-			if(node.type === 'sky130_fd_sc_hd__nand2_2') {
-				format = `!(${inputs['A']} && ${inputs['B']})`
-				
-				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__nand2b_2') {
-				format = `!(${inputs['A_N']} && ${inputs['B']})`
-				
-				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__nand3_2') {
-				format = `!(${inputs['A']} && ${inputs['B']} && ${inputs['C']})`
-				
-				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__nand3b_2') {
-				format = `!(!${inputs['A_N']} && ${inputs['B']} && ${inputs['C']})`
-				
-				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__nand4_2') {
-				format = `!(${inputs['A']} && ${inputs['B']} && ${inputs['C']} && ${inputs['D']})`
-				
-				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
+				return `(${inputs['A']} !== ${inputs['B']})`
 			}
 
 			if(node.type === 'sky130_fd_sc_hd__and2_2') {
-				format = `(${inputs['A']} && ${inputs['B']})`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__and2b_2') {
-				format = `(!${inputs['A_N']} && ${inputs['B']})`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__and3_2') {
-				format = `(${inputs['A']} && ${inputs['B']} && ${inputs['C']})`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
+				return `(${inputs['A']} && ${inputs['B']})`
 			}
 
 			if(node.type === 'sky130_fd_sc_hd__or2_2') {
-				format = `(${inputs['A']} || ${inputs['B']})`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__or3_2') {
-				format = `(${inputs['A']} || ${inputs['B']} || ${inputs['C']})`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__or4_2') {
-				format = `(${inputs['A']} || ${inputs['B']} || ${inputs['C']} || ${inputs['D']})`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__or4b_2') {
-				format = `(${inputs['A']} || ${inputs['B']} || ${inputs['C']} || !${inputs['D_N']})`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__or4bb_2') {
-				format = `(${inputs['A']} || ${inputs['B']} || !${inputs['C_N']} || !${inputs['D_N']})`
-				
-				if((node.outPorts['X'].length === 1 || forceInline.includes(name)) && !forceNonInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__a32o_2') {
-				format = `((${inputs['A1']} && ${inputs['A2']} && ${inputs['A3']}) || (${inputs['B1']} && ${inputs['B2']}))`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__a211oi_2') {
-				format = `!((${inputs['A1']} && ${inputs['A2']}) || ${inputs['B1']} || ${inputs['C1']})`
-				
-				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__a221o_2') {
-				format = `((${inputs['A1']} && ${inputs['A2']}) || (${inputs['B1']} && ${inputs['B2']}) || ${inputs['C1']})`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__a221oi_2') {
-				format = `!((${inputs['A1']} && ${inputs['A2']}) || (${inputs['B1']} && ${inputs['B2']}) || ${inputs['C1']})`
-				
-				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__a41oi_2') {
-				format = `!((${inputs['A1']} && ${inputs['A2']} && ${inputs['A3']} && ${inputs['A4']}) || ${inputs['B1']})`
-				
-				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__a21o_2') {
-				format = `((${inputs['A1']} && ${inputs['A2']}) || ${inputs['B1']})`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__a21bo_2') {
-				format = `((${inputs['A1']} && ${inputs['A2']}) || !${inputs['B1_N']})`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__a21oi_2') {
-				format = `!((${inputs['A1']} && ${inputs['A2']}) || ${inputs['B1']})`
-				
-				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__a22o_2') {
-				format = `((${inputs['A1']} && ${inputs['A2']}) || (${inputs['B1']} && ${inputs['B2']}))`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__a211o_2') {
-				format = `((${inputs['A1']} && ${inputs['A2']}) || ${inputs['B1']} || ${inputs['C1']})`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__a31o_2') {
-				format = `((${inputs['A1']} && ${inputs['A2']} && ${inputs['A3']}) || ${inputs['B1']})`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__a311o_2') {
-				format = `((${inputs['A1']} && ${inputs['A2']} && ${inputs['A3']}) || ${inputs['B1']} || ${inputs['C1']})`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__o21a_2') {
-				format = `((${inputs['A1']} || ${inputs['A2']}) && ${inputs['B1']})`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__o21ba_2') {
-				format = `((${inputs['A1']} || ${inputs['A2']}) && !${inputs['B1_N']})`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__o211a_2') {
-				format = `((${inputs['A1']} || ${inputs['A2']}) && ${inputs['B1']} && ${inputs['C1']})`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__o32a_2') {
-				format = `((${inputs['A1']} || ${inputs['A2']} || ${inputs['A3']}) && (${inputs['B1']} || ${inputs['B2']}))`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__o22a_2') {
-				format = `((${inputs['A1']} || ${inputs['A2']}) && (${inputs['B1']} || ${inputs['B2']}))`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__o22ai_2') {
-				format = `!((${inputs['A1']} || ${inputs['A2']}) && (${inputs['B1']} || ${inputs['B2']}))`
-				
-				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__o221a_2') {
-				format = `((${inputs['A1']} || ${inputs['A2']}) && (${inputs['B1']} || ${inputs['B2']}) && ${inputs['C1']})`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__o211ai_2') {
-				format = `!((${inputs['A1']} || ${inputs['A2']}) && ${inputs['B1']} && ${inputs['C1']})`
-				
-				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__o21ai_2') {
-				format = `!((${inputs['A1']} || ${inputs['A2']}) && ${inputs['B1']})`
-				
-				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__o2bb2a_2') {
-				format = `((!${inputs['A1_N']} || !${inputs['A2_N']}) && (${inputs['B1']} || ${inputs['B2']}))`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__o311a_2') {
-				format = `((${inputs['A1']} || ${inputs['A2']} || ${inputs['A3']}) && ${inputs['B1']} && ${inputs['C1']})`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__o31ai_2') {
-				format = `!((${inputs['A1']} || ${inputs['A2']} || ${inputs['A3']}) && ${inputs['B1']})`
-				
-				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
+				return `(${inputs['A']} || ${inputs['B']})`
 			}
 
 			if(node.type === 'sky130_fd_sc_hd__inv_2') {
-				format = `!${inputs['A']}`
-
-				if(node.outPorts['Y'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__and4_2') {
-				format = `(${inputs['A']} && ${inputs['B']} && ${inputs['C']} && ${inputs['D']})`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__and4b_2') {
-				format = `(!${inputs['A_N']} && ${inputs['B']} && ${inputs['C']} && ${inputs['D']})`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
-			}
-
-			if(node.type === 'sky130_fd_sc_hd__and4bb_2') {
-				format = `(!${inputs['A_N']} && !${inputs['B_N']} && ${inputs['C']} && ${inputs['D']})`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
+				return `!${inputs['A']}`
 			}
 
 			if(node.type === 'sky130_fd_sc_hd__mux2_1') {
-				format = `(${inputs['S']} ? ${inputs['A0']} : ${inputs['A1']})`
-				
-				if(node.outPorts['X'].length === 1 || forceInline.includes(name)) {
-					return format
-				}
+				return `(${inputs['S']} ? ${inputs['A0']} : ${inputs['A1']})`
 			}
 
 			context.main += `\nconst ${cleanName(name)} = ${format} // ${cleanName(name)}`
