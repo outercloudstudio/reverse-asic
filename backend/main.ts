@@ -285,6 +285,18 @@ function simplify(graph: CircuitGraph) {
 			'sky130_fd_sc_hd__or4b_2',
 			'sky130_fd_sc_hd__or4bb_2',
 			'sky130_fd_sc_hd__nand2_2',
+			'sky130_fd_sc_hd__nand2b_2',
+			'sky130_fd_sc_hd__nand3_2',
+			'sky130_fd_sc_hd__nand3b_2',
+			'sky130_fd_sc_hd__nand4_2',
+			'sky130_fd_sc_hd__nand4b_2',
+			'sky130_fd_sc_hd__nand4bb_2',
+			'sky130_fd_sc_hd__nor2_2',
+			'sky130_fd_sc_hd__nor3_2',
+			'sky130_fd_sc_hd__nor3b_2',
+			'sky130_fd_sc_hd__nor4_2',
+			'sky130_fd_sc_hd__nor4b_2',
+			'sky130_fd_sc_hd__nor4bb_2',
 			'sky130_fd_sc_hd__xnor2_2'
 		].includes(node.type))
 
@@ -318,7 +330,18 @@ function simplify(graph: CircuitGraph) {
 		}
 
 		if(node.type === 'sky130_fd_sc_hd__and3b_2') {
-			throw new Error('Unhandled!')
+			graph[`${id}_simplify_and`] = { type: 'sky130_fd_sc_hd__and2_2', inPorts: {}, outPorts: {} }
+			graph[`${id}_simplify_and2`] = { type: 'sky130_fd_sc_hd__and2_2', inPorts: {}, outPorts: {} }
+			graph[`${id}_simplify_and_not`] = { type: 'sky130_fd_sc_hd__inv_2', inPorts: {}, outPorts: {} }
+
+			portInputPort(graph, { name: id, port: 'A_N' }, { name: `${id}_simplify_and_not`, port: 'A' })
+			portInputPort(graph, { name: id, port: 'B' }, { name: `${id}_simplify_and`, port: 'B' })
+			portInputPort(graph, { name: id, port: 'C' }, { name: `${id}_simplify_and2`, port: 'B' })
+
+			tiePorts(graph, { name: `${id}_simplify_and`, port: 'X' }, { name: `${id}_simplify_and2`, port: 'A' })
+			tiePorts(graph, { name: `${id}_simplify_and_not`, port: 'Y' }, { name: `${id}_simplify_and`, port: 'A' })
+
+			portOutputPort(graph, { name: id, port: 'X' }, { name: `${id}_simplify_and2`, port: 'X' })
 		}
 
 		if(node.type === 'sky130_fd_sc_hd__and4_2') {
@@ -456,6 +479,178 @@ function simplify(graph: CircuitGraph) {
 			tiePorts(graph, { name: `${id}_simplify_and`, port: 'X' }, { name: `${id}_simplify_and_not`, port: 'A' })
 
 			portOutputPort(graph, { name: id, port: 'Y' }, { name: `${id}_simplify_and_not`, port: 'Y' })
+		}
+
+		if(node.type === 'sky130_fd_sc_hd__nand2b_2') {
+			graph[`${id}_simplify_and`] = { type: 'sky130_fd_sc_hd__and2b_2', inPorts: {}, outPorts: {} }
+			graph[`${id}_simplify_and_not`] = { type: 'sky130_fd_sc_hd__inv_2', inPorts: {}, outPorts: {} }
+
+			portInputPort(graph, { name: id, port: 'A_N' }, { name: `${id}_simplify_and`, port: 'A_N' })
+			portInputPort(graph, { name: id, port: 'B' }, { name: `${id}_simplify_and`, port: 'B' })
+
+			tiePorts(graph, { name: `${id}_simplify_and`, port: 'X' }, { name: `${id}_simplify_and_not`, port: 'A' })
+
+			portOutputPort(graph, { name: id, port: 'Y' }, { name: `${id}_simplify_and_not`, port: 'Y' })
+		}
+
+		if(node.type === 'sky130_fd_sc_hd__nand3_2') {
+			graph[`${id}_simplify_and`] = { type: 'sky130_fd_sc_hd__and3_2', inPorts: {}, outPorts: {} }
+			graph[`${id}_simplify_and_not`] = { type: 'sky130_fd_sc_hd__inv_2', inPorts: {}, outPorts: {} }
+
+			portInputPort(graph, { name: id, port: 'A' }, { name: `${id}_simplify_and`, port: 'A' })
+			portInputPort(graph, { name: id, port: 'B' }, { name: `${id}_simplify_and`, port: 'B' })
+			portInputPort(graph, { name: id, port: 'C' }, { name: `${id}_simplify_and`, port: 'C' })
+
+			tiePorts(graph, { name: `${id}_simplify_and`, port: 'X' }, { name: `${id}_simplify_and_not`, port: 'A' })
+
+			portOutputPort(graph, { name: id, port: 'Y' }, { name: `${id}_simplify_and_not`, port: 'Y' })
+		}
+
+		if(node.type === 'sky130_fd_sc_hd__nand3b_2') {
+			graph[`${id}_simplify_and`] = { type: 'sky130_fd_sc_hd__and3b_2', inPorts: {}, outPorts: {} }
+			graph[`${id}_simplify_and_not`] = { type: 'sky130_fd_sc_hd__inv_2', inPorts: {}, outPorts: {} }
+
+			portInputPort(graph, { name: id, port: 'A_N' }, { name: `${id}_simplify_and`, port: 'A_N' })
+			portInputPort(graph, { name: id, port: 'B' }, { name: `${id}_simplify_and`, port: 'B' })
+			portInputPort(graph, { name: id, port: 'C' }, { name: `${id}_simplify_and`, port: 'C' })
+
+			tiePorts(graph, { name: `${id}_simplify_and`, port: 'X' }, { name: `${id}_simplify_and_not`, port: 'A' })
+
+			portOutputPort(graph, { name: id, port: 'Y' }, { name: `${id}_simplify_and_not`, port: 'Y' })
+		}
+
+		if(node.type === 'sky130_fd_sc_hd__nand4_2') {
+			graph[`${id}_simplify_and`] = { type: 'sky130_fd_sc_hd__and4_2', inPorts: {}, outPorts: {} }
+			graph[`${id}_simplify_and_not`] = { type: 'sky130_fd_sc_hd__inv_2', inPorts: {}, outPorts: {} }
+
+			portInputPort(graph, { name: id, port: 'A' }, { name: `${id}_simplify_and`, port: 'A' })
+			portInputPort(graph, { name: id, port: 'B' }, { name: `${id}_simplify_and`, port: 'B' })
+			portInputPort(graph, { name: id, port: 'C' }, { name: `${id}_simplify_and`, port: 'C' })
+			portInputPort(graph, { name: id, port: 'D' }, { name: `${id}_simplify_and`, port: 'D' })
+
+			tiePorts(graph, { name: `${id}_simplify_and`, port: 'X' }, { name: `${id}_simplify_and_not`, port: 'A' })
+
+			portOutputPort(graph, { name: id, port: 'Y' }, { name: `${id}_simplify_and_not`, port: 'Y' })
+		}
+
+		if(node.type === 'sky130_fd_sc_hd__nand4b_2') {
+			graph[`${id}_simplify_and`] = { type: 'sky130_fd_sc_hd__and4b_2', inPorts: {}, outPorts: {} }
+			graph[`${id}_simplify_and_not`] = { type: 'sky130_fd_sc_hd__inv_2', inPorts: {}, outPorts: {} }
+
+			portInputPort(graph, { name: id, port: 'A_N' }, { name: `${id}_simplify_and`, port: 'A_N' })
+			portInputPort(graph, { name: id, port: 'B' }, { name: `${id}_simplify_and`, port: 'B' })
+			portInputPort(graph, { name: id, port: 'C' }, { name: `${id}_simplify_and`, port: 'C' })
+			portInputPort(graph, { name: id, port: 'D' }, { name: `${id}_simplify_and`, port: 'D' })
+
+			tiePorts(graph, { name: `${id}_simplify_and`, port: 'X' }, { name: `${id}_simplify_and_not`, port: 'A' })
+
+			portOutputPort(graph, { name: id, port: 'Y' }, { name: `${id}_simplify_and_not`, port: 'Y' })
+		}
+
+		if(node.type === 'sky130_fd_sc_hd__nand4bb_2') {
+			graph[`${id}_simplify_and`] = { type: 'sky130_fd_sc_hd__and4bb_2', inPorts: {}, outPorts: {} }
+			graph[`${id}_simplify_and_not`] = { type: 'sky130_fd_sc_hd__inv_2', inPorts: {}, outPorts: {} }
+
+			portInputPort(graph, { name: id, port: 'A_N' }, { name: `${id}_simplify_and`, port: 'A_N' })
+			portInputPort(graph, { name: id, port: 'B_N' }, { name: `${id}_simplify_and`, port: 'B_N' })
+			portInputPort(graph, { name: id, port: 'C' }, { name: `${id}_simplify_and`, port: 'C' })
+			portInputPort(graph, { name: id, port: 'D' }, { name: `${id}_simplify_and`, port: 'D' })
+
+			tiePorts(graph, { name: `${id}_simplify_and`, port: 'X' }, { name: `${id}_simplify_and_not`, port: 'A' })
+
+			portOutputPort(graph, { name: id, port: 'Y' }, { name: `${id}_simplify_and_not`, port: 'Y' })
+		}
+
+		if(node.type === 'sky130_fd_sc_hd__nor2_2') {
+			graph[`${id}_simplify_or`] = { type: 'sky130_fd_sc_hd__or2_2', inPorts: {}, outPorts: {} }
+			graph[`${id}_simplify_or_not`] = { type: 'sky130_fd_sc_hd__inv_2', inPorts: {}, outPorts: {} }
+
+			portInputPort(graph, { name: id, port: 'A' }, { name: `${id}_simplify_or`, port: 'A' })
+			portInputPort(graph, { name: id, port: 'B' }, { name: `${id}_simplify_or`, port: 'B' })
+
+			tiePorts(graph, { name: `${id}_simplify_or`, port: 'X' }, { name: `${id}_simplify_or_not`, port: 'A' })
+
+			portOutputPort(graph, { name: id, port: 'Y' }, { name: `${id}_simplify_or_not`, port: 'Y' })
+		}
+
+		if(node.type === 'sky130_fd_sc_hd__nor2b_2') {
+			graph[`${id}_simplify_or`] = { type: 'sky130_fd_sc_hd__or2b_2', inPorts: {}, outPorts: {} }
+			graph[`${id}_simplify_or_not`] = { type: 'sky130_fd_sc_hd__inv_2', inPorts: {}, outPorts: {} }
+
+			portInputPort(graph, { name: id, port: 'A_N' }, { name: `${id}_simplify_or`, port: 'A_N' })
+			portInputPort(graph, { name: id, port: 'B' }, { name: `${id}_simplify_or`, port: 'B' })
+
+			tiePorts(graph, { name: `${id}_simplify_or`, port: 'X' }, { name: `${id}_simplify_or_not`, port: 'A' })
+
+			portOutputPort(graph, { name: id, port: 'Y' }, { name: `${id}_simplify_or_not`, port: 'Y' })
+		}
+
+		if(node.type === 'sky130_fd_sc_hd__nor3_2') {
+			graph[`${id}_simplify_or`] = { type: 'sky130_fd_sc_hd__or3_2', inPorts: {}, outPorts: {} }
+			graph[`${id}_simplify_or_not`] = { type: 'sky130_fd_sc_hd__inv_2', inPorts: {}, outPorts: {} }
+
+			portInputPort(graph, { name: id, port: 'A' }, { name: `${id}_simplify_or`, port: 'A' })
+			portInputPort(graph, { name: id, port: 'B' }, { name: `${id}_simplify_or`, port: 'B' })
+			portInputPort(graph, { name: id, port: 'C' }, { name: `${id}_simplify_or`, port: 'C' })
+
+			tiePorts(graph, { name: `${id}_simplify_or`, port: 'X' }, { name: `${id}_simplify_or_not`, port: 'A' })
+
+			portOutputPort(graph, { name: id, port: 'Y' }, { name: `${id}_simplify_or_not`, port: 'Y' })
+		}
+
+		if(node.type === 'sky130_fd_sc_hd__nor3b_2') {
+			graph[`${id}_simplify_or`] = { type: 'sky130_fd_sc_hd__or3b_2', inPorts: {}, outPorts: {} }
+			graph[`${id}_simplify_or_not`] = { type: 'sky130_fd_sc_hd__inv_2', inPorts: {}, outPorts: {} }
+
+			portInputPort(graph, { name: id, port: 'A_N' }, { name: `${id}_simplify_or`, port: 'A_N' })
+			portInputPort(graph, { name: id, port: 'B' }, { name: `${id}_simplify_or`, port: 'B' })
+			portInputPort(graph, { name: id, port: 'C' }, { name: `${id}_simplify_or`, port: 'C' })
+
+			tiePorts(graph, { name: `${id}_simplify_or`, port: 'X' }, { name: `${id}_simplify_or_not`, port: 'A' })
+
+			portOutputPort(graph, { name: id, port: 'Y' }, { name: `${id}_simplify_or_not`, port: 'Y' })
+		}
+
+		if(node.type === 'sky130_fd_sc_hd__nor4_2') {
+			graph[`${id}_simplify_or`] = { type: 'sky130_fd_sc_hd__or4_2', inPorts: {}, outPorts: {} }
+			graph[`${id}_simplify_or_not`] = { type: 'sky130_fd_sc_hd__inv_2', inPorts: {}, outPorts: {} }
+
+			portInputPort(graph, { name: id, port: 'A' }, { name: `${id}_simplify_or`, port: 'A' })
+			portInputPort(graph, { name: id, port: 'B' }, { name: `${id}_simplify_or`, port: 'B' })
+			portInputPort(graph, { name: id, port: 'C' }, { name: `${id}_simplify_or`, port: 'C' })
+			portInputPort(graph, { name: id, port: 'D' }, { name: `${id}_simplify_or`, port: 'D' })
+
+			tiePorts(graph, { name: `${id}_simplify_or`, port: 'X' }, { name: `${id}_simplify_or_not`, port: 'A' })
+
+			portOutputPort(graph, { name: id, port: 'Y' }, { name: `${id}_simplify_or_not`, port: 'Y' })
+		}
+
+		if(node.type === 'sky130_fd_sc_hd__nor4b_2') {
+			graph[`${id}_simplify_or`] = { type: 'sky130_fd_sc_hd__or4b_2', inPorts: {}, outPorts: {} }
+			graph[`${id}_simplify_or_not`] = { type: 'sky130_fd_sc_hd__inv_2', inPorts: {}, outPorts: {} }
+
+			portInputPort(graph, { name: id, port: 'A_N' }, { name: `${id}_simplify_or`, port: 'A_N' })
+			portInputPort(graph, { name: id, port: 'B' }, { name: `${id}_simplify_or`, port: 'B' })
+			portInputPort(graph, { name: id, port: 'C' }, { name: `${id}_simplify_or`, port: 'C' })
+			portInputPort(graph, { name: id, port: 'D' }, { name: `${id}_simplify_or`, port: 'D' })
+
+			tiePorts(graph, { name: `${id}_simplify_or`, port: 'X' }, { name: `${id}_simplify_or_not`, port: 'A' })
+
+			portOutputPort(graph, { name: id, port: 'Y' }, { name: `${id}_simplify_or_not`, port: 'Y' })
+		}
+
+		if(node.type === 'sky130_fd_sc_hd__nor4bb_2') {
+			graph[`${id}_simplify_or`] = { type: 'sky130_fd_sc_hd__or4bb_2', inPorts: {}, outPorts: {} }
+			graph[`${id}_simplify_or_not`] = { type: 'sky130_fd_sc_hd__inv_2', inPorts: {}, outPorts: {} }
+
+			portInputPort(graph, { name: id, port: 'A_N' }, { name: `${id}_simplify_or`, port: 'A_N' })
+			portInputPort(graph, { name: id, port: 'B_N' }, { name: `${id}_simplify_or`, port: 'B_N' })
+			portInputPort(graph, { name: id, port: 'C' }, { name: `${id}_simplify_or`, port: 'C' })
+			portInputPort(graph, { name: id, port: 'D' }, { name: `${id}_simplify_or`, port: 'D' })
+
+			tiePorts(graph, { name: `${id}_simplify_or`, port: 'X' }, { name: `${id}_simplify_or_not`, port: 'A' })
+
+			portOutputPort(graph, { name: id, port: 'Y' }, { name: `${id}_simplify_or_not`, port: 'Y' })
 		}
 
 		if(node.type === 'sky130_fd_sc_hd__xnor2_2') {
